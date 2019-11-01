@@ -1,0 +1,1439 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>第12章 Spring Boot 安全控制 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="Securyty.html" />
+    
+    
+    <link rel="prev" href="../第11章 单元测试与热部署/UnitTestHotDeploy.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    前言
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../第0章 前后端分离的vue急速入门/Vue.html">
+            
+                <a href="../第0章 前后端分离的vue急速入门/Vue.html">
+            
+                    
+                    第0章 前后端分离的vue急速入门
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../第0章 前后端分离的vue急速入门/Vue.html">
+            
+                <a href="../第0章 前后端分离的vue急速入门/Vue.html#overview">
+            
+                    
+                    0.1 vue 介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../第0章 前后端分离的vue急速入门/Vue.html">
+            
+                <a href="../第0章 前后端分离的vue急速入门/Vue.html#config">
+            
+                    
+                    0.2 vue 开发环境配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../第0章 前后端分离的vue急速入门/Vue.html">
+            
+                <a href="../第0章 前后端分离的vue急速入门/Vue.html#hello">
+            
+                    
+                    0.3 Hello vue
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="../第0章 前后端分离的vue急速入门/Vue.html">
+            
+                <a href="../第0章 前后端分离的vue急速入门/Vue.html#deploy">
+            
+                    
+                    0.3 前后端分离的部署
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="../第0章 前后端分离的vue急速入门/Vue.html">
+            
+                <a href="../第0章 前后端分离的vue急速入门/Vue.html#router">
+            
+                    
+                    0.4 vue路由示例
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6" data-path="../第0章 前后端分离的vue急速入门/Vue.html">
+            
+                <a href="../第0章 前后端分离的vue急速入门/Vue.html#summary">
+            
+                    
+                    0.5 急速入门总结
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../第1章 Spring Boot介绍/SpringBoot.html">
+            
+                <a href="../第1章 Spring Boot介绍/SpringBoot.html">
+            
+                    
+                    第1章 Spring Boot介绍
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../第1章 Spring Boot介绍/SpringBoot.html">
+            
+                <a href="../第1章 Spring Boot介绍/SpringBoot.html#springOverview">
+            
+                    
+                    1.1 Spring 介绍
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1.1" data-path="../第1章 Spring Boot介绍/SpringBoot.html">
+            
+                <a href="../第1章 Spring Boot介绍/SpringBoot.html#springOverview1">
+            
+                    
+                    1.1.1 Spring 概述
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.2" data-path="../第1章 Spring Boot介绍/SpringBoot.html">
+            
+                <a href="../第1章 Spring Boot介绍/SpringBoot.html#springOverview2">
+            
+                    
+                    1.1.2 Spring 的进化
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.3" data-path="../第1章 Spring Boot介绍/SpringBoot.html">
+            
+                <a href="../第1章 Spring Boot介绍/SpringBoot.html#springOverview3">
+            
+                    
+                    1.1.3 Spring 5 的新特性
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../第1章 Spring Boot介绍/SpringBoot.html">
+            
+                <a href="../第1章 Spring Boot介绍/SpringBoot.html#springBootOverview">
+            
+                    
+                    1.2. Spring Boot简介
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.2.1" data-path="../第1章 Spring Boot介绍/SpringBoot.html">
+            
+                <a href="../第1章 Spring Boot介绍/SpringBoot.html#springBootOverview1">
+            
+                    
+                    1.2.1 Spring Boot 概述
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.2" data-path="../第1章 Spring Boot介绍/SpringBoot.html">
+            
+                <a href="../第1章 Spring Boot介绍/SpringBoot.html#springBootOverview2">
+            
+                    
+                    1.2.2 Spring Boot 能做什么
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.3" data-path="../第1章 Spring Boot介绍/SpringBoot.html">
+            
+                <a href="../第1章 Spring Boot介绍/SpringBoot.html#springBootOverview3">
+            
+                    
+                    1.2.3 Spring Boot 2 的新特性
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../第1章 Spring Boot介绍/SpringBoot.html">
+            
+                <a href="../第1章 Spring Boot介绍/SpringBoot.html#modules">
+            
+                    
+                    1.3. Spring Boot 的主要模块
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="../第1章 Spring Boot介绍/SpringBoot.html">
+            
+                <a href="../第1章 Spring Boot介绍/SpringBoot.html#helloSpringBoot">
+            
+                    
+                    1.4. Hello Spring Boot
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../第2章 开发环境配置/IDE.html">
+            
+                <a href="../第2章 开发环境配置/IDE.html">
+            
+                    
+                    第2章 开发环境配置
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../第2章 开发环境配置/IDE.html">
+            
+                <a href="../第2章 开发环境配置/IDE.html#jdk">
+            
+                    
+                    2.1 安装jdk
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../第2章 开发环境配置/IDE.html">
+            
+                <a href="../第2章 开发环境配置/IDE.html#maven">
+            
+                    
+                    2.2 安装配置maven
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../第2章 开发环境配置/IDE.html">
+            
+                <a href="../第2章 开发环境配置/IDE.html#sts">
+            
+                    
+                    2.3 安装配置sts
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="../第2章 开发环境配置/IDE.html">
+            
+                <a href="../第2章 开发环境配置/IDE.html#mysql">
+            
+                    
+                    2.4 安装MySQL和管理工具
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5" data-path="../第2章 开发环境配置/IDE.html">
+            
+                <a href="../第2章 开发环境配置/IDE.html#validation">
+            
+                    
+                    2.5 验证开发环境
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../第3章 Spring Boot原理剖析/SpringBootHow.html">
+            
+                <a href="../第3章 Spring Boot原理剖析/SpringBootHow.html">
+            
+                    
+                    第3章 Spring Boot原理剖析
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../第3章 Spring Boot原理剖析/SpringBootHow.html">
+            
+                <a href="../第3章 Spring Boot原理剖析/SpringBootHow.html#structure">
+            
+                    
+                    3.1 项目结构
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../第3章 Spring Boot原理剖析/SpringBootHow.html">
+            
+                <a href="../第3章 Spring Boot原理剖析/SpringBootHow.html#baseConfig">
+            
+                    
+                    3.2 基本配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" data-path="../第3章 Spring Boot原理剖析/SpringBootHow.html">
+            
+                <a href="../第3章 Spring Boot原理剖析/SpringBootHow.html#annotation">
+            
+                    
+                    3.3 启动类与核心注解
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4" data-path="../第3章 Spring Boot原理剖析/SpringBootHow.html">
+            
+                <a href="../第3章 Spring Boot原理剖析/SpringBootHow.html#autoConfig">
+            
+                    
+                    3.4 自动配置原理
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../第4章 Spring Boot Web开发/SpringBootWeb.html">
+            
+                <a href="../第4章 Spring Boot Web开发/SpringBootWeb.html">
+            
+                    
+                    第4章 Spring Boot Web开发
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../第4章 Spring Boot Web开发/SpringBootWeb.html">
+            
+                <a href="../第4章 Spring Boot Web开发/SpringBootWeb.html#mvc">
+            
+                    
+                    4.1 Spring MVC介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="../第4章 Spring Boot Web开发/SpringBootWeb.html">
+            
+                <a href="../第4章 Spring Boot Web开发/SpringBootWeb.html#thymeleaf">
+            
+                    
+                    4.2 Thymeleaf介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="../第4章 Spring Boot Web开发/SpringBootWeb.html">
+            
+                <a href="../第4章 Spring Boot Web开发/SpringBootWeb.html#legacy">
+            
+                    
+                    4.3 使用Listener和Filter
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../第5章 Spring Boot事务/SpringBootTransaction.html">
+            
+                <a href="../第5章 Spring Boot事务/SpringBootTransaction.html">
+            
+                    
+                    第5章 Spring Boot事务
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="../第5章 Spring Boot事务/SpringBootTransaction.html">
+            
+                <a href="../第5章 Spring Boot事务/SpringBootTransaction.html#overview">
+            
+                    
+                    5.1 事务介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2" data-path="../第5章 Spring Boot事务/SpringBootTransaction.html">
+            
+                <a href="../第5章 Spring Boot事务/SpringBootTransaction.html#use">
+            
+                    
+                    5.2 事务的使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="../第6章 Spring Boot的数据访问/DataAccess.html">
+            
+                <a href="../第6章 Spring Boot的数据访问/DataAccess.html">
+            
+                    
+                    第6章 Spring Boot的数据访问
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.1" data-path="../第6章 Spring Boot的数据访问/DataAccess.html">
+            
+                <a href="../第6章 Spring Boot的数据访问/DataAccess.html#jdbc">
+            
+                    
+                    6.1 Spring Boot 集成JdbcTemplate
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.2" data-path="../第6章 Spring Boot的数据访问/DataAccess.html">
+            
+                <a href="../第6章 Spring Boot的数据访问/DataAccess.html#mybatis">
+            
+                    
+                    6.2 Spring Boot 集成MyBatis
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="../第7章 Spring Boot 集成 Redis/Redis.html">
+            
+                <a href="../第7章 Spring Boot 集成 Redis/Redis.html">
+            
+                    
+                    第7章 Spring Boot 集成 Redis
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.9.1" data-path="../第7章 Spring Boot 集成 Redis/Redis.html">
+            
+                <a href="../第7章 Spring Boot 集成 Redis/Redis.html#overview">
+            
+                    
+                    7.1 Redis简介
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.2" data-path="../第7章 Spring Boot 集成 Redis/Redis.html">
+            
+                <a href="../第7章 Spring Boot 集成 Redis/Redis.html#integration">
+            
+                    
+                    7.2 集成Redis
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="../第8章 Spring Boot 集成 MongoDB/MongoDB.html">
+            
+                <a href="../第8章 Spring Boot 集成 MongoDB/MongoDB.html">
+            
+                    
+                    第8章 Spring Boot 集成 MongoDB
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.10.1" data-path="../第8章 Spring Boot 集成 MongoDB/MongoDB.html">
+            
+                <a href="../第8章 Spring Boot 集成 MongoDB/MongoDB.html#overview">
+            
+                    
+                    8.1 MongoDB简介
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.2" data-path="../第8章 Spring Boot 集成 MongoDB/MongoDB.html">
+            
+                <a href="../第8章 Spring Boot 集成 MongoDB/MongoDB.html#integration">
+            
+                    
+                    8.2 集成MongoDB
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="../第9章 Spring Boot与异步消息/MQ.html">
+            
+                <a href="../第9章 Spring Boot与异步消息/MQ.html">
+            
+                    
+                    第9章 Spring Boot与异步消息
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.11.1" data-path="../第9章 Spring Boot与异步消息/MQ.html">
+            
+                <a href="../第9章 Spring Boot与异步消息/MQ.html#overview">
+            
+                    
+                    9.1 JMS简介
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.2" data-path="../第9章 Spring Boot与异步消息/MQ.html">
+            
+                <a href="../第9章 Spring Boot与异步消息/MQ.html#amq">
+            
+                    
+                    9.2 Spring Boot 集成 ActiveMQ
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.3" data-path="../第9章 Spring Boot与异步消息/MQ.html">
+            
+                <a href="../第9章 Spring Boot与异步消息/MQ.html#amqUse">
+            
+                    
+                    9.3 使用ActiveMQ
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.11.3.1" data-path="../第9章 Spring Boot与异步消息/MQ.html">
+            
+                <a href="../第9章 Spring Boot与异步消息/MQ.html#amqUseProducer">
+            
+                    
+                    9.3.1 创建消息生产者
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.3.2" data-path="../第9章 Spring Boot与异步消息/MQ.html">
+            
+                <a href="../第9章 Spring Boot与异步消息/MQ.html#amqUseConsumer">
+            
+                    
+                    9.3.2 创建消息消费者
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.3.3" data-path="../第9章 Spring Boot与异步消息/MQ.html">
+            
+                <a href="../第9章 Spring Boot与异步消息/MQ.html#amqUseTestCase">
+            
+                    
+                    9.3.3 测试示例
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" data-path="../第10章 异常处理/Exception.html">
+            
+                <a href="../第10章 异常处理/Exception.html">
+            
+                    
+                    第10章 异常处理
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.12.1" data-path="../第10章 异常处理/Exception.html">
+            
+                <a href="../第10章 异常处理/Exception.html#overview">
+            
+                    
+                    10.1 异常介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.2" data-path="../第10章 异常处理/Exception.html">
+            
+                <a href="../第10章 异常处理/Exception.html#use">
+            
+                    
+                    10.2 Spring Boot 中全局异常的使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.3" data-path="../第10章 异常处理/Exception.html">
+            
+                <a href="../第10章 异常处理/Exception.html#retry">
+            
+                    
+                    10.3 异常的重试
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13" data-path="../第11章 单元测试与热部署/UnitTestHotDeploy.html">
+            
+                <a href="../第11章 单元测试与热部署/UnitTestHotDeploy.html">
+            
+                    
+                    第11章 单元测试与热部署
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.13.1" data-path="../第11章 单元测试与热部署/UnitTestHotDeploy.html">
+            
+                <a href="../第11章 单元测试与热部署/UnitTestHotDeploy.html#unitTest">
+            
+                    
+                    11.1 Spring Boot中的单元测试
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.2" data-path="../第11章 单元测试与热部署/UnitTestHotDeploy.html">
+            
+                <a href="../第11章 单元测试与热部署/UnitTestHotDeploy.html#hotDeploy">
+            
+                    
+                    11.2 Spring Boot对热部署的支持
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.14" data-path="Securyty.html">
+            
+                <a href="Securyty.html">
+            
+                    
+                    第12章 Spring Boot 安全控制
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.14.1" data-path="Securyty.html">
+            
+                <a href="Securyty.html#overview">
+            
+                    
+                    12.1 Spring Security介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14.2" data-path="Securyty.html">
+            
+                <a href="Securyty.html#integration">
+            
+                    
+                    12.2 集成Spring Securyty
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15" data-path="../第13章 Spring Boot 中的应用监控/Monitor.html">
+            
+                <a href="../第13章 Spring Boot 中的应用监控/Monitor.html">
+            
+                    
+                    第13章 Spring Boot 中的应用监控
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.15.1" data-path="../第13章 Spring Boot 中的应用监控/Monitor.html">
+            
+                <a href="../第13章 Spring Boot 中的应用监控/Monitor.html#overview">
+            
+                    
+                    13.1 应用监控介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.2" data-path="../第13章 Spring Boot 中的应用监控/Monitor.html">
+            
+                <a href="../第13章 Spring Boot 中的应用监控/Monitor.html#use">
+            
+                    
+                    13.2 使用应用监控
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.3" data-path="../第13章 Spring Boot 中的应用监控/Monitor.html">
+            
+                <a href="../第13章 Spring Boot 中的应用监控/Monitor.html#customize">
+            
+                    
+                    13.3 自定义端点
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.4" data-path="../第13章 Spring Boot 中的应用监控/Monitor.html">
+            
+                <a href="../第13章 Spring Boot 中的应用监控/Monitor.html#protect">
+            
+                    
+                    13.4 保护端点
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16" data-path="../第14章 应用的多环境配置与部署/MultEnv.html">
+            
+                <a href="../第14章 应用的多环境配置与部署/MultEnv.html">
+            
+                    
+                    第14章 应用的多环境配置与部署
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.16.1" data-path="../第14章 应用的多环境配置与部署/MultEnv.html">
+            
+                <a href="../第14章 应用的多环境配置与部署/MultEnv.html#overview">
+            
+                    
+                    14.1 多环境配置介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.2" data-path="../第14章 应用的多环境配置与部署/MultEnv.html">
+            
+                <a href="../第14章 应用的多环境配置与部署/MultEnv.html#use">
+            
+                    
+                    14.2 使用多环境配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.3" data-path="../第14章 应用的多环境配置与部署/MultEnv.html">
+            
+                <a href="../第14章 应用的多环境配置与部署/MultEnv.html#deploy">
+            
+                    
+                    14.3 打包部署应用
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17" data-path="../第15章 Spring Boot 综合示例/DevExample.html">
+            
+                <a href="../第15章 Spring Boot 综合示例/DevExample.html">
+            
+                    
+                    第15章 Spring Boot 综合示例
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.17.1" data-path="../第15章 Spring Boot 综合示例/DevExample.html">
+            
+                <a href="../第15章 Spring Boot 综合示例/DevExample.html#overview">
+            
+                    
+                    15.1 项目背景介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17.2" data-path="../第15章 Spring Boot 综合示例/DevExample.html">
+            
+                <a href="../第15章 Spring Boot 综合示例/DevExample.html#design">
+            
+                    
+                    15.2 项目设计
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.17.2.1" data-path="../第15章 Spring Boot 综合示例/DevExample.html">
+            
+                <a href="../第15章 Spring Boot 综合示例/DevExample.html#process">
+            
+                    
+                    15.2.1 业务流程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17.2.2" data-path="../第15章 Spring Boot 综合示例/DevExample.html">
+            
+                <a href="../第15章 Spring Boot 综合示例/DevExample.html#db">
+            
+                    
+                    15.2.2 数据库设计
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17.2.3" data-path="../第15章 Spring Boot 综合示例/DevExample.html">
+            
+                <a href="../第15章 Spring Boot 综合示例/DevExample.html#prototype">
+            
+                    
+                    15.2.3 页面原型设计
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17.3" data-path="../第15章 Spring Boot 综合示例/DevExample.html">
+            
+                <a href="../第15章 Spring Boot 综合示例/DevExample.html#implementation">
+            
+                    
+                    15.3 实现
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.17.3.1" data-path="../第15章 Spring Boot 综合示例/DevExample.html">
+            
+                <a href="../第15章 Spring Boot 综合示例/DevExample.html#entity">
+            
+                    
+                    15.3.1 持久化类
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17.3.2" data-path="../第15章 Spring Boot 综合示例/DevExample.html">
+            
+                <a href="../第15章 Spring Boot 综合示例/DevExample.html#service">
+            
+                    
+                    15.3.2 服务层实现
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17.3.3" data-path="../第15章 Spring Boot 综合示例/DevExample.html">
+            
+                <a href="../第15章 Spring Boot 综合示例/DevExample.html#web">
+            
+                    
+                    15.3.3 Web层实现
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17.4" data-path="../第15章 Spring Boot 综合示例/DevExample.html">
+            
+                <a href="../第15章 Spring Boot 综合示例/DevExample.html#summary">
+            
+                    
+                    15.4 项目总结
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.18" data-path="../Postscript.html">
+            
+                <a href="../Postscript.html">
+            
+                    
+                    后记
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >第12章 Spring Boot 安全控制</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="&#x7B2C;12&#x7AE0;-spring-boot-&#x5B89;&#x5168;&#x63A7;&#x5236;">&#x7B2C;12&#x7AE0; Spring Boot &#x5B89;&#x5168;&#x63A7;&#x5236;</h1>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="../第11章 单元测试与热部署/UnitTestHotDeploy.html#hotDeploy" class="navigation navigation-prev " aria-label="Previous page: 11.2 Spring Boot对热部署的支持">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="Securyty.html#overview" class="navigation navigation-next " aria-label="Next page: 12.1 Spring Security介绍">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"第12章 Spring Boot 安全控制","level":"1.14","depth":1,"next":{"title":"12.1 Spring Security介绍","level":"1.14.1","depth":2,"anchor":"#overview","path":"第12章 Spring Boot 安全控制/Securyty.md","ref":"第12章 Spring Boot 安全控制/Securyty.md#overview","articles":[]},"previous":{"title":"11.2 Spring Boot对热部署的支持","level":"1.13.2","depth":2,"anchor":"#hotDeploy","path":"第11章 单元测试与热部署/UnitTestHotDeploy.md","ref":"第11章 单元测试与热部署/UnitTestHotDeploy.md#hotDeploy","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"第12章 Spring Boot 安全控制/Securyty.md","mtime":"2019-11-01T13:34:48.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-11-01T14:19:01.613Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
