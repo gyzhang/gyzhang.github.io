@@ -1,0 +1,1963 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>9.5 Spring Boot集成Kafka · SpringBoot入门教程</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="Kevin Zhang">
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search-pro/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-code/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-page-toc-button/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-back-to-top-button/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="9.6homework.html" />
+    
+    
+    <link rel="prev" href="9.4rocketMQ.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    前言
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../第1章 Spring Boot介绍/SpringBoot.html">
+            
+                <a href="../第1章 Spring Boot介绍/SpringBoot.html">
+            
+                    
+                    第1章 Spring Boot介绍
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../第1章 Spring Boot介绍/1.1spring.html">
+            
+                <a href="../第1章 Spring Boot介绍/1.1spring.html">
+            
+                    
+                    1.1 Spring介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../第1章 Spring Boot介绍/1.2springBoot.html">
+            
+                <a href="../第1章 Spring Boot介绍/1.2springBoot.html">
+            
+                    
+                    1.2 Spring Boot简介
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../第1章 Spring Boot介绍/1.3springBootModules.html">
+            
+                <a href="../第1章 Spring Boot介绍/1.3springBootModules.html">
+            
+                    
+                    1.3 Spring Boot的主要模块
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="../第1章 Spring Boot介绍/1.4helloSpringBoot.html">
+            
+                <a href="../第1章 Spring Boot介绍/1.4helloSpringBoot.html">
+            
+                    
+                    1.4 Hello Spring Boot
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="../第1章 Spring Boot介绍/1.5homework.html">
+            
+                <a href="../第1章 Spring Boot介绍/1.5homework.html">
+            
+                    
+                    1.5 课后作业
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../第2章 开发环境配置/IDE.html">
+            
+                <a href="../第2章 开发环境配置/IDE.html">
+            
+                    
+                    第2章 开发环境配置
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../第2章 开发环境配置/2.1jdk.html">
+            
+                <a href="../第2章 开发环境配置/2.1jdk.html">
+            
+                    
+                    2.1 安装JDK
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../第2章 开发环境配置/2.2maven.html">
+            
+                <a href="../第2章 开发环境配置/2.2maven.html">
+            
+                    
+                    2.2 安装配置Maven
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../第2章 开发环境配置/2.3sts.html">
+            
+                <a href="../第2章 开发环境配置/2.3sts.html">
+            
+                    
+                    2.3 安装配置STS
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="../第2章 开发环境配置/2.4mysql.html">
+            
+                <a href="../第2章 开发环境配置/2.4mysql.html">
+            
+                    
+                    2.4 安装MySQL和管理工具
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="../第2章 开发环境配置/2.5validation.html">
+            
+                <a href="../第2章 开发环境配置/2.5validation.html">
+            
+                    
+                    2.5 验证开发环境
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6" data-path="../第2章 开发环境配置/2.6postman.html">
+            
+                <a href="../第2章 开发环境配置/2.6postman.html">
+            
+                    
+                    2.6 安装Postman
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.7" data-path="../第2章 开发环境配置/2.7homework.html">
+            
+                <a href="../第2章 开发环境配置/2.7homework.html">
+            
+                    
+                    2.7 课后作业
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../第3章 Spring Boot原理剖析/SpringBootHow.html">
+            
+                <a href="../第3章 Spring Boot原理剖析/SpringBootHow.html">
+            
+                    
+                    第3章 Spring Boot原理剖析
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../第3章 Spring Boot原理剖析/3.1structure.html">
+            
+                <a href="../第3章 Spring Boot原理剖析/3.1structure.html">
+            
+                    
+                    3.1 项目结构
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../第3章 Spring Boot原理剖析/3.2baseConfig.html">
+            
+                <a href="../第3章 Spring Boot原理剖析/3.2baseConfig.html">
+            
+                    
+                    3.2 基本配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../第3章 Spring Boot原理剖析/3.3annotation.html">
+            
+                <a href="../第3章 Spring Boot原理剖析/3.3annotation.html">
+            
+                    
+                    3.3 启动类与核心注解
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="../第3章 Spring Boot原理剖析/3.4startFlow.html">
+            
+                <a href="../第3章 Spring Boot原理剖析/3.4startFlow.html">
+            
+                    
+                    3.4 启动过程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5" data-path="../第3章 Spring Boot原理剖析/3.5homework.html">
+            
+                <a href="../第3章 Spring Boot原理剖析/3.5homework.html">
+            
+                    
+                    3.5 课后作业
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../第4章 Spring Boot Web开发/SpringBootWeb.html">
+            
+                <a href="../第4章 Spring Boot Web开发/SpringBootWeb.html">
+            
+                    
+                    第4章 Spring Boot Web开发
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../第4章 Spring Boot Web开发/4.1mvc.html">
+            
+                <a href="../第4章 Spring Boot Web开发/4.1mvc.html">
+            
+                    
+                    4.1 Spring MVC介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../第4章 Spring Boot Web开发/4.2thymeleaf.html">
+            
+                <a href="../第4章 Spring Boot Web开发/4.2thymeleaf.html">
+            
+                    
+                    4.2 Thymeleaf介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" data-path="../第4章 Spring Boot Web开发/4.3legacy.html">
+            
+                <a href="../第4章 Spring Boot Web开发/4.3legacy.html">
+            
+                    
+                    4.3 使用Servlet、Listener和Filter
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4" data-path="../第4章 Spring Boot Web开发/4.4homework.html">
+            
+                <a href="../第4章 Spring Boot Web开发/4.4homework.html">
+            
+                    
+                    4.4 课后作业
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../第5章 Spring Boot数据访问/DataAccess.html">
+            
+                <a href="../第5章 Spring Boot数据访问/DataAccess.html">
+            
+                    
+                    第5章 Spring Boot数据访问
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../第5章 Spring Boot数据访问/5.1jdbc.html">
+            
+                <a href="../第5章 Spring Boot数据访问/5.1jdbc.html">
+            
+                    
+                    5.1 Spring Boot集成JdbcTemplate
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="../第5章 Spring Boot数据访问/5.2myBatis.html">
+            
+                <a href="../第5章 Spring Boot数据访问/5.2myBatis.html">
+            
+                    
+                    5.2 Spring Boot集成MyBatis
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="../第5章 Spring Boot数据访问/5.3pageHelper.html">
+            
+                <a href="../第5章 Spring Boot数据访问/5.3pageHelper.html">
+            
+                    
+                    5.3 MyBatis分页
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.4" data-path="../第5章 Spring Boot数据访问/5.4myBatisPlus.html">
+            
+                <a href="../第5章 Spring Boot数据访问/5.4myBatisPlus.html">
+            
+                    
+                    5.4 MyBatis-Plus
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.5" data-path="../第5章 Spring Boot数据访问/5.5homework.html">
+            
+                <a href="../第5章 Spring Boot数据访问/5.5homework.html">
+            
+                    
+                    5.5 课后作业
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../第6章 Spring Boot事务/SpringBootTransaction.html">
+            
+                <a href="../第6章 Spring Boot事务/SpringBootTransaction.html">
+            
+                    
+                    第6章 Spring Boot事务
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="../第6章 Spring Boot事务/6.1transaction.html">
+            
+                <a href="../第6章 Spring Boot事务/6.1transaction.html">
+            
+                    
+                    6.1 事务介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2" data-path="../第6章 Spring Boot事务/6.2usingTransaction.html">
+            
+                <a href="../第6章 Spring Boot事务/6.2usingTransaction.html">
+            
+                    
+                    6.2 事务的使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.3" data-path="../第6章 Spring Boot事务/6.3distributedTransaction.html">
+            
+                <a href="../第6章 Spring Boot事务/6.3distributedTransaction.html">
+            
+                    
+                    6.3 分布式事务
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.4" data-path="../第6章 Spring Boot事务/6.4homework.html">
+            
+                <a href="../第6章 Spring Boot事务/6.4homework.html">
+            
+                    
+                    6.4 课后作业
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="../第7章 Spring Boot集成Redis/Redis.html">
+            
+                <a href="../第7章 Spring Boot集成Redis/Redis.html">
+            
+                    
+                    第7章 Spring Boot集成Redis
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.1" data-path="../第7章 Spring Boot集成Redis/7.1redisOverview.html">
+            
+                <a href="../第7章 Spring Boot集成Redis/7.1redisOverview.html">
+            
+                    
+                    7.1 Redis简介
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.2" data-path="../第7章 Spring Boot集成Redis/7.2redisIntegration.html">
+            
+                <a href="../第7章 Spring Boot集成Redis/7.2redisIntegration.html">
+            
+                    
+                    7.2 集成Redis
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.3" data-path="../第7章 Spring Boot集成Redis/7.3redisSession.html">
+            
+                <a href="../第7章 Spring Boot集成Redis/7.3redisSession.html">
+            
+                    
+                    7.3 Session共享
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.4" data-path="../第7章 Spring Boot集成Redis/7.4redisCluster.html">
+            
+                <a href="../第7章 Spring Boot集成Redis/7.4redisCluster.html">
+            
+                    
+                    7.4 Redis集群
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.5" data-path="../第7章 Spring Boot集成Redis/7.5homework.html">
+            
+                <a href="../第7章 Spring Boot集成Redis/7.5homework.html">
+            
+                    
+                    7.5 课后作业
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="../第8章 Spring Boot集成MongoDB/MongoDB.html">
+            
+                <a href="../第8章 Spring Boot集成MongoDB/MongoDB.html">
+            
+                    
+                    第8章 Spring Boot集成MongoDB
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.9.1" data-path="../第8章 Spring Boot集成MongoDB/8.1mongoDBOverview.html">
+            
+                <a href="../第8章 Spring Boot集成MongoDB/8.1mongoDBOverview.html">
+            
+                    
+                    8.1 MongoDB简介
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.2" data-path="../第8章 Spring Boot集成MongoDB/8.2mongoDBIntegration.html">
+            
+                <a href="../第8章 Spring Boot集成MongoDB/8.2mongoDBIntegration.html">
+            
+                    
+                    8.2 集成MongoDB
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.3" data-path="../第8章 Spring Boot集成MongoDB/8.3homework.html">
+            
+                <a href="../第8章 Spring Boot集成MongoDB/8.3homework.html">
+            
+                    
+                    8.3 课后作业
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="MQ.html">
+            
+                <a href="MQ.html">
+            
+                    
+                    第9章 Spring Boot与异步消息
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.10.1" data-path="9.1jms.html">
+            
+                <a href="9.1jms.html">
+            
+                    
+                    9.1 有关消息的概念
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.2" data-path="9.2activeMQ.html">
+            
+                <a href="9.2activeMQ.html">
+            
+                    
+                    9.2 Spring Boot集成ActiveMQ
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.3" data-path="9.3rabbitMQ.html">
+            
+                <a href="9.3rabbitMQ.html">
+            
+                    
+                    9.3 Spring Boot集成RabbitMQ
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.4" data-path="9.4rocketMQ.html">
+            
+                <a href="9.4rocketMQ.html">
+            
+                    
+                    9.4 Spring Boot集成RocketMQ
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.10.5" data-path="9.5kafka.html">
+            
+                <a href="9.5kafka.html">
+            
+                    
+                    9.5 Spring Boot集成Kafka
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.6" data-path="9.6homework.html">
+            
+                <a href="9.6homework.html">
+            
+                    
+                    9.6 课后作业
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="../第10章 异常处理/Exception.html">
+            
+                <a href="../第10章 异常处理/Exception.html">
+            
+                    
+                    第10章 异常处理
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.11.1" data-path="../第10章 异常处理/10.1exceptionOverview.html">
+            
+                <a href="../第10章 异常处理/10.1exceptionOverview.html">
+            
+                    
+                    10.1 异常介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.2" data-path="../第10章 异常处理/10.2globalException.html">
+            
+                <a href="../第10章 异常处理/10.2globalException.html">
+            
+                    
+                    10.2 Spring Boot中全局异常的使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.3" data-path="../第10章 异常处理/10.3retry.html">
+            
+                <a href="../第10章 异常处理/10.3retry.html">
+            
+                    
+                    10.3 异常的重试
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.4" data-path="../第10章 异常处理/10.4homework.html">
+            
+                <a href="../第10章 异常处理/10.4homework.html">
+            
+                    
+                    10.4 课后作业
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" data-path="../第11章 单元测试与热部署/UnitTestHotDeploy.html">
+            
+                <a href="../第11章 单元测试与热部署/UnitTestHotDeploy.html">
+            
+                    
+                    第11章 单元测试与热部署
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.12.1" data-path="../第11章 单元测试与热部署/11.1unitTest.html">
+            
+                <a href="../第11章 单元测试与热部署/11.1unitTest.html">
+            
+                    
+                    11.1 Spring Boot中的单元测试
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.2" data-path="../第11章 单元测试与热部署/11.2hotDeploy.html">
+            
+                <a href="../第11章 单元测试与热部署/11.2hotDeploy.html">
+            
+                    
+                    11.2 Spring Boot对热部署的支持
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.3" data-path="../第11章 单元测试与热部署/11.3homework.html">
+            
+                <a href="../第11章 单元测试与热部署/11.3homework.html">
+            
+                    
+                    11.3 课后作业
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13" data-path="../第12章 Spring Boot安全控制/Security.html">
+            
+                <a href="../第12章 Spring Boot安全控制/Security.html">
+            
+                    
+                    第12章 Spring Boot安全控制
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.13.1" data-path="../第12章 Spring Boot安全控制/12.1securityOverview.html">
+            
+                <a href="../第12章 Spring Boot安全控制/12.1securityOverview.html">
+            
+                    
+                    12.1 Spring Security介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.2" data-path="../第12章 Spring Boot安全控制/12.2securityIntegration.html">
+            
+                <a href="../第12章 Spring Boot安全控制/12.2securityIntegration.html">
+            
+                    
+                    12.2 集成Spring Security
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.3" data-path="../第12章 Spring Boot安全控制/12.3securityOauth2.html">
+            
+                <a href="../第12章 Spring Boot安全控制/12.3securityOauth2.html">
+            
+                    
+                    12.3 OAuth 2
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.4" data-path="../第12章 Spring Boot安全控制/12.4homework.html">
+            
+                <a href="../第12章 Spring Boot安全控制/12.4homework.html">
+            
+                    
+                    12.4 课后作业
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14" data-path="../第13章 Spring Boot应用监控/Monitor.html">
+            
+                <a href="../第13章 Spring Boot应用监控/Monitor.html">
+            
+                    
+                    第13章 Spring Boot应用监控
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.14.1" data-path="../第13章 Spring Boot应用监控/13.1monitorOverview.html">
+            
+                <a href="../第13章 Spring Boot应用监控/13.1monitorOverview.html">
+            
+                    
+                    13.1 应用监控介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14.2" data-path="../第13章 Spring Boot应用监控/13.2monitorUse.html">
+            
+                <a href="../第13章 Spring Boot应用监控/13.2monitorUse.html">
+            
+                    
+                    13.2 使用应用监控
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14.3" data-path="../第13章 Spring Boot应用监控/13.3monitorCustomize.html">
+            
+                <a href="../第13章 Spring Boot应用监控/13.3monitorCustomize.html">
+            
+                    
+                    13.3 自定义端点
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14.4" data-path="../第13章 Spring Boot应用监控/13.4homework.html">
+            
+                <a href="../第13章 Spring Boot应用监控/13.4homework.html">
+            
+                    
+                    13.4 课后作业
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15" data-path="../第14章 企业级开发/Enterprise.html">
+            
+                <a href="../第14章 企业级开发/Enterprise.html">
+            
+                    
+                    第14章 企业级开发
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.15.1" data-path="../第14章 企业级开发/14.1mail.html">
+            
+                <a href="../第14章 企业级开发/14.1mail.html">
+            
+                    
+                    14.1 邮件发送
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.2" data-path="../第14章 企业级开发/14.2schedule.html">
+            
+                <a href="../第14章 企业级开发/14.2schedule.html">
+            
+                    
+                    14.2 定时任务
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.3" data-path="../第14章 企业级开发/14.3batch.html">
+            
+                <a href="../第14章 企业级开发/14.3batch.html">
+            
+                    
+                    14.3 批处理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.4" data-path="../第14章 企业级开发/14.4validation.html">
+            
+                <a href="../第14章 企业级开发/14.4validation.html">
+            
+                    
+                    14.4 数据校验
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.5" data-path="../第14章 企业级开发/14.5websocket.html">
+            
+                <a href="../第14章 企业级开发/14.5websocket.html">
+            
+                    
+                    14.5 WebSocket
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.6" data-path="../第14章 企业级开发/14.6swagger2.html">
+            
+                <a href="../第14章 企业级开发/14.6swagger2.html">
+            
+                    
+                    14.6 Swagger 2
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.7" data-path="../第14章 企业级开发/14.7homework.html">
+            
+                <a href="../第14章 企业级开发/14.7homework.html">
+            
+                    
+                    14.7 课后作业
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16" data-path="../第15章 多环境配置与部署/MultEnv.html">
+            
+                <a href="../第15章 多环境配置与部署/MultEnv.html">
+            
+                    
+                    第15章 多环境配置与部署
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.16.1" data-path="../第15章 多环境配置与部署/15.1multEnvUse.html">
+            
+                <a href="../第15章 多环境配置与部署/15.1multEnvUse.html">
+            
+                    
+                    15.1 使用多环境配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.2" data-path="../第15章 多环境配置与部署/15.2multEnvDeploy.html">
+            
+                <a href="../第15章 多环境配置与部署/15.2multEnvDeploy.html">
+            
+                    
+                    15.2 打包部署应用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.3" data-path="../第15章 多环境配置与部署/15.3homework.html">
+            
+                <a href="../第15章 多环境配置与部署/15.3homework.html">
+            
+                    
+                    15.3 课后作业
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17" data-path="../Postscript.html">
+            
+                <a href="../Postscript.html">
+            
+                    
+                    后记
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.18" data-path="../附录1 前后端分离的vue急速入门/Vue.html">
+            
+                <a href="../附录1 前后端分离的vue急速入门/Vue.html">
+            
+                    
+                    附录1 前后端分离的vue急速入门
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.18.1" data-path="../附录1 前后端分离的vue急速入门/0.1vueOverview.html">
+            
+                <a href="../附录1 前后端分离的vue急速入门/0.1vueOverview.html">
+            
+                    
+                    A.1 Vue介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.18.2" data-path="../附录1 前后端分离的vue急速入门/0.2vueConfig.html">
+            
+                <a href="../附录1 前后端分离的vue急速入门/0.2vueConfig.html">
+            
+                    
+                    A.2 Vue开发环境配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.18.3" data-path="../附录1 前后端分离的vue急速入门/0.3helloVue.html">
+            
+                <a href="../附录1 前后端分离的vue急速入门/0.3helloVue.html">
+            
+                    
+                    A.3 Hello Vue
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.18.4" data-path="../附录1 前后端分离的vue急速入门/0.4vueRouter.html">
+            
+                <a href="../附录1 前后端分离的vue急速入门/0.4vueRouter.html">
+            
+                    
+                    A.4 Vue路由示例
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.18.5" data-path="../附录1 前后端分离的vue急速入门/0.5deploy.html">
+            
+                <a href="../附录1 前后端分离的vue急速入门/0.5deploy.html">
+            
+                    
+                    A.5 前后端分离应用的部署
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.18.6" data-path="../附录1 前后端分离的vue急速入门/0.6vueSummary.html">
+            
+                <a href="../附录1 前后端分离的vue急速入门/0.6vueSummary.html">
+            
+                    
+                    A.6 急速入门总结
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.18.7" data-path="../附录1 前后端分离的vue急速入门/0.7homework.html">
+            
+                <a href="../附录1 前后端分离的vue急速入门/0.7homework.html">
+            
+                    
+                    A.7 课后作业
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.19" data-path="../附录2 Spring Boot配置大全/Configuration.html">
+            
+                <a href="../附录2 Spring Boot配置大全/Configuration.html">
+            
+                    
+                    附录2 Spring Boot配置大全
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.20" data-path="../附录3 在Docker中部署Spring Boot应用/Docker.html">
+            
+                <a href="../附录3 在Docker中部署Spring Boot应用/Docker.html">
+            
+                    
+                    附录3 在Docker中部署Spring Boot应用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.21" data-path="../EnrollmentAd.html">
+            
+                <a href="../EnrollmentAd.html">
+            
+                    
+                    广告 融宝大学堂招生
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >9.5 Spring Boot集成Kafka</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h2 id="95-spring-boot&#x96C6;&#x6210;kafka">9.5 Spring Boot&#x96C6;&#x6210;Kafka</h2>
+<p><img src="images/kafka-logo.png" alt="img"></p>
+<p>Kafka&#x6700;&#x521D;&#x7531;Linkedin&#x516C;&#x53F8;&#x5F00;&#x53D1;&#xFF0C;&#x662F;&#x4E00;&#x4E2A;&#x5206;&#x5E03;&#x5F0F;&#x3001;&#x5206;&#x533A;&#x7684;&#x3001;&#x591A;&#x526F;&#x672C;&#x7684;&#x3001;&#x591A;&#x8BA2;&#x9605;&#x8005;&#xFF0C;&#x57FA;&#x4E8E;zookeeper&#x534F;&#x8C03;&#x7684;&#x5206;&#x5E03;&#x5F0F;&#x65E5;&#x5FD7;&#x7CFB;&#x7EDF;&#xFF08;&#x4E5F;&#x53EF;&#x4EE5;&#x5F53;&#x505A;MQ&#x7CFB;&#x7EDF;&#xFF09;&#x3002;&#x5E38;&#x89C1;&#x53EF;&#x4EE5;&#x7528;&#x4E8E;web/nginx&#x65E5;&#x5FD7;&#x3001;&#x8BBF;&#x95EE;&#x65E5;&#x5FD7;&#xFF0C;&#x6D88;&#x606F;&#x670D;&#x52A1;&#x7B49;&#x7B49;&#xFF0C;Linkedin&#x4E8E;2010&#x5E74;&#x8D21;&#x732E;&#x7ED9;&#x4E86;Apache&#x57FA;&#x91D1;&#x4F1A;&#x5E76;&#x6210;&#x4E3A;&#x9876;&#x7EA7;&#x5F00;&#x6E90;&#x9879;&#x76EE;&#x3002;</p>
+<blockquote>
+<p>Kafka&#xAE;&#x7528;&#x4E8E;&#x6784;&#x5EFA;&#x5B9E;&#x65F6;&#x6570;&#x636E;&#x7BA1;&#x9053;&#x548C;&#x6D41;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x3002;&#x5B83;&#x5177;&#x6709;&#x6A2A;&#x5411;&#x53EF;&#x6269;&#x5C55;&#x6027;&#x3001;&#x5BB9;&#x9519;&#x6027;&#x3001;&#x6781;&#x5FEB;&#x7684;&#x901F;&#x5EA6;&#xFF0C;&#x5E76;&#x5728;&#x6570;&#x5343;&#x5BB6;&#x516C;&#x53F8;&#x7684;&#x751F;&#x4EA7;&#x4E2D;&#x8FD0;&#x884C;&#x3002;</p>
+</blockquote>
+<p><img src="images/image-20191208091010321.png" alt="image-20191208091010321"></p>
+<p>&#x4E3B;&#x8981;&#x5E94;&#x7528;&#x573A;&#x666F;&#x662F;&#xFF1A;&#x65E5;&#x5FD7;&#x6536;&#x96C6;&#x7CFB;&#x7EDF;&#x548C;&#x6D88;&#x606F;&#x7CFB;&#x7EDF;&#x3002;</p>
+<p>Kafka&#x7684;&#x4E3B;&#x8981;&#x8BBE;&#x8BA1;&#x76EE;&#x6807;&#xFF1A;</p>
+<ul>
+<li>&#x4EE5;&#x65F6;&#x95F4;&#x590D;&#x6742;&#x5EA6;&#x4E3A;O(1)&#x7684;&#x65B9;&#x5F0F;&#x63D0;&#x4F9B;&#x6D88;&#x606F;&#x6301;&#x4E45;&#x5316;&#x80FD;&#x529B;&#xFF0C;&#x5373;&#x4F7F;&#x5BF9;TB&#x7EA7;&#x4EE5;&#x4E0A;&#x6570;&#x636E;&#x4E5F;&#x80FD;&#x4FDD;&#x8BC1;&#x5E38;&#x6570;&#x65F6;&#x95F4;&#x7684;&#x8BBF;&#x95EE;&#x6027;&#x80FD;&#x3002;</li>
+<li>&#x9AD8;&#x541E;&#x5410;&#x7387;&#x3002;&#x5373;&#x4F7F;&#x5728;&#x975E;&#x5E38;&#x5EC9;&#x4EF7;&#x7684;&#x5546;&#x7528;&#x673A;&#x5668;&#x4E0A;&#x4E5F;&#x80FD;&#x505A;&#x5230;&#x5355;&#x673A;&#x652F;&#x6301;&#x6BCF;&#x79D2;10&#x4E07;+&#x6761;&#x6D88;&#x606F;&#x7684;&#x4F20;&#x8F93;&#x3002;</li>
+<li>&#x652F;&#x6301;Kafka Server&#x95F4;&#x7684;&#x6D88;&#x606F;&#x5206;&#x533A;&#xFF0C;&#x53CA;&#x5206;&#x5E03;&#x5F0F;&#x6D88;&#x8D39;&#xFF0C;&#x540C;&#x65F6;&#x4FDD;&#x8BC1;&#x6BCF;&#x4E2A;&#x5206;&#x533A;&#x5185;&#x7684;&#x6D88;&#x606F;&#x987A;&#x5E8F;&#x4F20;&#x8F93;&#x3002;</li>
+<li>&#x540C;&#x65F6;&#x652F;&#x6301;&#x79BB;&#x7EBF;&#x6570;&#x636E;&#x5904;&#x7406;&#x548C;&#x5B9E;&#x65F6;&#x6570;&#x636E;&#x5904;&#x7406;&#x3002;</li>
+<li>&#x652F;&#x6301;&#x5728;&#x7EBF;&#x6C34;&#x5E73;&#x6269;&#x5C55;&#x3002;</li>
+</ul>
+<h3 id="951-&#x6982;&#x5FF5;">9.5.1 &#x6982;&#x5FF5;</h3>
+<p>&#x4E3A;&#x4E86;&#x7406;&#x89E3;Kafka&#xFF0C;&#x9700;&#x8981;&#x4E86;&#x89E3;Kafka&#x4E2D;&#x7684;&#x672F;&#x8BED;&#x3002;&#x4E0B;&#x56FE;&#x5C55;&#x793A;&#x4E86;Kafka&#x7684;&#x76F8;&#x5173;&#x6982;&#x5FF5;&#x4EE5;&#x53CA;&#x4E4B;&#x95F4;&#x7684;&#x5173;&#x7CFB;&#xFF1A;</p>
+<p><img src="images/kafka-overview.png" alt="kafka-overview"></p>
+<p>&#x4E0A;&#x56FE;&#x4E2D;&#x4E00;&#x4E2A;topic&#x914D;&#x7F6E;&#x4E86;3&#x4E2A;partition&#x3002;Partition1&#x6709;&#x4E24;&#x4E2A;offset&#xFF1A;0&#x548C;1&#x3002;Partition2&#x6709;4&#x4E2A;offset&#x3002;Partition3&#x6709;1&#x4E2A;offset&#x3002;</p>
+<p>&#x5982;&#x679C;&#x4E00;&#x4E2A;topic&#x7684;&#x526F;&#x672C;&#x6570;&#x4E3A;3&#xFF0C;&#x90A3;&#x4E48;Kafka&#x5C06;&#x5728;&#x96C6;&#x7FA4;&#x4E2D;&#x4E3A;&#x6BCF;&#x4E2A;partition&#x521B;&#x5EFA;3&#x4E2A;&#x76F8;&#x540C;&#x7684;&#x526F;&#x672C;&#x3002;&#x96C6;&#x7FA4;&#x4E2D;&#x7684;&#x6BCF;&#x4E2A;broker&#x5B58;&#x50A8;&#x4E00;&#x4E2A;&#x6216;&#x591A;&#x4E2A;partition&#x3002;&#x591A;&#x4E2A;producer&#x548C;consumer&#x53EF;&#x540C;&#x65F6;&#x751F;&#x4EA7;&#x548C;&#x6D88;&#x8D39;&#x6570;&#x636E;&#x3002;</p>
+<h4 id="9511-broker">9.5.1.1 broker</h4>
+<p>Kafka &#x96C6;&#x7FA4;&#x5305;&#x542B;&#x4E00;&#x4E2A;&#x6216;&#x591A;&#x4E2A;&#x670D;&#x52A1;&#x5668;&#xFF0C;&#x670D;&#x52A1;&#x5668;&#x8282;&#x70B9;&#x79F0;&#x4E3A;broker&#x3002;broker&#x5B58;&#x50A8;topic&#x7684;&#x6570;&#x636E;&#x3002;&#x5982;&#x679C;&#x67D0;topic&#x6709;N&#x4E2A;partition&#xFF0C;&#x96C6;&#x7FA4;&#x6709;N&#x4E2A;broker&#xFF0C;&#x90A3;&#x4E48;&#x6BCF;&#x4E2A;broker&#x5B58;&#x50A8;&#x8BE5;topic&#x7684;&#x4E00;&#x4E2A;partition&#x3002;</p>
+<p>&#x5982;&#x679C;&#x67D0;topic&#x6709;N&#x4E2A;partition&#xFF0C;&#x96C6;&#x7FA4;&#x6709;(N+M)&#x4E2A;broker&#xFF0C;&#x90A3;&#x4E48;&#x5176;&#x4E2D;&#x6709;N&#x4E2A;broker&#x5B58;&#x50A8;&#x8BE5;topic&#x7684;&#x4E00;&#x4E2A;partition&#xFF0C;&#x5269;&#x4E0B;&#x7684;M&#x4E2A;broker&#x4E0D;&#x5B58;&#x50A8;&#x8BE5;topic&#x7684;partition&#x6570;&#x636E;&#x3002;</p>
+<p>&#x5982;&#x679C;&#x67D0;topic&#x6709;N&#x4E2A;partition&#xFF0C;&#x96C6;&#x7FA4;&#x4E2D;broker&#x6570;&#x76EE;&#x5C11;&#x4E8E;N&#x4E2A;&#xFF0C;&#x90A3;&#x4E48;&#x4E00;&#x4E2A;broker&#x5B58;&#x50A8;&#x8BE5;topic&#x7684;&#x4E00;&#x4E2A;&#x6216;&#x591A;&#x4E2A;partition&#x3002;&#x5728;&#x5B9E;&#x9645;&#x751F;&#x4EA7;&#x73AF;&#x5883;&#x4E2D;&#xFF0C;&#x5C3D;&#x91CF;&#x907F;&#x514D;&#x8FD9;&#x79CD;&#x60C5;&#x51B5;&#x7684;&#x53D1;&#x751F;&#xFF0C;&#x8FD9;&#x79CD;&#x60C5;&#x51B5;&#x5BB9;&#x6613;&#x5BFC;&#x81F4;Kafka&#x96C6;&#x7FA4;&#x6570;&#x636E;&#x4E0D;&#x5747;&#x8861;&#x3002;</p>
+<h4 id="9512-topic">9.5.1.2 Topic</h4>
+<p>&#x6BCF;&#x6761;&#x53D1;&#x5E03;&#x5230;Kafka&#x96C6;&#x7FA4;&#x7684;&#x6D88;&#x606F;&#x90FD;&#x6709;&#x4E00;&#x4E2A;&#x7C7B;&#x522B;&#xFF0C;&#x8FD9;&#x4E2A;&#x7C7B;&#x522B;&#x88AB;&#x79F0;&#x4E3A;Topic&#x3002;&#xFF08;&#x7269;&#x7406;&#x4E0A;&#x4E0D;&#x540C;Topic&#x7684;&#x6D88;&#x606F;&#x5206;&#x5F00;&#x5B58;&#x50A8;&#xFF0C;&#x903B;&#x8F91;&#x4E0A;&#x4E00;&#x4E2A;Topic&#x7684;&#x6D88;&#x606F;&#x867D;&#x7136;&#x4FDD;&#x5B58;&#x4E8E;&#x4E00;&#x4E2A;&#x6216;&#x591A;&#x4E2A;broker&#x4E0A;&#x4F46;&#x7528;&#x6237;&#x53EA;&#x9700;&#x6307;&#x5B9A;&#x6D88;&#x606F;&#x7684;Topic&#x5373;&#x53EF;&#x751F;&#x4EA7;&#x6216;&#x6D88;&#x8D39;&#x6570;&#x636E;&#x800C;&#x4E0D;&#x5FC5;&#x5173;&#x5FC3;&#x6570;&#x636E;&#x5B58;&#x4E8E;&#x4F55;&#x5904;&#xFF09;&#x3002;</p>
+<p>Topic&#x7C7B;&#x4F3C;&#x4E8E;&#x6570;&#x636E;&#x5E93;&#x7684;&#x8868;&#x540D;&#x3002;</p>
+<h4 id="9513-partition">9.5.1.3 Partition</h4>
+<p>topic&#x4E2D;&#x7684;&#x6570;&#x636E;&#x5206;&#x5272;&#x4E3A;&#x4E00;&#x4E2A;&#x6216;&#x591A;&#x4E2A;partition&#x3002;&#x6BCF;&#x4E2A;topic&#x81F3;&#x5C11;&#x6709;&#x4E00;&#x4E2A;partition&#x3002;&#x6BCF;&#x4E2A;partition&#x4E2D;&#x7684;&#x6570;&#x636E;&#x4F7F;&#x7528;&#x591A;&#x4E2A;segment&#x6587;&#x4EF6;&#x5B58;&#x50A8;&#x3002;partition&#x4E2D;&#x7684;&#x6570;&#x636E;&#x662F;&#x6709;&#x5E8F;&#x7684;&#xFF0C;&#x4E0D;&#x540C;partition&#x95F4;&#x7684;&#x6570;&#x636E;&#x4E22;&#x5931;&#x4E86;&#x6570;&#x636E;&#x7684;&#x987A;&#x5E8F;&#x3002;&#x5982;&#x679C;topic&#x6709;&#x591A;&#x4E2A;partition&#xFF0C;&#x6D88;&#x8D39;&#x6570;&#x636E;&#x65F6;&#x5C31;&#x4E0D;&#x80FD;&#x4FDD;&#x8BC1;&#x6570;&#x636E;&#x7684;&#x987A;&#x5E8F;&#x3002;&#x5728;&#x9700;&#x8981;&#x4E25;&#x683C;&#x4FDD;&#x8BC1;&#x6D88;&#x606F;&#x7684;&#x6D88;&#x8D39;&#x987A;&#x5E8F;&#x7684;&#x573A;&#x666F;&#x4E0B;&#xFF0C;&#x9700;&#x8981;&#x5C06;partition&#x6570;&#x76EE;&#x8BBE;&#x4E3A;1&#x3002;</p>
+<h4 id="9514-producer">9.5.1.4 Producer</h4>
+<p>&#x751F;&#x4EA7;&#x8005;&#x5373;&#x6570;&#x636E;&#x7684;&#x53D1;&#x5E03;&#x8005;&#xFF0C;&#x8BE5;&#x89D2;&#x8272;&#x5C06;&#x6D88;&#x606F;&#x53D1;&#x5E03;&#x5230;Kafka&#x7684;topic&#x4E2D;&#x3002;broker&#x63A5;&#x6536;&#x5230;&#x751F;&#x4EA7;&#x8005;&#x53D1;&#x9001;&#x7684;&#x6D88;&#x606F;&#x540E;&#xFF0C;broker&#x5C06;&#x8BE5;&#x6D88;&#x606F;&#x8FFD;&#x52A0;&#x5230;&#x5F53;&#x524D;&#x7528;&#x4E8E;&#x8FFD;&#x52A0;&#x6570;&#x636E;&#x7684;segment&#x6587;&#x4EF6;&#x4E2D;&#x3002;&#x751F;&#x4EA7;&#x8005;&#x53D1;&#x9001;&#x7684;&#x6D88;&#x606F;&#xFF0C;&#x5B58;&#x50A8;&#x5230;&#x4E00;&#x4E2A;partition&#x4E2D;&#xFF0C;&#x751F;&#x4EA7;&#x8005;&#x4E5F;&#x53EF;&#x4EE5;&#x6307;&#x5B9A;&#x6570;&#x636E;&#x5B58;&#x50A8;&#x7684;partition&#x3002;</p>
+<h4 id="9515-consumer">9.5.1.5 Consumer</h4>
+<p>&#x6D88;&#x8D39;&#x8005;&#x5C31;&#x662F;&#x6570;&#x636E;&#x7684;&#x4F7F;&#x7528;&#x8005;&#xFF0C;&#x53EF;&#x4EE5;&#x4ECE;broker&#x4E2D;&#x8BFB;&#x53D6;&#x6570;&#x636E;&#x3002;&#x6D88;&#x8D39;&#x8005;&#x53EF;&#x4EE5;&#x6D88;&#x8D39;&#x591A;&#x4E2A;topic&#x4E2D;&#x7684;&#x6570;&#x636E;&#x3002;</p>
+<h4 id="9516-consumer-group">9.5.1.6 Consumer Group</h4>
+<p>&#x6BCF;&#x4E2A;Consumer&#x5C5E;&#x4E8E;&#x4E00;&#x4E2A;&#x7279;&#x5B9A;&#x7684;Consumer Group&#xFF08;&#x53EF;&#x4E3A;&#x6BCF;&#x4E2A;Consumer&#x6307;&#x5B9A;group name&#xFF0C;&#x82E5;&#x4E0D;&#x6307;&#x5B9A;group name&#x5219;&#x5C5E;&#x4E8E;&#x9ED8;&#x8BA4;&#x7684;group&#xFF09;&#x3002;</p>
+<h4 id="9517-leader">9.5.1.7 Leader</h4>
+<p>&#x6BCF;&#x4E2A;partition&#x6709;&#x591A;&#x4E2A;&#x526F;&#x672C;&#xFF0C;&#x5176;&#x4E2D;&#x6709;&#x4E14;&#x4EC5;&#x6709;&#x4E00;&#x4E2A;&#x4F5C;&#x4E3A;Leader&#xFF0C;Leader&#x662F;&#x5F53;&#x524D;&#x8D1F;&#x8D23;&#x6570;&#x636E;&#x7684;&#x8BFB;&#x5199;&#x7684;partition&#x3002;</p>
+<h4 id="9518-follower">9.5.1.8 Follower</h4>
+<p>Follower&#x8DDF;&#x968F;Leader&#xFF0C;&#x6240;&#x6709;&#x5199;&#x8BF7;&#x6C42;&#x90FD;&#x901A;&#x8FC7;Leader&#x8DEF;&#x7531;&#xFF0C;&#x6570;&#x636E;&#x53D8;&#x66F4;&#x4F1A;&#x5E7F;&#x64AD;&#x7ED9;&#x6240;&#x6709;Follower&#xFF0C;Follower&#x4E0E;Leader&#x4FDD;&#x6301;&#x6570;&#x636E;&#x540C;&#x6B65;&#x3002;&#x5982;&#x679C;Leader&#x5931;&#x6548;&#xFF0C;&#x5219;&#x4ECE;Follower&#x4E2D;&#x9009;&#x4E3E;&#x51FA;&#x4E00;&#x4E2A;&#x65B0;&#x7684;Leader&#x3002;&#x5F53;Follower&#x4E0E;Leader&#x6302;&#x6389;&#x3001;&#x5361;&#x4F4F;&#x6216;&#x8005;&#x540C;&#x6B65;&#x592A;&#x6162;&#xFF0C;leader&#x4F1A;&#x628A;&#x8FD9;&#x4E2A;follower&#x4ECE;&#x201C;in sync replicas&#x201D;&#xFF08;ISR&#xFF09;&#x5217;&#x8868;&#x4E2D;&#x5220;&#x9664;&#xFF0C;&#x91CD;&#x65B0;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;Follower&#x3002;</p>
+<h3 id="952-&#x5B89;&#x88C5;&#x914D;&#x7F6E;">9.5.2 &#x5B89;&#x88C5;&#x914D;&#x7F6E;</h3>
+<p>&#x5230;<a href="http://kafka.apache.org/downloads" target="_blank">&#x5B98;&#x7F51;&#x4E0B;&#x8F7D;</a>&#x6700;&#x65B0;&#x7248;&#x672C;&#x7684;&#x4F7F;&#x7528;Scala 2.12&#x7684;Kafka 2.3.1&#xFF0C;Kafka&#x9700;&#x8981;&#x4F9D;&#x8D56; <a href="https://zookeeper.apache.org/" target="_blank">ZooKeeper</a>&#xFF0C;&#x9700;&#x8981;&#x5230;zookeeper<a href="https://www-eu.apache.org/dist/zookeeper/zookeeper-3.5.6/" target="_blank">&#x5B98;&#x7F51;&#x4E0B;&#x8F7D;</a>&#x6700;&#x65B0;&#x7248;&#x672C;&#x7684;ZooKeeper 3.5.6&#x5E76;&#x63D0;&#x524D;&#x5B89;&#x88C5;&#x914D;&#x7F6E;&#x597D;&#x3002;</p>
+<blockquote>
+<p>Kafka uses <a href="https://zookeeper.apache.org/" target="_blank">ZooKeeper</a> so you need to first start a ZooKeeper server if you don&apos;t already have one. You can use the convenience script packaged with kafka to get a quick-and-dirty single-node ZooKeeper instance.</p>
+<p><code>bin/zookeeper-server-start.sh config/zookeeper.properties</code></p>
+</blockquote>
+<h4 id="9521-&#x5B89;&#x88C5;zookeeper">9.5.2.1 &#x5B89;&#x88C5;ZooKeeper</h4>
+<p>&#x89E3;&#x538B;&#x4E0B;&#x8F7D;&#x540E;&#x7684;apache-zookeeper-3.5.6-bin.tar.gz&#x5230;&#x78C1;&#x76D8;&#xFF0C;&#x4F8B;&#x5982;<code>C:\Java\apache-zookeeper-3.5.6-bin</code>&#x76EE;&#x5F55;&#x3002;</p>
+<blockquote>
+<p>Windows&#x4E0B;&#x4F7F;&#x7528;WinRAR&#x89E3;&#x538B;apache-zookeeper-3.5.6-bin.tar.gz&#x6709;&#x53EF;&#x80FD;&#x4F1A;&#x51FA;&#x73B0;&#x9519;&#x8BEF;&#xFF0C;&#x53EF;&#x4F7F;&#x7528;7zip&#x89E3;&#x538B;&#x5373;&#x53EF;&#x3002;</p>
+</blockquote>
+<p>&#x5728;ZooKeeper&#x5B89;&#x88C5;&#x76EE;&#x5F55;&#x4E0B;&#x521B;&#x5EFA;data&#x76EE;&#x5F55;&#xFF0C;&#x4F8B;&#x5982;<code>C:\Java\apache-zookeeper-3.5.6-bin\data</code>&#x3002;</p>
+<p>&#x8FDB;&#x5165;<code>C:\Java\apache-zookeeper-3.5.6-bin\conf</code>&#x76EE;&#x5F55;&#xFF0C;&#x62F7;&#x8D1D;zoo_sample.cfg&#x4E3A;zoo.cfg&#xFF0C;&#x7136;&#x540E;&#x7F16;&#x8F91;&#x914D;&#x7F6E;&#x4FE1;&#x606F;&#x3002;</p>
+<pre><code class="lang-properties"># The number of milliseconds of each tick
+tickTime=2000
+# The number of ticks that the initial 
+# synchronization phase can take
+initLimit=10
+# The number of ticks that can pass between 
+# sending a request and getting an acknowledgement
+syncLimit=5
+# the directory where the snapshot is stored.
+# do not use /tmp for storage, /tmp here is just 
+# example sakes.
+dataDir=C:/Java/apache-zookeeper-3.5.6-bin/data
+# the port at which the clients will connect
+clientPort=2181
+# the maximum number of client connections.
+# increase this if you need to handle more clients
+#maxClientCnxns=60
+#
+# Be sure to read the maintenance section of the 
+# administrator guide before turning on autopurge.
+#
+# http://zookeeper.apache.org/doc/current/zookeeperAdmin.html#sc_maintenance
+#
+# The number of snapshots to retain in dataDir
+#autopurge.snapRetainCount=3
+# Purge task interval in hours
+# Set to &quot;0&quot; to disable auto purge feature
+#autopurge.purgeInterval=1
+</code></pre>
+<p>&#x6253;&#x5F00;&#x547D;&#x4EE4;&#x63D0;&#x793A;&#x7B26;&#x7A97;&#x53E3;&#xFF0C;&#x8FDB;&#x5165;ZooKeeper&#x7684;bin&#x76EE;&#x5F55;&#xFF0C;&#x6267;&#x884C;<code>zkServer.cmd</code>&#x547D;&#x4EE4;&#x542F;&#x52A8;&#x670D;&#x52A1;&#x3002;</p>
+<p><img src="images/image-20191208110005611.png" alt="image-20191208110005611"></p>
+<p>&#x5728;&#x5B66;&#x4E60;&#x73AF;&#x5883;&#x4E0B;&#xFF0C;&#x6211;&#x4EEC;&#x5C31;&#x4E0D;&#x6F14;&#x793A;&#x914D;&#x7F6E;ZooKeeper&#x9AD8;&#x53EF;&#x7528;&#x96C6;&#x7FA4;&#x4E86;&#x3002;</p>
+<h4 id="9522-&#x5B89;&#x88C5;kafka">9.5.2.2 &#x5B89;&#x88C5;Kafka</h4>
+<p>&#x89E3;&#x538B;&#x4E0B;&#x8F7D;&#x540E;&#x7684;kafka_2.12-2.3.1.tgz&#x6587;&#x4EF6;&#x5230;&#x78C1;&#x76D8;&#xFF0C;&#x4F8B;&#x5982;<code>C:\Java\kafka_2.12-2.3.1</code>&#x76EE;&#x5F55;&#x3002;</p>
+<p>&#x5728;Kafka&#x5B89;&#x88C5;&#x76EE;&#x5F55;&#x4E0B;&#x521B;&#x5EFA;logs&#x76EE;&#x5F55;&#xFF08;<code>C:\Java\kafka_2.12-2.3.1\logs</code>&#xFF09;&#xFF0C;&#x7528;&#x6765;&#x5B58;&#x653E;&#x65E5;&#x5FD7;&#x6587;&#x4EF6;&#x3002;</p>
+<p>&#x7F16;&#x8F91;Kafka&#x5B89;&#x88C5;&#x76EE;&#x5F55;&#x4E0B;config&#x76EE;&#x5F55;&#x4E0B;&#x7684;server.properties&#x6587;&#x4EF6;&#xFF08;<code>C:\Java\kafka_2.12-2.3.1\config\server.properties</code>&#xFF09;&#x3002;&#x4FEE;&#x6539;&#x7684;&#x5730;&#x65B9;&#x4E3A;<code>log.dirs=C:/Java/kafka_2.12-2.3.1/logs</code>&#xFF08;&#x7B2C;60&#x884C;&#xFF09;&#x3002;&#x9700;&#x8981;&#x68C0;&#x67E5;&#x8FDE;&#x63A5;&#x5230;ZooKeeper&#x7684;&#x914D;&#x7F6E;&#x4FE1;&#x606F;<code>zookeeper.connect=localhost:2181</code>&#xFF08;&#x7B2C;123&#x884C;&#xFF09;&#x662F;&#x5426;&#x6B63;&#x786E;&#x3002;</p>
+<pre><code class="lang-properties"># Licensed to the Apache Software Foundation (ASF) under one or more
+# contributor license agreements.  See the NOTICE file distributed with
+# this work for additional information regarding copyright ownership.
+# The ASF licenses this file to You under the Apache License, Version 2.0
+# (the &quot;License&quot;); you may not use this file except in compliance with
+# the License.  You may obtain a copy of the License at
+#
+#    http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an &quot;AS IS&quot; BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
+# see kafka.server.KafkaConfig for additional details and defaults
+
+############################# Server Basics #############################
+
+# The id of the broker. This must be set to a unique integer for each broker.
+broker.id=0
+
+############################# Socket Server Settings #############################
+
+# The address the socket server listens on. It will get the value returned from 
+# java.net.InetAddress.getCanonicalHostName() if not configured.
+#   FORMAT:
+#     listeners = listener_name://host_name:port
+#   EXAMPLE:
+#     listeners = PLAINTEXT://your.host.name:9092
+#listeners=PLAINTEXT://:9092
+
+# Hostname and port the broker will advertise to producers and consumers. If not set, 
+# it uses the value for &quot;listeners&quot; if configured.  Otherwise, it will use the value
+# returned from java.net.InetAddress.getCanonicalHostName().
+#advertised.listeners=PLAINTEXT://your.host.name:9092
+
+# Maps listener names to security protocols, the default is for them to be the same. See the config documentation for more details
+#listener.security.protocol.map=PLAINTEXT:PLAINTEXT,SSL:SSL,SASL_PLAINTEXT:SASL_PLAINTEXT,SASL_SSL:SASL_SSL
+
+# The number of threads that the server uses for receiving requests from the network and sending responses to the network
+num.network.threads=3
+
+# The number of threads that the server uses for processing requests, which may include disk I/O
+num.io.threads=8
+
+# The send buffer (SO_SNDBUF) used by the socket server
+socket.send.buffer.bytes=102400
+
+# The receive buffer (SO_RCVBUF) used by the socket server
+socket.receive.buffer.bytes=102400
+
+# The maximum size of a request that the socket server will accept (protection against OOM)
+socket.request.max.bytes=104857600
+
+
+############################# Log Basics #############################
+
+# A comma separated list of directories under which to store log files
+log.dirs=C:/Java/kafka_2.12-2.3.1/logs
+
+# The default number of log partitions per topic. More partitions allow greater
+# parallelism for consumption, but this will also result in more files across
+# the brokers.
+num.partitions=1
+
+# The number of threads per data directory to be used for log recovery at startup and flushing at shutdown.
+# This value is recommended to be increased for installations with data dirs located in RAID array.
+num.recovery.threads.per.data.dir=1
+
+############################# Internal Topic Settings  #############################
+# The replication factor for the group metadata internal topics &quot;__consumer_offsets&quot; and &quot;__transaction_state&quot;
+# For anything other than development testing, a value greater than 1 is recommended for to ensure availability such as 3.
+offsets.topic.replication.factor=1
+transaction.state.log.replication.factor=1
+transaction.state.log.min.isr=1
+
+############################# Log Flush Policy #############################
+
+# Messages are immediately written to the filesystem but by default we only fsync() to sync
+# the OS cache lazily. The following configurations control the flush of data to disk.
+# There are a few important trade-offs here:
+#    1. Durability: Unflushed data may be lost if you are not using replication.
+#    2. Latency: Very large flush intervals may lead to latency spikes when the flush does occur as there will be a lot of data to flush.
+#    3. Throughput: The flush is generally the most expensive operation, and a small flush interval may lead to excessive seeks.
+# The settings below allow one to configure the flush policy to flush data after a period of time or
+# every N messages (or both). This can be done globally and overridden on a per-topic basis.
+
+# The number of messages to accept before forcing a flush of data to disk
+#log.flush.interval.messages=10000
+
+# The maximum amount of time a message can sit in a log before we force a flush
+#log.flush.interval.ms=1000
+
+############################# Log Retention Policy #############################
+
+# The following configurations control the disposal of log segments. The policy can
+# be set to delete segments after a period of time, or after a given size has accumulated.
+# A segment will be deleted whenever *either* of these criteria are met. Deletion always happens
+# from the end of the log.
+
+# The minimum age of a log file to be eligible for deletion due to age
+log.retention.hours=168
+
+# A size-based retention policy for logs. Segments are pruned from the log unless the remaining
+# segments drop below log.retention.bytes. Functions independently of log.retention.hours.
+#log.retention.bytes=1073741824
+
+# The maximum size of a log segment file. When this size is reached a new log segment will be created.
+log.segment.bytes=1073741824
+
+# The interval at which log segments are checked to see if they can be deleted according
+# to the retention policies
+log.retention.check.interval.ms=300000
+
+############################# Zookeeper #############################
+
+# Zookeeper connection string (see zookeeper docs for details).
+# This is a comma separated host:port pairs, each corresponding to a zk
+# server. e.g. &quot;127.0.0.1:3000,127.0.0.1:3001,127.0.0.1:3002&quot;.
+# You can also append an optional chroot string to the urls to specify the
+# root directory for all kafka znodes.
+zookeeper.connect=localhost:2181
+
+# Timeout in ms for connecting to zookeeper
+zookeeper.connection.timeout.ms=6000
+
+
+############################# Group Coordinator Settings #############################
+
+# The following configuration specifies the time, in milliseconds, that the GroupCoordinator will delay the initial consumer rebalance.
+# The rebalance will be further delayed by the value of group.initial.rebalance.delay.ms as new members join the group, up to a maximum of max.poll.interval.ms.
+# The default value for this is 3 seconds.
+# We override this to 0 here as it makes for a better out-of-the-box experience for development and testing.
+# However, in production environments the default value of 3 seconds is more suitable as this will help to avoid unnecessary, and potentially expensive, rebalances during application startup.
+group.initial.rebalance.delay.ms=0
+</code></pre>
+<p>&#x6253;&#x5F00;&#x547D;&#x4EE4;&#x63D0;&#x793A;&#x7B26;&#x7A97;&#x53E3;&#xFF0C;&#x8FDB;&#x5165;<code>C:\Java\kafka_2.12-2.3.1\bin\windows</code>&#x76EE;&#x5F55;&#xFF0C;&#x6267;&#x884C;<code>kafka-server-start.bat ..\..\config\server.properties</code>&#x547D;&#x4EE4;&#xFF0C;&#x542F;&#x52A8;Kafka&#x670D;&#x52A1;&#x5668;&#xFF0C;&#x9ED8;&#x8BA4;&#x670D;&#x52A1;&#x76D1;&#x542C;&#x7AEF;&#x53E3;9092&#x3002;</p>
+<blockquote>
+<p>[2019-12-08 11:21:44,907] INFO Awaiting socket connections on 0.0.0.0:9092. (kafka.network.Acceptor)</p>
+</blockquote>
+<p><img src="images/image-20191208112335462.png" alt="image-20191208112335462"></p>
+<h3 id="953-&#x4E0E;spring-boot&#x96C6;&#x6210;">9.5.3 &#x4E0E;Spring Boot&#x96C6;&#x6210;</h3>
+<p>Spring&#x4E3A;Kafka&#x63D0;&#x4F9B;&#x4E86;&#x4F9D;&#x8D56;&#x914D;&#x7F6E;&#xFF0C;&#x96C6;&#x6210;&#x975E;&#x5E38;&#x65B9;&#x4FBF;&#x3002;&#x5E76;&#x4E14;&#x63D0;&#x4F9B;KafkaTemplate&#x6A21;&#x677F;&#x7C7B;&#x6765;&#x7B80;&#x5316;&#x7F16;&#x7801;&#x8FC7;&#x7A0B;&#x3002;</p>
+<p>&#x521B;&#x5EFA;&#x65B0;&#x7684;Spring  Boot&#x9879;&#x76EE;&#xFF0C;&#x6DFB;&#x52A0;<code>Spring Web</code>&#x548C;<code>Spring for Apache Kafka</code>&#x4F9D;&#x8D56;&#x3002;</p>
+<p><img src="images/image-20191208112914034.png" alt="image-20191208112914034"></p>
+<p>pom&#x6587;&#x4EF6;&#x4E2D;&#x5173;&#x952E;&#x7684;Kafka&#x4F9D;&#x8D56;&#xFF1A;</p>
+<pre><code class="lang-xml"><span class="hljs-tag">&lt;<span class="hljs-name">dependency</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">groupId</span>&gt;</span>org.springframework.kafka<span class="hljs-tag">&lt;/<span class="hljs-name">groupId</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">artifactId</span>&gt;</span>spring-kafka<span class="hljs-tag">&lt;/<span class="hljs-name">artifactId</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">dependency</span>&gt;</span>
+</code></pre>
+<p>&#x5728;application.yml&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x4E2D;&#x914D;&#x7F6E;&#x8FDE;&#x63A5;&#x5230;Kafka&#x7684;&#x4FE1;&#x606F;&#xFF1A;</p>
+<pre><code class="lang-yaml"><span class="hljs-attr">server:</span>
+<span class="hljs-attr">  port:</span> <span class="hljs-number">9090</span>
+
+<span class="hljs-attr">spring:</span>
+<span class="hljs-attr">  kafka:</span>
+<span class="hljs-attr">    bootstrap-servers:</span>
+<span class="hljs-bullet">    -</span> <span class="hljs-number">127.0</span><span class="hljs-number">.0</span><span class="hljs-number">.1</span>:<span class="hljs-number">9092</span>
+<span class="hljs-attr">    consumer:</span>
+<span class="hljs-attr">      group-id:</span> test-consumer-group
+<span class="hljs-attr">      key-deserializer:</span> org.apache.kafka.common.serialization.StringDeserializer
+<span class="hljs-attr">      value-deserializer:</span> org.apache.kafka.common.serialization.StringDeserializer
+<span class="hljs-attr">    producer:</span>
+<span class="hljs-attr">      key-serializer:</span> org.apache.kafka.common.serialization.StringSerializer
+<span class="hljs-attr">      value-serializer:</span> org.apache.kafka.common.serialization.StringSerializer
+</code></pre>
+<p>&#x521B;&#x5EFA;&#x6D88;&#x606F;&#x751F;&#x4EA7;&#x8005;KafkaProducer&#x7C7B;&#xFF0C;&#x6DFB;&#x52A0;&#x56DE;&#x8C03;&#x65B9;&#x6CD5;&#xFF08;&#x6D88;&#x606F;&#x6D88;&#x8D39;&#x6210;&#x529F;&#x540E;&#x6D88;&#x606F;&#x4E2D;&#x95F4;&#x4EF6;&#x4F1A;&#x56DE;&#x8C03;&#x6D88;&#x606F;&#x751F;&#x4EA7;&#x8005;&#xFF09;&#xFF1A;</p>
+<pre><code class="lang-java"><span class="hljs-keyword">package</span> com.example.kafka.producer;
+
+<span class="hljs-keyword">import</span> org.springframework.beans.factory.annotation.Autowired;
+<span class="hljs-keyword">import</span> org.springframework.kafka.core.KafkaTemplate;
+<span class="hljs-keyword">import</span> org.springframework.kafka.support.SendResult;
+<span class="hljs-keyword">import</span> org.springframework.stereotype.Component;
+<span class="hljs-keyword">import</span> org.springframework.util.concurrent.ListenableFuture;
+<span class="hljs-keyword">import</span> org.springframework.util.concurrent.ListenableFutureCallback;
+
+<span class="hljs-meta">@Component</span>
+<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">KafkaProducer</span> </span>{
+
+    <span class="hljs-meta">@Autowired</span>
+    <span class="hljs-keyword">private</span> KafkaTemplate&lt;String, String&gt; kafkaTemplate;
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">sendMessage</span><span class="hljs-params">(String msg)</span> </span>{
+        ListenableFuture&lt;SendResult&lt;String, String&gt;&gt; future = kafkaTemplate.send(<span class="hljs-string">&quot;KafkaTopic&quot;</span>, msg);
+        future.addCallback(<span class="hljs-keyword">new</span> ListenableFutureCallback&lt;SendResult&lt;String, String&gt;&gt;() {
+            <span class="hljs-meta">@Override</span>
+            <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">onFailure</span><span class="hljs-params">(Throwable throwable)</span> </span>{
+                System.out.println(<span class="hljs-string">&quot;Send Message Failure:&quot;</span> + throwable.getMessage());
+            }
+
+            <span class="hljs-meta">@Override</span>
+            <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">onSuccess</span><span class="hljs-params">(SendResult&lt;String, String&gt; sendResult)</span> </span>{
+                System.out.println(<span class="hljs-string">&quot;Send Message Success:&quot;</span> + sendResult.toString());
+            }
+        });
+    }
+
+}
+</code></pre>
+<p>&#x521B;&#x5EFA;&#x6D88;&#x606F;&#x6D88;&#x8D39;&#x8005;KafkaConsumer&#x7C7B;&#xFF1A;</p>
+<pre><code class="lang-java"><span class="hljs-keyword">package</span> com.example.kafka.consumer;
+
+<span class="hljs-keyword">import</span> org.apache.kafka.clients.consumer.ConsumerRecord;
+<span class="hljs-keyword">import</span> org.springframework.kafka.annotation.KafkaListener;
+<span class="hljs-keyword">import</span> org.springframework.stereotype.Component;
+
+<span class="hljs-meta">@Component</span>
+<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">KafkaConsumer</span> </span>{
+
+    <span class="hljs-meta">@KafkaListener</span>(topics = {<span class="hljs-string">&quot;KafkaTopic&quot;</span>})
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">listen</span><span class="hljs-params">(ConsumerRecord&lt;?, ?&gt; record)</span> </span>{
+        System.out.println(<span class="hljs-string">&quot;RocketMQ Consumer consume message: &quot;</span> + record.value());
+    }
+
+}
+</code></pre>
+<p>&#x521B;&#x5EFA;&#x63A7;&#x5236;&#x5668;KafkaController&#x7C7B;&#x4E0E;&#x7528;&#x6237;&#x4EA4;&#x4E92;&#xFF1A;</p>
+<pre><code class="lang-java"><span class="hljs-keyword">package</span> com.example.kafka.controller;
+
+<span class="hljs-keyword">import</span> org.springframework.beans.factory.annotation.Autowired;
+<span class="hljs-keyword">import</span> org.springframework.web.bind.annotation.RequestMapping;
+<span class="hljs-keyword">import</span> org.springframework.web.bind.annotation.RestController;
+
+<span class="hljs-keyword">import</span> com.example.kafka.producer.KafkaProducer;
+
+<span class="hljs-meta">@RestController</span>
+<span class="hljs-meta">@RequestMapping</span>(<span class="hljs-string">&quot;/kafka/&quot;</span>)
+<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">KafkaController</span> </span>{
+
+    <span class="hljs-meta">@Autowired</span>
+    KafkaProducer kafkaProducer;
+
+    <span class="hljs-meta">@RequestMapping</span>(<span class="hljs-string">&quot;/send&quot;</span>)
+    <span class="hljs-function"><span class="hljs-keyword">public</span> String <span class="hljs-title">sendMsg</span><span class="hljs-params">(String msg)</span> </span>{
+        kafkaProducer.sendMessage(msg);
+        <span class="hljs-keyword">return</span> msg + <span class="hljs-string">&quot; Sended to KafkaTopic.&quot;</span>;
+    }
+
+}
+</code></pre>
+<p>&#x8FD9;&#x4E2A;&#x65F6;&#x5019;&#x542F;&#x52A8;Spring Boot&#x5E94;&#x7528;&#x53EF;&#x80FD;&#x4F1A;&#x62A5;&#x9519;&#xFF0C;&#x539F;&#x56E0;&#x662F;&#x6CA1;&#x6709;&#x521B;&#x5EFA;&#x201C;KafkaTopic&#x201D;&#x4E3B;&#x9898;&#xFF0C;&#x9700;&#x8981;&#x63D0;&#x524D;&#x5728;Kafka&#x4E2D;&#x521B;&#x5EFA;&#x8FD9;&#x4E2A;&#x201C;KafkaTopic&#x201D;&#x4E3B;&#x9898;&#x3002;</p>
+<pre><code>org.springframework.context.ApplicationContextException: Failed to start bean &apos;org.springframework.kafka.config.internalKafkaListenerEndpointRegistry&apos;; nested exception is java.lang.IllegalStateException: Topic(s) [KafkaTopic] is/are not present and missingTopicsFatal is true
+</code></pre><blockquote>
+<p>&#x521B;&#x5EFA;KafkaTopic&#x4E3B;&#x9898;&#xFF1A;<code>kafka-topics.bat -create --bootstrap-server localhost:9092 -replication-factor 1 --partitions 1 --topic KafkaTopic</code></p>
+<p>&#x67E5;&#x770B;&#x4E3B;&#x9898;&#xFF1A;<code>kafka-topics -list --bootstrap-server localhost:9092</code></p>
+</blockquote>
+<p>&#x5728;&#x786E;&#x4FDD;Kafka&#x6D88;&#x606F;&#x4E2D;&#x95F4;&#x4EF6;&#x4E2D;&#x6709;&#x201C;KafkaTopic&#x201D;&#x4E3B;&#x9898;&#x7684;&#x524D;&#x63D0;&#x4E0B;&#x542F;&#x52A8;Spring Boot&#x5E94;&#x7528;&#x3002;</p>
+<p>&#x6253;&#x5F00;&#x6D4F;&#x89C8;&#x5668;&#xFF0C;&#x8BBF;&#x95EE;<a href="http://localhost:9090/kafka/send?msg=Kevin is a GOODMAN." target="_blank">http://localhost:9090/kafka/send?msg=Kevin is a GOODMAN.</a>&#x5730;&#x5740;&#xFF0C;&#x5411;Kafka&#x53D1;&#x9001;&#x6D88;&#x606F;&#x3002;</p>
+<p><img src="images/image-20191208182927624.png" alt="image-20191208182927624"></p>
+<p>&#x89C2;&#x5BDF;Spring Boot&#x5E94;&#x7528;&#x7684;&#x63A7;&#x5236;&#x53F0;&#xFF0C;&#x6D88;&#x606F;&#x6D88;&#x8D39;&#x8005;KafkaConsumer&#x6D88;&#x8D39;&#x6D88;&#x606F;&#x540E;&#x5728;&#x63A7;&#x5236;&#x53F0;&#x4E0A;&#x8F93;&#x51FA;&#x6B63;&#x786E;&#x7684;&#x6D88;&#x606F;<code>RocketMQ Consumer consume message: Kevin is a GOODMAN.</code>&#xFF0C;&#x8FD8;&#x53EF;&#x4EE5;&#x770B;&#x5230;&#x56DE;&#x8C03;&#x6D88;&#x606F;&#x751F;&#x4EA7;&#x8005;&#x8F93;&#x51FA;&#x7684;&#x7ED3;&#x679C;<code>Send Message Success...</code>&#x3002;</p>
+<p><img src="images/image-20191208182859859.png" alt="image-20191208182859859"></p>
+<blockquote>
+<p>&#x672C;&#x5C0F;&#x8282;&#x793A;&#x4F8B;&#x9879;&#x76EE;&#x4EE3;&#x7801;&#xFF1A;</p>
+<p><a href="https://github.com/gyzhang/SpringBootCourseCode/tree/master/spring-boot-kafka" target="_blank">https://github.com/gyzhang/SpringBootCourseCode/tree/master/spring-boot-kafka</a></p>
+</blockquote>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="9.4rocketMQ.html" class="navigation navigation-prev " aria-label="Previous page: 9.4 Spring Boot集成RocketMQ">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="9.6homework.html" class="navigation navigation-next " aria-label="Next page: 9.6 课后作业">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"9.5 Spring Boot集成Kafka","level":"1.10.5","depth":2,"next":{"title":"9.6 课后作业","level":"1.10.6","depth":2,"path":"第9章 Spring Boot与异步消息/9.6homework.md","ref":"第9章 Spring Boot与异步消息/9.6homework.md","articles":[]},"previous":{"title":"9.4 Spring Boot集成RocketMQ","level":"1.10.4","depth":2,"path":"第9章 Spring Boot与异步消息/9.4rocketMQ.md","ref":"第9章 Spring Boot与异步消息/9.4rocketMQ.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-search","search-pro","code","splitter","expandable-chapters","page-toc-button","back-to-top-button","livereload"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"livereload":{},"splitter":{},"search-pro":{"cutWordLib":"nodejieba","defineWord":["Spring Boot"],"expandable-chapters":{}},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"code":{"copyButtons":true},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"page-toc-button":{},"back-to-top-button":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"expandable-chapters":{}},"theme":"default","author":"Kevin Zhang","pdf":{"pageNumbers":true,"fontSize":23,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"SpringBoot入门教程","language":"zh-hans","gitbook":"*","description":"针对初级程序员的Spring Boot入门教程，使用版本2.2.x"},"file":{"path":"第9章 Spring Boot与异步消息/9.5kafka.md","mtime":"2019-12-28T02:01:16.840Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-02-07T14:42:40.985Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-pro/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-code/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-page-toc-button/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-back-to-top-button/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

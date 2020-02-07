@@ -1,0 +1,2025 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>14.5 WebSocket · SpringBoot入门教程</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="Kevin Zhang">
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search-pro/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-code/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-page-toc-button/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-back-to-top-button/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="14.6swagger2.html" />
+    
+    
+    <link rel="prev" href="14.4validation.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    前言
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../第1章 Spring Boot介绍/SpringBoot.html">
+            
+                <a href="../第1章 Spring Boot介绍/SpringBoot.html">
+            
+                    
+                    第1章 Spring Boot介绍
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../第1章 Spring Boot介绍/1.1spring.html">
+            
+                <a href="../第1章 Spring Boot介绍/1.1spring.html">
+            
+                    
+                    1.1 Spring介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../第1章 Spring Boot介绍/1.2springBoot.html">
+            
+                <a href="../第1章 Spring Boot介绍/1.2springBoot.html">
+            
+                    
+                    1.2 Spring Boot简介
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../第1章 Spring Boot介绍/1.3springBootModules.html">
+            
+                <a href="../第1章 Spring Boot介绍/1.3springBootModules.html">
+            
+                    
+                    1.3 Spring Boot的主要模块
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="../第1章 Spring Boot介绍/1.4helloSpringBoot.html">
+            
+                <a href="../第1章 Spring Boot介绍/1.4helloSpringBoot.html">
+            
+                    
+                    1.4 Hello Spring Boot
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="../第1章 Spring Boot介绍/1.5homework.html">
+            
+                <a href="../第1章 Spring Boot介绍/1.5homework.html">
+            
+                    
+                    1.5 课后作业
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../第2章 开发环境配置/IDE.html">
+            
+                <a href="../第2章 开发环境配置/IDE.html">
+            
+                    
+                    第2章 开发环境配置
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../第2章 开发环境配置/2.1jdk.html">
+            
+                <a href="../第2章 开发环境配置/2.1jdk.html">
+            
+                    
+                    2.1 安装JDK
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../第2章 开发环境配置/2.2maven.html">
+            
+                <a href="../第2章 开发环境配置/2.2maven.html">
+            
+                    
+                    2.2 安装配置Maven
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../第2章 开发环境配置/2.3sts.html">
+            
+                <a href="../第2章 开发环境配置/2.3sts.html">
+            
+                    
+                    2.3 安装配置STS
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="../第2章 开发环境配置/2.4mysql.html">
+            
+                <a href="../第2章 开发环境配置/2.4mysql.html">
+            
+                    
+                    2.4 安装MySQL和管理工具
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="../第2章 开发环境配置/2.5validation.html">
+            
+                <a href="../第2章 开发环境配置/2.5validation.html">
+            
+                    
+                    2.5 验证开发环境
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6" data-path="../第2章 开发环境配置/2.6postman.html">
+            
+                <a href="../第2章 开发环境配置/2.6postman.html">
+            
+                    
+                    2.6 安装Postman
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.7" data-path="../第2章 开发环境配置/2.7homework.html">
+            
+                <a href="../第2章 开发环境配置/2.7homework.html">
+            
+                    
+                    2.7 课后作业
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../第3章 Spring Boot原理剖析/SpringBootHow.html">
+            
+                <a href="../第3章 Spring Boot原理剖析/SpringBootHow.html">
+            
+                    
+                    第3章 Spring Boot原理剖析
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../第3章 Spring Boot原理剖析/3.1structure.html">
+            
+                <a href="../第3章 Spring Boot原理剖析/3.1structure.html">
+            
+                    
+                    3.1 项目结构
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../第3章 Spring Boot原理剖析/3.2baseConfig.html">
+            
+                <a href="../第3章 Spring Boot原理剖析/3.2baseConfig.html">
+            
+                    
+                    3.2 基本配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../第3章 Spring Boot原理剖析/3.3annotation.html">
+            
+                <a href="../第3章 Spring Boot原理剖析/3.3annotation.html">
+            
+                    
+                    3.3 启动类与核心注解
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="../第3章 Spring Boot原理剖析/3.4startFlow.html">
+            
+                <a href="../第3章 Spring Boot原理剖析/3.4startFlow.html">
+            
+                    
+                    3.4 启动过程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5" data-path="../第3章 Spring Boot原理剖析/3.5homework.html">
+            
+                <a href="../第3章 Spring Boot原理剖析/3.5homework.html">
+            
+                    
+                    3.5 课后作业
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../第4章 Spring Boot Web开发/SpringBootWeb.html">
+            
+                <a href="../第4章 Spring Boot Web开发/SpringBootWeb.html">
+            
+                    
+                    第4章 Spring Boot Web开发
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../第4章 Spring Boot Web开发/4.1mvc.html">
+            
+                <a href="../第4章 Spring Boot Web开发/4.1mvc.html">
+            
+                    
+                    4.1 Spring MVC介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../第4章 Spring Boot Web开发/4.2thymeleaf.html">
+            
+                <a href="../第4章 Spring Boot Web开发/4.2thymeleaf.html">
+            
+                    
+                    4.2 Thymeleaf介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" data-path="../第4章 Spring Boot Web开发/4.3legacy.html">
+            
+                <a href="../第4章 Spring Boot Web开发/4.3legacy.html">
+            
+                    
+                    4.3 使用Servlet、Listener和Filter
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4" data-path="../第4章 Spring Boot Web开发/4.4homework.html">
+            
+                <a href="../第4章 Spring Boot Web开发/4.4homework.html">
+            
+                    
+                    4.4 课后作业
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../第5章 Spring Boot数据访问/DataAccess.html">
+            
+                <a href="../第5章 Spring Boot数据访问/DataAccess.html">
+            
+                    
+                    第5章 Spring Boot数据访问
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../第5章 Spring Boot数据访问/5.1jdbc.html">
+            
+                <a href="../第5章 Spring Boot数据访问/5.1jdbc.html">
+            
+                    
+                    5.1 Spring Boot集成JdbcTemplate
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="../第5章 Spring Boot数据访问/5.2myBatis.html">
+            
+                <a href="../第5章 Spring Boot数据访问/5.2myBatis.html">
+            
+                    
+                    5.2 Spring Boot集成MyBatis
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="../第5章 Spring Boot数据访问/5.3pageHelper.html">
+            
+                <a href="../第5章 Spring Boot数据访问/5.3pageHelper.html">
+            
+                    
+                    5.3 MyBatis分页
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.4" data-path="../第5章 Spring Boot数据访问/5.4myBatisPlus.html">
+            
+                <a href="../第5章 Spring Boot数据访问/5.4myBatisPlus.html">
+            
+                    
+                    5.4 MyBatis-Plus
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.5" data-path="../第5章 Spring Boot数据访问/5.5homework.html">
+            
+                <a href="../第5章 Spring Boot数据访问/5.5homework.html">
+            
+                    
+                    5.5 课后作业
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../第6章 Spring Boot事务/SpringBootTransaction.html">
+            
+                <a href="../第6章 Spring Boot事务/SpringBootTransaction.html">
+            
+                    
+                    第6章 Spring Boot事务
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="../第6章 Spring Boot事务/6.1transaction.html">
+            
+                <a href="../第6章 Spring Boot事务/6.1transaction.html">
+            
+                    
+                    6.1 事务介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2" data-path="../第6章 Spring Boot事务/6.2usingTransaction.html">
+            
+                <a href="../第6章 Spring Boot事务/6.2usingTransaction.html">
+            
+                    
+                    6.2 事务的使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.3" data-path="../第6章 Spring Boot事务/6.3distributedTransaction.html">
+            
+                <a href="../第6章 Spring Boot事务/6.3distributedTransaction.html">
+            
+                    
+                    6.3 分布式事务
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.4" data-path="../第6章 Spring Boot事务/6.4homework.html">
+            
+                <a href="../第6章 Spring Boot事务/6.4homework.html">
+            
+                    
+                    6.4 课后作业
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="../第7章 Spring Boot集成Redis/Redis.html">
+            
+                <a href="../第7章 Spring Boot集成Redis/Redis.html">
+            
+                    
+                    第7章 Spring Boot集成Redis
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.1" data-path="../第7章 Spring Boot集成Redis/7.1redisOverview.html">
+            
+                <a href="../第7章 Spring Boot集成Redis/7.1redisOverview.html">
+            
+                    
+                    7.1 Redis简介
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.2" data-path="../第7章 Spring Boot集成Redis/7.2redisIntegration.html">
+            
+                <a href="../第7章 Spring Boot集成Redis/7.2redisIntegration.html">
+            
+                    
+                    7.2 集成Redis
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.3" data-path="../第7章 Spring Boot集成Redis/7.3redisSession.html">
+            
+                <a href="../第7章 Spring Boot集成Redis/7.3redisSession.html">
+            
+                    
+                    7.3 Session共享
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.4" data-path="../第7章 Spring Boot集成Redis/7.4redisCluster.html">
+            
+                <a href="../第7章 Spring Boot集成Redis/7.4redisCluster.html">
+            
+                    
+                    7.4 Redis集群
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.5" data-path="../第7章 Spring Boot集成Redis/7.5homework.html">
+            
+                <a href="../第7章 Spring Boot集成Redis/7.5homework.html">
+            
+                    
+                    7.5 课后作业
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="../第8章 Spring Boot集成MongoDB/MongoDB.html">
+            
+                <a href="../第8章 Spring Boot集成MongoDB/MongoDB.html">
+            
+                    
+                    第8章 Spring Boot集成MongoDB
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.9.1" data-path="../第8章 Spring Boot集成MongoDB/8.1mongoDBOverview.html">
+            
+                <a href="../第8章 Spring Boot集成MongoDB/8.1mongoDBOverview.html">
+            
+                    
+                    8.1 MongoDB简介
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.2" data-path="../第8章 Spring Boot集成MongoDB/8.2mongoDBIntegration.html">
+            
+                <a href="../第8章 Spring Boot集成MongoDB/8.2mongoDBIntegration.html">
+            
+                    
+                    8.2 集成MongoDB
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.3" data-path="../第8章 Spring Boot集成MongoDB/8.3homework.html">
+            
+                <a href="../第8章 Spring Boot集成MongoDB/8.3homework.html">
+            
+                    
+                    8.3 课后作业
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="../第9章 Spring Boot与异步消息/MQ.html">
+            
+                <a href="../第9章 Spring Boot与异步消息/MQ.html">
+            
+                    
+                    第9章 Spring Boot与异步消息
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.10.1" data-path="../第9章 Spring Boot与异步消息/9.1jms.html">
+            
+                <a href="../第9章 Spring Boot与异步消息/9.1jms.html">
+            
+                    
+                    9.1 有关消息的概念
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.2" data-path="../第9章 Spring Boot与异步消息/9.2activeMQ.html">
+            
+                <a href="../第9章 Spring Boot与异步消息/9.2activeMQ.html">
+            
+                    
+                    9.2 Spring Boot集成ActiveMQ
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.3" data-path="../第9章 Spring Boot与异步消息/9.3rabbitMQ.html">
+            
+                <a href="../第9章 Spring Boot与异步消息/9.3rabbitMQ.html">
+            
+                    
+                    9.3 Spring Boot集成RabbitMQ
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.4" data-path="../第9章 Spring Boot与异步消息/9.4rocketMQ.html">
+            
+                <a href="../第9章 Spring Boot与异步消息/9.4rocketMQ.html">
+            
+                    
+                    9.4 Spring Boot集成RocketMQ
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.5" data-path="../第9章 Spring Boot与异步消息/9.5kafka.html">
+            
+                <a href="../第9章 Spring Boot与异步消息/9.5kafka.html">
+            
+                    
+                    9.5 Spring Boot集成Kafka
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.6" data-path="../第9章 Spring Boot与异步消息/9.6homework.html">
+            
+                <a href="../第9章 Spring Boot与异步消息/9.6homework.html">
+            
+                    
+                    9.6 课后作业
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="../第10章 异常处理/Exception.html">
+            
+                <a href="../第10章 异常处理/Exception.html">
+            
+                    
+                    第10章 异常处理
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.11.1" data-path="../第10章 异常处理/10.1exceptionOverview.html">
+            
+                <a href="../第10章 异常处理/10.1exceptionOverview.html">
+            
+                    
+                    10.1 异常介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.2" data-path="../第10章 异常处理/10.2globalException.html">
+            
+                <a href="../第10章 异常处理/10.2globalException.html">
+            
+                    
+                    10.2 Spring Boot中全局异常的使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.3" data-path="../第10章 异常处理/10.3retry.html">
+            
+                <a href="../第10章 异常处理/10.3retry.html">
+            
+                    
+                    10.3 异常的重试
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.4" data-path="../第10章 异常处理/10.4homework.html">
+            
+                <a href="../第10章 异常处理/10.4homework.html">
+            
+                    
+                    10.4 课后作业
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" data-path="../第11章 单元测试与热部署/UnitTestHotDeploy.html">
+            
+                <a href="../第11章 单元测试与热部署/UnitTestHotDeploy.html">
+            
+                    
+                    第11章 单元测试与热部署
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.12.1" data-path="../第11章 单元测试与热部署/11.1unitTest.html">
+            
+                <a href="../第11章 单元测试与热部署/11.1unitTest.html">
+            
+                    
+                    11.1 Spring Boot中的单元测试
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.2" data-path="../第11章 单元测试与热部署/11.2hotDeploy.html">
+            
+                <a href="../第11章 单元测试与热部署/11.2hotDeploy.html">
+            
+                    
+                    11.2 Spring Boot对热部署的支持
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.3" data-path="../第11章 单元测试与热部署/11.3homework.html">
+            
+                <a href="../第11章 单元测试与热部署/11.3homework.html">
+            
+                    
+                    11.3 课后作业
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13" data-path="../第12章 Spring Boot安全控制/Security.html">
+            
+                <a href="../第12章 Spring Boot安全控制/Security.html">
+            
+                    
+                    第12章 Spring Boot安全控制
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.13.1" data-path="../第12章 Spring Boot安全控制/12.1securityOverview.html">
+            
+                <a href="../第12章 Spring Boot安全控制/12.1securityOverview.html">
+            
+                    
+                    12.1 Spring Security介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.2" data-path="../第12章 Spring Boot安全控制/12.2securityIntegration.html">
+            
+                <a href="../第12章 Spring Boot安全控制/12.2securityIntegration.html">
+            
+                    
+                    12.2 集成Spring Security
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.3" data-path="../第12章 Spring Boot安全控制/12.3securityOauth2.html">
+            
+                <a href="../第12章 Spring Boot安全控制/12.3securityOauth2.html">
+            
+                    
+                    12.3 OAuth 2
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.4" data-path="../第12章 Spring Boot安全控制/12.4homework.html">
+            
+                <a href="../第12章 Spring Boot安全控制/12.4homework.html">
+            
+                    
+                    12.4 课后作业
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14" data-path="../第13章 Spring Boot应用监控/Monitor.html">
+            
+                <a href="../第13章 Spring Boot应用监控/Monitor.html">
+            
+                    
+                    第13章 Spring Boot应用监控
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.14.1" data-path="../第13章 Spring Boot应用监控/13.1monitorOverview.html">
+            
+                <a href="../第13章 Spring Boot应用监控/13.1monitorOverview.html">
+            
+                    
+                    13.1 应用监控介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14.2" data-path="../第13章 Spring Boot应用监控/13.2monitorUse.html">
+            
+                <a href="../第13章 Spring Boot应用监控/13.2monitorUse.html">
+            
+                    
+                    13.2 使用应用监控
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14.3" data-path="../第13章 Spring Boot应用监控/13.3monitorCustomize.html">
+            
+                <a href="../第13章 Spring Boot应用监控/13.3monitorCustomize.html">
+            
+                    
+                    13.3 自定义端点
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14.4" data-path="../第13章 Spring Boot应用监控/13.4homework.html">
+            
+                <a href="../第13章 Spring Boot应用监控/13.4homework.html">
+            
+                    
+                    13.4 课后作业
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15" data-path="Enterprise.html">
+            
+                <a href="Enterprise.html">
+            
+                    
+                    第14章 企业级开发
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.15.1" data-path="14.1mail.html">
+            
+                <a href="14.1mail.html">
+            
+                    
+                    14.1 邮件发送
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.2" data-path="14.2schedule.html">
+            
+                <a href="14.2schedule.html">
+            
+                    
+                    14.2 定时任务
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.3" data-path="14.3batch.html">
+            
+                <a href="14.3batch.html">
+            
+                    
+                    14.3 批处理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.4" data-path="14.4validation.html">
+            
+                <a href="14.4validation.html">
+            
+                    
+                    14.4 数据校验
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.15.5" data-path="14.5websocket.html">
+            
+                <a href="14.5websocket.html">
+            
+                    
+                    14.5 WebSocket
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.6" data-path="14.6swagger2.html">
+            
+                <a href="14.6swagger2.html">
+            
+                    
+                    14.6 Swagger 2
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.7" data-path="14.7homework.html">
+            
+                <a href="14.7homework.html">
+            
+                    
+                    14.7 课后作业
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16" data-path="../第15章 多环境配置与部署/MultEnv.html">
+            
+                <a href="../第15章 多环境配置与部署/MultEnv.html">
+            
+                    
+                    第15章 多环境配置与部署
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.16.1" data-path="../第15章 多环境配置与部署/15.1multEnvUse.html">
+            
+                <a href="../第15章 多环境配置与部署/15.1multEnvUse.html">
+            
+                    
+                    15.1 使用多环境配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.2" data-path="../第15章 多环境配置与部署/15.2multEnvDeploy.html">
+            
+                <a href="../第15章 多环境配置与部署/15.2multEnvDeploy.html">
+            
+                    
+                    15.2 打包部署应用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.3" data-path="../第15章 多环境配置与部署/15.3homework.html">
+            
+                <a href="../第15章 多环境配置与部署/15.3homework.html">
+            
+                    
+                    15.3 课后作业
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17" data-path="../Postscript.html">
+            
+                <a href="../Postscript.html">
+            
+                    
+                    后记
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.18" data-path="../附录1 前后端分离的vue急速入门/Vue.html">
+            
+                <a href="../附录1 前后端分离的vue急速入门/Vue.html">
+            
+                    
+                    附录1 前后端分离的vue急速入门
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.18.1" data-path="../附录1 前后端分离的vue急速入门/0.1vueOverview.html">
+            
+                <a href="../附录1 前后端分离的vue急速入门/0.1vueOverview.html">
+            
+                    
+                    A.1 Vue介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.18.2" data-path="../附录1 前后端分离的vue急速入门/0.2vueConfig.html">
+            
+                <a href="../附录1 前后端分离的vue急速入门/0.2vueConfig.html">
+            
+                    
+                    A.2 Vue开发环境配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.18.3" data-path="../附录1 前后端分离的vue急速入门/0.3helloVue.html">
+            
+                <a href="../附录1 前后端分离的vue急速入门/0.3helloVue.html">
+            
+                    
+                    A.3 Hello Vue
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.18.4" data-path="../附录1 前后端分离的vue急速入门/0.4vueRouter.html">
+            
+                <a href="../附录1 前后端分离的vue急速入门/0.4vueRouter.html">
+            
+                    
+                    A.4 Vue路由示例
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.18.5" data-path="../附录1 前后端分离的vue急速入门/0.5deploy.html">
+            
+                <a href="../附录1 前后端分离的vue急速入门/0.5deploy.html">
+            
+                    
+                    A.5 前后端分离应用的部署
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.18.6" data-path="../附录1 前后端分离的vue急速入门/0.6vueSummary.html">
+            
+                <a href="../附录1 前后端分离的vue急速入门/0.6vueSummary.html">
+            
+                    
+                    A.6 急速入门总结
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.18.7" data-path="../附录1 前后端分离的vue急速入门/0.7homework.html">
+            
+                <a href="../附录1 前后端分离的vue急速入门/0.7homework.html">
+            
+                    
+                    A.7 课后作业
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.19" data-path="../附录2 Spring Boot配置大全/Configuration.html">
+            
+                <a href="../附录2 Spring Boot配置大全/Configuration.html">
+            
+                    
+                    附录2 Spring Boot配置大全
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.20" data-path="../附录3 在Docker中部署Spring Boot应用/Docker.html">
+            
+                <a href="../附录3 在Docker中部署Spring Boot应用/Docker.html">
+            
+                    
+                    附录3 在Docker中部署Spring Boot应用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.21" data-path="../EnrollmentAd.html">
+            
+                <a href="../EnrollmentAd.html">
+            
+                    
+                    广告 融宝大学堂招生
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >14.5 WebSocket</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h2 id="145-websocket">14.5 WebSocket</h2>
+<p>&#x5728;&#x67D0;&#x4E9B;&#x5185;&#x90E8;&#x7BA1;&#x7406;&#x7CFB;&#x7EDF;&#x4E2D;&#xFF0C;&#x6709;&#x4E9B;&#x670D;&#x52A1;&#x7AEF;&#x6D88;&#x606F;&#x9700;&#x8981;&#x53CA;&#x65F6;&#x901A;&#x77E5;&#x5230;&#x5F53;&#x524D;&#x7528;&#x6237;&#xFF0C;&#x6BD4;&#x5982;&#x5BA1;&#x6279;&#x5DE5;&#x4F5C;&#x6D41;&#x4E2D;&#x7684;&#x5BA1;&#x6279;&#x4EFB;&#x52A1;&#xFF0C;&#x6216;&#x67D0;&#x79CD;&#x516C;&#x544A;&#x8981;&#x901A;&#x77E5;&#x5230;&#x4E00;&#x6279;&#x4EBA;&#xFF08;&#x67D0;&#x4E9B;&#x89D2;&#x8272;/&#x5C97;&#x4F4D;&#x7684;&#x7528;&#x6237;&#xFF09;&#xFF0C;&#x53C8;&#x6216;&#x662F;&#x7CFB;&#x7EDF;&#x5185;&#x7F6E;&#x7684;&#x804A;&#x5929;&#x7CFB;&#x7EDF;&#x3002;&#x5728;&#x8FD9;&#x4E9B;&#x573A;&#x666F;&#x4E0B;&#xFF0C;&#x53EF;&#x4EE5;&#x4F7F;&#x7528; WebSocket &#x6280;&#x672F;&#x3002;</p>
+<h3 id="1451-&#x4ECB;&#x7ECD;">14.5.1 &#x4ECB;&#x7ECD;</h3>
+<p>&#x4EE5;&#x524D;&#xFF0C;&#x5F88;&#x591A;&#x7F51;&#x7AD9;&#x4E3A;&#x4E86;&#x5B9E;&#x73B0;&#x63A8;&#x9001;&#x6280;&#x672F;&#xFF0C;&#x6240;&#x7528;&#x7684;&#x6280;&#x672F;&#x90FD;&#x662F; Ajax &#x8F6E;&#x8BE2;&#x3002;&#x8F6E;&#x8BE2;&#x662F;&#x5728;&#x7279;&#x5B9A;&#x7684;&#x7684;&#x65F6;&#x95F4;&#x95F4;&#x9694;&#xFF08;&#x5982;&#x6BCF;1&#x79D2;&#xFF09;&#xFF0C;&#x7531;&#x6D4F;&#x89C8;&#x5668;&#x5BF9;&#x670D;&#x52A1;&#x5668;&#x53D1;&#x51FA;HTTP&#x8BF7;&#x6C42;&#xFF0C;&#x7136;&#x540E;&#x7531;&#x670D;&#x52A1;&#x5668;&#x8FD4;&#x56DE;&#x6700;&#x65B0;&#x7684;&#x6570;&#x636E;&#x7ED9;&#x5BA2;&#x6237;&#x7AEF;&#x7684;&#x6D4F;&#x89C8;&#x5668;&#x3002;&#x8FD9;&#x79CD;&#x4F20;&#x7EDF;&#x7684;&#x6A21;&#x5F0F;&#x5E26;&#x6765;&#x5F88;&#x660E;&#x663E;&#x7684;&#x7F3A;&#x70B9;&#xFF0C;&#x5373;&#x6D4F;&#x89C8;&#x5668;&#x9700;&#x8981;&#x4E0D;&#x65AD;&#x7684;&#x5411;&#x670D;&#x52A1;&#x5668;&#x53D1;&#x51FA;&#x8BF7;&#x6C42;&#xFF0C;&#x7136;&#x800C;HTTP&#x8BF7;&#x6C42;&#x53EF;&#x80FD;&#x5305;&#x542B;&#x8F83;&#x957F;&#x7684;&#x5934;&#x90E8;&#xFF0C;&#x5176;&#x4E2D;&#x771F;&#x6B63;&#x6709;&#x6548;&#x7684;&#x6570;&#x636E;&#x53EF;&#x80FD;&#x53EA;&#x662F;&#x5F88;&#x5C0F;&#x7684;&#x4E00;&#x90E8;&#x5206;&#xFF0C;&#x663E;&#x7136;&#x8FD9;&#x6837;&#x4F1A;&#x6D6A;&#x8D39;&#x5F88;&#x591A;&#x7684;&#x5E26;&#x5BBD;&#x7B49;&#x8D44;&#x6E90;&#x3002;</p>
+<p>WebSocket &#x662F; HTML5 &#x5F00;&#x59CB;&#x63D0;&#x4F9B;&#x7684;&#x4E00;&#x79CD;&#x5728;&#x5355;&#x4E2A; TCP &#x8FDE;&#x63A5;&#x4E0A;&#x8FDB;&#x884C;&#x5168;&#x53CC;&#x5DE5;&#x901A;&#x8BAF;&#x7684;&#x534F;&#x8BAE;&#x3002;</p>
+<p>WebSocket &#x4F7F;&#x5F97;&#x5BA2;&#x6237;&#x7AEF;&#x548C;&#x670D;&#x52A1;&#x5668;&#x4E4B;&#x95F4;&#x7684;&#x6570;&#x636E;&#x4EA4;&#x6362;&#x53D8;&#x5F97;&#x66F4;&#x52A0;&#x7B80;&#x5355;&#xFF0C;&#x5141;&#x8BB8;&#x670D;&#x52A1;&#x7AEF;&#x4E3B;&#x52A8;&#x5411;&#x5BA2;&#x6237;&#x7AEF;&#x63A8;&#x9001;&#x6570;&#x636E;&#x3002;&#x5728; WebSocket API &#x4E2D;&#xFF0C;&#x6D4F;&#x89C8;&#x5668;&#x548C;&#x670D;&#x52A1;&#x5668;&#x53EA;&#x9700;&#x8981;&#x5B8C;&#x6210;&#x4E00;&#x6B21;&#x63E1;&#x624B;&#xFF0C;&#x4E24;&#x8005;&#x4E4B;&#x95F4;&#x5C31;&#x76F4;&#x63A5;&#x53EF;&#x4EE5;&#x521B;&#x5EFA;&#x6301;&#x4E45;&#x6027;&#x7684;&#x8FDE;&#x63A5;&#xFF0C;&#x5E76;&#x8FDB;&#x884C;&#x53CC;&#x5411;&#x6570;&#x636E;&#x4F20;&#x8F93;&#x3002;</p>
+<p>HTML5 &#x5B9A;&#x4E49;&#x7684; WebSocket &#x534F;&#x8BAE;&#xFF0C;&#x80FD;&#x66F4;&#x597D;&#x7684;&#x8282;&#x7701;&#x670D;&#x52A1;&#x5668;&#x8D44;&#x6E90;&#x548C;&#x5E26;&#x5BBD;&#xFF0C;&#x5E76;&#x4E14;&#x80FD;&#x591F;&#x66F4;&#x5B9E;&#x65F6;&#x5730;&#x8FDB;&#x884C;&#x901A;&#x8BAF;&#x3002;</p>
+<p><img src="images/ws.png" alt="img"></p>
+<p>&#x6D4F;&#x89C8;&#x5668;&#x901A;&#x8FC7; JavaScript &#x5411;&#x670D;&#x52A1;&#x5668;&#x53D1;&#x51FA;&#x5EFA;&#x7ACB; WebSocket &#x8FDE;&#x63A5;&#x7684;&#x8BF7;&#x6C42;&#xFF0C;&#x8FDE;&#x63A5;&#x5EFA;&#x7ACB;&#x4EE5;&#x540E;&#xFF0C;&#x5BA2;&#x6237;&#x7AEF;&#x548C;&#x670D;&#x52A1;&#x5668;&#x7AEF;&#x5C31;&#x53EF;&#x4EE5;&#x901A;&#x8FC7; TCP &#x8FDE;&#x63A5;&#x76F4;&#x63A5;&#x4EA4;&#x6362;&#x6570;&#x636E;&#x3002;</p>
+<p>&#x5F53;&#x4F60;&#x83B7;&#x53D6; Web Socket &#x8FDE;&#x63A5;&#x540E;&#xFF0C;&#x4F60;&#x53EF;&#x4EE5;&#x901A;&#x8FC7; <strong>send()</strong> &#x65B9;&#x6CD5;&#x6765;&#x5411;&#x670D;&#x52A1;&#x5668;&#x53D1;&#x9001;&#x6570;&#x636E;&#xFF0C;&#x5E76;&#x901A;&#x8FC7; <strong>onmessage</strong> &#x4E8B;&#x4EF6;&#x6765;&#x63A5;&#x6536;&#x670D;&#x52A1;&#x5668;&#x8FD4;&#x56DE;&#x7684;&#x6570;&#x636E;&#x3002;</p>
+<p>&#x4F60;&#x53EF;&#x4EE5;&#x7528;<code>var Socket = new WebSocket(url, [protocol] );</code>&#x521B;&#x5EFA; WebSocket &#x5BF9;&#x8C61;&#xFF0C;&#x7B2C;&#x4E00;&#x4E2A;&#x53C2;&#x6570; url, &#x6307;&#x5B9A;&#x8FDE;&#x63A5;&#x7684; URL&#xFF0C;&#x7B2C;&#x4E8C;&#x4E2A;&#x53C2;&#x6570; protocol &#x662F;&#x53EF;&#x9009;&#x7684;&#xFF0C;&#x6307;&#x5B9A;&#x53EF;&#x63A5;&#x53D7;&#x7684;&#x5B50;&#x534F;&#x8BAE;&#x3002;&#x3002;</p>
+<blockquote>
+<p>WebSocket &#x4E0E; Socket &#x7684;&#x533A;&#x522B;&#xFF1A;</p>
+<p>&#x8F6F;&#x4EF6;&#x901A;&#x4FE1;&#x6709;&#x4E03;&#x5C42;&#x7ED3;&#x6784;&#xFF0C;&#x4E0B;&#x4E09;&#x5C42;&#x7ED3;&#x6784;&#x504F;&#x5411;&#x4E0E;&#x6570;&#x636E;&#x901A;&#x4FE1;&#xFF0C;&#x4E0A;&#x4E09;&#x5C42;&#x66F4;&#x504F;&#x5411;&#x4E8E;&#x6570;&#x636E;&#x5904;&#x7406;&#xFF0C;&#x4E2D;&#x95F4;&#x7684;&#x4F20;&#x8F93;&#x5C42;&#x5219;&#x662F;&#x8FDE;&#x63A5;&#x4E0A;&#x4E09;&#x5C42;&#x4E0E;&#x4E0B;&#x4E09;&#x5C42;&#x4E4B;&#x95F4;&#x7684;&#x6865;&#x6881;&#xFF0C;&#x6BCF;&#x4E00;&#x5C42;&#x90FD;&#x505A;&#x4E0D;&#x540C;&#x7684;&#x5DE5;&#x4F5C;&#xFF0C;&#x4E0A;&#x5C42;&#x534F;&#x8BAE;&#x4F9D;&#x8D56;&#x4E0E;&#x4E0B;&#x5C42;&#x534F;&#x8BAE;&#x3002;</p>
+<p>&#x57FA;&#x4E8E;&#x8FD9;&#x4E2A;&#x901A;&#x4FE1;&#x7ED3;&#x6784;&#x7684;&#x6982;&#x5FF5;&#x3002;Socket &#x5176;&#x5B9E;&#x5E76;&#x4E0D;&#x662F;&#x4E00;&#x4E2A;&#x534F;&#x8BAE;&#xFF0C;&#x662F;&#x5E94;&#x7528;&#x5C42;&#x4E0E; TCP/IP &#x534F;&#x8BAE;&#x65CF;&#x901A;&#x4FE1;&#x7684;&#x4E2D;&#x95F4;&#x8F6F;&#x4EF6;&#x62BD;&#x8C61;&#x5C42;&#xFF0C;&#x5B83;&#x662F;&#x4E00;&#x7EC4;&#x63A5;&#x53E3;&#x3002;&#x5F53;&#x4E24;&#x53F0;&#x4E3B;&#x673A;&#x901A;&#x4FE1;&#x65F6;&#xFF0C;&#x8BA9; Socket &#x53BB;&#x7EC4;&#x7EC7;&#x6570;&#x636E;&#xFF0C;&#x4EE5;&#x7B26;&#x5408;&#x6307;&#x5B9A;&#x7684;&#x534F;&#x8BAE;&#x3002;TCP &#x8FDE;&#x63A5;&#x5219;&#x66F4;&#x4F9D;&#x9760;&#x4E8E;&#x5E95;&#x5C42;&#x7684; IP &#x534F;&#x8BAE;&#xFF0C;IP &#x534F;&#x8BAE;&#x7684;&#x8FDE;&#x63A5;&#x5219;&#x4F9D;&#x8D56;&#x4E8E;&#x94FE;&#x8DEF;&#x5C42;&#x7B49;&#x66F4;&#x4F4E;&#x5C42;&#x6B21;&#x3002;</p>
+<p>WebSocket &#x5219;&#x662F;&#x4E00;&#x4E2A;&#x5178;&#x578B;&#x7684;&#x5E94;&#x7528;&#x5C42;&#x534F;&#x8BAE;&#x3002;</p>
+<p>&#x603B;&#x7684;&#x6765;&#x8BF4;&#xFF1A;Socket &#x662F;&#x4F20;&#x8F93;&#x63A7;&#x5236;&#x5C42;&#x534F;&#x8BAE;&#xFF0C;WebSocket &#x662F;&#x5E94;&#x7528;&#x5C42;&#x534F;&#x8BAE;&#x3002;</p>
+</blockquote>
+<p>WebSocket&#x5177;&#x6709;&#x5982;&#x4E0B;&#x7279;&#x70B9;&#xFF1A;</p>
+<ol>
+<li><p>WebSocket&#x4F7F;&#x7528;&#x65F6;&#x9700;&#x8981;&#x5148;&#x521B;&#x5EFA;&#x8FDE;&#x63A5;&#xFF0C;&#x8FD9;&#x4F7F;&#x5F97;WebSocket&#x6210;&#x4E3A;&#x4E00;&#x79CD;&#x6709;&#x72B6;&#x6001;&#x7684;&#x534F;&#x8BAE;&#xFF0C;&#x5728;&#x4E4B;&#x540E;&#x7684;&#x901A;&#x884C;&#x8FC7;&#x7A0B;&#x4E2D;&#x53EF;&#x4EE5;&#x7701;&#x7565;&#x90E8;&#x5206;&#x72B6;&#x6001;&#x4FE1;&#x606F;&#xFF08;&#x4F8B;&#x5982;&#x8EAB;&#x4EFD;&#x8BA4;&#x8BC1;&#x7B49;&#xFF09;&#xFF1B;</p>
+</li>
+<li><p>WebSocket&#x8FDE;&#x63A5;&#x5728;&#x7AEF;&#x53E3;80&#xFF08;ws&#xFF09;&#x6216;&#x8005;443&#xFF08;wss&#xFF09;&#x4E0A;&#x8FDE;&#x63A5;&#xFF0C;&#x4E0E;HTTP&#x4F7F;&#x7528;&#x7684;&#x7AEF;&#x53E3;&#x76F8;&#x540C;&#xFF0C;&#x8FD9;&#x6837;&#x57FA;&#x672C;&#x6240;&#x6709;&#x7684;&#x9632;&#x706B;&#x5899;&#x90FD;&#x4E0D;&#x4F1A;&#x963B;&#x6B62;WebSocket&#x7684;&#x8FDE;&#x63A5;&#xFF1B;</p>
+</li>
+<li><p>WebSocket&#x4F7F;&#x7528;HTTP&#x534F;&#x8BAE;&#x8FDB;&#x884C;&#x63E1;&#x624B;&#xFF0C;&#x56E0;&#x6B64;&#x53EF;&#x4EE5;&#x76F4;&#x63A5;&#x96C6;&#x6210;&#x5230;&#x7F51;&#x7EDC;&#x6D4F;&#x89C8;&#x5668;&#x548C;HTTP&#x670D;&#x52A1;&#x5668;&#x4E2D;&#xFF0C;&#x4E0D;&#x9700;&#x8981;&#x989D;&#x5916;&#x7684;&#x6210;&#x672C;&#xFF1B;</p>
+</li>
+<li><p>&#x5FC3;&#x8DF3;&#x6D88;&#x606F;&#xFF08;ping&#x548C;pong&#xFF09;&#x5C06;&#x88AB;&#x53CD;&#x590D;&#x63A8;&#x9001;&#xFF0C;&#x4FDD;&#x6301;WebSocket&#x4E00;&#x81F4;&#x5904;&#x4E8E;&#x6D3B;&#x8DC3;&#x72B6;&#x6001;&#xFF1B;</p>
+</li>
+<li><p>&#x4F7F;&#x7528;&#x8BE5;&#x534F;&#x8BAE;&#xFF0C;&#x5F53;&#x6D88;&#x606F;&#x542F;&#x52A8;&#x6216;&#x8005;&#x5230;&#x8FBE;&#x65F6;&#xFF0C;&#x670D;&#x52A1;&#x7AEF;&#x548C;&#x5BA2;&#x6237;&#x7AEF;&#x90FD;&#x53EF;&#x4EE5;&#x77E5;&#x9053;&#xFF1B;</p>
+</li>
+<li><p>Websocket&#x8FDE;&#x63A5;&#x5173;&#x95ED;&#x65F6;&#x5C06;&#x53D1;&#x9001;&#x4E00;&#x4E2A;&#x7279;&#x6B8A;&#x7684;&#x5173;&#x95ED;&#x6D88;&#x606F;&#xFF1B;</p>
+</li>
+<li><p>WebSocket&#x652F;&#x6301;&#x8DE8;&#x57DF;&#xFF0C;&#x53EF;&#x4EE5;&#x907F;&#x514D;Ajax&#x7684;&#x9650;&#x5236;&#xFF1B;</p>
+</li>
+<li><p>HTTP&#x89C4;&#x8303;&#x8981;&#x6C42;&#x6D4F;&#x89C8;&#x5668;&#x5C06;&#x5E76;&#x53D1;&#x8FDE;&#x63A5;&#x9650;&#x5236;&#x4E3A;&#x6BCF;&#x4E2A;&#x4E3B;&#x673A;&#x540D;&#x4E24;&#x4E2A;&#x8FDE;&#x63A5;&#xFF0C;&#x4F46;&#x662F;&#x5F53;&#x6211;&#x4EEC;&#x4F7F;&#x7528;WebSocket&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x5F53;&#x63E1;&#x624B;&#x5B8C;&#x6210;&#x540E;&#xFF0C;&#x8BE5;&#x9650;&#x5236;&#x5C31;&#x4E0D;&#x5B58;&#x5728;&#x4E86;&#xFF0C;&#x56E0;&#x4E3A;&#x6B64;&#x65F6;&#x7684;&#x8FDE;&#x63A5;&#x5DF2;&#x7ECF;&#x4E0D;&#x518D;&#x662F;HTTP&#x8FDE;&#x63A5;&#x4E86;&#xFF1B;</p>
+</li>
+<li><p>WebSocket&#x534F;&#x8BAE;&#x652F;&#x6301;&#x6269;&#x5C55;&#xFF0C;&#x7528;&#x6237;&#x53EF;&#x4EE5;&#x6269;&#x5C55;&#x534F;&#x8BAE;&#xFF0C;&#x5B9E;&#x73B0;&#x90E8;&#x5206;&#x81EA;&#x5B9A;&#x4E49;&#x7684;&#x5B50;&#x534F;&#x8BAE;&#xFF1B;</p>
+</li>
+<li><p>&#x66F4;&#x597D;&#x7684;&#x4E8C;&#x8FDB;&#x5236;&#x652F;&#x6301;&#x4EE5;&#x53CA;&#x66F4;&#x597D;&#x7684;&#x538B;&#x7F29;&#x6548;&#x679C;&#x3002;</p>
+</li>
+</ol>
+<h3 id="1452-&#x96C6;&#x6210;">14.5.2 &#x96C6;&#x6210;</h3>
+<p>Spring Boot &#x4E00;&#x5982;&#x65E2;&#x5F80;&#x5730;&#x63D0;&#x4F9B;&#x4E86;WebSocket&#x7684;&#x542F;&#x52A8;&#x5668;&#x4F9D;&#x8D56;&#x6765;&#x652F;&#x6301;&#x65B9;&#x4FBF;&#x5730;&#x96C6;&#x6210;&#x3002;</p>
+<p>&#x6211;&#x4EEC;&#x901A;&#x8FC7;&#x804A;&#x5929;&#x5BA4;&#x53CA;&#x70B9;&#x5BF9;&#x70B9;&#x804A;&#x5929;&#x6765;&#x793A;&#x4F8B;&#x5982;&#x4F55;&#x4F7F;&#x7528;WebSocket&#x6280;&#x672F;&#x3002;</p>
+<p>&#x521B;&#x5EFA;&#x4E00;&#x4E2A;Spring Boot &#x5E94;&#x7528;&#x3002;</p>
+<p><img src="images/image-20200126193614115.png" alt="image-20200126193614115"></p>
+<p>&#x6DFB;&#x52A0; WebSocket &#x7B49;&#x5FC5;&#x8981;&#x7684;&#x542F;&#x52A8;&#x5668;&#x4F9D;&#x8D56;&#x3002;&#x9879;&#x76EE;&#x4E2D;&#x6DFB;&#x52A0; Spring Security &#x662F;&#x4E3A;&#x4E86;&#x65B9;&#x4FBF;&#x5730;&#x4F7F;&#x7528;&#x4E0D;&#x540C;&#x7684;&#x7528;&#x6237;&#xFF0C;&#x4EE5;&#x6F14;&#x793A;&#x7528;&#x6237;&#x4E4B;&#x95F4;&#x7684;&#x804A;&#x5929;&#x529F;&#x80FD;&#x3002;</p>
+<p><img src="images/image-20200126193752236.png" alt="image-20200126193614115"></p>
+<p>&#x9879;&#x76EE;pom&#x6587;&#x4EF6;&#x4E2D;&#x6DFB;&#x52A0;&#x4E86;&#x4E00;&#x4E9B;&#x524D;&#x7AEF;&#x4F9D;&#x8D56;&#x5E93;&#x65B9;&#x4FBF;&#x524D;&#x7AEF;&#x9875;&#x9762;&#x5F15;&#x7528;&#xFF0C;&#x4F9D;&#x8D56;&#x914D;&#x7F6E;&#x4FE1;&#x606F;&#x5982;&#x4E0B;&#x3002;</p>
+<pre><code class="lang-xml"><span class="hljs-tag">&lt;<span class="hljs-name">dependency</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">groupId</span>&gt;</span>org.springframework.boot<span class="hljs-tag">&lt;/<span class="hljs-name">groupId</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">artifactId</span>&gt;</span>spring-boot-starter-security<span class="hljs-tag">&lt;/<span class="hljs-name">artifactId</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">dependency</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">dependency</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">groupId</span>&gt;</span>org.springframework.boot<span class="hljs-tag">&lt;/<span class="hljs-name">groupId</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">artifactId</span>&gt;</span>spring-boot-starter-web<span class="hljs-tag">&lt;/<span class="hljs-name">artifactId</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">dependency</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">dependency</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">groupId</span>&gt;</span>org.springframework.boot<span class="hljs-tag">&lt;/<span class="hljs-name">groupId</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">artifactId</span>&gt;</span>spring-boot-starter-websocket<span class="hljs-tag">&lt;/<span class="hljs-name">artifactId</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">dependency</span>&gt;</span>
+<span class="hljs-comment">&lt;!-- &#x524D;&#x7AEF;&#x4F9D;&#x8D56;&#x5E93; --&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">dependency</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">groupId</span>&gt;</span>org.webjars<span class="hljs-tag">&lt;/<span class="hljs-name">groupId</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">artifactId</span>&gt;</span>webjars-locator-core<span class="hljs-tag">&lt;/<span class="hljs-name">artifactId</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">dependency</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">dependency</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">groupId</span>&gt;</span>org.webjars<span class="hljs-tag">&lt;/<span class="hljs-name">groupId</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">artifactId</span>&gt;</span>sockjs-client<span class="hljs-tag">&lt;/<span class="hljs-name">artifactId</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">version</span>&gt;</span>1.1.2<span class="hljs-tag">&lt;/<span class="hljs-name">version</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">dependency</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">dependency</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">groupId</span>&gt;</span>org.webjars<span class="hljs-tag">&lt;/<span class="hljs-name">groupId</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">artifactId</span>&gt;</span>stomp-websocket<span class="hljs-tag">&lt;/<span class="hljs-name">artifactId</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">version</span>&gt;</span>2.3.3<span class="hljs-tag">&lt;/<span class="hljs-name">version</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">dependency</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">dependency</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">groupId</span>&gt;</span>org.webjars<span class="hljs-tag">&lt;/<span class="hljs-name">groupId</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">artifactId</span>&gt;</span>jquery<span class="hljs-tag">&lt;/<span class="hljs-name">artifactId</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">version</span>&gt;</span>3.3.1<span class="hljs-tag">&lt;/<span class="hljs-name">version</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">dependency</span>&gt;</span>
+</code></pre>
+<p>&#x4F8B;&#x5982;&#x4E0A;&#x9762;&#x7684;stomp-websocket&#x4F9D;&#x8D56;&#xFF0C;&#x6253;&#x5F00; stomp-websocket-2.3.3.jar &#x53EF;&#x4EE5;&#x770B;&#x5230;&#x5176;&#x5185;&#x90E8;&#x5305;&#x542B;&#x4E86; stomp.min.js &#x6587;&#x4EF6;&#xFF0C;&#x53EF;&#x4EE5;&#x5728;&#x9875;&#x9762;&#x4E0A;&#x5F15;&#x7528;&#xFF0C;&#x800C;&#x4E0D;&#x7528;&#x518D;&#x5355;&#x72EC;&#x63D0;&#x4F9B;&#xFF0C;&#x8FD9;&#x6837;&#x65B9;&#x4FBF;&#x7EDF;&#x4E00;&#x4F9D;&#x8D56;&#x7248;&#x672C;&#x7BA1;&#x7406;&#x3002;</p>
+<p><img src="images/image-20200127133919477.png" alt="image-20200127133919477"></p>
+<h4 id="14521-&#x804A;&#x5929;&#x5BA4;">14.5.2.1 &#x804A;&#x5929;&#x5BA4;</h4>
+<p>&#x9996;&#x5148;&#x521B;&#x5EFA; WebSocketConfig &#x914D;&#x7F6E;&#x7C7B;&#xFF0C;&#x914D;&#x7F6E;</p>
+<pre><code class="lang-java"><span class="hljs-meta">@Configuration</span>
+<span class="hljs-meta">@EnableWebSocketMessageBroker</span>
+<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">WebSocketConfig</span> <span class="hljs-keyword">implements</span> <span class="hljs-title">WebSocketMessageBrokerConfigurer</span> </span>{
+    <span class="hljs-meta">@Override</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">configureMessageBroker</span><span class="hljs-params">(MessageBrokerRegistry registry)</span> </span>{
+        registry.enableSimpleBroker(<span class="hljs-string">&quot;/topic&quot;</span>);
+        registry.setApplicationDestinationPrefixes(<span class="hljs-string">&quot;/app&quot;</span>);
+    }
+
+    <span class="hljs-meta">@Override</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">registerStompEndpoints</span><span class="hljs-params">(StompEndpointRegistry registry)</span> </span>{
+        registry.addEndpoint(<span class="hljs-string">&quot;/chat&quot;</span>).withSockJS();
+    }
+
+}
+</code></pre>
+<ul>
+<li>&#x81EA;&#x5B9A;&#x4E49;WebSocketConfig&#x7EE7;&#x627F;&#x81EA;WebSocketMessageBrokerConfigurer&#x8FDB;&#x884C;WebSocket&#x914D;&#x7F6E;&#xFF0C;&#x7136;&#x540E;&#x901A;&#x8FC7;@EnableWebSocketMessageBroker&#x6CE8;&#x89E3;&#x5F00;&#x542F;&#x4E86;WebSocket&#x6D88;&#x606F;&#x4EE3;&#x7406;&#xFF1B;</li>
+<li><p>registry.enableSimpleBroker(&quot;/topic&quot;)&#x8868;&#x793A;&#x8BBE;&#x7F6E;&#x6D88;&#x606F;&#x4EE3;&#x7406;&#x7684;&#x524D;&#x7F00;&#xFF0C;&#x5373;&#x5982;&#x679C;&#x6D88;&#x606F;&#x7684;&#x524D;&#x7F00;&#x662F;&#x201D;/topic&#x201D;&#xFF0C;&#x5C31;&#x4F1A;&#x5C06;&#x6D88;&#x606F;&#x8F6C;&#x53D1;&#x7ED9;&#x4EE3;&#x7406;&#xFF08;broker&#xFF09;&#xFF0C;&#x518D;&#x7531;&#x6D88;&#x606F;&#x4EE3;&#x7406;&#x5C06;&#x6D88;&#x606F;&#x5E7F;&#x64AD;&#x7ED9;&#x5F53;&#x524D;&#x8FDE;&#x63A5;&#x7684;&#x5BA2;&#x6237;&#x7AEF;&#xFF08;&#x901A;&#x4FD7;&#x7684;&#x8BB2;&#x5C31;&#x540E;&#x53F0;&#x5411;&#x524D;&#x53F0;&#x53D1;&#x9001;&#x6D88;&#x606F;&#x7684;&#x5730;&#x5740;&#x8981;&#x52A0;&#x4E0A;/topic&#x524D;&#x7F00;&#xFF09;&#xFF1B;</p>
+</li>
+<li><p>registry.setApplicationDestinationPrefixes(&quot;/app&quot;)&#x8868;&#x793A;&#x914D;&#x7F6E;&#x4E00;&#x4E2A;&#x6216;&#x591A;&#x4E2A;&#x524D;&#x7F00;&#xFF0C;&#x901A;&#x8FC7;&#x8FD9;&#x4E9B;&#x524D;&#x7F00;&#x8FC7;&#x6EE4;&#x51FA;&#x9700;&#x8981;&#x88AB;&#x6CE8;&#x89E3;&#x65B9;&#x6CD5;&#x5904;&#x7406;&#x7684;&#x6D88;&#x606F;&#xFF08;&#x901A;&#x4FD7;&#x7684;&#x8BB2;&#x5C31;&#x524D;&#x53F0;&#x5411;&#x540E;&#x53F0;&#x53D1;&#x9001;&#x6D88;&#x606F;&#x7684;&#x5730;&#x5740;&#x8981;&#x52A0;&#x4E0A;/app&#x524D;&#x7F00;&#xFF09;&#xFF1B;</p>
+</li>
+<li><p>registry.addEndpoint(&quot;/chat&quot;).withSockJS()&#x8868;&#x793A;&#x5B9A;&#x4E49;&#x4E00;&#x4E2A;&#x524D;&#x7F00;&#x4E3A;&#x201D;/chat&#x201D;&#x7684;endPoint&#xFF0C;&#x5E76;&#x5F00;&#x542F;sockjs&#x652F;&#x6301;&#xFF0C;sockjs&#x53EF;&#x4EE5;&#x89E3;&#x51B3;&#x6D4F;&#x89C8;&#x5668;&#x5BF9;WebSocket&#x7684;&#x517C;&#x5BB9;&#x6027;&#x95EE;&#x9898;&#xFF0C;&#x5BA2;&#x6237;&#x7AEF;&#x5C06;&#x901A;&#x8FC7;&#x8FD9;&#x91CC;&#x914D;&#x7F6E;&#x7684;URL&#x6765;&#x5EFA;&#x7ACB;WebSocket&#x8FDE;&#x63A5;&#xFF08;&#x786E;&#x5207;&#x7684;&#x8BF4;&#x5C31;&#x662F;&#x901A;&#x8FC7;/chat&#x8FDE;&#x63A5;&#x540E;&#x53F0;&#xFF09;&#x3002;</p>
+</li>
+</ul>
+<p>&#x521B;&#x5EFA;&#x6D88;&#x606F;&#x7C7B;Message&#xFF0C;&#x6DFB;&#x52A0;&#x9700;&#x8981;&#x7684;&#x5C5E;&#x6027;&#x3002;</p>
+<pre><code class="lang-java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Message</span> </span>{
+    <span class="hljs-keyword">private</span> String name;
+    <span class="hljs-keyword">private</span> String content;
+    <span class="hljs-keyword">private</span> String time;
+...
+}
+</code></pre>
+<p>&#x5B9A;&#x4E49;&#x4E00;&#x4E2A;Controller&#x6765;&#x5904;&#x7406;&#x6D88;&#x606F;&#x3002;</p>
+<pre><code class="lang-java"><span class="hljs-meta">@Controller</span>
+<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">GreetingController</span> </span>{
+
+    <span class="hljs-meta">@MessageMapping</span>(<span class="hljs-string">&quot;/hello&quot;</span>)
+    <span class="hljs-meta">@SendTo</span>(<span class="hljs-string">&quot;/topic/greetings&quot;</span>)
+    <span class="hljs-function"><span class="hljs-keyword">public</span> Message <span class="hljs-title">greeting</span><span class="hljs-params">(Message message)</span> <span class="hljs-keyword">throws</span> Exception </span>{
+        Calendar calendar = Calendar.getInstance();
+        DateFormat df = <span class="hljs-keyword">new</span> SimpleDateFormat(<span class="hljs-string">&quot;yyyy-MM-dd hh:mm:ss&quot;</span>);
+        Date date = calendar.getTime();
+
+        message.setTime(df.format(date));<span class="hljs-comment">//&#x6DFB;&#x52A0;&#x53D1;&#x9001;&#x65F6;&#x95F4;</span>
+
+        <span class="hljs-keyword">return</span> message;
+    }
+
+}
+</code></pre>
+<p>&#x6839;&#x636E;&#x524D;&#x9762;&#x914D;&#x7F6E;&#x7C7B;&#x4E2D;&#x7684;&#x914D;&#x7F6E;&#xFF0C;&#x4E0A;&#x9762;Controller&#x4E2D; @MessageMapping(&quot;/hello&quot;) &#x6CE8;&#x89E3;&#x7684;&#x65B9;&#x6CD5;&#x7528;&#x6765;&#x63A5;&#x6536;&#x201C;/app/hello&#x201D;&#x8DEF;&#x5F84;&#x53D1;&#x9001;&#x8FC7;&#x6765;&#x7684;&#x6D88;&#x606F;&#xFF0C;&#x5728;&#x5BF9;&#x6D88;&#x606F;&#x8FDB;&#x884C;&#x5904;&#x7406;&#x540E;&#xFF0C;&#x518D;&#x5C06;&#x6D88;&#x606F;&#x8F6C;&#x53D1;&#x5230; @SendTo(&quot;/topic/greetings&quot;) &#x5B9A;&#x4E49;&#x7684;&#x8DEF;&#x5F84;&#x4E0A;&#xFF0C;&#x8FD9;&#x4E2A;&#x8DEF;&#x5F84;&#x4E0A;&#x6709;&#x201C;/topic&#x201D;&#x524D;&#x7F00;&#xFF0C;&#x6240;&#x4EE5;&#x7531;&#x6D88;&#x606F;&#x4EE3;&#x7406;&#x8FDB;&#x884C;&#x5E7F;&#x64AD;&#x3002;</p>
+<p>&#x6784;&#x5EFA;&#x804A;&#x5929;&#x5BA4;&#x9875;&#x9762;app.html&#xFF0C;&#x5B58;&#x653E;&#x5230;&#x5230;&#x9879;&#x76EE;&#x7684; resources/static &#x8DEF;&#x5F84;&#x4E0B;&#x3002;</p>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">html</span> <span class="hljs-attr">lang</span>=<span class="hljs-string">&quot;en&quot;</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">head</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">charset</span>=<span class="hljs-string">&quot;UTF-8&quot;</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">title</span>&gt;</span>&#x7FA4;&#x804A;<span class="hljs-tag">&lt;/<span class="hljs-name">title</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;/webjars/jquery/jquery.min.js&quot;</span>&gt;</span><span class="undefined"></span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;/webjars/sockjs-client/sockjs.min.js&quot;</span>&gt;</span><span class="undefined"></span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;/webjars/stomp-websocket/stomp.min.js&quot;</span>&gt;</span><span class="undefined"></span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;/app.js&quot;</span>&gt;</span><span class="undefined"></span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">head</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">body</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">for</span>=<span class="hljs-string">&quot;name&quot;</span>&gt;</span>&#x8BF7;&#x8F93;&#x5165;&#x7528;&#x6237;&#x540D;&#xFF1A;<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span> 
+        <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;text&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;name&quot;</span> <span class="hljs-attr">placeholder</span>=<span class="hljs-string">&quot;&#x7528;&#x6237;&#x540D;&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;connect&quot;</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;button&quot;</span>&gt;</span>&#x8FDE;&#x63A5;<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;disconnect&quot;</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;button&quot;</span> <span class="hljs-attr">disabled</span>=<span class="hljs-string">&quot;disabled&quot;</span>&gt;</span>&#x65AD;&#x5F00;&#x8FDE;&#x63A5;<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;chat&quot;</span> <span class="hljs-attr">style</span>=<span class="hljs-string">&quot;display: none;&quot;</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">for</span>=<span class="hljs-string">&quot;name&quot;</span>&gt;</span>&#x8BF7;&#x8F93;&#x5165;&#x804A;&#x5929;&#x5185;&#x5BB9;&#xFF1A;<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;text&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;content&quot;</span> <span class="hljs-attr">placeholder</span>=<span class="hljs-string">&quot;&#x804A;&#x5929;&#x5185;&#x5BB9;&quot;</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;send&quot;</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;button&quot;</span>&gt;</span>&#x53D1;&#x9001;<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;greetings&quot;</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;conversation&quot;</span> <span class="hljs-attr">style</span>=<span class="hljs-string">&quot;display: none&quot;</span>&gt;</span>&#x7FA4;&#x804A;&#x8FDB;&#x884C;&#x4E2D;...<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">body</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">html</span>&gt;</span>
+</code></pre>
+<p>&#x521B;&#x5EFA;&#x804A;&#x5929;&#x5BA4;&#x7528;&#x7684;&#x524D;&#x7AEF;js&#x6587;&#x4EF6;app.js&#xFF0C;&#x5B58;&#x653E;&#x5230;&#x5230;&#x9879;&#x76EE;&#x7684; resources/static &#x8DEF;&#x5F84;&#x4E0B;&#x3002;</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">var</span> stompClient = <span class="hljs-literal">null</span>;
+
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">setConnected</span>(<span class="hljs-params">connected</span>) </span>{
+    $(<span class="hljs-string">&quot;#connect&quot;</span>).prop(<span class="hljs-string">&quot;disabled&quot;</span>, connected);
+    $(<span class="hljs-string">&quot;#disconnect&quot;</span>).prop(<span class="hljs-string">&quot;disabled&quot;</span>, !connected);
+    <span class="hljs-keyword">if</span> (connected) {
+        $(<span class="hljs-string">&quot;#conversation&quot;</span>).show();
+        $(<span class="hljs-string">&quot;#chat&quot;</span>).show();
+    } <span class="hljs-keyword">else</span> {
+        $(<span class="hljs-string">&quot;#conversation&quot;</span>).hide();
+        $(<span class="hljs-string">&quot;#chat&quot;</span>).hide();
+    }
+    $(<span class="hljs-string">&quot;#greetings&quot;</span>).html(<span class="hljs-string">&quot;&quot;</span>);
+}
+
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">connect</span>(<span class="hljs-params"></span>) </span>{
+    <span class="hljs-keyword">if</span> (!$(<span class="hljs-string">&quot;#name&quot;</span>).val()) {
+        <span class="hljs-keyword">return</span>;
+    }
+    <span class="hljs-keyword">var</span> socket = <span class="hljs-keyword">new</span> SockJS(<span class="hljs-string">&apos;/chat&apos;</span>);
+    stompClient = Stomp.over(socket);
+    stompClient.connect({}, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">frame</span>) </span>{
+        setConnected(<span class="hljs-literal">true</span>);
+        stompClient.subscribe(<span class="hljs-string">&apos;/topic/greetings&apos;</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">greeting</span>) </span>{
+            showGreeting(<span class="hljs-built_in">JSON</span>.parse(greeting.body));
+        });
+    });
+}
+
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">disconnect</span>(<span class="hljs-params"></span>) </span>{
+    <span class="hljs-keyword">if</span> (stompClient !== <span class="hljs-literal">null</span>) {
+        stompClient.disconnect();
+    }
+    setConnected(<span class="hljs-literal">false</span>);
+}
+
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">sendName</span>(<span class="hljs-params"></span>) </span>{
+    stompClient.send(<span class="hljs-string">&quot;/app/hello&quot;</span>, {}, <span class="hljs-built_in">JSON</span>.stringify({
+            <span class="hljs-string">&apos;name&apos;</span> : $(<span class="hljs-string">&quot;#name&quot;</span>).val(),
+            <span class="hljs-string">&apos;content&apos;</span> : $(<span class="hljs-string">&quot;#content&quot;</span>).val()
+    }));
+}
+
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">showGreeting</span>(<span class="hljs-params">message</span>) </span>{
+    $(<span class="hljs-string">&quot;#greetings&quot;</span>)
+        .append(<span class="hljs-string">&quot;&lt;div&gt;&quot;</span> + message.name + <span class="hljs-string">&quot;: &quot;</span> + message.content + <span class="hljs-string">&quot; [&quot;</span> + message.time + <span class="hljs-string">&quot;] &lt;/div&gt;&quot;</span>);
+}
+
+$(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+    $(<span class="hljs-string">&quot;#connect&quot;</span>).click(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+        connect();
+    });
+
+    $(<span class="hljs-string">&quot;#disconnect&quot;</span>).click(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+        disconnect();
+    });
+
+    $(<span class="hljs-string">&quot;#send&quot;</span>).click(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+        sendName();
+    });
+});
+</code></pre>
+<ul>
+<li><p>connect&#x65B9;&#x6CD5;&#x8868;&#x793A;&#x5EFA;&#x7ACB;&#x4E00;&#x4E2A;WebSocket&#x8FDE;&#x63A5;&#xFF0C;&#x5728;&#x5EFA;&#x7ACB;WebSocket&#x8FDE;&#x63A5;&#x65F6;&#xFF0C;&#x7528;&#x6237;&#x5FC5;&#x987B;&#x5148;&#x8F93;&#x5165;&#x7528;&#x6237;&#x540D;&#xFF0C;&#x7136;&#x540E;&#x624D;&#x80FD;&#x5EFA;&#x7ACB;&#x8FDE;&#x63A5;&#xFF1B;</p>
+</li>
+<li><p>&#x65B9;&#x6CD5;&#x4F53;&#x4E2D;&#x7684;&#x610F;&#x601D;&#xFF1A;&#x4F7F;&#x7528;SockJS&#x5EFA;&#x7ACB;&#x8FDE;&#x63A5;&#xFF0C;&#x7136;&#x540E;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;STOMP&#x5B9E;&#x4F8B;&#x53D1;&#x8D77;&#x8BF7;&#x6C42;&#xFF0C;&#x5728;&#x8FDE;&#x63A5;&#x6210;&#x529F;&#x56DE;&#x8C03;&#x65B9;&#x6CD5;&#x4E2D;&#xFF0C;&#x9996;&#x5148;&#x8C03;&#x7528;setConnected(true)&#xFF1B;&#x65B9;&#x6CD5;&#x8FDB;&#x884C;&#x9875;&#x9762;&#x8BBE;&#x7F6E;&#xFF0C;&#x7136;&#x540E;&#x8C03;&#x7528;STOPM&#x4E2D;&#x7684;subscribe&#x65B9;&#x6CD5;&#x8BA2;&#x9605;&#x670D;&#x52A1;&#x7AEF;&#x53D1;&#x9001;&#x56DE;&#x6765;&#x7684;&#x6D88;&#x606F;&#xFF0C;&#x5E76;&#x5C06;&#x670D;&#x52A1;&#x7AEF;&#x53D1;&#x9001;&#x6765;&#x7684;&#x6D88;&#x606F;&#x5C55;&#x793A;&#x51FA;&#x6765;&#xFF08;&#x4F7F;&#x7528;showGreeting&#x65B9;&#x6CD5;&#xFF09;&#xFF1B;</p>
+</li>
+<li><p>&#x8C03;&#x7528;STOMP&#x4E2D;&#x7684;disconnect&#x65B9;&#x6CD5;&#x53EF;&#x4EE5;&#x65AD;&#x5F00;&#x4E00;&#x4E2A;WebScoket&#x8FDE;&#x63A5;&#x3002;</p>
+</li>
+</ul>
+<p>&#x8FD0;&#x884C;&#x804A;&#x5929;&#x5BA4;&#x5E94;&#x7528;&#xFF0C;&#x901A;&#x8FC7;&#x4E24;&#x4E2A;&#x6D4F;&#x89C8;&#x5668;&#x6765;&#x6A21;&#x62DF;&#x4E24;&#x4E2A;&#x4EBA;&#x5728;&#x804A;&#x5929;&#x5BA4;&#x4E2D;&#x7684;&#x804A;&#x5929;&#x3002;</p>
+<p>&#x5728;Chrome&#x6D4F;&#x89C8;&#x5668;&#x4E2D;&#x8F93;&#x5165;<a href="http://localhost:8080/app.html" target="_blank">http://localhost:8080/app.html</a>&#xFF0C;&#x4F7F;&#x7528;kevin&#x7528;&#x6237;&#x540D;&#x8FDE;&#x63A5;&#x540E;&#xFF0C;&#x53C2;&#x4E0E;&#x804A;&#x5929;&#x3002;</p>
+<p><img src="images/image-20200127120134557.png" alt="image-20200127120134557"></p>
+<p>&#x5728;Edge&#x6D4F;&#x89C8;&#x5668;&#x4E2D;&#x8F93;&#x5165;<a href="http://localhost:8080/app.html" target="_blank">http://localhost:8080/app.html</a>&#xFF0C;&#x4F7F;&#x7528;roy&#x7528;&#x6237;&#x540D;&#x8FDE;&#x63A5;&#x540E;&#xFF0C;&#x53C2;&#x4E0E;&#x804A;&#x5929;&#x3002;</p>
+<p><img src="images/image-20200127120158846.png" alt="image-20200127120158846"></p>
+<p>&#x7ECF;&#x6D4B;&#x8BD5;&#xFF0C;&#x53EF;&#x4EE5;&#x770B;&#x5230; WebSocket &#x804A;&#x5929;&#x5BA4;&#x529F;&#x80FD;&#x6B63;&#x5E38;&#x3002;</p>
+<h4 id="14522-&#x70B9;&#x5BF9;&#x70B9;&#x804A;&#x5929;">14.5.2.2 &#x70B9;&#x5BF9;&#x70B9;&#x804A;&#x5929;</h4>
+<p>&#x7531;&#x4E8E;&#x70B9;&#x5BF9;&#x70B9;&#x804A;&#x5929;&#x6D89;&#x53CA;&#x5177;&#x4F53;&#x7684;&#x7528;&#x6237;&#xFF0C;&#x6240;&#x4EE5;&#xFF0C;&#x6DFB;&#x52A0;Spring Security&#x914D;&#x7F6E;&#x7C7B;&#x3002;</p>
+<pre><code class="lang-java"><span class="hljs-meta">@Configuration</span>
+<span class="hljs-meta">@EnableWebSecurity</span>
+<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">SecurityConfiguration</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">WebSecurityConfigurerAdapter</span> </span>{
+
+    <span class="hljs-meta">@Override</span>
+    <span class="hljs-function"><span class="hljs-keyword">protected</span> <span class="hljs-keyword">void</span> <span class="hljs-title">configure</span><span class="hljs-params">(AuthenticationManagerBuilder auth)</span> <span class="hljs-keyword">throws</span> Exception </span>{
+        auth.inMemoryAuthentication()
+        .passwordEncoder(<span class="hljs-keyword">new</span> BCryptPasswordEncoder())
+        .withUser(<span class="hljs-string">&quot;admin&quot;</span>).password(<span class="hljs-keyword">new</span> BCryptPasswordEncoder().encode(<span class="hljs-string">&quot;admin&quot;</span>)).roles(<span class="hljs-string">&quot;ADMIN&quot;</span>, <span class="hljs-string">&quot;USER&quot;</span>)
+        .and()
+        .withUser(<span class="hljs-string">&quot;kevin&quot;</span>).password(<span class="hljs-keyword">new</span> BCryptPasswordEncoder().encode(<span class="hljs-string">&quot;6998&quot;</span>)).roles(<span class="hljs-string">&quot;USER&quot;</span>)
+        .and()
+        .withUser(<span class="hljs-string">&quot;roy&quot;</span>).password(<span class="hljs-keyword">new</span> BCryptPasswordEncoder().encode(<span class="hljs-string">&quot;3525&quot;</span>)).roles(<span class="hljs-string">&quot;OTHER&quot;</span>);
+    }
+
+    <span class="hljs-meta">@Override</span>
+    <span class="hljs-function"><span class="hljs-keyword">protected</span> <span class="hljs-keyword">void</span> <span class="hljs-title">configure</span><span class="hljs-params">(HttpSecurity http)</span> <span class="hljs-keyword">throws</span> Exception </span>{
+        http.formLogin()
+            .permitAll()
+        .and().authorizeRequests()
+            .anyRequest()
+            .authenticated();
+    }
+
+}
+</code></pre>
+<p>&#x4EE5;&#x4E0A;&#x4EE3;&#x7801;&#x53EA;&#x662F;&#x6700;&#x7B80;&#x5355;&#x7684;Spring Security&#x914D;&#x7F6E;&#xFF0C;&#x76EE;&#x7684;&#x662F;&#x652F;&#x6301;&#x7528;&#x6237;&#x767B;&#x5F55;&#xFF0C;&#x5E76;&#x8BA9;&#x767B;&#x5F55;&#x7684;&#x7528;&#x6237;&#x5177;&#x6709;&#x7528;&#x6237;&#x8EAB;&#x4EFD;&#x3002;</p>
+<p>&#x6539;&#x9020;WebSocketConfig&#x914D;&#x7F6E;&#x7C7B;&#xFF0C;&#x6DFB;&#x52A0; &quot;/queue&quot; &#x4EE3;&#x7406;&#xFF08;broker&#xFF09;&#x3002;</p>
+<pre><code class="lang-java"><span class="hljs-meta">@Configuration</span>
+<span class="hljs-meta">@EnableWebSocketMessageBroker</span>
+<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">WebSocketConfig</span> <span class="hljs-keyword">implements</span> <span class="hljs-title">WebSocketMessageBrokerConfigurer</span> </span>{
+    <span class="hljs-meta">@Override</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">configureMessageBroker</span><span class="hljs-params">(MessageBrokerRegistry registry)</span> </span>{
+        registry.enableSimpleBroker(<span class="hljs-string">&quot;/topic&quot;</span>, <span class="hljs-string">&quot;/queue&quot;</span>);
+        registry.setApplicationDestinationPrefixes(<span class="hljs-string">&quot;/app&quot;</span>);
+    }
+
+    <span class="hljs-meta">@Override</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">registerStompEndpoints</span><span class="hljs-params">(StompEndpointRegistry registry)</span> </span>{
+        registry.addEndpoint(<span class="hljs-string">&quot;/chat&quot;</span>).withSockJS();
+    }
+
+}
+</code></pre>
+<p>&#x521B;&#x5EFA;&#x6D88;&#x606F;&#x7C7B;&#xFF0C;&#x7528;&#x6765;&#x5C01;&#x88C5;&#x6D88;&#x606F;&#x53D1;&#x9001;&#x8005;&#xFF0C;&#x63A5;&#x6536;&#x8005;&#xFF0C;&#x6D88;&#x606F;&#x5185;&#x5BB9;&#x548C;&#x6D88;&#x606F;&#x53D1;&#x9001;&#x65F6;&#x95F4;&#x3002;</p>
+<pre><code class="lang-java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">ChatMsg</span> </span>{
+    <span class="hljs-keyword">private</span> String from;
+    <span class="hljs-keyword">private</span> String to;
+    <span class="hljs-keyword">private</span> String content;
+    <span class="hljs-keyword">private</span> String time;
+...
+}
+</code></pre>
+<p>&#x521B;&#x9020;&#x4E00;&#x4E2A;ChatController&#x63A7;&#x5236;&#x5668;&#xFF0C;&#x7528;&#x6765;&#x5904;&#x7406;&#x70B9;&#x5BF9;&#x70B9;&#x7684;&#x804A;&#x5929;&#x6D88;&#x606F;&#xFF0C;</p>
+<pre><code class="lang-java"><span class="hljs-meta">@Controller</span>
+<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">ChatController</span> </span>{
+    <span class="hljs-meta">@Autowired</span>
+    SimpMessagingTemplate template;
+
+    <span class="hljs-meta">@MessageMapping</span>(<span class="hljs-string">&quot;/chat&quot;</span>)
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">chat</span><span class="hljs-params">(Principal principal, ChatMsg msg)</span> <span class="hljs-keyword">throws</span> Exception </span>{
+        String from=principal.getName();
+        msg.setFrom(from);
+
+        Calendar calendar = Calendar.getInstance();
+        DateFormat df = <span class="hljs-keyword">new</span> SimpleDateFormat(<span class="hljs-string">&quot;yyyy-MM-dd hh:mm:ss&quot;</span>);
+        Date date = calendar.getTime();
+
+        msg.setTime(df.format(date));<span class="hljs-comment">//&#x6DFB;&#x52A0;&#x53D1;&#x9001;&#x65F6;&#x95F4;</span>
+
+        template.convertAndSendToUser(msg.getTo(), <span class="hljs-string">&quot;/queue/chat&quot;</span>, msg);;
+    }
+
+}
+</code></pre>
+<ul>
+<li><p>@MessageMapping(&quot;/chat&quot;)&#x8868;&#x793A;&#x6765;&#x81EA;&#x201D;/app/chat&#x201D;&#x8DEF;&#x5F84;&#x7684;&#x6D88;&#x606F;&#xFF08;&#x5BA2;&#x6237;&#x7AEF;chat.js&#x4E2D;&#x7684;sendMsg&#x65B9;&#x6CD5;&#x4EE3;&#x7801;<code>stompClient.send(&quot;/app/chat&quot;...</code>&#xFF09;&#x5C06;&#x88AB;chat&#x65B9;&#x6CD5;&#x5904;&#x7406;&#xFF0C;chat&#x65B9;&#x6CD5;&#x7684;&#x7B2C;&#x4E00;&#x4E2A;&#x53C2;&#x6570;Principal &#x53EF;&#x4EE5;&#x7528;&#x6765;&#x83B7;&#x53D6;&#x5F53;&#x524D;&#x767B;&#x5F55;&#x7528;&#x6237;&#x7684;&#x4FE1;&#x606F;&#xFF0C;&#x7B2C;&#x4E8C;&#x4E2A;&#x53C2;&#x6570;&#x5219;&#x662F;&#x5BA2;&#x6237;&#x7AEF;&#x53D1;&#x9001;&#x6765;&#x7684;&#x6D88;&#x606F;&#xFF1B;</p>
+</li>
+<li><p>&#x5728;chat&#x65B9;&#x6CD5;&#x4E2D;&#xFF0C;&#x9996;&#x5148;&#x83B7;&#x53D6;&#x5F53;&#x524D;&#x767B;&#x5F55;&#x7528;&#x6237;&#x7684;&#x7528;&#x6237;&#x540D;&#xFF0C;&#x8BBE;&#x7F6E;&#x7ED9;msg&#x5BF9;&#x8C61;&#x7684;from&#x5C5E;&#x6027;&#xFF0C;&#x7136;&#x540E;&#x8BBE;&#x7F6E;&#x6D88;&#x606F;&#x7684;&#x53D1;&#x9001;&#x65F6;&#x95F4;&#xFF0C;&#x518D;&#x5C06;&#x6D88;&#x606F;&#x53D1;&#x9001;&#x51FA;&#x53BB;&#xFF0C;&#x53D1;&#x9001;&#x7684;&#x76EE;&#x6807;&#x5C31;&#x662F;msg&#x7684;to&#x5C5E;&#x6027;&#xFF1B;</p>
+</li>
+<li><p>&#x6D88;&#x606F;&#x53D1;&#x9001;&#x4F7F;&#x7528;&#x7684;&#x65B9;&#x6CD5;&#x662F;convertAndSendToUser&#xFF0C;&#x8BE5;&#x65B9;&#x6CD5;&#x5185;&#x90E8;&#x8C03;&#x7528;&#x4E86;convertAndSend&#x65B9;&#x6CD5;&#xFF0C;&#x5E76;&#x5BF9;&#x6D88;&#x606F;&#x8DEF;&#x5F84;&#x505A;&#x4E86;&#x5904;&#x7406;&#xFF08;SimpMessagingTemplate&#x7C7B;&#x4E2D;<code>private String destinationPrefix = &quot;/user/&quot;</code>&#xFF0C;&#x6240;&#x4EE5;&#x540E;&#x7EED;&#x5BA2;&#x6237;&#x7AEF;&#x8BA2;&#x9605;&#x6D88;&#x606F;&#x4E2D;&#x9700;&#x8981;&#x6DFB;&#x52A0;user&#x524D;&#x7F00;&#xFF0C;&#x5373;<code>/user/queue/chat</code>&#xFF09;&#x3002;</p>
+<blockquote>
+<p>convertAndSend(this.destinationPrefix + user + destination, payload, headers, postProcessor);</p>
+</blockquote>
+</li>
+</ul>
+<p>&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x804A;&#x5929;&#x9875;&#x9762;chat.html&#x6587;&#x4EF6;&#xFF0C;&#x5B58;&#x653E;&#x5230;&#x5230;&#x9879;&#x76EE;&#x7684; resources/static &#x8DEF;&#x5F84;&#x4E0B;&#x3002;</p>
+<pre><code class="lang-html"><span class="hljs-meta">&lt;!DOCTYPE html&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">html</span> <span class="hljs-attr">lang</span>=<span class="hljs-string">&quot;en&quot;</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">head</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">charset</span>=<span class="hljs-string">&quot;UTF-8&quot;</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">title</span>&gt;</span>&#x5355;&#x804A;<span class="hljs-tag">&lt;/<span class="hljs-name">title</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;/webjars/jquery/jquery.min.js&quot;</span>&gt;</span><span class="undefined"></span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;/webjars/sockjs-client/sockjs.min.js&quot;</span>&gt;</span><span class="undefined"></span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;/webjars/stomp-websocket/stomp.min.js&quot;</span>&gt;</span><span class="undefined"></span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;/chat.js&quot;</span>&gt;</span><span class="undefined"></span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">head</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">body</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;chat&quot;</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;chatsContent&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+            &#x8BF7;&#x8F93;&#x5165;&#x804A;&#x5929;&#x5185;&#x5BB9;&#xFF1A; <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;text&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;content&quot;</span> <span class="hljs-attr">placeholder</span>=<span class="hljs-string">&quot;&#x804A;&#x5929;&#x5185;&#x5BB9;&quot;</span>&gt;</span>
+            &#x76EE;&#x6807;&#x7528;&#x6237;&#xFF1A; <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;text&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;to&quot;</span> <span class="hljs-attr">placeholder</span>=<span class="hljs-string">&quot;&#x76EE;&#x6807;&#x7528;&#x6237;&quot;</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;send&quot;</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;button&quot;</span>&gt;</span>&#x53D1;&#x9001;<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">body</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">html</span>&gt;</span>
+</code></pre>
+<p>&#x521B;&#x5EFA;chat.js&#xFF0C;&#x5B58;&#x653E;&#x5230;&#x5230;&#x9879;&#x76EE;&#x7684; resources/static &#x8DEF;&#x5F84;&#x4E0B;&#xFF0C;&#x5904;&#x7406;&#x8FDE;&#x63A5;WebSocket&#x3001;&#x53D1;&#x9001;&#x548C;&#x63A5;&#x6536;&#x804A;&#x5929;&#x4FE1;&#x606F;&#x3002;</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">var</span> stompClient = <span class="hljs-literal">null</span>;
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">connect</span>(<span class="hljs-params"></span>) </span>{
+    <span class="hljs-keyword">var</span> socket = <span class="hljs-keyword">new</span> SockJS(<span class="hljs-string">&apos;/chat&apos;</span>);
+    stompClient = Stomp.over(socket);
+    stompClient.connect({}, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">frame</span>) </span>{
+        stompClient.subscribe(<span class="hljs-string">&apos;/user/queue/chat&apos;</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">chat</span>) </span>{
+            showChatMsg(<span class="hljs-built_in">JSON</span>.parse(chat.body));
+        });
+    });
+}
+
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">sendMsg</span>(<span class="hljs-params"></span>) </span>{
+    stompClient.send(<span class="hljs-string">&quot;/app/chat&quot;</span>, {}, <span class="hljs-built_in">JSON</span>.stringify({
+        <span class="hljs-string">&apos;to&apos;</span> : $(<span class="hljs-string">&quot;#to&quot;</span>).val(),
+        <span class="hljs-string">&apos;content&apos;</span> : $(<span class="hljs-string">&quot;#content&quot;</span>).val()
+    }));
+}
+
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">showChatMsg</span>(<span class="hljs-params">message</span>) </span>{
+    $(<span class="hljs-string">&quot;#chatsContent&quot;</span>)
+    .append(<span class="hljs-string">&quot;&lt;div&gt;&quot;</span> + message.from + <span class="hljs-string">&quot;: &quot;</span> + message.content + <span class="hljs-string">&quot; [&quot;</span> + message.time + <span class="hljs-string">&quot;] &lt;/div&gt;&quot;</span>);
+}
+
+$(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+    connect();
+    $(<span class="hljs-string">&quot;#send&quot;</span>).click(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+        sendMsg();
+    });
+});
+</code></pre>
+<ul>
+<li><p>&#x8FDE;&#x63A5;&#x6210;&#x529F;&#x540E;&#xFF0C;&#x8BA2;&#x9605;&#x5730;&#x5740;&#x4E3A;&#x201D;/user/queue/chat&#x201D;&#xFF0C;&#x8BE5;&#x5730;&#x5740;&#x6BD4;&#x670D;&#x52A1;&#x7AEF;&#x914D;&#x7F6E;&#x7684;&#x5730;&#x5740;&#x591A;&#x4E86;&#x201D;/user&#x201D;&#x524D;&#x7F00;&#xFF0C;&#x8FD9;&#x662F;&#x56E0;&#x4E3A;&#xFF0C;SimpMessagingTemplate&#x7C7B;&#x4E2D;&#x81EA;&#x52A8;&#x6DFB;&#x52A0;&#x4E86;&#x8DEF;&#x5F84;&#x524D;&#x7F00;&#xFF1B;</p>
+</li>
+<li><p>&#x804A;&#x5929;&#x6D88;&#x606F;&#x53D1;&#x9001;&#x8DEF;&#x5F84;&#x4E3A;&#x201D;/app/chat&#x201D;&#xFF1B;</p>
+</li>
+<li><p>&#x53D1;&#x9001;&#x7684;&#x6D88;&#x606F;&#x5185;&#x5BB9;&#x4E2D;&#x6709;&#x4E00;&#x4E2A;to&#x5B57;&#x6BB5;&#xFF0C;&#x8BE5;&#x5B57;&#x6BB5;&#x7528;&#x6765;&#x63CF;&#x8FF0;&#x6D88;&#x606F;&#x53D1;&#x9001;&#x7684;&#x76EE;&#x6807;&#x7528;&#x6237;&#x3002;</p>
+</li>
+</ul>
+<p>&#x542F;&#x52A8;&#x9879;&#x76EE;&#x8FD0;&#x884C;&#x804A;&#x5929;&#x7A0B;&#x5E8F;&#xFF0C;&#x901A;&#x8FC7;&#x4E24;&#x4E2A;&#x6D4F;&#x89C8;&#x5668;&#x6765;&#x6A21;&#x62DF;&#x4E24;&#x4E2A;&#x4EBA;&#x70B9;&#x5BF9;&#x70B9;&#x804A;&#x5929;&#x3002;</p>
+<p>&#x5728;Chrome&#x6D4F;&#x89C8;&#x5668;&#x4E2D;&#x8F93;&#x5165;<a href="http://localhost:8080/chat.html" target="_blank">http://localhost:8080/chat.html</a>&#xFF0C;&#x4F7F;&#x7528;kevin&#x7528;&#x6237;&#x540D;&#x5BC6;&#x7801;6998&#x767B;&#x5F55;&#x540E;&#xFF08;&#x81EA;&#x52A8;&#x8FDE;&#x63A5;&#xFF09;&#xFF0C;&#x5728;roy&#x7528;&#x6237;&#x767B;&#x5F55;&#x540E;&#x5411;&#x5176;&#x53D1;&#x9001;&#x804A;&#x5929;&#x4FE1;&#x606F;&#x3002;</p>
+<p><img src="images/image-20200127154044351.png" alt="image-20200127154044351"></p>
+<p>&#x5728;Edge&#x6D4F;&#x89C8;&#x5668;&#x4E2D;&#x8F93;&#x5165;<a href="http://localhost:8080/chat.html" target="_blank">http://localhost:8080/chat.html</a>&#xFF0C;&#x4F7F;&#x7528;roy&#x7528;&#x6237;&#x540D;&#x5BC6;&#x7801;3525&#x767B;&#x5F55;&#x540E;&#xFF08;&#x81EA;&#x52A8;&#x8FDE;&#x63A5;&#xFF09;&#xFF0C;&#x5728;&#x63A5;&#x6536;&#x5230;kevin&#x7528;&#x6237;&#x53D1;&#x9001;&#x7684;&#x6D88;&#x606F;&#x540E;&#x56DE;&#x590D;&#x4FE1;&#x606F;&#x3002;</p>
+<p><img src="images/image-20200127154107358.png" alt="image-20200127154107358"></p>
+<p>&#x7ECF;&#x6D4B;&#x8BD5;&#xFF0C;&#x53EF;&#x4EE5;&#x770B;&#x5230;kevin&#x548C;roy&#x4E24;&#x4E2A;&#x7528;&#x6237;&#x53EF;&#x4EE5;&#x5B8C;&#x6210;&#x70B9;&#x5BF9;&#x70B9;&#x7684;&#x804A;&#x5929;&#x3002;</p>
+<p>&#x5728;&#x6211;&#x4EEC;&#x5B9E;&#x9645;&#x5DE5;&#x4F5C;&#x4E2D;&#xFF0C;&#x4E0A;&#x9762;&#x7684;&#x804A;&#x5929;&#x5BA4;&#x529F;&#x80FD;&#x548C;&#x4F01;&#x4E1A;&#x7BA1;&#x7406;&#x7C7B;&#x7CFB;&#x7EDF;&#x4E2D;&#x7684;&#x901A;&#x77E5;&#x7C7B;&#x4F3C;&#xFF0C;&#x70B9;&#x5BF9;&#x70B9;&#x804A;&#x5929;&#x529F;&#x80FD;&#x5C31;&#x662F;&#x4E00;&#x79CD;&#x5C0F;&#x578B;&#x7684;&#x5373;&#x65F6;&#x901A;&#x8BAF;&#x529F;&#x80FD;&#x3002;</p>
+<blockquote>
+<p>&#x672C;&#x5C0F;&#x8282;&#x793A;&#x4F8B;&#x9879;&#x76EE;&#x4EE3;&#x7801;&#xFF1A;</p>
+<p><a href="https://github.com/gyzhang/SpringBootCourseCode/tree/master/spring-boot-websocket" target="_blank">https://github.com/gyzhang/SpringBootCourseCode/tree/master/spring-boot-websocket</a></p>
+</blockquote>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="14.4validation.html" class="navigation navigation-prev " aria-label="Previous page: 14.4 数据校验">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="14.6swagger2.html" class="navigation navigation-next " aria-label="Next page: 14.6 Swagger 2">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"14.5 WebSocket","level":"1.15.5","depth":2,"next":{"title":"14.6 Swagger 2","level":"1.15.6","depth":2,"path":"第14章 企业级开发/14.6swagger2.md","ref":"第14章 企业级开发/14.6swagger2.md","articles":[]},"previous":{"title":"14.4 数据校验","level":"1.15.4","depth":2,"path":"第14章 企业级开发/14.4validation.md","ref":"第14章 企业级开发/14.4validation.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-search","search-pro","code","splitter","expandable-chapters","page-toc-button","back-to-top-button","livereload"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"livereload":{},"splitter":{},"search-pro":{"cutWordLib":"nodejieba","defineWord":["Spring Boot"],"expandable-chapters":{}},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"code":{"copyButtons":true},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"page-toc-button":{},"back-to-top-button":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"expandable-chapters":{}},"theme":"default","author":"Kevin Zhang","pdf":{"pageNumbers":true,"fontSize":23,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"SpringBoot入门教程","language":"zh-hans","gitbook":"*","description":"针对初级程序员的Spring Boot入门教程，使用版本2.2.x"},"file":{"path":"第14章 企业级开发/14.5websocket.md","mtime":"2020-01-28T00:15:12.335Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-02-07T14:42:40.985Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-pro/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-code/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-page-toc-button/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-back-to-top-button/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

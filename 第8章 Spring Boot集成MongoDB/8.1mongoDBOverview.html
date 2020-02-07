@@ -1,0 +1,1888 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>8.1 MongoDB简介 · SpringBoot入门教程</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="Kevin Zhang">
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search-pro/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-code/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-page-toc-button/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-back-to-top-button/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="8.2mongoDBIntegration.html" />
+    
+    
+    <link rel="prev" href="MongoDB.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    前言
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../第1章 Spring Boot介绍/SpringBoot.html">
+            
+                <a href="../第1章 Spring Boot介绍/SpringBoot.html">
+            
+                    
+                    第1章 Spring Boot介绍
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../第1章 Spring Boot介绍/1.1spring.html">
+            
+                <a href="../第1章 Spring Boot介绍/1.1spring.html">
+            
+                    
+                    1.1 Spring介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../第1章 Spring Boot介绍/1.2springBoot.html">
+            
+                <a href="../第1章 Spring Boot介绍/1.2springBoot.html">
+            
+                    
+                    1.2 Spring Boot简介
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../第1章 Spring Boot介绍/1.3springBootModules.html">
+            
+                <a href="../第1章 Spring Boot介绍/1.3springBootModules.html">
+            
+                    
+                    1.3 Spring Boot的主要模块
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="../第1章 Spring Boot介绍/1.4helloSpringBoot.html">
+            
+                <a href="../第1章 Spring Boot介绍/1.4helloSpringBoot.html">
+            
+                    
+                    1.4 Hello Spring Boot
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="../第1章 Spring Boot介绍/1.5homework.html">
+            
+                <a href="../第1章 Spring Boot介绍/1.5homework.html">
+            
+                    
+                    1.5 课后作业
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../第2章 开发环境配置/IDE.html">
+            
+                <a href="../第2章 开发环境配置/IDE.html">
+            
+                    
+                    第2章 开发环境配置
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../第2章 开发环境配置/2.1jdk.html">
+            
+                <a href="../第2章 开发环境配置/2.1jdk.html">
+            
+                    
+                    2.1 安装JDK
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../第2章 开发环境配置/2.2maven.html">
+            
+                <a href="../第2章 开发环境配置/2.2maven.html">
+            
+                    
+                    2.2 安装配置Maven
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../第2章 开发环境配置/2.3sts.html">
+            
+                <a href="../第2章 开发环境配置/2.3sts.html">
+            
+                    
+                    2.3 安装配置STS
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="../第2章 开发环境配置/2.4mysql.html">
+            
+                <a href="../第2章 开发环境配置/2.4mysql.html">
+            
+                    
+                    2.4 安装MySQL和管理工具
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="../第2章 开发环境配置/2.5validation.html">
+            
+                <a href="../第2章 开发环境配置/2.5validation.html">
+            
+                    
+                    2.5 验证开发环境
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6" data-path="../第2章 开发环境配置/2.6postman.html">
+            
+                <a href="../第2章 开发环境配置/2.6postman.html">
+            
+                    
+                    2.6 安装Postman
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.7" data-path="../第2章 开发环境配置/2.7homework.html">
+            
+                <a href="../第2章 开发环境配置/2.7homework.html">
+            
+                    
+                    2.7 课后作业
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../第3章 Spring Boot原理剖析/SpringBootHow.html">
+            
+                <a href="../第3章 Spring Boot原理剖析/SpringBootHow.html">
+            
+                    
+                    第3章 Spring Boot原理剖析
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../第3章 Spring Boot原理剖析/3.1structure.html">
+            
+                <a href="../第3章 Spring Boot原理剖析/3.1structure.html">
+            
+                    
+                    3.1 项目结构
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../第3章 Spring Boot原理剖析/3.2baseConfig.html">
+            
+                <a href="../第3章 Spring Boot原理剖析/3.2baseConfig.html">
+            
+                    
+                    3.2 基本配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../第3章 Spring Boot原理剖析/3.3annotation.html">
+            
+                <a href="../第3章 Spring Boot原理剖析/3.3annotation.html">
+            
+                    
+                    3.3 启动类与核心注解
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="../第3章 Spring Boot原理剖析/3.4startFlow.html">
+            
+                <a href="../第3章 Spring Boot原理剖析/3.4startFlow.html">
+            
+                    
+                    3.4 启动过程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5" data-path="../第3章 Spring Boot原理剖析/3.5homework.html">
+            
+                <a href="../第3章 Spring Boot原理剖析/3.5homework.html">
+            
+                    
+                    3.5 课后作业
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../第4章 Spring Boot Web开发/SpringBootWeb.html">
+            
+                <a href="../第4章 Spring Boot Web开发/SpringBootWeb.html">
+            
+                    
+                    第4章 Spring Boot Web开发
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../第4章 Spring Boot Web开发/4.1mvc.html">
+            
+                <a href="../第4章 Spring Boot Web开发/4.1mvc.html">
+            
+                    
+                    4.1 Spring MVC介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../第4章 Spring Boot Web开发/4.2thymeleaf.html">
+            
+                <a href="../第4章 Spring Boot Web开发/4.2thymeleaf.html">
+            
+                    
+                    4.2 Thymeleaf介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" data-path="../第4章 Spring Boot Web开发/4.3legacy.html">
+            
+                <a href="../第4章 Spring Boot Web开发/4.3legacy.html">
+            
+                    
+                    4.3 使用Servlet、Listener和Filter
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4" data-path="../第4章 Spring Boot Web开发/4.4homework.html">
+            
+                <a href="../第4章 Spring Boot Web开发/4.4homework.html">
+            
+                    
+                    4.4 课后作业
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../第5章 Spring Boot数据访问/DataAccess.html">
+            
+                <a href="../第5章 Spring Boot数据访问/DataAccess.html">
+            
+                    
+                    第5章 Spring Boot数据访问
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../第5章 Spring Boot数据访问/5.1jdbc.html">
+            
+                <a href="../第5章 Spring Boot数据访问/5.1jdbc.html">
+            
+                    
+                    5.1 Spring Boot集成JdbcTemplate
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="../第5章 Spring Boot数据访问/5.2myBatis.html">
+            
+                <a href="../第5章 Spring Boot数据访问/5.2myBatis.html">
+            
+                    
+                    5.2 Spring Boot集成MyBatis
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="../第5章 Spring Boot数据访问/5.3pageHelper.html">
+            
+                <a href="../第5章 Spring Boot数据访问/5.3pageHelper.html">
+            
+                    
+                    5.3 MyBatis分页
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.4" data-path="../第5章 Spring Boot数据访问/5.4myBatisPlus.html">
+            
+                <a href="../第5章 Spring Boot数据访问/5.4myBatisPlus.html">
+            
+                    
+                    5.4 MyBatis-Plus
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.5" data-path="../第5章 Spring Boot数据访问/5.5homework.html">
+            
+                <a href="../第5章 Spring Boot数据访问/5.5homework.html">
+            
+                    
+                    5.5 课后作业
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../第6章 Spring Boot事务/SpringBootTransaction.html">
+            
+                <a href="../第6章 Spring Boot事务/SpringBootTransaction.html">
+            
+                    
+                    第6章 Spring Boot事务
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="../第6章 Spring Boot事务/6.1transaction.html">
+            
+                <a href="../第6章 Spring Boot事务/6.1transaction.html">
+            
+                    
+                    6.1 事务介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2" data-path="../第6章 Spring Boot事务/6.2usingTransaction.html">
+            
+                <a href="../第6章 Spring Boot事务/6.2usingTransaction.html">
+            
+                    
+                    6.2 事务的使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.3" data-path="../第6章 Spring Boot事务/6.3distributedTransaction.html">
+            
+                <a href="../第6章 Spring Boot事务/6.3distributedTransaction.html">
+            
+                    
+                    6.3 分布式事务
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.4" data-path="../第6章 Spring Boot事务/6.4homework.html">
+            
+                <a href="../第6章 Spring Boot事务/6.4homework.html">
+            
+                    
+                    6.4 课后作业
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="../第7章 Spring Boot集成Redis/Redis.html">
+            
+                <a href="../第7章 Spring Boot集成Redis/Redis.html">
+            
+                    
+                    第7章 Spring Boot集成Redis
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.1" data-path="../第7章 Spring Boot集成Redis/7.1redisOverview.html">
+            
+                <a href="../第7章 Spring Boot集成Redis/7.1redisOverview.html">
+            
+                    
+                    7.1 Redis简介
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.2" data-path="../第7章 Spring Boot集成Redis/7.2redisIntegration.html">
+            
+                <a href="../第7章 Spring Boot集成Redis/7.2redisIntegration.html">
+            
+                    
+                    7.2 集成Redis
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.3" data-path="../第7章 Spring Boot集成Redis/7.3redisSession.html">
+            
+                <a href="../第7章 Spring Boot集成Redis/7.3redisSession.html">
+            
+                    
+                    7.3 Session共享
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.4" data-path="../第7章 Spring Boot集成Redis/7.4redisCluster.html">
+            
+                <a href="../第7章 Spring Boot集成Redis/7.4redisCluster.html">
+            
+                    
+                    7.4 Redis集群
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.5" data-path="../第7章 Spring Boot集成Redis/7.5homework.html">
+            
+                <a href="../第7章 Spring Boot集成Redis/7.5homework.html">
+            
+                    
+                    7.5 课后作业
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="MongoDB.html">
+            
+                <a href="MongoDB.html">
+            
+                    
+                    第8章 Spring Boot集成MongoDB
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter active" data-level="1.9.1" data-path="8.1mongoDBOverview.html">
+            
+                <a href="8.1mongoDBOverview.html">
+            
+                    
+                    8.1 MongoDB简介
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.2" data-path="8.2mongoDBIntegration.html">
+            
+                <a href="8.2mongoDBIntegration.html">
+            
+                    
+                    8.2 集成MongoDB
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.3" data-path="8.3homework.html">
+            
+                <a href="8.3homework.html">
+            
+                    
+                    8.3 课后作业
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="../第9章 Spring Boot与异步消息/MQ.html">
+            
+                <a href="../第9章 Spring Boot与异步消息/MQ.html">
+            
+                    
+                    第9章 Spring Boot与异步消息
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.10.1" data-path="../第9章 Spring Boot与异步消息/9.1jms.html">
+            
+                <a href="../第9章 Spring Boot与异步消息/9.1jms.html">
+            
+                    
+                    9.1 有关消息的概念
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.2" data-path="../第9章 Spring Boot与异步消息/9.2activeMQ.html">
+            
+                <a href="../第9章 Spring Boot与异步消息/9.2activeMQ.html">
+            
+                    
+                    9.2 Spring Boot集成ActiveMQ
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.3" data-path="../第9章 Spring Boot与异步消息/9.3rabbitMQ.html">
+            
+                <a href="../第9章 Spring Boot与异步消息/9.3rabbitMQ.html">
+            
+                    
+                    9.3 Spring Boot集成RabbitMQ
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.4" data-path="../第9章 Spring Boot与异步消息/9.4rocketMQ.html">
+            
+                <a href="../第9章 Spring Boot与异步消息/9.4rocketMQ.html">
+            
+                    
+                    9.4 Spring Boot集成RocketMQ
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.5" data-path="../第9章 Spring Boot与异步消息/9.5kafka.html">
+            
+                <a href="../第9章 Spring Boot与异步消息/9.5kafka.html">
+            
+                    
+                    9.5 Spring Boot集成Kafka
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.6" data-path="../第9章 Spring Boot与异步消息/9.6homework.html">
+            
+                <a href="../第9章 Spring Boot与异步消息/9.6homework.html">
+            
+                    
+                    9.6 课后作业
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="../第10章 异常处理/Exception.html">
+            
+                <a href="../第10章 异常处理/Exception.html">
+            
+                    
+                    第10章 异常处理
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.11.1" data-path="../第10章 异常处理/10.1exceptionOverview.html">
+            
+                <a href="../第10章 异常处理/10.1exceptionOverview.html">
+            
+                    
+                    10.1 异常介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.2" data-path="../第10章 异常处理/10.2globalException.html">
+            
+                <a href="../第10章 异常处理/10.2globalException.html">
+            
+                    
+                    10.2 Spring Boot中全局异常的使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.3" data-path="../第10章 异常处理/10.3retry.html">
+            
+                <a href="../第10章 异常处理/10.3retry.html">
+            
+                    
+                    10.3 异常的重试
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.4" data-path="../第10章 异常处理/10.4homework.html">
+            
+                <a href="../第10章 异常处理/10.4homework.html">
+            
+                    
+                    10.4 课后作业
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" data-path="../第11章 单元测试与热部署/UnitTestHotDeploy.html">
+            
+                <a href="../第11章 单元测试与热部署/UnitTestHotDeploy.html">
+            
+                    
+                    第11章 单元测试与热部署
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.12.1" data-path="../第11章 单元测试与热部署/11.1unitTest.html">
+            
+                <a href="../第11章 单元测试与热部署/11.1unitTest.html">
+            
+                    
+                    11.1 Spring Boot中的单元测试
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.2" data-path="../第11章 单元测试与热部署/11.2hotDeploy.html">
+            
+                <a href="../第11章 单元测试与热部署/11.2hotDeploy.html">
+            
+                    
+                    11.2 Spring Boot对热部署的支持
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.3" data-path="../第11章 单元测试与热部署/11.3homework.html">
+            
+                <a href="../第11章 单元测试与热部署/11.3homework.html">
+            
+                    
+                    11.3 课后作业
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13" data-path="../第12章 Spring Boot安全控制/Security.html">
+            
+                <a href="../第12章 Spring Boot安全控制/Security.html">
+            
+                    
+                    第12章 Spring Boot安全控制
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.13.1" data-path="../第12章 Spring Boot安全控制/12.1securityOverview.html">
+            
+                <a href="../第12章 Spring Boot安全控制/12.1securityOverview.html">
+            
+                    
+                    12.1 Spring Security介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.2" data-path="../第12章 Spring Boot安全控制/12.2securityIntegration.html">
+            
+                <a href="../第12章 Spring Boot安全控制/12.2securityIntegration.html">
+            
+                    
+                    12.2 集成Spring Security
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.3" data-path="../第12章 Spring Boot安全控制/12.3securityOauth2.html">
+            
+                <a href="../第12章 Spring Boot安全控制/12.3securityOauth2.html">
+            
+                    
+                    12.3 OAuth 2
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.4" data-path="../第12章 Spring Boot安全控制/12.4homework.html">
+            
+                <a href="../第12章 Spring Boot安全控制/12.4homework.html">
+            
+                    
+                    12.4 课后作业
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14" data-path="../第13章 Spring Boot应用监控/Monitor.html">
+            
+                <a href="../第13章 Spring Boot应用监控/Monitor.html">
+            
+                    
+                    第13章 Spring Boot应用监控
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.14.1" data-path="../第13章 Spring Boot应用监控/13.1monitorOverview.html">
+            
+                <a href="../第13章 Spring Boot应用监控/13.1monitorOverview.html">
+            
+                    
+                    13.1 应用监控介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14.2" data-path="../第13章 Spring Boot应用监控/13.2monitorUse.html">
+            
+                <a href="../第13章 Spring Boot应用监控/13.2monitorUse.html">
+            
+                    
+                    13.2 使用应用监控
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14.3" data-path="../第13章 Spring Boot应用监控/13.3monitorCustomize.html">
+            
+                <a href="../第13章 Spring Boot应用监控/13.3monitorCustomize.html">
+            
+                    
+                    13.3 自定义端点
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14.4" data-path="../第13章 Spring Boot应用监控/13.4homework.html">
+            
+                <a href="../第13章 Spring Boot应用监控/13.4homework.html">
+            
+                    
+                    13.4 课后作业
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15" data-path="../第14章 企业级开发/Enterprise.html">
+            
+                <a href="../第14章 企业级开发/Enterprise.html">
+            
+                    
+                    第14章 企业级开发
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.15.1" data-path="../第14章 企业级开发/14.1mail.html">
+            
+                <a href="../第14章 企业级开发/14.1mail.html">
+            
+                    
+                    14.1 邮件发送
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.2" data-path="../第14章 企业级开发/14.2schedule.html">
+            
+                <a href="../第14章 企业级开发/14.2schedule.html">
+            
+                    
+                    14.2 定时任务
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.3" data-path="../第14章 企业级开发/14.3batch.html">
+            
+                <a href="../第14章 企业级开发/14.3batch.html">
+            
+                    
+                    14.3 批处理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.4" data-path="../第14章 企业级开发/14.4validation.html">
+            
+                <a href="../第14章 企业级开发/14.4validation.html">
+            
+                    
+                    14.4 数据校验
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.5" data-path="../第14章 企业级开发/14.5websocket.html">
+            
+                <a href="../第14章 企业级开发/14.5websocket.html">
+            
+                    
+                    14.5 WebSocket
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.6" data-path="../第14章 企业级开发/14.6swagger2.html">
+            
+                <a href="../第14章 企业级开发/14.6swagger2.html">
+            
+                    
+                    14.6 Swagger 2
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.7" data-path="../第14章 企业级开发/14.7homework.html">
+            
+                <a href="../第14章 企业级开发/14.7homework.html">
+            
+                    
+                    14.7 课后作业
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16" data-path="../第15章 多环境配置与部署/MultEnv.html">
+            
+                <a href="../第15章 多环境配置与部署/MultEnv.html">
+            
+                    
+                    第15章 多环境配置与部署
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.16.1" data-path="../第15章 多环境配置与部署/15.1multEnvUse.html">
+            
+                <a href="../第15章 多环境配置与部署/15.1multEnvUse.html">
+            
+                    
+                    15.1 使用多环境配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.2" data-path="../第15章 多环境配置与部署/15.2multEnvDeploy.html">
+            
+                <a href="../第15章 多环境配置与部署/15.2multEnvDeploy.html">
+            
+                    
+                    15.2 打包部署应用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.3" data-path="../第15章 多环境配置与部署/15.3homework.html">
+            
+                <a href="../第15章 多环境配置与部署/15.3homework.html">
+            
+                    
+                    15.3 课后作业
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17" data-path="../Postscript.html">
+            
+                <a href="../Postscript.html">
+            
+                    
+                    后记
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.18" data-path="../附录1 前后端分离的vue急速入门/Vue.html">
+            
+                <a href="../附录1 前后端分离的vue急速入门/Vue.html">
+            
+                    
+                    附录1 前后端分离的vue急速入门
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.18.1" data-path="../附录1 前后端分离的vue急速入门/0.1vueOverview.html">
+            
+                <a href="../附录1 前后端分离的vue急速入门/0.1vueOverview.html">
+            
+                    
+                    A.1 Vue介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.18.2" data-path="../附录1 前后端分离的vue急速入门/0.2vueConfig.html">
+            
+                <a href="../附录1 前后端分离的vue急速入门/0.2vueConfig.html">
+            
+                    
+                    A.2 Vue开发环境配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.18.3" data-path="../附录1 前后端分离的vue急速入门/0.3helloVue.html">
+            
+                <a href="../附录1 前后端分离的vue急速入门/0.3helloVue.html">
+            
+                    
+                    A.3 Hello Vue
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.18.4" data-path="../附录1 前后端分离的vue急速入门/0.4vueRouter.html">
+            
+                <a href="../附录1 前后端分离的vue急速入门/0.4vueRouter.html">
+            
+                    
+                    A.4 Vue路由示例
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.18.5" data-path="../附录1 前后端分离的vue急速入门/0.5deploy.html">
+            
+                <a href="../附录1 前后端分离的vue急速入门/0.5deploy.html">
+            
+                    
+                    A.5 前后端分离应用的部署
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.18.6" data-path="../附录1 前后端分离的vue急速入门/0.6vueSummary.html">
+            
+                <a href="../附录1 前后端分离的vue急速入门/0.6vueSummary.html">
+            
+                    
+                    A.6 急速入门总结
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.18.7" data-path="../附录1 前后端分离的vue急速入门/0.7homework.html">
+            
+                <a href="../附录1 前后端分离的vue急速入门/0.7homework.html">
+            
+                    
+                    A.7 课后作业
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.19" data-path="../附录2 Spring Boot配置大全/Configuration.html">
+            
+                <a href="../附录2 Spring Boot配置大全/Configuration.html">
+            
+                    
+                    附录2 Spring Boot配置大全
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.20" data-path="../附录3 在Docker中部署Spring Boot应用/Docker.html">
+            
+                <a href="../附录3 在Docker中部署Spring Boot应用/Docker.html">
+            
+                    
+                    附录3 在Docker中部署Spring Boot应用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.21" data-path="../EnrollmentAd.html">
+            
+                <a href="../EnrollmentAd.html">
+            
+                    
+                    广告 融宝大学堂招生
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >8.1 MongoDB简介</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h2 id="81-mongodb&#x7B80;&#x4ECB;">8.1 MongoDB&#x7B80;&#x4ECB;</h2>
+<p>MongoDB&#x662F;&#x7528;C++&#x8BED;&#x8A00;&#x7F16;&#x5199;&#x7684;&#x975E;&#x5173;&#x7CFB;&#x578B;&#x6570;&#x636E;&#x5E93;&#x3002;&#x7279;&#x70B9;&#x662F;&#x9AD8;&#x6027;&#x80FD;&#x3001;&#x6613;&#x90E8;&#x7F72;&#x3001;&#x6613;&#x4F7F;&#x7528;&#xFF0C;&#x5B58;&#x50A8;&#x6570;&#x636E;&#x5341;&#x5206;&#x65B9;&#x4FBF;&#xFF0C;&#x4E3B;&#x8981;&#x7279;&#x6027;&#x6709;&#xFF1A;</p>
+<ul>
+<li>&#x9762;&#x5411;&#x96C6;&#x5408;&#x5B58;&#x50A8;&#xFF0C;&#x6613;&#x4E8E;&#x5B58;&#x50A8;&#x5BF9;&#x8C61;&#x7C7B;&#x578B;&#x7684;&#x6570;&#x636E;&#xFF1B;</li>
+<li>&#x6A21;&#x5F0F;&#x81EA;&#x7531;&#xFF1B;</li>
+<li>&#x652F;&#x6301;&#x52A8;&#x6001;&#x67E5;&#x8BE2;&#xFF1B;</li>
+<li>&#x652F;&#x6301;&#x5B8C;&#x5168;&#x7D22;&#x5F15;&#xFF0C;&#x5305;&#x542B;&#x5185;&#x90E8;&#x5BF9;&#x8C61;&#xFF1B;</li>
+<li>&#x652F;&#x6301;&#x590D;&#x5236;&#x548C;&#x6545;&#x969C;&#x6062;&#x590D;&#xFF1B;</li>
+<li>&#x4F7F;&#x7528;&#x9AD8;&#x6548;&#x7684;&#x4E8C;&#x8FDB;&#x5236;&#x6570;&#x636E;&#x5B58;&#x50A8;&#xFF0C;&#x5305;&#x62EC;&#x5927;&#x578B;&#x5BF9;&#x8C61;&#xFF1B;</li>
+<li>&#x6587;&#x4EF6;&#x5B58;&#x50A8;&#x683C;&#x5F0F;&#x4E3A;BSON&#xFF08;&#x4E00;&#x79CD;JSON&#x7684;&#x6269;&#x5C55;&#xFF09;&#xFF1B;</li>
+</ul>
+<p>MongoDB&#x6709;&#x5E7F;&#x6CDB;&#x7684;&#x4F7F;&#x7528;&#x573A;&#x666F;&#xFF0C;&#x662F;&#x4F20;&#x7EDF;&#x5173;&#x7CFB;&#x578B;&#x6570;&#x636E;&#x7684;&#x6709;&#x6548;&#x8865;&#x5145;&#x3002;</p>
+<ul>
+<li><p>&#x7F51;&#x7AD9;&#x6570;&#x636E;&#xFF1A;MongoDB&#x975E;&#x5E38;&#x9002;&#x5408;&#x5B9E;&#x65F6;&#x7684;&#x63D2;&#x5165;&#xFF0C;&#x66F4;&#x65B0;&#x4E0E;&#x67E5;&#x8BE2;&#xFF0C;&#x5E76;&#x5177;&#x5907;&#x7F51;&#x7AD9;&#x5B9E;&#x65F6;&#x6570;&#x636E;&#x5B58;&#x50A8;&#x6240;&#x9700;&#x7684;&#x590D;&#x5236;&#x53CA;&#x9AD8;&#x5EA6;&#x4F38;&#x7F29;&#x6027;&#x3002;</p>
+</li>
+<li><p>&#x7F13;&#x5B58;&#xFF1A;&#x7531;&#x4E8E;&#x6027;&#x80FD;&#x5F88;&#x9AD8;&#xFF0C;MongoDB&#x4E5F;&#x9002;&#x5408;&#x4F5C;&#x4E3A;&#x4FE1;&#x606F;&#x57FA;&#x7840;&#x8BBE;&#x65BD;&#x7684;&#x7F13;&#x5B58;&#x5C42;&#x3002;&#x5728;&#x7CFB;&#x7EDF;&#x91CD;&#x542F;&#x4E4B;&#x540E;&#xFF0C;&#x7531;MongoDB&#x642D;&#x5EFA;&#x7684;&#x6301;&#x4E45;&#x5316;&#x7F13;&#x5B58;&#x53EF;&#x4EE5;&#x907F;&#x514D;&#x4E0B;&#x5C42;&#x7684;&#x6570;&#x636E;&#x6E90;&#x8FC7;&#x8F7D;&#x3002;</p>
+</li>
+<li><p>&#x5927;&#x5C3A;&#x5BF8;&#x3001;&#x4F4E;&#x4EF7;&#x503C;&#x7684;&#x6570;&#x636E;&#xFF1A;&#x4F7F;&#x7528;&#x4F20;&#x7EDF;&#x7684;&#x5173;&#x7CFB;&#x6570;&#x636E;&#x5E93;&#x5B58;&#x50A8;&#x4E00;&#x4E9B;&#x6570;&#x636E;&#x65F6;&#x53EF;&#x80FD;&#x4F1A;&#x6BD4;&#x8F83;&#x8D35;&#xFF0C;&#x5728;&#x6B64;&#x4E4B;&#x524D;&#xFF0C;&#x5F88;&#x591A;&#x7A0B;&#x5E8F;&#x5458;&#x5F80;&#x5F80;&#x4F1A;&#x9009;&#x62E9;&#x4F20;&#x7EDF;&#x7684;&#x6587;&#x4EF6;&#x8FDB;&#x884C;&#x5B58;&#x50A8;&#x3002;</p>
+</li>
+<li><p>&#x9AD8;&#x4F38;&#x7F29;&#x6027;&#x7684;&#x573A;&#x666F;&#xFF1A;MongoDB&#x975E;&#x5E38;&#x9002;&#x5408;&#x7531;&#x6570;&#x5341;&#x6216;&#x8005;&#x6570;&#x767E;&#x53F0;&#x670D;&#x52A1;&#x5668;&#x7EC4;&#x6210;&#x7684;&#x6570;&#x636E;&#x5E93;&#x3002;</p>
+</li>
+<li><p>&#x7528;&#x4E8E;&#x5BF9;&#x8C61;&#x53CA;JSON&#x6570;&#x636E;&#x7684;&#x5B58;&#x50A8;&#xFF1A;MongoDB&#x7684;BSON&#x6570;&#x636E;&#x683C;&#x5F0F;&#x975E;&#x5E38;&#x9002;&#x5408;&#x6587;&#x6863;&#x683C;&#x5F0F;&#x5316;&#x7684;&#x5B58;&#x50A8;&#x53CA;&#x67E5;&#x8BE2;&#x3002;</p>
+</li>
+</ul>
+<p>2018&#x5E74;6&#x6708;&#xFF0C;MongoDB&#x5728;4.0&#x7248;&#x672C;&#x4E2D;&#x652F;&#x6301;ACID&#x4E8B;&#x52A1;&#xFF0C;&#x6210;&#x4E3A;&#x7B2C;&#x4E00;&#x4E2A;&#x652F;&#x6301;&#x5F3A;&#x4E8B;&#x52A1;&#x7684;NoSQL&#x6570;&#x636E;&#x5E93;&#xFF0C;&#x66F4;&#x52A0;&#x6269;&#x5927;&#x4E86;&#x5176;&#x4F7F;&#x7528;&#x7684;&#x8303;&#x56F4;&#x3002;</p>
+<h3 id="811-&#x57FA;&#x672C;&#x6982;&#x5FF5;">8.1.1 &#x57FA;&#x672C;&#x6982;&#x5FF5;</h3>
+<p>&#x5728;&#x5173;&#x7CFB;&#x578B;&#x6570;&#x636E;&#x5E93;&#x4E2D;&#xFF0C;&#x4E3B;&#x8981;&#x7531;<strong>&#x6570;&#x636E;&#x5E93;&#xFF08;database&#xFF09;</strong>&#x3001;<strong>&#x8868;&#xFF08;table&#xFF09;</strong>&#x3001;<strong>&#x8BB0;&#x5F55;&#xFF08;rows&#xFF09;</strong>&#x4E09;&#x4E2A;&#x5C42;&#x6B21;&#x6982;&#x5FF5;&#x7EC4;&#x6210;&#x3002;</p>
+<p>&#x5728;MongoDB&#x6570;&#x636E;&#x5E93;&#x4E2D;&#xFF0C;&#x4E3B;&#x8981;&#x7531;<strong>&#x6570;&#x636E;&#x5E93;&#xFF08;database&#xFF09;</strong>&#x3001;<strong>&#x96C6;&#x5408;&#xFF08;collection&#xFF09;</strong>&#x3001;<strong>&#x6587;&#x6863;&#x5BF9;&#x8C61;&#xFF08;document&#xFF09;</strong>&#x4E09;&#x4E2A;&#x5C42;&#x6B21;&#x6982;&#x5FF5;&#x7EC4;&#x6210;&#x3002;</p>
+<table>
+<thead>
+<tr>
+<th>&#x5BF9;&#x6BD4;&#x9879;</th>
+<th>MongoDB</th>
+<th>MySQL/Oracle</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>&#x8868;</td>
+<td>&#x96C6;&#x5408;</td>
+<td>&#x4E8C;&#x7EF4;&#x8868;table</td>
+</tr>
+<tr>
+<td>&#x8868;&#x7684;&#x4E00;&#x884C;&#x6570;&#x636E;</td>
+<td>&#x6587;&#x6863;document</td>
+<td>&#x4E00;&#x6761;&#x8BB0;&#x5F55;record</td>
+</tr>
+<tr>
+<td>&#x8868;&#x5B57;&#x6BB5;</td>
+<td>&#x952E;key</td>
+<td>&#x5B57;&#x6BB5;field</td>
+</tr>
+<tr>
+<td>&#x5B57;&#x6BB5;&#x503C;</td>
+<td>&#x503C;value</td>
+<td>&#x503C;value</td>
+</tr>
+<tr>
+<td>&#x4E3B;&#x5916;&#x952E;</td>
+<td>&#x65E0;</td>
+<td>PK&#xFF0C;FK</td>
+</tr>
+<tr>
+<td>&#x7075;&#x6D3B;&#x5EA6;&#x6269;&#x5C55;&#x6027;</td>
+<td>&#x6781;&#x9AD8;</td>
+<td>&#x5DEE;</td>
+</tr>
+</tbody>
+</table>
+<p>MongoDB&#x91CC;&#x7684;&#x96C6;&#x5408;&#x5BF9;&#x5E94;&#x4E8E;&#x5173;&#x7CFB;&#x578B;&#x6570;&#x636E;&#x5E93;&#x91CC;&#x7684;&#x8868;&#xFF0C;&#x4F46;&#x662F;&#x96C6;&#x5408;&#x4E2D;&#x6CA1;&#x6709;&#x5217;&#x3001;&#x884C;&#x548C;&#x5173;&#x7CFB;&#x7684;&#x6982;&#x5FF5;&#xFF0C;&#x96C6;&#x5408;&#x4E2D;&#x53EA;&#x6709;&#x6587;&#x6863;&#xFF0C;&#x4E00;&#x4E2A;&#x6587;&#x6863;&#x5C31;&#x76F8;&#x5F53;&#x4E8E;&#x4E00;&#x6761;&#x8BB0;&#x5F55;&#xFF0C;&#x8FD9;&#x4F53;&#x73B0;&#x4E86;&#x6A21;&#x5F0F;&#x81EA;&#x7531;&#x7684;&#x7279;&#x70B9;&#x3002;</p>
+<ul>
+<li>&#x6587;&#x6863;&#xFF08;document&#xFF09;&#x662F;MongoDB&#x4E2D;&#x6570;&#x636E;&#x7684;&#x57FA;&#x672C;&#x5355;&#x5143;&#xFF0C;&#x975E;&#x5E38;&#x7C7B;&#x4F3C;&#x4E8E;&#x5173;&#x7CFB;&#x578B;&#x6570;&#x636E;&#x5E93;&#x7CFB;&#x7EDF;&#x4E2D;&#x7684;&#x884C;&#xFF08;&#x4F46;&#x662F;&#x6BD4;&#x884C;&#x8981;&#x590D;&#x6742;&#x7684;&#x591A;&#xFF09;;</li>
+<li>&#x96C6;&#x5408;&#xFF08;collection&#xFF09;&#x5C31;&#x662F;&#x4E00;&#x7EC4;&#x6587;&#x6863;&#xFF0C;&#x5982;&#x679C;&#x8BF4;MongoDB&#x4E2D;&#x7684;&#x6587;&#x6863;&#x7C7B;&#x4F3C;&#x4E8E;&#x5173;&#x7CFB;&#x578B;&#x6570;&#x636E;&#x5E93;&#x4E2D;&#x7684;&#x884C;&#xFF0C;&#x90A3;&#x4E48;&#x96C6;&#x5408;&#x5C31;&#x5982;&#x540C;&#x8868;;</li>
+</ul>
+<p>&#x5982;&#x4E0B;&#x4E3A;&#x5B98;&#x65B9;&#x7ED9;&#x51FA;&#x7684;&#x6587;&#x6863;&#xFF08;document&#xFF09;&#x793A;&#x4F8B;&#xFF0C;&#x662F;&#x5178;&#x578B;&#x7684;json&#x6570;&#x636E;&#x3002;</p>
+<pre><code class="lang-json">{
+  <span class="hljs-string">&quot;_id&quot;</span>: <span class="hljs-string">&quot;5cf0029caff5056591b0ce7d&quot;</span>,
+  <span class="hljs-string">&quot;firstname&quot;</span>: <span class="hljs-string">&quot;Jane&quot;</span>,
+  <span class="hljs-string">&quot;lastname&quot;</span>: <span class="hljs-string">&quot;Wu&quot;</span>,
+  <span class="hljs-string">&quot;address&quot;</span>: {
+    <span class="hljs-string">&quot;street&quot;</span>: <span class="hljs-string">&quot;1 Circle Rd&quot;</span>,
+    <span class="hljs-string">&quot;city&quot;</span>: <span class="hljs-string">&quot;Los Angeles&quot;</span>,
+    <span class="hljs-string">&quot;state&quot;</span>: <span class="hljs-string">&quot;CA&quot;</span>,
+    <span class="hljs-string">&quot;zip&quot;</span>: <span class="hljs-string">&quot;90404&quot;</span>
+  },
+  <span class="hljs-string">&quot;hobbies&quot;</span>: [<span class="hljs-string">&quot;surfing&quot;</span>, <span class="hljs-string">&quot;coding&quot;</span>]
+}
+</code></pre>
+<p>&#x5176;&#x4F7F;&#x7528;&#x7684;&#x67E5;&#x8BE2;&#x8BED;&#x8A00;&#x4E5F;&#x975E;&#x5E38;&#x65B9;&#x4FBF;&#xFF0C;&#x7B80;&#x5355;&#x6613;&#x61C2;&#x3002;</p>
+<pre><code class="lang-bash">&gt; db.users.find({ <span class="hljs-string">&quot;address.zip&quot;</span> : <span class="hljs-string">&quot;90404&quot;</span> })
+{ <span class="hljs-string">&quot;_id&quot;</span>: <span class="hljs-string">&quot;5cf0029caff5056591b0ce7d&quot;</span>, <span class="hljs-string">&quot;firstname&quot;</span>: <span class="hljs-string">&quot;Jane&quot;</span>, <span class="hljs-string">&quot;lastname&quot;</span>: <span class="hljs-string">&quot;Wu&quot;</span>, <span class="hljs-string">&quot;address&quot;</span>:{}}
+{ <span class="hljs-string">&quot;_id&quot;</span>: <span class="hljs-string">&quot;507f1f77bcf86cd799439011&quot;</span>, <span class="hljs-string">&quot;firstname&quot;</span>: <span class="hljs-string">&quot;Jon&quot;</span>, <span class="hljs-string">&quot;lastname&quot;</span>: <span class="hljs-string">&quot;Davis&quot;</span>, <span class="hljs-string">&quot;address&quot;</span>:{}}
+{ <span class="hljs-string">&quot;_id&quot;</span>: <span class="hljs-string">&quot;5349b4ddd2781d08c09890f3&quot;</span>, <span class="hljs-string">&quot;firstname&quot;</span>: <span class="hljs-string">&quot;Jim&quot;</span>, <span class="hljs-string">&quot;lastname&quot;</span>: <span class="hljs-string">&quot;White&quot;</span>, <span class="hljs-string">&quot;address&quot;</span>:{}}
+{ <span class="hljs-string">&quot;_id&quot;</span>: <span class="hljs-string">&quot;5bf142459b72e12b2b1b2cd&quot;</span>, <span class="hljs-string">&quot;firstname&quot;</span>: <span class="hljs-string">&quot;Jeff&quot;</span>, <span class="hljs-string">&quot;lastname&quot;</span>: <span class="hljs-string">&quot;Taylor&quot;</span>, <span class="hljs-string">&quot;address&quot;</span>:{}}
+{ <span class="hljs-string">&quot;_id&quot;</span>: <span class="hljs-string">&quot;5cf003283b23d04a40d5f88a&quot;</span>, <span class="hljs-string">&quot;firstname&quot;</span>: <span class="hljs-string">&quot;Jerry&quot;</span>, <span class="hljs-string">&quot;lastname&quot;</span>: <span class="hljs-string">&quot;Miller&quot;</span>, <span class="hljs-string">&quot;address&quot;</span>:{}}
+{ <span class="hljs-string">&quot;_id&quot;</span>: <span class="hljs-string">&quot;5bf142459b72e12b2b1b2cd&quot;</span>, <span class="hljs-string">&quot;firstname&quot;</span>: <span class="hljs-string">&quot;Jai&quot;</span>, <span class="hljs-string">&quot;lastname&quot;</span>: <span class="hljs-string">&quot;Williams&quot;</span>, <span class="hljs-string">&quot;address&quot;</span>:{}}
+{ <span class="hljs-string">&quot;_id&quot;</span>: <span class="hljs-string">&quot;5cf0036deaa1742dd225ea35&quot;</span>, <span class="hljs-string">&quot;firstname&quot;</span>: <span class="hljs-string">&quot;Jess&quot;</span>, <span class="hljs-string">&quot;lastname&quot;</span>: <span class="hljs-string">&quot;Johnson&quot;</span>, <span class="hljs-string">&quot;address&quot;</span>:{}}
+{ <span class="hljs-string">&quot;_id&quot;</span>: <span class="hljs-string">&quot;54495ad94c934721ede76d90&quot;</span>, <span class="hljs-string">&quot;firstname&quot;</span>: <span class="hljs-string">&quot;Jill&quot;</span>, <span class="hljs-string">&quot;lastname&quot;</span>: <span class="hljs-string">&quot;Brown&quot;</span>, <span class="hljs-string">&quot;address&quot;</span>:{}}
+{ <span class="hljs-string">&quot;_id&quot;</span>: <span class="hljs-string">&quot;566eb3c704c7b31facbb0007&quot;</span>, <span class="hljs-string">&quot;firstname&quot;</span>: <span class="hljs-string">&quot;Janet&quot;</span>, <span class="hljs-string">&quot;lastname&quot;</span>: <span class="hljs-string">&quot;Jones&quot;</span>, <span class="hljs-string">&quot;address&quot;</span>:{}}
+{ <span class="hljs-string">&quot;_id&quot;</span>: <span class="hljs-string">&quot;5a999cc461d36489a27f2563&quot;</span>, <span class="hljs-string">&quot;firstname&quot;</span>: <span class="hljs-string">&quot;Jan&quot;</span>, <span class="hljs-string">&quot;lastname&quot;</span>:
+</code></pre>
+<p>&#x6216;&#x8005;&#x8FD9;&#x6837;&#x652F;&#x6301;&#x4E8B;&#x52A1;&#x7684;&#x590D;&#x6742;&#x67E5;&#x8BE2;&#xFF1A;</p>
+<pre><code class="lang-javascript">session.start_transaction()
+order = { line_items : [ { item : <span class="hljs-number">5</span>, quantity: <span class="hljs-number">6</span> } ] }
+db.orders.insertOne( order, session=session );
+<span class="hljs-keyword">for</span> x <span class="hljs-keyword">in</span> order.line_items:
+  db.inventory.update(
+    { _id  : x.item } ,
+    { $inc : { number : <span class="hljs-number">-1</span> * x.quantity } },
+    session=session
+  )
+session.commit_transaction()
+</code></pre>
+<p>MongoDB&#x7684;&#x5355;&#x4E2A;&#x5B9E;&#x4F8B;&#x53EF;&#x4EE5;&#x5BB9;&#x7EB3;&#x591A;&#x4E2A;&#x72EC;&#x7ACB;&#x7684;&#x6570;&#x636E;&#x5E93;&#xFF0C;&#x6BCF;&#x4E00;&#x4E2A;&#x6570;&#x636E;&#x5E93;&#x90FD;&#x6709;&#x81EA;&#x5DF1;&#x7684;&#x96C6;&#x5408;&#x548C;&#x6743;&#x9650;&#x3002;</p>
+<p>MongoDB&#x81EA;&#x5E26;&#x7B80;&#x6D01;&#x4F46;&#x529F;&#x80FD;&#x5F3A;&#x5927;&#x7684;<code>JavaScript Shell</code>&#xFF0C;&#x8FD9;&#x4E2A;&#x5DE5;&#x5177;&#x5BF9;&#x4E8E;&#x7BA1;&#x7406;MongoDB&#x5B9E;&#x4F8B;&#x548C;&#x64CD;&#x4F5C;&#x6570;&#x636E;&#x4F5C;&#x7528;&#x975E;&#x5E38;&#x5927;&#x3002;</p>
+<p>&#x6BCF;&#x4E00;&#x4E2A;&#x6587;&#x6863;&#x90FD;&#x6709;&#x4E00;&#x4E2A;&#x7279;&#x6B8A;&#x7684;&#x952E; <strong>&#x201C;_id&#x201D;</strong>&#xFF0C;&#x5B83;&#x5728;&#x6587;&#x6863;&#x6240;&#x5904;&#x7684;&#x96C6;&#x5408;&#x4E2D;&#x662F;&#x552F;&#x4E00;&#x7684;&#xFF0C;&#x76F8;&#x5F53;&#x4E8E;&#x5173;&#x7CFB;&#x6570;&#x636E;&#x5E93;&#x4E2D;&#x7684;&#x8868;&#x7684;&#x4E3B;&#x952E;&#x3002;</p>
+<p>MongoDB&#x652F;&#x6301;&#x7684;&#x6570;&#x636E;&#x7C7B;&#x578B;&#xFF0C;&#x5982;&#x4E0B;&#x8868;&#x6240;&#x793A;&#xFF1A;</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">&#x6570;&#x636E;&#x7C7B;&#x578B;</th>
+<th style="text-align:left">&#x63CF;&#x8FF0;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">String</td>
+<td style="text-align:left">&#x5B57;&#x7B26;&#x4E32;&#x3002;&#x5B58;&#x50A8;&#x6570;&#x636E;&#x5E38;&#x7528;&#x7684;&#x6570;&#x636E;&#x7C7B;&#x578B;&#x3002;&#x5728; MongoDB &#x4E2D;&#xFF0C;UTF-8 &#x7F16;&#x7801;&#x7684;&#x5B57;&#x7B26;&#x4E32;&#x624D;&#x662F;&#x5408;&#x6CD5;&#x7684;&#x3002;</td>
+</tr>
+<tr>
+<td style="text-align:left">Integer</td>
+<td style="text-align:left">&#x6574;&#x578B;&#x6570;&#x503C;&#x3002;&#x7528;&#x4E8E;&#x5B58;&#x50A8;&#x6570;&#x503C;&#x3002;&#x6839;&#x636E;&#x4F60;&#x6240;&#x91C7;&#x7528;&#x7684;&#x670D;&#x52A1;&#x5668;&#xFF0C;&#x53EF;&#x5206;&#x4E3A; 32 &#x4F4D;&#x6216; 64 &#x4F4D;&#x3002;</td>
+</tr>
+<tr>
+<td style="text-align:left">Boolean</td>
+<td style="text-align:left">&#x5E03;&#x5C14;&#x503C;&#x3002;&#x7528;&#x4E8E;&#x5B58;&#x50A8;&#x5E03;&#x5C14;&#x503C;&#xFF08;&#x771F;/&#x5047;&#xFF09;&#x3002;</td>
+</tr>
+<tr>
+<td style="text-align:left">Double</td>
+<td style="text-align:left">&#x53CC;&#x7CBE;&#x5EA6;&#x6D6E;&#x70B9;&#x503C;&#x3002;&#x7528;&#x4E8E;&#x5B58;&#x50A8;&#x6D6E;&#x70B9;&#x503C;&#x3002;</td>
+</tr>
+<tr>
+<td style="text-align:left">Min/Max keys</td>
+<td style="text-align:left">&#x5C06;&#x4E00;&#x4E2A;&#x503C;&#x4E0E; BSON&#xFF08;&#x4E8C;&#x8FDB;&#x5236;&#x7684; JSON&#xFF09;&#x5143;&#x7D20;&#x7684;&#x6700;&#x4F4E;&#x503C;&#x548C;&#x6700;&#x9AD8;&#x503C;&#x76F8;&#x5BF9;&#x6BD4;&#x3002;</td>
+</tr>
+<tr>
+<td style="text-align:left">Array</td>
+<td style="text-align:left">&#x7528;&#x4E8E;&#x5C06;&#x6570;&#x7EC4;&#x6216;&#x5217;&#x8868;&#x6216;&#x591A;&#x4E2A;&#x503C;&#x5B58;&#x50A8;&#x4E3A;&#x4E00;&#x4E2A;&#x952E;&#x3002;</td>
+</tr>
+<tr>
+<td style="text-align:left">Timestamp</td>
+<td style="text-align:left">&#x65F6;&#x95F4;&#x6233;&#x3002;&#x8BB0;&#x5F55;&#x6587;&#x6863;&#x4FEE;&#x6539;&#x6216;&#x6DFB;&#x52A0;&#x7684;&#x5177;&#x4F53;&#x65F6;&#x95F4;&#x3002;</td>
+</tr>
+<tr>
+<td style="text-align:left">Object</td>
+<td style="text-align:left">&#x7528;&#x4E8E;&#x5185;&#x5D4C;&#x6587;&#x6863;&#x3002;</td>
+</tr>
+<tr>
+<td style="text-align:left">Null</td>
+<td style="text-align:left">&#x7528;&#x4E8E;&#x521B;&#x5EFA;&#x7A7A;&#x503C;&#x3002;</td>
+</tr>
+<tr>
+<td style="text-align:left">Symbol</td>
+<td style="text-align:left">&#x7B26;&#x53F7;&#x3002;&#x8BE5;&#x6570;&#x636E;&#x7C7B;&#x578B;&#x57FA;&#x672C;&#x4E0A;&#x7B49;&#x540C;&#x4E8E;&#x5B57;&#x7B26;&#x4E32;&#x7C7B;&#x578B;&#xFF0C;&#x4F46;&#x4E0D;&#x540C;&#x7684;&#x662F;&#xFF0C;&#x5B83;&#x4E00;&#x822C;&#x7528;&#x4E8E;&#x91C7;&#x7528;&#x7279;&#x6B8A;&#x7B26;&#x53F7;&#x7C7B;&#x578B;&#x7684;&#x8BED;&#x8A00;&#x3002;</td>
+</tr>
+<tr>
+<td style="text-align:left">Date</td>
+<td style="text-align:left">&#x65E5;&#x671F;&#x65F6;&#x95F4;&#x3002;&#x7528; UNIX &#x65F6;&#x95F4;&#x683C;&#x5F0F;&#x6765;&#x5B58;&#x50A8;&#x5F53;&#x524D;&#x65E5;&#x671F;&#x6216;&#x65F6;&#x95F4;&#x3002;&#x4F60;&#x53EF;&#x4EE5;&#x6307;&#x5B9A;&#x81EA;&#x5DF1;&#x7684;&#x65E5;&#x671F;&#x65F6;&#x95F4;&#xFF1A;&#x521B;&#x5EFA; Date &#x5BF9;&#x8C61;&#xFF0C;&#x4F20;&#x5165;&#x5E74;&#x6708;&#x65E5;&#x4FE1;&#x606F;&#x3002;</td>
+</tr>
+<tr>
+<td style="text-align:left">Object ID</td>
+<td style="text-align:left">&#x5BF9;&#x8C61; ID&#x3002;&#x7528;&#x4E8E;&#x521B;&#x5EFA;&#x6587;&#x6863;&#x7684; ID&#x3002;</td>
+</tr>
+<tr>
+<td style="text-align:left">Binary Data</td>
+<td style="text-align:left">&#x4E8C;&#x8FDB;&#x5236;&#x6570;&#x636E;&#x3002;&#x7528;&#x4E8E;&#x5B58;&#x50A8;&#x4E8C;&#x8FDB;&#x5236;&#x6570;&#x636E;&#x3002;</td>
+</tr>
+<tr>
+<td style="text-align:left">Code</td>
+<td style="text-align:left">&#x4EE3;&#x7801;&#x7C7B;&#x578B;&#x3002;&#x7528;&#x4E8E;&#x5728;&#x6587;&#x6863;&#x4E2D;&#x5B58;&#x50A8; JavaScript &#x4EE3;&#x7801;&#x3002;</td>
+</tr>
+<tr>
+<td style="text-align:left">Regular expression</td>
+<td style="text-align:left">&#x6B63;&#x5219;&#x8868;&#x8FBE;&#x5F0F;&#x7C7B;&#x578B;&#x3002;&#x7528;&#x4E8E;&#x5B58;&#x50A8;&#x6B63;&#x5219;&#x8868;&#x8FBE;&#x5F0F;&#x3002;</td>
+</tr>
+</tbody>
+</table>
+<h3 id="812-&#x4E0B;&#x8F7D;&#x5B89;&#x88C5;">8.1.2 &#x4E0B;&#x8F7D;&#x5B89;&#x88C5;</h3>
+<p>MongoDB&#x5B98;&#x65B9;&#x63D0;&#x4F9B;&#x6709;Windows&#x3001;Linux&#x3001;macOS&#x7B49;&#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;&#x7684;&#x5B89;&#x88C5;&#x5305;&#x4E0B;&#x8F7D;&#x3002;&#x672C;&#x5C0F;&#x8282;&#x4F7F;&#x7528;Windows&#x7248;&#x672C;&#x8FDB;&#x884C;&#x4ECB;&#x7ECD;&#x3002;</p>
+<p>&#x5230;&#x5B98;&#x65B9;&#x7F51;&#x7AD9;<a href="https://www.mongodb.com/download-center/community" target="_blank">https://www.mongodb.com/download-center/community</a>&#x4E0B;&#x8F7D;Windows x64&#x6700;&#x65B0;4.2.1&#x7248;&#x672C;&#x7684;MSI&#x5B89;&#x88C5;&#x5305;&#x3002;</p>
+<p><img src="images/image-20191201213902305.png" alt="image-20191201213902305"></p>
+<p>&#x53CC;&#x51FB;&#x4E0B;&#x8F7D;&#x7684;<code>mongodb-win32-x86_64-2012plus-4.2.1-signed.msi</code>&#x5B89;&#x88C5;&#x6587;&#x4EF6;&#xFF0C;&#x542F;&#x52A8;&#x5B89;&#x88C5;&#x8FC7;&#x7A0B;&#x3002;</p>
+<p><img src="images/image-20191201214103174.png" alt="image-20191201214103174"></p>
+<p>&#x9009;&#x62E9;&#x201C;&#x5B8C;&#x5168;&#x201D;&#x5B89;&#x88C5;&#x3002;</p>
+<p><img src="images/image-20191201214232446.png" alt="image-20191201214232446"></p>
+<p>&#x5728;&#x201C;Install MongoDB Compass&#x201D;&#x5B89;&#x88C5;&#x6B65;&#x9AA4;&#x4E2D;&#xFF0C;&#x53D6;&#x6D88;&#x201C;Install MongoDB Compass&#x201D;&#x590D;&#x9009;&#x6846;&#xFF0C;&#x5426;&#x5219;&#x5B89;&#x88C5;&#x7A0B;&#x5E8F;&#x4F1A;&#x5230;&#x7F51;&#x4E0A;&#x4E0B;&#x8F7D;&#x8FD9;&#x4E2A;GUI&#x7BA1;&#x7406;&#x5DE5;&#x5177;&#xFF0C;&#x7531;&#x4E8E;&#x7F51;&#x7EDC;&#x4E0B;&#x8F7D;&#x539F;&#x56E0;&#xFF0C;&#x4F1A;&#x5BFC;&#x81F4;&#x5B89;&#x88C5;&#x8FC7;&#x7A0B;&#x7279;&#x522B;&#x6F2B;&#x957F;&#x3002;</p>
+<p><img src="images/image-20191201221242655.png" alt="image-20191201221242655"></p>
+<p>&#x5269;&#x4F59;&#x5B89;&#x88C5;&#x6B65;&#x9AA4;&#xFF0C;&#x5168;&#x90E8;&#x9009;&#x62E9;&#x9ED8;&#x8BA4;&#x5373;&#x53EF;&#x3002;</p>
+<p>&#x5B89;&#x88C5;&#x5B8C;&#x6BD5;&#x540E;&#xFF0C;&#x68C0;&#x67E5;Windows&#x670D;&#x52A1;&#xFF0C;&#x786E;&#x8BA4;MongoDB&#x670D;&#x52A1;&#x5DF2;&#x7ECF;&#x542F;&#x52A8;&#x3002;</p>
+<p><img src="images/image-20191201222004211.png" alt="image-20191201222004211"></p>
+<p>&#x5982;&#x679C;&#x8BFB;&#x8005;&#x60F3;&#x4F7F;&#x7528;&#x5B98;&#x65B9;GUI&#x7BA1;&#x7406;&#x5DE5;&#x5177;&#xFF08;MongoDB Compass&#xFF09;&#xFF0C;&#x53EF;&#x4EE5;&#x81EA;&#x884C;&#x5230;<a href="https://www.mongodb.com/download-center/compass" target="_blank">https://www.mongodb.com/download-center/compass</a>&#x8FD9;&#x91CC;&#x4F7F;&#x7528;&#x4E0B;&#x8F7D;&#x5DE5;&#x5177;&#xFF08;&#x5982;&#x8FC5;&#x96F7;&#xFF09;&#x5FEB;&#x901F;&#x4E0B;&#x8F7D;&#xFF0C;&#x5E76;&#x81EA;&#x5DF1;&#x5B89;&#x88C5;&#x3002;</p>
+<h3 id="813-&#x5B89;&#x88C5;&#x7BA1;&#x7406;&#x5DE5;&#x5177;">8.1.3 &#x5B89;&#x88C5;&#x7BA1;&#x7406;&#x5DE5;&#x5177;</h3>
+<p>&#x8FDE;&#x63A5;MongoDB&#x6709;&#x591A;&#x79CD;&#x65B9;&#x5F0F;&#xFF0C;&#x9664;&#x4E86;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;MongoDB&#x81EA;&#x5E26;&#x7684;&#x6700;&#x539F;&#x59CB;&#x7684;&#x547D;&#x4EE4;&#x7A97;&#x53E3;&#x5DE5;&#x5177;&#x5916;&#xFF0C;&#x8FD8;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x529F;&#x80FD;&#x5F3A;&#x5927;&#x7684;&#x201C;NoSQL Manager for MongoDB&#x201D;&#x5BA2;&#x6237;&#x7AEF;GUI&#x7BA1;&#x7406;&#x5DE5;&#x5177;&#x6765;&#x8FDE;&#x63A5;MongoDB&#x3002;</p>
+<p><img src="images/image-20191201220729405.png" alt="image-20191201220729405"></p>
+<p>&#x5230;mongodbmanager&#x5B98;&#x7F51;<a href="https://www.mongodbmanager.com/download" target="_blank">https://www.mongodbmanager.com/download</a>&#x4E0B;&#x8F7D;Free&#x7248;&#x672C;&#x7684;&#x7BA1;&#x7406;&#x5DE5;&#x5177;&#xFF0C;&#x6309;&#x7167;&#x6B63;&#x5E38;&#x6B65;&#x9AA4;&#x5B89;&#x88C5;&#x5373;&#x53EF;&#x3002;</p>
+<p><img src="images/image-20191201222723802.png" alt="image-20191201222723802"></p>
+<p>&#x5B89;&#x88C5;&#x5B8C;&#x6BD5;&#x540E;&#xFF0C;&#x6253;&#x5F00;&#x7BA1;&#x7406;&#x5DE5;&#x5177;&#xFF0C;&#x8FDE;&#x63A5;&#x5230;&#x672C;&#x5730;MongoDB&#x670D;&#x52A1;&#x5668;&#x3002;</p>
+<p><img src="images/image-20191201222927744.png" alt="image-20191201222927744"></p>
+<p>&#x901A;&#x8FC7;GUI&#x7BA1;&#x7406;&#x5DE5;&#x5177;&#xFF0C;&#x53EF;&#x4EE5;&#x65B9;&#x4FBF;&#x5730;&#x770B;&#x5230;MongoDB&#x5B89;&#x88C5;&#x5B8C;&#x6BD5;&#x540E;&#xFF0C;&#x9ED8;&#x8BA4;&#x521B;&#x5EFA;&#x4E86;admin&#x3001;config&#x548C;local&#x7B49;3&#x4E2A;&#x6570;&#x636E;&#x5E93;&#x3002;</p>
+<p>&#x5728;Database&#x4E0A;&#x53F3;&#x952E;&#xFF0C;&#x521B;&#x5EFA;&#x6570;&#x636E;&#x5E93;test&#xFF0C;&#x5E76;&#x5728;test&#x6570;&#x636E;&#x5E93;&#x4E2D;&#x521B;&#x5EFA;test_collection&#x3002;</p>
+<p>&#x5728;test_collection&#x4E2D;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x6587;&#x6863;&#xFF08;document&#xFF09;&#xFF0C;&#x5185;&#x5BB9;&#x4E3A;&#x5B98;&#x65B9;&#x7F51;&#x7AD9;&#x9996;&#x9875;&#x7ED9;&#x51FA;&#x7684;&#x793A;&#x4F8B;&#x6570;&#x636E;&#x3002;</p>
+<p><img src="images/image-20191201223504999.png" alt="image-20191201223504999"></p>
+<p>&#x4FDD;&#x5B58;&#x540E;&#xFF0C;&#x5728;&#x754C;&#x9762;&#x4E2D;&#x53EF;&#x67E5;&#x770B;&#x5230;&#x6570;&#x636E;&#x5DF2;&#x6B63;&#x786E;&#x4FDD;&#x5B58;&#x3002;</p>
+<p><img src="images/image-20191201223721226.png" alt="image-20191201223721226"></p>
+<p>&#x5982;&#x679C;&#x8BFB;&#x8005;&#x5B89;&#x88C5;&#x4E86;MongoDB Compass&#xFF0C;&#x53EF;&#x4EE5;&#x6253;&#x5F00;MongoDB Compass&#x67E5;&#x770B;&#x4FDD;&#x5B58;&#x5728;MongoDB&#x670D;&#x52A1;&#x5668;&#x4E2D;&#x7684;&#x6570;&#x636E;&#x3002;</p>
+<p><img src="images/image-20191201224124621.png" alt="image-20191201224124621"></p>
+<p>&#x4E2A;&#x4EBA;&#x611F;&#x89C9;&#xFF0C;&#x5176;&#x754C;&#x9762;&#x4E0D;&#x5982;NoSQL Manager for MongoDB&#x770B;&#x8D77;&#x6765;&#x65B9;&#x4FBF;&#x3002;&#x5F53;&#x7136;&#xFF0C;&#x8BFB;&#x8005;&#x53EF;&#x4EE5;&#x9009;&#x7528;&#x81EA;&#x5DF1;&#x987A;&#x624B;&#x7684;GUI&#x7BA1;&#x7406;&#x5DE5;&#x5177;&#xFF0C;&#x6216;&#x8005;&#x76F4;&#x63A5;&#x4F7F;&#x7528;&#x547D;&#x4EE4;&#x884C;&#x5DE5;&#x5177;&#x6765;&#x7BA1;&#x7406;&#xFF0C;&#x6700;&#x7EC8;&#x6548;&#x679C;&#x90FD;&#x662F;&#x4E00;&#x6837;&#x7684;&#x3002;</p>
+<h3 id="814-&#x5E38;&#x7528;&#x547D;&#x4EE4;">8.1.4 &#x5E38;&#x7528;&#x547D;&#x4EE4;</h3>
+<p>&#x5728;&#x8D44;&#x6E90;&#x7BA1;&#x7406;&#x5668;&#xFF08;C:\Program Files\MongoDB\Server\4.2\bin&#xFF09;&#x4E0B;&#x627E;&#x5230;<code>mongo.exe</code>&#xFF0C;&#x53CC;&#x51FB;&#xFF0C;&#x6253;&#x5F00;MongoDB&#x7684;&#x547D;&#x4EE4;&#x884C;&#x7BA1;&#x7406;&#x7EC8;&#x7AEF;&#x3002;</p>
+<p><img src="images/image-20191201224627492.png" alt="image-20191201224627492"></p>
+<p>&#x63A5;&#x4E0B;&#x6765;&#xFF0C;&#x6211;&#x4EEC;&#x4ECB;&#x7ECD;&#x4E00;&#x4E9B;MongoDB&#x7684;&#x547D;&#x4EE4;&#xFF0C;&#x719F;&#x6089;&#x4E00;&#x4E0B;MongoDB&#x7684;&#x64CD;&#x4F5C;&#xFF0C;&#x66F4;&#x8BE6;&#x7EC6;&#x7684;MongoDB&#x7684;&#x64CD;&#x4F5C;&#xFF0C;&#x8BF7;&#x53C2;&#x8003;&#x5B98;&#x65B9;&#x6587;&#x6863;&#x3002;</p>
+<p>&#x663E;&#x793A;&#x6240;&#x6709;&#x7684;&#x6570;&#x636E;&#x5E93;&#xFF1A;</p>
+<pre><code>&gt; show dbs;
+admin   0.000GB
+config  0.000GB
+local   0.000GB
+test    0.000GB
+</code></pre><p>&#x5207;&#x6362;&#x5230;&#x524D;&#x9762;&#x521B;&#x5EFA;&#x7684;test&#x6570;&#x636E;&#x5E93;&#xFF1A;</p>
+<pre><code>&gt; use test;
+switched to db test
+</code></pre><p>&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x540D;&#x4E3A;user&#x7684;&#x96C6;&#x5408;&#xFF1A;</p>
+<pre><code>&gt; db.createCollection(&quot;user&quot;);
+{ &quot;ok&quot; : 1 }
+</code></pre><p>&#x663E;&#x793A;&#x6570;&#x636E;&#x5E93;&#x4E2D;&#x6240;&#x6709;&#x7684;&#x96C6;&#x5408;&#xFF1A;</p>
+<pre><code>&gt; show collections;
+empty_collection
+test_collection
+user
+</code></pre><p>&#x5728;user&#x96C6;&#x5408;&#x4E2D;&#x63D2;&#x5165;2&#x4E2A;&#x6587;&#x6863;&#xFF1A;</p>
+<pre><code>&gt; db.user.insert({&quot;id&quot;:1,&quot;name&quot;:&quot;Kevin&quot;,&quot;age&quot;:&quot;18&quot;});
+WriteResult({ &quot;nInserted&quot; : 1 })
+&gt; db.user.insert({&quot;id&quot;:2,&quot;name&quot;:&quot;Roy&quot;,&quot;age&quot;:&quot;8&quot;});
+WriteResult({ &quot;nInserted&quot; : 1 })
+</code></pre><p>&#x67E5;&#x8BE2;user&#x96C6;&#x5408;&#x4E2D;&#x7684;&#x6240;&#x6709;&#x6587;&#x6863;&#xFF1A;</p>
+<pre><code>&gt; db.user.find();
+{ &quot;_id&quot; : ObjectId(&quot;5de3d41cb422c3774fecc6e8&quot;), &quot;id&quot; : 1, &quot;name&quot; : &quot;Kevin&quot;, &quot;age&quot; : &quot;18&quot; }
+{ &quot;_id&quot; : ObjectId(&quot;5de3d4cfb422c3774fecc6e9&quot;), &quot;id&quot; : 2, &quot;name&quot; : &quot;Roy&quot;, &quot;age&quot; : &quot;8&quot; }
+</code></pre><p>&#x67E5;&#x8BE2;user&#x96C6;&#x5408;&#x4E2D;name=Kevin&#x7684;&#x6587;&#x6863;&#xFF1A;</p>
+<pre><code>&gt; db.user.find({&quot;name&quot;:&quot;Kevin&quot;});
+{ &quot;_id&quot; : ObjectId(&quot;5de3d41cb422c3774fecc6e8&quot;), &quot;id&quot; : 1, &quot;name&quot; : &quot;Kevin&quot;, &quot;age&quot; : &quot;18&quot; }
+</code></pre><p>&#x66F4;&#x65B0;user&#x96C6;&#x5408;&#x4E2D;id=1&#x7684;&#x6587;&#x6863;&#x7684;name&#x4E3A;Kevin Zhang&#xFF0C;&#x5E76;&#x6DFB;&#x52A0;&#x5C5E;&#x6027;smart&#xFF0C;&#x503C;&#x4E3A;The Best&#xFF0C;&#x5E76;&#x67E5;&#x8BE2;&#x6240;&#x6709;&#x8BB0;&#x5F55;&#x68C0;&#x67E5;&#x66F4;&#x65B0;&#x7ED3;&#x679C;&#xFF1A;</p>
+<pre><code>&gt; db.user.update({&quot;id&quot;:1}, {&quot;id&quot;:1,&quot;name&quot;:&quot;Kevin Zhang&quot;,&quot;age&quot;:&quot;18&quot;,&quot;smart&quot;:&quot;The Best&quot;})
+WriteResult({ &quot;nMatched&quot; : 1, &quot;nUpserted&quot; : 0, &quot;nModified&quot; : 1 })
+&gt; db.user.find();
+{ &quot;_id&quot; : ObjectId(&quot;5de3d41cb422c3774fecc6e8&quot;), &quot;id&quot; : 1, &quot;name&quot; : &quot;Kevin Zhang&quot;, &quot;age&quot; : &quot;18&quot;, &quot;smart&quot; : &quot;The Best&quot; }
+{ &quot;_id&quot; : ObjectId(&quot;5de3d4cfb422c3774fecc6e9&quot;), &quot;id&quot; : 2, &quot;name&quot; : &quot;Roy&quot;, &quot;age&quot; : &quot;8&quot; }
+</code></pre><p>&#x518D;&#x6DFB;&#x52A0;&#x4E00;&#x4E2A;&#x6587;&#x6863;&#xFF08;&#x67E5;&#x8BE2;&#x7ED3;&#x679C;&#x4E3A;3&#x4E2A;&#x6587;&#x6863;&#xFF09;&#xFF0C;&#x4F9B;&#x540E;&#x7EED;&#x5220;&#x9664;&#x7EC3;&#x4E60;&#x7528;&#xFF1A;</p>
+<pre><code>&gt; db.user.insert({&quot;id&quot;:3,&quot;name&quot;:&quot;Good Man&quot;,&quot;age&quot;:&quot;16&quot;});
+WriteResult({ &quot;nInserted&quot; : 1 })
+&gt; db.user.find();
+{ &quot;_id&quot; : ObjectId(&quot;5de3d41cb422c3774fecc6e8&quot;), &quot;id&quot; : 1, &quot;name&quot; : &quot;Kevin Zhang&quot;, &quot;age&quot; : &quot;18&quot;, &quot;smart&quot; : &quot;The Best&quot; }
+{ &quot;_id&quot; : ObjectId(&quot;5de3d4cfb422c3774fecc6e9&quot;), &quot;id&quot; : 2, &quot;name&quot; : &quot;Roy&quot;, &quot;age&quot; : &quot;8&quot; }
+{ &quot;_id&quot; : ObjectId(&quot;5de3d790b422c3774fecc6ea&quot;), &quot;id&quot; : 3, &quot;name&quot; : &quot;Good Man&quot;, &quot;age&quot; : &quot;16&quot; }
+</code></pre><p>&#x5220;&#x9664;id=3&#x7684;&#x6587;&#x6863;&#xFF0C;&#x5E76;&#x67E5;&#x8BE2;&#x68C0;&#x67E5;&#xFF0C;&#x786E;&#x8BA4;&#x67E5;&#x8BE2;&#x7ED3;&#x679C;&#x4E3A;2&#x4E2A;&#x6587;&#x6863;&#xFF1A;</p>
+<pre><code>&gt; db.user.remove({&quot;id&quot;:3});
+WriteResult({ &quot;nRemoved&quot; : 1 })
+&gt; db.user.find();
+{ &quot;_id&quot; : ObjectId(&quot;5de3d41cb422c3774fecc6e8&quot;), &quot;id&quot; : 1, &quot;name&quot; : &quot;Kevin Zhang&quot;, &quot;age&quot; : &quot;18&quot;, &quot;smart&quot; : &quot;The Best&quot; }
+{ &quot;_id&quot; : ObjectId(&quot;5de3d4cfb422c3774fecc6e9&quot;), &quot;id&quot; : 2, &quot;name&quot; : &quot;Roy&quot;, &quot;age&quot; : &quot;8&quot; }
+</code></pre><p>&#x901A;&#x8FC7;GUI&#x7BA1;&#x7406;&#x5DE5;&#x5177;&#xFF0C;&#x67E5;&#x770B;&#x6570;&#x636E;&#x5E93;&#x4E2D;&#x96C6;&#x5408;&#x6587;&#x6863;&#x7684;&#x53D8;&#x5316;&#x60C5;&#x51B5;&#xFF0C;&#x53EF;&#x4EE5;&#x6E05;&#x6670;&#x5F97;&#x770B;&#x5230;test&#x6570;&#x636E;&#x5E93;&#x4E2D;&#x65B0;&#x589E;&#x4E86;1&#x4E2A;user&#x96C6;&#x5408;&#xFF0C;&#x8FD9;&#x4E2A;&#x96C6;&#x5408;&#x4E2D;&#x6709;2&#x4E2A;&#x6587;&#x6863;&#xFF0C;&#x5E76;&#x4E14;&#x8FD9;&#x4E24;&#x4E2A;&#x6587;&#x6863;&#x7684;&#x5B57;&#x6BB5;&#x6570;&#x4E0D;&#x76F8;&#x540C;&#xFF08;&#x6709;&#x522B;&#x4E8E;&#x5173;&#x7CFB;&#x578B;&#x6570;&#x636E;&#x5E93;&#x5982;MySQL&#xFF0C;&#x540C;&#x4E00;&#x5F20;&#x8868;&#x4E2D;&#x5B57;&#x6BB5;&#x5FC5;&#x987B;&#x76F8;&#x540C;&#xFF09;&#x3002;</p>
+<p><img src="images/image-20191201231551577.png" alt="image-20191201231551577"></p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="MongoDB.html" class="navigation navigation-prev " aria-label="Previous page: 第8章 Spring Boot集成MongoDB">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="8.2mongoDBIntegration.html" class="navigation navigation-next " aria-label="Next page: 8.2 集成MongoDB">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"8.1 MongoDB简介","level":"1.9.1","depth":2,"next":{"title":"8.2 集成MongoDB","level":"1.9.2","depth":2,"path":"第8章 Spring Boot集成MongoDB/8.2mongoDBIntegration.md","ref":"第8章 Spring Boot集成MongoDB/8.2mongoDBIntegration.md","articles":[]},"previous":{"title":"第8章 Spring Boot集成MongoDB","level":"1.9","depth":1,"path":"第8章 Spring Boot集成MongoDB/MongoDB.md","ref":"第8章 Spring Boot集成MongoDB/MongoDB.md","articles":[{"title":"8.1 MongoDB简介","level":"1.9.1","depth":2,"path":"第8章 Spring Boot集成MongoDB/8.1mongoDBOverview.md","ref":"第8章 Spring Boot集成MongoDB/8.1mongoDBOverview.md","articles":[]},{"title":"8.2 集成MongoDB","level":"1.9.2","depth":2,"path":"第8章 Spring Boot集成MongoDB/8.2mongoDBIntegration.md","ref":"第8章 Spring Boot集成MongoDB/8.2mongoDBIntegration.md","articles":[]},{"title":"8.3 课后作业","level":"1.9.3","depth":2,"path":"第8章 Spring Boot集成MongoDB/8.3homework.md","ref":"第8章 Spring Boot集成MongoDB/8.3homework.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["-search","search-pro","code","splitter","expandable-chapters","page-toc-button","back-to-top-button","livereload"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"livereload":{},"splitter":{},"search-pro":{"cutWordLib":"nodejieba","defineWord":["Spring Boot"],"expandable-chapters":{}},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"code":{"copyButtons":true},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"page-toc-button":{},"back-to-top-button":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"expandable-chapters":{}},"theme":"default","author":"Kevin Zhang","pdf":{"pageNumbers":true,"fontSize":23,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"SpringBoot入门教程","language":"zh-hans","gitbook":"*","description":"针对初级程序员的Spring Boot入门教程，使用版本2.2.x"},"file":{"path":"第8章 Spring Boot集成MongoDB/8.1mongoDBOverview.md","mtime":"2019-12-07T00:32:33.646Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-02-07T14:42:40.985Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-pro/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-code/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-page-toc-button/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-back-to-top-button/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

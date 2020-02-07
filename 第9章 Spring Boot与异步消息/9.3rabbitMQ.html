@@ -1,0 +1,1984 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>9.3 Spring Boot集成RabbitMQ · SpringBoot入门教程</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="Kevin Zhang">
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search-pro/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-code/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-page-toc-button/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-back-to-top-button/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="9.4rocketMQ.html" />
+    
+    
+    <link rel="prev" href="9.2activeMQ.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    前言
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../第1章 Spring Boot介绍/SpringBoot.html">
+            
+                <a href="../第1章 Spring Boot介绍/SpringBoot.html">
+            
+                    
+                    第1章 Spring Boot介绍
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../第1章 Spring Boot介绍/1.1spring.html">
+            
+                <a href="../第1章 Spring Boot介绍/1.1spring.html">
+            
+                    
+                    1.1 Spring介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../第1章 Spring Boot介绍/1.2springBoot.html">
+            
+                <a href="../第1章 Spring Boot介绍/1.2springBoot.html">
+            
+                    
+                    1.2 Spring Boot简介
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../第1章 Spring Boot介绍/1.3springBootModules.html">
+            
+                <a href="../第1章 Spring Boot介绍/1.3springBootModules.html">
+            
+                    
+                    1.3 Spring Boot的主要模块
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="../第1章 Spring Boot介绍/1.4helloSpringBoot.html">
+            
+                <a href="../第1章 Spring Boot介绍/1.4helloSpringBoot.html">
+            
+                    
+                    1.4 Hello Spring Boot
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="../第1章 Spring Boot介绍/1.5homework.html">
+            
+                <a href="../第1章 Spring Boot介绍/1.5homework.html">
+            
+                    
+                    1.5 课后作业
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../第2章 开发环境配置/IDE.html">
+            
+                <a href="../第2章 开发环境配置/IDE.html">
+            
+                    
+                    第2章 开发环境配置
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../第2章 开发环境配置/2.1jdk.html">
+            
+                <a href="../第2章 开发环境配置/2.1jdk.html">
+            
+                    
+                    2.1 安装JDK
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../第2章 开发环境配置/2.2maven.html">
+            
+                <a href="../第2章 开发环境配置/2.2maven.html">
+            
+                    
+                    2.2 安装配置Maven
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../第2章 开发环境配置/2.3sts.html">
+            
+                <a href="../第2章 开发环境配置/2.3sts.html">
+            
+                    
+                    2.3 安装配置STS
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="../第2章 开发环境配置/2.4mysql.html">
+            
+                <a href="../第2章 开发环境配置/2.4mysql.html">
+            
+                    
+                    2.4 安装MySQL和管理工具
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="../第2章 开发环境配置/2.5validation.html">
+            
+                <a href="../第2章 开发环境配置/2.5validation.html">
+            
+                    
+                    2.5 验证开发环境
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6" data-path="../第2章 开发环境配置/2.6postman.html">
+            
+                <a href="../第2章 开发环境配置/2.6postman.html">
+            
+                    
+                    2.6 安装Postman
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.7" data-path="../第2章 开发环境配置/2.7homework.html">
+            
+                <a href="../第2章 开发环境配置/2.7homework.html">
+            
+                    
+                    2.7 课后作业
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../第3章 Spring Boot原理剖析/SpringBootHow.html">
+            
+                <a href="../第3章 Spring Boot原理剖析/SpringBootHow.html">
+            
+                    
+                    第3章 Spring Boot原理剖析
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../第3章 Spring Boot原理剖析/3.1structure.html">
+            
+                <a href="../第3章 Spring Boot原理剖析/3.1structure.html">
+            
+                    
+                    3.1 项目结构
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../第3章 Spring Boot原理剖析/3.2baseConfig.html">
+            
+                <a href="../第3章 Spring Boot原理剖析/3.2baseConfig.html">
+            
+                    
+                    3.2 基本配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../第3章 Spring Boot原理剖析/3.3annotation.html">
+            
+                <a href="../第3章 Spring Boot原理剖析/3.3annotation.html">
+            
+                    
+                    3.3 启动类与核心注解
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="../第3章 Spring Boot原理剖析/3.4startFlow.html">
+            
+                <a href="../第3章 Spring Boot原理剖析/3.4startFlow.html">
+            
+                    
+                    3.4 启动过程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5" data-path="../第3章 Spring Boot原理剖析/3.5homework.html">
+            
+                <a href="../第3章 Spring Boot原理剖析/3.5homework.html">
+            
+                    
+                    3.5 课后作业
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../第4章 Spring Boot Web开发/SpringBootWeb.html">
+            
+                <a href="../第4章 Spring Boot Web开发/SpringBootWeb.html">
+            
+                    
+                    第4章 Spring Boot Web开发
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../第4章 Spring Boot Web开发/4.1mvc.html">
+            
+                <a href="../第4章 Spring Boot Web开发/4.1mvc.html">
+            
+                    
+                    4.1 Spring MVC介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../第4章 Spring Boot Web开发/4.2thymeleaf.html">
+            
+                <a href="../第4章 Spring Boot Web开发/4.2thymeleaf.html">
+            
+                    
+                    4.2 Thymeleaf介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" data-path="../第4章 Spring Boot Web开发/4.3legacy.html">
+            
+                <a href="../第4章 Spring Boot Web开发/4.3legacy.html">
+            
+                    
+                    4.3 使用Servlet、Listener和Filter
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4" data-path="../第4章 Spring Boot Web开发/4.4homework.html">
+            
+                <a href="../第4章 Spring Boot Web开发/4.4homework.html">
+            
+                    
+                    4.4 课后作业
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../第5章 Spring Boot数据访问/DataAccess.html">
+            
+                <a href="../第5章 Spring Boot数据访问/DataAccess.html">
+            
+                    
+                    第5章 Spring Boot数据访问
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../第5章 Spring Boot数据访问/5.1jdbc.html">
+            
+                <a href="../第5章 Spring Boot数据访问/5.1jdbc.html">
+            
+                    
+                    5.1 Spring Boot集成JdbcTemplate
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="../第5章 Spring Boot数据访问/5.2myBatis.html">
+            
+                <a href="../第5章 Spring Boot数据访问/5.2myBatis.html">
+            
+                    
+                    5.2 Spring Boot集成MyBatis
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="../第5章 Spring Boot数据访问/5.3pageHelper.html">
+            
+                <a href="../第5章 Spring Boot数据访问/5.3pageHelper.html">
+            
+                    
+                    5.3 MyBatis分页
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.4" data-path="../第5章 Spring Boot数据访问/5.4myBatisPlus.html">
+            
+                <a href="../第5章 Spring Boot数据访问/5.4myBatisPlus.html">
+            
+                    
+                    5.4 MyBatis-Plus
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.5" data-path="../第5章 Spring Boot数据访问/5.5homework.html">
+            
+                <a href="../第5章 Spring Boot数据访问/5.5homework.html">
+            
+                    
+                    5.5 课后作业
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../第6章 Spring Boot事务/SpringBootTransaction.html">
+            
+                <a href="../第6章 Spring Boot事务/SpringBootTransaction.html">
+            
+                    
+                    第6章 Spring Boot事务
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="../第6章 Spring Boot事务/6.1transaction.html">
+            
+                <a href="../第6章 Spring Boot事务/6.1transaction.html">
+            
+                    
+                    6.1 事务介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2" data-path="../第6章 Spring Boot事务/6.2usingTransaction.html">
+            
+                <a href="../第6章 Spring Boot事务/6.2usingTransaction.html">
+            
+                    
+                    6.2 事务的使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.3" data-path="../第6章 Spring Boot事务/6.3distributedTransaction.html">
+            
+                <a href="../第6章 Spring Boot事务/6.3distributedTransaction.html">
+            
+                    
+                    6.3 分布式事务
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.4" data-path="../第6章 Spring Boot事务/6.4homework.html">
+            
+                <a href="../第6章 Spring Boot事务/6.4homework.html">
+            
+                    
+                    6.4 课后作业
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="../第7章 Spring Boot集成Redis/Redis.html">
+            
+                <a href="../第7章 Spring Boot集成Redis/Redis.html">
+            
+                    
+                    第7章 Spring Boot集成Redis
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.1" data-path="../第7章 Spring Boot集成Redis/7.1redisOverview.html">
+            
+                <a href="../第7章 Spring Boot集成Redis/7.1redisOverview.html">
+            
+                    
+                    7.1 Redis简介
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.2" data-path="../第7章 Spring Boot集成Redis/7.2redisIntegration.html">
+            
+                <a href="../第7章 Spring Boot集成Redis/7.2redisIntegration.html">
+            
+                    
+                    7.2 集成Redis
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.3" data-path="../第7章 Spring Boot集成Redis/7.3redisSession.html">
+            
+                <a href="../第7章 Spring Boot集成Redis/7.3redisSession.html">
+            
+                    
+                    7.3 Session共享
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.4" data-path="../第7章 Spring Boot集成Redis/7.4redisCluster.html">
+            
+                <a href="../第7章 Spring Boot集成Redis/7.4redisCluster.html">
+            
+                    
+                    7.4 Redis集群
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.5" data-path="../第7章 Spring Boot集成Redis/7.5homework.html">
+            
+                <a href="../第7章 Spring Boot集成Redis/7.5homework.html">
+            
+                    
+                    7.5 课后作业
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="../第8章 Spring Boot集成MongoDB/MongoDB.html">
+            
+                <a href="../第8章 Spring Boot集成MongoDB/MongoDB.html">
+            
+                    
+                    第8章 Spring Boot集成MongoDB
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.9.1" data-path="../第8章 Spring Boot集成MongoDB/8.1mongoDBOverview.html">
+            
+                <a href="../第8章 Spring Boot集成MongoDB/8.1mongoDBOverview.html">
+            
+                    
+                    8.1 MongoDB简介
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.2" data-path="../第8章 Spring Boot集成MongoDB/8.2mongoDBIntegration.html">
+            
+                <a href="../第8章 Spring Boot集成MongoDB/8.2mongoDBIntegration.html">
+            
+                    
+                    8.2 集成MongoDB
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.3" data-path="../第8章 Spring Boot集成MongoDB/8.3homework.html">
+            
+                <a href="../第8章 Spring Boot集成MongoDB/8.3homework.html">
+            
+                    
+                    8.3 课后作业
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="MQ.html">
+            
+                <a href="MQ.html">
+            
+                    
+                    第9章 Spring Boot与异步消息
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.10.1" data-path="9.1jms.html">
+            
+                <a href="9.1jms.html">
+            
+                    
+                    9.1 有关消息的概念
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.2" data-path="9.2activeMQ.html">
+            
+                <a href="9.2activeMQ.html">
+            
+                    
+                    9.2 Spring Boot集成ActiveMQ
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.10.3" data-path="9.3rabbitMQ.html">
+            
+                <a href="9.3rabbitMQ.html">
+            
+                    
+                    9.3 Spring Boot集成RabbitMQ
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.4" data-path="9.4rocketMQ.html">
+            
+                <a href="9.4rocketMQ.html">
+            
+                    
+                    9.4 Spring Boot集成RocketMQ
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.5" data-path="9.5kafka.html">
+            
+                <a href="9.5kafka.html">
+            
+                    
+                    9.5 Spring Boot集成Kafka
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.6" data-path="9.6homework.html">
+            
+                <a href="9.6homework.html">
+            
+                    
+                    9.6 课后作业
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="../第10章 异常处理/Exception.html">
+            
+                <a href="../第10章 异常处理/Exception.html">
+            
+                    
+                    第10章 异常处理
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.11.1" data-path="../第10章 异常处理/10.1exceptionOverview.html">
+            
+                <a href="../第10章 异常处理/10.1exceptionOverview.html">
+            
+                    
+                    10.1 异常介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.2" data-path="../第10章 异常处理/10.2globalException.html">
+            
+                <a href="../第10章 异常处理/10.2globalException.html">
+            
+                    
+                    10.2 Spring Boot中全局异常的使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.3" data-path="../第10章 异常处理/10.3retry.html">
+            
+                <a href="../第10章 异常处理/10.3retry.html">
+            
+                    
+                    10.3 异常的重试
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.4" data-path="../第10章 异常处理/10.4homework.html">
+            
+                <a href="../第10章 异常处理/10.4homework.html">
+            
+                    
+                    10.4 课后作业
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" data-path="../第11章 单元测试与热部署/UnitTestHotDeploy.html">
+            
+                <a href="../第11章 单元测试与热部署/UnitTestHotDeploy.html">
+            
+                    
+                    第11章 单元测试与热部署
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.12.1" data-path="../第11章 单元测试与热部署/11.1unitTest.html">
+            
+                <a href="../第11章 单元测试与热部署/11.1unitTest.html">
+            
+                    
+                    11.1 Spring Boot中的单元测试
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.2" data-path="../第11章 单元测试与热部署/11.2hotDeploy.html">
+            
+                <a href="../第11章 单元测试与热部署/11.2hotDeploy.html">
+            
+                    
+                    11.2 Spring Boot对热部署的支持
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.3" data-path="../第11章 单元测试与热部署/11.3homework.html">
+            
+                <a href="../第11章 单元测试与热部署/11.3homework.html">
+            
+                    
+                    11.3 课后作业
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13" data-path="../第12章 Spring Boot安全控制/Security.html">
+            
+                <a href="../第12章 Spring Boot安全控制/Security.html">
+            
+                    
+                    第12章 Spring Boot安全控制
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.13.1" data-path="../第12章 Spring Boot安全控制/12.1securityOverview.html">
+            
+                <a href="../第12章 Spring Boot安全控制/12.1securityOverview.html">
+            
+                    
+                    12.1 Spring Security介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.2" data-path="../第12章 Spring Boot安全控制/12.2securityIntegration.html">
+            
+                <a href="../第12章 Spring Boot安全控制/12.2securityIntegration.html">
+            
+                    
+                    12.2 集成Spring Security
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.3" data-path="../第12章 Spring Boot安全控制/12.3securityOauth2.html">
+            
+                <a href="../第12章 Spring Boot安全控制/12.3securityOauth2.html">
+            
+                    
+                    12.3 OAuth 2
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.4" data-path="../第12章 Spring Boot安全控制/12.4homework.html">
+            
+                <a href="../第12章 Spring Boot安全控制/12.4homework.html">
+            
+                    
+                    12.4 课后作业
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14" data-path="../第13章 Spring Boot应用监控/Monitor.html">
+            
+                <a href="../第13章 Spring Boot应用监控/Monitor.html">
+            
+                    
+                    第13章 Spring Boot应用监控
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.14.1" data-path="../第13章 Spring Boot应用监控/13.1monitorOverview.html">
+            
+                <a href="../第13章 Spring Boot应用监控/13.1monitorOverview.html">
+            
+                    
+                    13.1 应用监控介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14.2" data-path="../第13章 Spring Boot应用监控/13.2monitorUse.html">
+            
+                <a href="../第13章 Spring Boot应用监控/13.2monitorUse.html">
+            
+                    
+                    13.2 使用应用监控
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14.3" data-path="../第13章 Spring Boot应用监控/13.3monitorCustomize.html">
+            
+                <a href="../第13章 Spring Boot应用监控/13.3monitorCustomize.html">
+            
+                    
+                    13.3 自定义端点
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14.4" data-path="../第13章 Spring Boot应用监控/13.4homework.html">
+            
+                <a href="../第13章 Spring Boot应用监控/13.4homework.html">
+            
+                    
+                    13.4 课后作业
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15" data-path="../第14章 企业级开发/Enterprise.html">
+            
+                <a href="../第14章 企业级开发/Enterprise.html">
+            
+                    
+                    第14章 企业级开发
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.15.1" data-path="../第14章 企业级开发/14.1mail.html">
+            
+                <a href="../第14章 企业级开发/14.1mail.html">
+            
+                    
+                    14.1 邮件发送
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.2" data-path="../第14章 企业级开发/14.2schedule.html">
+            
+                <a href="../第14章 企业级开发/14.2schedule.html">
+            
+                    
+                    14.2 定时任务
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.3" data-path="../第14章 企业级开发/14.3batch.html">
+            
+                <a href="../第14章 企业级开发/14.3batch.html">
+            
+                    
+                    14.3 批处理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.4" data-path="../第14章 企业级开发/14.4validation.html">
+            
+                <a href="../第14章 企业级开发/14.4validation.html">
+            
+                    
+                    14.4 数据校验
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.5" data-path="../第14章 企业级开发/14.5websocket.html">
+            
+                <a href="../第14章 企业级开发/14.5websocket.html">
+            
+                    
+                    14.5 WebSocket
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.6" data-path="../第14章 企业级开发/14.6swagger2.html">
+            
+                <a href="../第14章 企业级开发/14.6swagger2.html">
+            
+                    
+                    14.6 Swagger 2
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.7" data-path="../第14章 企业级开发/14.7homework.html">
+            
+                <a href="../第14章 企业级开发/14.7homework.html">
+            
+                    
+                    14.7 课后作业
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16" data-path="../第15章 多环境配置与部署/MultEnv.html">
+            
+                <a href="../第15章 多环境配置与部署/MultEnv.html">
+            
+                    
+                    第15章 多环境配置与部署
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.16.1" data-path="../第15章 多环境配置与部署/15.1multEnvUse.html">
+            
+                <a href="../第15章 多环境配置与部署/15.1multEnvUse.html">
+            
+                    
+                    15.1 使用多环境配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.2" data-path="../第15章 多环境配置与部署/15.2multEnvDeploy.html">
+            
+                <a href="../第15章 多环境配置与部署/15.2multEnvDeploy.html">
+            
+                    
+                    15.2 打包部署应用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.3" data-path="../第15章 多环境配置与部署/15.3homework.html">
+            
+                <a href="../第15章 多环境配置与部署/15.3homework.html">
+            
+                    
+                    15.3 课后作业
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17" data-path="../Postscript.html">
+            
+                <a href="../Postscript.html">
+            
+                    
+                    后记
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.18" data-path="../附录1 前后端分离的vue急速入门/Vue.html">
+            
+                <a href="../附录1 前后端分离的vue急速入门/Vue.html">
+            
+                    
+                    附录1 前后端分离的vue急速入门
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.18.1" data-path="../附录1 前后端分离的vue急速入门/0.1vueOverview.html">
+            
+                <a href="../附录1 前后端分离的vue急速入门/0.1vueOverview.html">
+            
+                    
+                    A.1 Vue介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.18.2" data-path="../附录1 前后端分离的vue急速入门/0.2vueConfig.html">
+            
+                <a href="../附录1 前后端分离的vue急速入门/0.2vueConfig.html">
+            
+                    
+                    A.2 Vue开发环境配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.18.3" data-path="../附录1 前后端分离的vue急速入门/0.3helloVue.html">
+            
+                <a href="../附录1 前后端分离的vue急速入门/0.3helloVue.html">
+            
+                    
+                    A.3 Hello Vue
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.18.4" data-path="../附录1 前后端分离的vue急速入门/0.4vueRouter.html">
+            
+                <a href="../附录1 前后端分离的vue急速入门/0.4vueRouter.html">
+            
+                    
+                    A.4 Vue路由示例
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.18.5" data-path="../附录1 前后端分离的vue急速入门/0.5deploy.html">
+            
+                <a href="../附录1 前后端分离的vue急速入门/0.5deploy.html">
+            
+                    
+                    A.5 前后端分离应用的部署
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.18.6" data-path="../附录1 前后端分离的vue急速入门/0.6vueSummary.html">
+            
+                <a href="../附录1 前后端分离的vue急速入门/0.6vueSummary.html">
+            
+                    
+                    A.6 急速入门总结
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.18.7" data-path="../附录1 前后端分离的vue急速入门/0.7homework.html">
+            
+                <a href="../附录1 前后端分离的vue急速入门/0.7homework.html">
+            
+                    
+                    A.7 课后作业
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.19" data-path="../附录2 Spring Boot配置大全/Configuration.html">
+            
+                <a href="../附录2 Spring Boot配置大全/Configuration.html">
+            
+                    
+                    附录2 Spring Boot配置大全
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.20" data-path="../附录3 在Docker中部署Spring Boot应用/Docker.html">
+            
+                <a href="../附录3 在Docker中部署Spring Boot应用/Docker.html">
+            
+                    
+                    附录3 在Docker中部署Spring Boot应用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.21" data-path="../EnrollmentAd.html">
+            
+                <a href="../EnrollmentAd.html">
+            
+                    
+                    广告 融宝大学堂招生
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >9.3 Spring Boot集成RabbitMQ</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h2 id="93-spring-boot&#x96C6;&#x6210;rabbitmq">9.3 Spring Boot&#x96C6;&#x6210;RabbitMQ</h2>
+<p>RabbitMQ&#x662F;&#x5B9E;&#x73B0;&#x4E86;&#x9AD8;&#x7EA7;&#x6D88;&#x606F;&#x961F;&#x5217;&#x534F;&#x8BAE;&#xFF08;AMQP&#xFF09;&#x7684;&#x5F00;&#x6E90;&#x6D88;&#x606F;&#x4E2D;&#x95F4;&#x4EF6;&#xFF0C;&#x57FA;&#x4E8E;erlang&#x5F00;&#x53D1;&#xFF0C;&#x5E76;&#x53D1;&#x80FD;&#x529B;&#x5F88;&#x5F3A;&#xFF0C;&#x6027;&#x80FD;&#x6781;&#x597D;&#xFF0C;&#x5EF6;&#x65F6;&#x5F88;&#x4F4E;&#xFF0C;&#x662F;&#x5F53;&#x524D;&#x5927;&#x91CF;&#x90E8;&#x7F72;&#x4F7F;&#x7528;&#x7684;&#x6D88;&#x606F;&#x4E2D;&#x95F4;&#x4EF6;&#x3002;</p>
+<p><img src="images/image-20191209102156424.png" alt="image-20191209102156424"></p>
+<p>RabbitMQ&#x53D1;&#x9001;&#x6D88;&#x606F;&#x65F6;&#xFF0C;&#x662F;&#x5148;&#x628A;&#x6D88;&#x606F;&#x53D1;&#x9001;&#x7ED9;Exchange&#xFF08;&#x4EA4;&#x6362;&#x5668;&#xFF09;&#xFF0C;&#x7136;&#x540E;&#x518D;&#x5206;&#x53D1;&#x7ED9;&#x6709;&#x76F8;&#x5E94;RoutingKey&#xFF08;&#x8DEF;&#x7531;&#x952E;&#xFF09;&#x5173;&#x7CFB;&#x7684;Queue&#xFF08;&#x961F;&#x5217;&#xFF09;&#x3002;</p>
+<p>&#x5728;RabbitMQ&#x4E2D;&#x6D88;&#x606F;&#x4EA4;&#x6362;&#x5668;&#x6709;&#x56DB;&#x79CD;&#xFF1A;</p>
+<ol>
+<li><strong>Direct</strong>&#x6A21;&#x5F0F;&#xFF1A;&#x6D88;&#x606F;&#x4E2D;&#x7684;&#x8DEF;&#x7531;&#x952E;&#xFF08;routing key&#xFF09;&#x5982;&#x679C;&#x548C; Binding &#x4E2D;&#x7684; binding key &#x4E00;&#x81F4;&#xFF0C; &#x4EA4;&#x6362;&#x5668;&#x5C31;&#x5C06;&#x6D88;&#x606F;&#x53D1;&#x5230;&#x5BF9;&#x5E94;&#x7684;&#x961F;&#x5217;&#x4E2D;&#x3002;&#x8DEF;&#x7531;&#x952E;&#x4E0E;&#x961F;&#x5217;&#x540D;&#x5B8C;&#x5168;&#x5339;&#x914D;&#x3002;</li>
+<li><strong>Topic</strong>&#x6A21;&#x5F0F;&#xFF1A;&#x4E3B;&#x9898;&#x4EA4;&#x6362;&#x5668;&#x901A;&#x8FC7;&#x6A21;&#x5F0F;&#x5339;&#x914D;&#x6D88;&#x606F;&#x7684;&#x8DEF;&#x7531;&#x952E;&#x5C5E;&#x6027;&#xFF0C;&#x7136;&#x540E;&#x5C06;&#x6D88;&#x606F;&#x5206;&#x914D;&#x5230;&#x7ED1;&#x5B9A;&#x5230;&#x8BE5;&#x6A21;&#x5F0F;&#x7684;&#x961F;&#x5217;&#x3002;&#x5B83;&#x5C06;&#x8DEF;&#x7531;&#x952E;&#x548C;&#x7ED1;&#x5B9A;&#x952E;&#x7684;&#x5B57;&#x7B26;&#x4E32;&#x5207;&#x5206;&#x6210;&#x5355;&#x8BCD;&#xFF0C;&#x8FD9;&#x4E9B;&#x5355;&#x8BCD;&#x4E4B;&#x95F4;&#x7528;&#x70B9;&#x9694;&#x5F00;&#x3002;&#x8BE5;&#x4EA4;&#x6362;&#x5668;&#x4F1A;&#x8BC6;&#x522B;&#x4E24;&#x4E2A;&#x901A;&#x914D;&#x7B26;&#xFF1A;&#x201C;#&#x201D;&#x548C;&#x201C;*&#x201D;&#x3002;#&#x5339;&#x914D;0&#x4E2A;&#x6216;&#x591A;&#x4E2A;&#x5355;&#x8BCD;&#xFF0C;*&#x5339;&#x914D;&#x4E00;&#x4E2A;&#x5355;&#x8BCD;&#x3002;</li>
+<li><strong>Fanout</strong>&#x6A21;&#x5F0F;&#xFF1A;&#x6BCF;&#x4E2A;&#x53D1;&#x5230; fanout &#x7C7B;&#x578B;&#x4EA4;&#x6362;&#x5668;&#x7684;&#x6D88;&#x606F;&#x90FD;&#x4F1A;&#x5206;&#x5230;&#x6240;&#x6709;&#x7ED1;&#x5B9A;&#x7684;&#x961F;&#x5217;&#x4E0A;&#x53BB;&#x3002;fanout &#x4EA4;&#x6362;&#x5668;&#x4E0D;&#x5904;&#x7406;&#x8DEF;&#x7531;&#x952E;&#xFF0C;&#x53EA;&#x662F;&#x7B80;&#x5355;&#x7684;&#x5C06;&#x961F;&#x5217;&#x7ED1;&#x5B9A;&#x5230;&#x4EA4;&#x6362;&#x5668;&#x4E0A;&#xFF0C;&#x6BCF;&#x4E2A;&#x53D1;&#x9001;&#x5230;&#x4EA4;&#x6362;&#x5668;&#x7684;&#x6D88;&#x606F;&#x90FD;&#x4F1A;&#x88AB;&#x8F6C;&#x53D1;&#x5230;&#x4E0E;&#x8BE5;&#x4EA4;&#x6362;&#x5668;&#x7ED1;&#x5B9A;&#x7684;&#x6240;&#x6709;&#x961F;&#x5217;&#x4E0A;&#xFF08;&#x5C31;&#x50CF;&#x5E7F;&#x64AD;&#x4E00;&#x6837;&#xFF09;&#x3002;fanout &#x7C7B;&#x578B;&#x8F6C;&#x53D1;&#x6D88;&#x606F;&#x662F;&#x6700;&#x5FEB;&#x7684;&#x3002;</li>
+<li><strong>Header</strong>&#x6A21;&#x5F0F;&#xFF1A; &#x548C;&#x4E3B;&#x9898;&#x4EA4;&#x6362;&#x5668;&#x6709;&#x70B9;&#x76F8;&#x4F3C;&#xFF0C;&#x5934;&#x4EA4;&#x6362;&#x5668;&#x7684;&#x8DEF;&#x7531;&#x503C;&#x57FA;&#x4E8E;&#x6D88;&#x606F;&#x7684;header&#x6570;&#x636E;&#x3002;&#x4E3B;&#x9898;&#x4EA4;&#x6362;&#x5668;&#x8DEF;&#x7531;&#x952E;&#x53EA;&#x6709;&#x662F;&#x5B57;&#x7B26;&#x4E32;&#xFF0C;&#x800C;&#x5934;&#x4EA4;&#x6362;&#x5668;&#x53EF;&#x4EE5;&#x662F;&#x6574;&#x578B;&#x548C;&#x54C8;&#x5E0C;&#x503C;&#x3002;</li>
+</ol>
+<blockquote>
+<p>Headers&#x4EA4;&#x6362;&#x5668;&#x5141;&#x8BB8;&#x4F60;&#x5339;&#x914D;AMQP&#x6D88;&#x606F;&#x7684;header&#x800C;&#x975E;&#x8DEF;&#x7531;&#x952E;&#xFF0C;&#x9664;&#x6B64;&#x4E4B;&#x5916;headers&#x4EA4;&#x6362;&#x5668;&#x548C;direct&#x4EA4;&#x6362;&#x5668;&#x5B8C;&#x5168;&#x4E00;&#x81F4;&#xFF0C;&#x4F46;&#x6027;&#x80FD;&#x5374;&#x5F88;&#x5DEE;&#xFF0C;&#x51E0;&#x4E4E;&#x7528;&#x4E0D;&#x5230;&#x3002;</p>
+</blockquote>
+<h3 id="931-&#x5B89;&#x88C5;&#x914D;&#x7F6E;">9.3.1 &#x5B89;&#x88C5;&#x914D;&#x7F6E;</h3>
+<p>&#x5230;<a href="http://www.rabbitmq.com/" target="_blank">RabbitMQ&#x5B98;&#x7F51;</a>&#x4E0B;&#x8F7D;&#x6700;&#x65B0;&#x7248;<a href="https://github.com/rabbitmq/rabbitmq-server/releases/download/v3.8.2/rabbitmq-server-3.8.2.exe" target="_blank">rabbitmq-server-3.8.2.exe</a>&#x3002;</p>
+<p>&#x5B89;&#x88C5;&#x8FD0;&#x884C;RabbitMQ&#x9700;&#x8981;64&#x4F4D;&#x7684;Erlang&#xFF0C;&#x9488;&#x5BF9;3.8.2&#x7248;&#x672C;&#x7684;RabbitMQ&#x5B98;&#x65B9;&#x63A8;&#x8350;Erlang 22.1&#x7248;&#x672C;&#x3002;</p>
+<p>&#x5230;<a href="https://www.erlang.org/" target="_blank">Erlang&#x5B98;&#x7F51;</a>&#x4E0B;&#x8F7D;<a href="https://erlang.org/download/otp_win64_22.1.exe" target="_blank">otp_win64_22.1.exe</a>&#x3002;</p>
+<h4 id="9311-&#x5B89;&#x88C5;erlang">9.3.1.1 &#x5B89;&#x88C5;Erlang</h4>
+<p>&#x4F7F;&#x7528;&#x9ED8;&#x8BA4;&#x914D;&#x7F6E;&#x5B89;&#x88C5;Erlang&#x3002;</p>
+<p><img src="images/image-20191210175929079.png" alt="image-20191210175929079"></p>
+<h4 id="9312-&#x5B89;&#x88C5;rabbitmq">9.3.1.2 &#x5B89;&#x88C5;RabbitMQ</h4>
+<p>&#x4F7F;&#x7528;&#x9ED8;&#x8BA4;&#x914D;&#x7F6E;&#x5B89;&#x88C5;RabbitMQ&#x3002;</p>
+<p><img src="images/image-20191212015556148.png" alt="image-20191212015556148"></p>
+<p>RabbitMQ&#x63D0;&#x4F9B;&#x4E86;Web&#x7BA1;&#x7406;&#x754C;&#x9762;&#x3002;</p>
+<p>&#x6253;&#x5F00;&#x547D;&#x4EE4;&#x63D0;&#x793A;&#x7B26;&#x7A97;&#x53E3;&#xFF0C;&#x8FDB;&#x5165;<code>C:\Program Files\RabbitMQ Server\rabbitmq_server-3.8.2\sbin</code>&#x76EE;&#x5F55;&#xFF0C;&#x6267;&#x884C;<code>rabbitmq-plugins.bat enable rabbitmq_management</code> &#x5F00;&#x542F;Web&#x7BA1;&#x7406;&#x63D2;&#x4EF6;&#x3002;</p>
+<pre><code class="lang-powershell">Microsoft Windows [&#x7248;&#x672C; <span class="hljs-number">10.0</span>.<span class="hljs-number">18362.476</span>]
+(c) <span class="hljs-number">2019</span> Microsoft Corporation&#x3002;&#x4FDD;&#x7559;&#x6240;&#x6709;&#x6743;&#x5229;&#x3002;
+
+C:\Users\Kevin&gt;cd C:\Program Files\RabbitMQ Server\rabbitmq_server-<span class="hljs-number">3.8</span>.<span class="hljs-number">2</span>\sbin
+
+C:\Program Files\RabbitMQ Server\rabbitmq_server-<span class="hljs-number">3.8</span>.<span class="hljs-number">2</span>\sbin&gt;rabbitmq-plugins.bat enable rabbitmq_management
+Enabling plugins on node rabbit@NOTEBOOK-KEVIN:
+rabbitmq_management
+The following plugins have been configured:
+  rabbitmq_management
+  rabbitmq_management_agent
+  rabbitmq_web_dispatch
+Applying plugin configuration to rabbit@NOTEBOOK-KEVIN...
+The following plugins have been enabled:
+  rabbitmq_management
+  rabbitmq_management_agent
+  rabbitmq_web_dispatch
+
+started <span class="hljs-number">3</span> plugins.
+
+C:\Program Files\RabbitMQ Server\rabbitmq_server-<span class="hljs-number">3.8</span>.<span class="hljs-number">2</span>\sbin&gt;
+</code></pre>
+<p>&#x6253;&#x5F00;&#x6D4F;&#x89C8;&#x5668;&#x8BBF;&#x95EE;<a href="http://localhost:15672/" target="_blank">http://localhost:15672/</a>&#xFF0C;&#x4F7F;&#x7528;guest&#x7528;&#x6237;&#xFF0C;&#x5BC6;&#x7801;guest&#x767B;&#x5F55;&#x7BA1;&#x7406;&#x63A7;&#x5236;&#x53F0;&#x3002;</p>
+<p><img src="images/image-20191212015951847.png" alt="image-20191212015951847"></p>
+<h3 id="932-&#x4E0E;spring-boot&#x96C6;&#x6210;">9.3.2 &#x4E0E;Spring Boot&#x96C6;&#x6210;</h3>
+<p>&#x65B0;&#x5EFA;Spring Boot&#x9879;&#x76EE;&#xFF0C;&#x9009;&#x62E9;Spring for RabbitMQ+Spring Web&#x542F;&#x52A8;&#x5668;&#x4F9D;&#x8D56;&#x3002;</p>
+<p><img src="images/image-20191210183720495.png" alt="image-20191210183720495"></p>
+<p>pom&#x6587;&#x4EF6;&#x7684;&#x4E3B;&#x8981;&#x4F9D;&#x8D56;&#x4E3A;<code>spring-boot-starter-amqp</code>&#x3002;</p>
+<pre><code class="lang-xml"><span class="hljs-tag">&lt;<span class="hljs-name">dependency</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">groupId</span>&gt;</span>org.springframework.boot<span class="hljs-tag">&lt;/<span class="hljs-name">groupId</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">artifactId</span>&gt;</span>spring-boot-starter-amqp<span class="hljs-tag">&lt;/<span class="hljs-name">artifactId</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">dependency</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">dependency</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">groupId</span>&gt;</span>org.springframework.boot<span class="hljs-tag">&lt;/<span class="hljs-name">groupId</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">artifactId</span>&gt;</span>spring-boot-starter-web<span class="hljs-tag">&lt;/<span class="hljs-name">artifactId</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">dependency</span>&gt;</span>
+</code></pre>
+<p>&#x5728;&#x914D;&#x7F6E;&#x6587;&#x4EF6;application.yml&#x4E2D;&#x6DFB;&#x52A0;RabbitMQ&#x8FDE;&#x63A5;&#x7B49;&#x914D;&#x7F6E;&#x4FE1;&#x606F;&#x3002;</p>
+<pre><code class="lang-yaml"><span class="hljs-attr">spring:</span>
+<span class="hljs-attr">  application:</span>
+<span class="hljs-attr">    name:</span> spring-boot-rabbitmq
+<span class="hljs-attr">  rabbitmq:</span>
+<span class="hljs-attr">    host:</span> <span class="hljs-number">127.0</span><span class="hljs-number">.0</span><span class="hljs-number">.1</span>
+<span class="hljs-attr">    port:</span> <span class="hljs-number">5672</span>
+<span class="hljs-attr">    username:</span> guest
+<span class="hljs-attr">    password:</span> guest
+<span class="hljs-comment"># &#x5F00;&#x542F;&#x53D1;&#x9001;&#x786E;&#x8BA4;</span>
+<span class="hljs-attr">    publisher-confirm-type:</span> correlated
+<span class="hljs-comment"># &#x5F00;&#x542F;&#x53D1;&#x9001;&#x5931;&#x8D25;&#x9000;&#x56DE;</span>
+<span class="hljs-attr">    publisher-returns:</span> <span class="hljs-literal">true</span>
+<span class="hljs-comment"># &#x5F00;&#x542F;ACK</span>
+<span class="hljs-attr">    listener:</span>
+<span class="hljs-attr">      direct:</span>
+<span class="hljs-attr">        acknowledge-mode:</span> manual
+<span class="hljs-attr">      simple:</span>
+<span class="hljs-attr">        acknowledge-mode:</span> manual
+</code></pre>
+<h4 id="9321-&#x4E00;&#x5BF9;&#x4E00;&#x6A21;&#x5F0F;">9.3.2.1 &#x4E00;&#x5BF9;&#x4E00;&#x6A21;&#x5F0F;</h4>
+<p>&#x4E00;&#x4E2A;&#x751F;&#x4EA7;&#x8005;&#x5BF9;&#x4E00;&#x4E2A;&#x6D88;&#x8D39;&#x8005;&#x6A21;&#x5F0F;&#xFF0C;&#x751F;&#x4EA7;&#x8005;&#x5C06;&#x6D88;&#x606F;&#x6295;&#x9001;&#x5230;&#x961F;&#x5217;&#x4E2D;&#xFF0C;&#x6D88;&#x8D39;&#x8005;&#x4ECE;&#x961F;&#x5217;&#x4E2D;&#x6D88;&#x8D39;&#x6D88;&#x606F;&#xFF0C;&#x7136;&#x540E;&#x5C31;&#x7ED3;&#x675F;&#x4E86;&#x3002;</p>
+<p>&#x521B;&#x5EFA;&#x914D;&#x7F6E;&#x7C7B;RabbitMQConfig&#xFF0C;&#x5728;&#x5176;&#x4E2D;&#x914D;&#x7F6E;&#x6D88;&#x606F;&#x961F;&#x5217;<code>kevin</code>&#x3002;</p>
+<pre><code class="lang-java"><span class="hljs-keyword">package</span> com.example.rabbitmq.config;
+
+<span class="hljs-keyword">import</span> org.springframework.amqp.core.Queue;
+<span class="hljs-keyword">import</span> org.springframework.context.annotation.Bean;
+<span class="hljs-keyword">import</span> org.springframework.context.annotation.Configuration;
+
+
+<span class="hljs-meta">@Configuration</span>
+<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">RabbitMQConfig</span> </span>{
+
+    <span class="hljs-meta">@Bean</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> Queue <span class="hljs-title">kevinQueue</span><span class="hljs-params">()</span> </span>{
+        <span class="hljs-keyword">return</span> <span class="hljs-keyword">new</span> Queue(<span class="hljs-string">&quot;kevin&quot;</span>);
+    }
+
+}
+</code></pre>
+<p>&#x521B;&#x5EFA;&#x6D88;&#x606F;&#x751F;&#x4EA7;&#x8005;RabbitMQProducer&#xFF0C;&#x4F7F;&#x7528;&#x6CE8;&#x5165;&#x7684;AmqpTemplate&#x5BF9;&#x8C61;&#x5411;&#x6D88;&#x606F;&#x961F;&#x5217;<code>kevin</code>&#x53D1;&#x9001;&#x6D88;&#x606F;&#x3002;</p>
+<pre><code class="lang-java"><span class="hljs-keyword">package</span> com.example.rabbitmq.producer;
+
+<span class="hljs-keyword">import</span> org.springframework.amqp.core.AmqpTemplate;
+<span class="hljs-keyword">import</span> org.springframework.beans.factory.annotation.Autowired;
+<span class="hljs-keyword">import</span> org.springframework.stereotype.Component;
+
+<span class="hljs-meta">@Component</span>
+<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">RabbitMQProducer</span> </span>{
+
+    <span class="hljs-meta">@Autowired</span> 
+    AmqpTemplate amqpTemplate;
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">sendMessage</span><span class="hljs-params">(String msg)</span> </span>{
+        amqpTemplate.convertAndSend(<span class="hljs-string">&quot;kevin&quot;</span>, msg);
+    }
+
+}
+</code></pre>
+<p>&#x521B;&#x5EFA;&#x6D88;&#x606F;&#x6D88;&#x8D39;&#x8005;RabbitMQConsumer&#xFF0C;&#x76D1;&#x542C;<code>kevin</code>&#x6D88;&#x606F;&#x961F;&#x5217;&#x7684;&#x6D88;&#x606F;&#xFF0C;&#x5E76;&#x5728;&#x7BA1;&#x7406;&#x63A7;&#x5236;&#x53F0;&#x4E0A;&#x8F93;&#x51FA;&#x4FE1;&#x606F;&#x3002;</p>
+<pre><code class="lang-java"><span class="hljs-keyword">package</span> com.example.rabbitmq.consumer;
+
+<span class="hljs-keyword">import</span> org.springframework.amqp.rabbit.annotation.RabbitHandler;
+<span class="hljs-keyword">import</span> org.springframework.amqp.rabbit.annotation.RabbitListener;
+<span class="hljs-keyword">import</span> org.springframework.stereotype.Component;
+
+<span class="hljs-meta">@Component</span>
+<span class="hljs-meta">@RabbitListener</span>(queues = <span class="hljs-string">&quot;kevin&quot;</span>)
+<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">RabbitMQConsumer</span> </span>{
+
+    <span class="hljs-meta">@RabbitHandler</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">receive</span><span class="hljs-params">(String msg)</span> </span>{
+        System.out.println(<span class="hljs-string">&quot;RabbitMQ Consumer consume message: &quot;</span> + msg);
+    }
+
+}
+</code></pre>
+<p>&#x521B;&#x5EFA;&#x4E0E;&#x7528;&#x6237;&#x4EA4;&#x4E92;&#x7684;&#x63A7;&#x5236;&#x5668;&#x7C7B;RabbitMQController&#xFF0C;&#x5728;<code>/rabbitmq/send</code>&#x8DEF;&#x5F84;&#x4E0A;&#x63A5;&#x6536;&#x7528;&#x6237;&#x8F93;&#x5165;&#x3002;</p>
+<pre><code class="lang-java"><span class="hljs-keyword">package</span> com.example.rabbitmq.controller;
+
+<span class="hljs-keyword">import</span> org.springframework.beans.factory.annotation.Autowired;
+<span class="hljs-keyword">import</span> org.springframework.web.bind.annotation.RequestMapping;
+<span class="hljs-keyword">import</span> org.springframework.web.bind.annotation.RestController;
+
+<span class="hljs-keyword">import</span> com.example.rabbitmq.producer.RabbitMQProducer;
+
+<span class="hljs-meta">@RestController</span>
+<span class="hljs-meta">@RequestMapping</span>(<span class="hljs-string">&quot;/rabbitmq/&quot;</span>)
+<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">RabbitMQController</span> </span>{
+
+    <span class="hljs-meta">@Autowired</span>
+    RabbitMQProducer rabbitMQProducer;
+
+    <span class="hljs-meta">@RequestMapping</span>(<span class="hljs-string">&quot;/send&quot;</span>)
+    <span class="hljs-function"><span class="hljs-keyword">public</span> String <span class="hljs-title">sendMsg</span><span class="hljs-params">(String msg)</span> </span>{
+        rabbitMQProducer.sendMessage(msg);
+        <span class="hljs-keyword">return</span> msg + <span class="hljs-string">&quot; Sended to kevin.&quot;</span>;
+    }
+
+}
+</code></pre>
+<p>&#x8FD0;&#x884C;Spring Boot&#x5E94;&#x7528;&#xFF0C;&#x6253;&#x5F00;&#x6D4F;&#x89C8;&#x5668;&#x8BBF;&#x95EE;<a href="http://localhost:8080/rabbitmq/send?msg=Kevin is a GOODMAN." target="_blank">http://localhost:8080/rabbitmq/send?msg=Kevin is a GOODMAN.</a>&#xFF0C;&#x5411;RabbitMQ&#x53D1;&#x9001;&#x6D88;&#x606F;&#x3002;</p>
+<p><img src="images/image-20191212023410382.png" alt="image-20191212023410382"></p>
+<p>RabbitMQ&#x6D88;&#x8D39;&#x8005;&#xFF08;RabbitMQConsumer&#x7C7B;&#xFF09;&#x6D88;&#x8D39;&#x6D88;&#x606F;&#xFF0C;&#x5E76;&#x5728;&#x63A7;&#x5236;&#x53F0;&#x6253;&#x5370;&#x4FE1;&#x606F;&#x3002;</p>
+<p><img src="images/image-20191212023624170.png" alt="image-20191212023624170"></p>
+<p>&#x901A;&#x8FC7;<a href="http://localhost:15672/#/queues" target="_blank">&#x7BA1;&#x7406;&#x63A7;&#x5236;&#x53F0;</a>&#xFF0C;&#x53EF;&#x4EE5;&#x770B;&#x5230;&#x6D88;&#x606F;&#x961F;&#x5217;&#x7684;&#x76F8;&#x5173;&#x60C5;&#x51B5;&#x3002;</p>
+<p><img src="images/image-20191212024813785.png" alt="image-20191212024813785"></p>
+<h4 id="9322-&#x4E00;&#x5BF9;&#x591A;&#x6A21;&#x5F0F;">9.3.2.2 &#x4E00;&#x5BF9;&#x591A;&#x6A21;&#x5F0F;</h4>
+<p>&#x4E00;&#x4E2A;&#x751F;&#x4EA7;&#x8005;&#x5BF9;&#x591A;&#x4E2A;&#x6D88;&#x8D39;&#x8005;&#xFF0C;&#x8BE5;&#x6A21;&#x5F0F;&#x4E0B;&#x53EF;&#x4EE5;&#x662F;&#x4E00;&#x4E2A;&#x751F;&#x4EA7;&#x8005;&#x5C06;&#x6D88;&#x606F;&#x6295;&#x9012;&#x5230;&#x4E00;&#x4E2A;&#x961F;&#x5217;&#xFF0C;&#x8BE5;&#x961F;&#x5217;&#x5BF9;&#x5E94;&#x591A;&#x4E2A;&#x6D88;&#x8D39;&#x8005;&#xFF0C;&#x6B64;&#x65F6;&#x6BCF;&#x6761;&#x6D88;&#x606F;&#x53EA;&#x4F1A;&#x88AB;&#x6D88;&#x8D39;&#x4E00;&#x6B21;&#xFF0C;&#x591A;&#x4E2A;&#x6D88;&#x8D39;&#x8005;&#x5FAA;&#x73AF;&#x5904;&#x7406;&#x3002;&#x53E6;&#x5916;&#x4E5F;&#x53EF;&#x4EE5;&#x662F;&#x4E00;&#x4E2A;&#x751F;&#x4EA7;&#x8005;&#x5C06;&#x6D88;&#x606F;&#x6295;&#x9012;&#x5230;&#x591A;&#x4E2A;&#x961F;&#x5217;&#x91CC;&#xFF0C;&#x6B64;&#x65F6;&#x6D88;&#x606F;&#x662F;&#x88AB;&#x590D;&#x5236;&#x5904;&#x7406;&#x3002;</p>
+<p>&#x5728;&#x914D;&#x7F6E;&#x7C7B;<code>com.example.rabbitmq.config.RabbitMQConfig</code>&#x4E2D;&#x6DFB;&#x52A0;&#x4E00;&#x4E2A;&#x65B0;&#x7684;&#x6D88;&#x606F;&#x961F;&#x5217;roy&#x3002;</p>
+<pre><code class="lang-java"><span class="hljs-meta">@Bean</span>
+<span class="hljs-function"><span class="hljs-keyword">public</span> Queue <span class="hljs-title">royQueue</span><span class="hljs-params">()</span> </span>{
+    <span class="hljs-keyword">return</span> <span class="hljs-keyword">new</span> Queue(<span class="hljs-string">&quot;roy&quot;</span>);
+}
+</code></pre>
+<p>&#x521B;&#x5EFA;&#x6D88;&#x606F;&#x751F;&#x4EA7;&#x8005;RabbitMQProducerMore&#xFF0C;&#x4F7F;&#x7528;&#x6CE8;&#x5165;&#x7684;AmqpTemplate&#x5BF9;&#x8C61;&#x5411;&#x6D88;&#x606F;&#x961F;&#x5217;<code>roy</code>&#x53D1;&#x9001;&#x6D88;&#x606F;&#x3002;</p>
+<pre><code class="lang-java"><span class="hljs-keyword">package</span> com.example.rabbitmq.producer;
+
+<span class="hljs-keyword">import</span> org.springframework.amqp.core.AmqpTemplate;
+<span class="hljs-keyword">import</span> org.springframework.beans.factory.annotation.Autowired;
+<span class="hljs-keyword">import</span> org.springframework.stereotype.Component;
+
+<span class="hljs-meta">@Component</span>
+<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">RabbitMQProducerMore</span> </span>{
+
+    <span class="hljs-meta">@Autowired</span> 
+    AmqpTemplate amqpTemplate;
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">sendMessage</span><span class="hljs-params">(String msg)</span> </span>{
+        amqpTemplate.convertAndSend(<span class="hljs-string">&quot;roy&quot;</span>, msg);
+    }
+
+}
+</code></pre>
+<p>&#x521B;&#x5EFA;&#x6D88;&#x606F;&#x6D88;&#x8D39;&#x8005;RabbitMQConsumer1&#xFF0C;&#x76D1;&#x542C;<code>roy</code>&#x6D88;&#x606F;&#x961F;&#x5217;&#x7684;&#x6D88;&#x606F;&#xFF0C;&#x5E76;&#x5728;&#x7BA1;&#x7406;&#x63A7;&#x5236;&#x53F0;&#x4E0A;&#x8F93;&#x51FA;&#x4FE1;&#x606F;&#x3002;</p>
+<pre><code class="lang-java"><span class="hljs-keyword">package</span> com.example.rabbitmq.consumer;
+
+<span class="hljs-keyword">import</span> org.springframework.amqp.rabbit.annotation.RabbitHandler;
+<span class="hljs-keyword">import</span> org.springframework.amqp.rabbit.annotation.RabbitListener;
+<span class="hljs-keyword">import</span> org.springframework.stereotype.Component;
+
+<span class="hljs-meta">@Component</span>
+<span class="hljs-meta">@RabbitListener</span>(queues = <span class="hljs-string">&quot;roy&quot;</span>)
+<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">RabbitMQConsumer1</span> </span>{
+
+    <span class="hljs-meta">@RabbitHandler</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">receive</span><span class="hljs-params">(String msg)</span> </span>{
+        System.out.println(<span class="hljs-string">&quot;RabbitMQ Consumer1 consume message: &quot;</span> + msg);
+    }
+
+}
+</code></pre>
+<p>&#x521B;&#x5EFA;&#x6D88;&#x606F;&#x6D88;&#x8D39;&#x8005;RabbitMQConsumer2&#xFF0C;&#x76D1;&#x542C;<code>roy</code>&#x6D88;&#x606F;&#x961F;&#x5217;&#x7684;&#x6D88;&#x606F;&#xFF0C;&#x5E76;&#x5728;&#x7BA1;&#x7406;&#x63A7;&#x5236;&#x53F0;&#x4E0A;&#x8F93;&#x51FA;&#x4FE1;&#x606F;&#x3002;</p>
+<pre><code class="lang-java"><span class="hljs-keyword">package</span> com.example.rabbitmq.consumer;
+
+<span class="hljs-keyword">import</span> org.springframework.amqp.rabbit.annotation.RabbitHandler;
+<span class="hljs-keyword">import</span> org.springframework.amqp.rabbit.annotation.RabbitListener;
+<span class="hljs-keyword">import</span> org.springframework.stereotype.Component;
+
+<span class="hljs-meta">@Component</span>
+<span class="hljs-meta">@RabbitListener</span>(queues = <span class="hljs-string">&quot;roy&quot;</span>)
+<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">RabbitMQConsumer2</span> </span>{
+
+    <span class="hljs-meta">@RabbitHandler</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">receive</span><span class="hljs-params">(String msg)</span> </span>{
+        System.out.println(<span class="hljs-string">&quot;RabbitMQ Consumer2 consume message: &quot;</span> + msg);
+    }
+
+}
+</code></pre>
+<p>&#x5728;&#x63A7;&#x5236;&#x5668;&#x7C7B;RabbitMQController&#x4E2D;&#xFF0C;&#x6DFB;&#x52A0;<code>/rabbitmq/sendMore</code>&#x8DEF;&#x5F84;&#x4E0A;&#x63A5;&#x6536;&#x7528;&#x6237;&#x8F93;&#x5165;&#xFF0C;&#x5E76;&#x8C03;&#x7528;RabbitMQProducerMore&#xFF08;&#x6D88;&#x606F;&#x751F;&#x4EA7;&#x8005;&#x7C7B;&#xFF09;&#x4E2D;&#x7684;sendMessage&#x65B9;&#x6CD5;&#x5FAA;&#x73AF;&#x53D1;&#x9001;5&#x6761;&#x6D88;&#x606F;&#x5230;roy&#x6D88;&#x606F;&#x961F;&#x5217;&#x4E0A;&#x3002;</p>
+<pre><code class="lang-java"><span class="hljs-meta">@Autowired</span>
+RabbitMQProducerMore rabbitMQProducerMore;
+
+<span class="hljs-meta">@RequestMapping</span>(<span class="hljs-string">&quot;/sendMore&quot;</span>)
+<span class="hljs-function"><span class="hljs-keyword">public</span> String <span class="hljs-title">sendMoreMsg</span><span class="hljs-params">(String msg)</span> </span>{
+    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; <span class="hljs-number">5</span>; i++) {
+        rabbitMQProducerMore.sendMessage(msg + <span class="hljs-string">&quot;No.&quot;</span> + i);
+    }
+    <span class="hljs-keyword">return</span> msg + <span class="hljs-string">&quot; Sended 5 Messages to roy.&quot;</span>;
+}
+</code></pre>
+<p>&#x8FD0;&#x884C;Spring Boot&#x5E94;&#x7528;&#xFF0C;&#x6253;&#x5F00;&#x6D4F;&#x89C8;&#x5668;&#x8BBF;&#x95EE;<a href="http://localhost:8080/rabbitmq/sendMore?msg=Roy is a GOODMAN." target="_blank">http://localhost:8080/rabbitmq/sendMore?msg=Roy is a GOODMAN.</a>&#xFF0C;&#x5411;RabbitMQ&#x53D1;&#x9001;&#x6D88;&#x606F;&#x3002;</p>
+<p><img src="images/image-20191212231517513.png" alt="image-20191212231517513"></p>
+<p>RabbitMQ&#x6D88;&#x8D39;&#x8005;&#xFF08;RabbitMQConsumer1&#x7C7B;&#x548C;RabbitMQConsumer2&#x7C7B;&#xFF09;&#x8F6E;&#x6D41;&#x6D88;&#x8D39;&#x6D88;&#x606F;&#xFF0C;&#x5E76;&#x5728;&#x63A7;&#x5236;&#x53F0;&#x6253;&#x5370;&#x4FE1;&#x606F;&#x3002;</p>
+<p><img src="images/image-20191212231456659.png" alt="image-20191212231456659"></p>
+<p>&#x901A;&#x8FC7;<a href="http://localhost:15672/#/queues" target="_blank">&#x7BA1;&#x7406;&#x63A7;&#x5236;&#x53F0;</a>&#xFF0C;&#x53EF;&#x4EE5;&#x770B;&#x5230;&#x6D88;&#x606F;&#x961F;&#x5217;&#x7684;&#x76F8;&#x5173;&#x60C5;&#x51B5;&#x3002;</p>
+<p><img src="images/image-20191212231735588.png" alt="image-20191212231735588"></p>
+<p>&#x4E00;&#x4E2A;&#x751F;&#x4EA7;&#x8005;&#x5C06;&#x6D88;&#x606F;&#x6295;&#x9012;&#x5230;&#x591A;&#x4E2A;&#x961F;&#x5217;&#x91CC;&#x7684;&#x573A;&#x666F;&#xFF0C;&#x8BF7;&#x8BFB;&#x8005;&#x81EA;&#x884C;&#x5B8C;&#x6210;&#x7EC3;&#x4E60;&#x3002;</p>
+<h4 id="9323-ack&#x6D88;&#x606F;&#x786E;&#x8BA4;">9.3.2.3 ACK&#x6D88;&#x606F;&#x786E;&#x8BA4;</h4>
+<p>&#x6D88;&#x606F;&#x786E;&#x8BA4;ACK&#x673A;&#x5236;&#xFF0C;&#x662F;&#x6307;&#x6D88;&#x8D39;&#x8005;&#x4ECE;RabbitMQ&#x6536;&#x5230;&#x6D88;&#x606F;&#x5E76;&#x5904;&#x7406;&#x5B8C;&#x6210;&#x540E;&#xFF0C;&#x53CD;&#x9988;&#x7ED9;RabbitMQ&#xFF0C;RabbitMQ&#x6536;&#x5230;&#x53CD;&#x9988;&#x540E;&#x624D;&#x5C06;&#x6B64;&#x6D88;&#x606F;&#x4ECE;&#x961F;&#x5217;&#x4E2D;&#x5220;&#x9664;&#x7684;&#x4E00;&#x79CD;&#x4FDD;&#x8BC1;&#x6D88;&#x606F;&#x80FD;&#x88AB;&#x6B63;&#x786E;&#x6D88;&#x8D39;&#x7684;&#x4E00;&#x79CD;&#x5904;&#x7406;&#x65B9;&#x6CD5;&#x3002;</p>
+<p>&#x5982;&#x679C;&#x4E00;&#x4E2A;&#x6D88;&#x8D39;&#x8005;&#x5728;&#x5904;&#x7406;&#x6D88;&#x606F;&#x7684;&#x8FC7;&#x7A0B;&#x4E2D;&#x51FA;&#x73B0;&#x4E86;&#x7F51;&#x7EDC;&#x4E0D;&#x7A33;&#x5B9A;&#x3001;&#x670D;&#x52A1;&#x5668;&#x5F02;&#x5E38;&#x7B49;&#x73B0;&#x8C61;&#xFF0C;&#x90A3;&#x4E48;&#x5C31;&#x4E0D;&#x4F1A;&#x6709;ACK&#x53CD;&#x9988;&#xFF0C;RabbitMQ&#x4F1A;&#x8BA4;&#x4E3A;&#x8FD9;&#x4E2A;&#x6D88;&#x606F;&#x6CA1;&#x6709;&#x88AB;&#x6B63;&#x5E38;&#x6D88;&#x8D39;&#xFF0C;&#x4F1A;&#x5C06;&#x6D88;&#x606F;&#x91CD;&#x65B0;&#x653E;&#x5165;&#x961F;&#x5217;&#x4E2D;&#x3002;</p>
+<blockquote>
+<p>ACK&#xFF1A;acknowledgement&#xFF0C;&#x786E;&#x8BA4;&#x3002;</p>
+</blockquote>
+<p>&#x5728;&#x914D;&#x7F6E;&#x7C7B;<code>com.example.rabbitmq.config.RabbitMQConfig</code>&#x4E2D;&#x6DFB;&#x52A0;&#x4E00;&#x4E2A;&#x65B0;&#x7684;&#x6D88;&#x606F;&#x961F;&#x5217;<code>lily</code>&#xFF0C;&#x5E76;&#x7ED1;&#x5B9A;&#x5230;&#x4E00;&#x4E2A;&#x540D;&#x4E3A;&#x201C;fanoutExchange&#x201D;&#x7684;Fanout&#x4EA4;&#x6362;&#x5668;&#x4E0A;&#x3002;</p>
+<pre><code class="lang-java"><span class="hljs-meta">@Bean</span>
+<span class="hljs-function"><span class="hljs-keyword">public</span> Queue <span class="hljs-title">ackQueue</span><span class="hljs-params">()</span> </span>{
+    <span class="hljs-keyword">return</span> <span class="hljs-keyword">new</span> Queue(<span class="hljs-string">&quot;lily&quot;</span>);
+}
+
+<span class="hljs-meta">@Bean</span>
+<span class="hljs-function"><span class="hljs-keyword">public</span> FanoutExchange <span class="hljs-title">fanoutExchange</span><span class="hljs-params">()</span> </span>{
+    <span class="hljs-keyword">return</span> <span class="hljs-keyword">new</span> FanoutExchange(<span class="hljs-string">&quot;fanoutExchange&quot;</span>);
+}
+
+<span class="hljs-meta">@Bean</span>
+<span class="hljs-function">Binding <span class="hljs-title">bindingAckQueue2Exchange</span><span class="hljs-params">(Queue ackQueue, FanoutExchange fanoutExchange)</span> </span>{
+    <span class="hljs-keyword">return</span> BindingBuilder.bind(ackQueue).to(fanoutExchange);
+}
+</code></pre>
+<p>&#x521B;&#x5EFA;&#x6D88;&#x606F;&#x751F;&#x4EA7;&#x8005;RabbitMQProducerAck&#xFF0C;&#x4F7F;&#x7528;&#x6CE8;&#x5165;&#x7684;RabbitTemplate&#x5BF9;&#x8C61;&#x5411;&#x6D88;&#x606F;&#x961F;&#x5217;<code>lily</code>&#x53D1;&#x9001;&#x6D88;&#x606F;&#xFF0C;&#x5E76;&#x7F16;&#x5199;&#x5BF9;&#x5E94;&#x7684;&#x56DE;&#x8C03;&#x5B9E;&#x73B0;&#x3002;</p>
+<pre><code class="lang-java"><span class="hljs-keyword">package</span> com.example.rabbitmq.producer;
+
+<span class="hljs-keyword">import</span> java.time.LocalDateTime;
+<span class="hljs-keyword">import</span> java.time.ZoneId;
+
+<span class="hljs-keyword">import</span> org.springframework.amqp.core.Message;
+<span class="hljs-keyword">import</span> org.springframework.amqp.rabbit.core.RabbitTemplate;
+<span class="hljs-keyword">import</span> org.springframework.beans.factory.annotation.Autowired;
+<span class="hljs-keyword">import</span> org.springframework.stereotype.Component;
+
+<span class="hljs-meta">@Component</span>
+<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">RabbitMQProducerAck</span> <span class="hljs-keyword">implements</span> <span class="hljs-title">RabbitTemplate</span>.<span class="hljs-title">ReturnCallback</span> </span>{
+
+    <span class="hljs-meta">@Autowired</span>
+    <span class="hljs-keyword">private</span> RabbitTemplate rabbitTemplate;
+
+    <span class="hljs-meta">@Override</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">returnedMessage</span><span class="hljs-params">(Message message, <span class="hljs-keyword">int</span> i, String s, String s1, String s2)</span> </span>{
+        System.out.println(<span class="hljs-string">&quot;RabbitMQProducerAck Returned Message: &quot;</span> + message.toString() + <span class="hljs-string">&quot; , &quot;</span> + i + <span class="hljs-string">&quot; , &quot;</span> + s1 + <span class="hljs-string">&quot; , &quot;</span> + s2);
+    }
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">sendMessage</span><span class="hljs-params">(String msg)</span> </span>{
+        rabbitTemplate.setReturnCallback(<span class="hljs-keyword">this</span>);
+        rabbitTemplate.setConfirmCallback((correlationData, ack, cause) -&gt; {
+            <span class="hljs-keyword">if</span> (ack) {
+                System.out.println(<span class="hljs-string">&quot;Send Message Success.&quot;</span>);
+            } <span class="hljs-keyword">else</span> {
+                System.out.println(<span class="hljs-string">&quot;Send Message Failure:&quot;</span> + cause + correlationData.toString());
+            }
+        });
+        rabbitTemplate.convertAndSend(<span class="hljs-string">&quot;lily&quot;</span>, msg + <span class="hljs-string">&quot;, &quot;</span> + LocalDateTime.now(ZoneId.systemDefault()));
+    }
+
+}
+</code></pre>
+<p>&#x521B;&#x5EFA;&#x6D88;&#x606F;&#x6D88;&#x8D39;&#x8005;RabbitMQConsumerAck&#xFF0C;&#x76D1;&#x542C;<code>lily</code>&#x6D88;&#x606F;&#x961F;&#x5217;&#x7684;&#x6D88;&#x606F;&#xFF0C;&#x6D88;&#x8D39;&#x6D88;&#x606F;&#x5E76;&#x786E;&#x8BA4;&#xFF08;channel.basicAck&#xFF09;&#xFF0C;&#x7136;&#x540E;&#x5728;&#x7BA1;&#x7406;&#x63A7;&#x5236;&#x53F0;&#x4E0A;&#x8F93;&#x51FA;&#x4FE1;&#x606F;&#x3002;</p>
+<pre><code class="lang-java"><span class="hljs-keyword">package</span> com.example.rabbitmq.consumer;
+
+<span class="hljs-keyword">import</span> java.time.LocalDateTime;
+<span class="hljs-keyword">import</span> java.time.ZoneId;
+
+<span class="hljs-keyword">import</span> org.springframework.amqp.core.Message;
+<span class="hljs-keyword">import</span> org.springframework.amqp.rabbit.annotation.RabbitHandler;
+<span class="hljs-keyword">import</span> org.springframework.amqp.rabbit.annotation.RabbitListener;
+<span class="hljs-keyword">import</span> org.springframework.stereotype.Component;
+
+<span class="hljs-keyword">import</span> com.rabbitmq.client.Channel;
+
+<span class="hljs-meta">@Component</span>
+<span class="hljs-meta">@RabbitListener</span>(queues = {<span class="hljs-string">&quot;lily&quot;</span>})
+<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">RabbitMQConsumerAck</span> </span>{
+
+    <span class="hljs-meta">@RabbitHandler</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">process</span><span class="hljs-params">(String sendMsg, Channel channel, Message message)</span> </span>{
+        System.out.println(<span class="hljs-string">&quot;RabbitMQ ConsumerAck consume message: &quot;</span> + sendMsg + <span class="hljs-string">&quot; @&quot;</span> + LocalDateTime.now(ZoneId.systemDefault()));
+        <span class="hljs-keyword">try</span> {
+            channel.basicAck(message.getMessageProperties().getDeliveryTag(), <span class="hljs-keyword">false</span>);
+            System.out.println(<span class="hljs-string">&quot;Process Success&quot;</span>);
+        } <span class="hljs-keyword">catch</span> (Exception e) {
+            System.out.println(<span class="hljs-string">&quot;Process Failure.&quot;</span>);
+            e.printStackTrace();
+        }
+    }
+}
+</code></pre>
+<p>&#x5728;&#x63A7;&#x5236;&#x5668;&#x7C7B;RabbitMQController&#x4E2D;&#xFF0C;&#x6DFB;&#x52A0;<code>/rabbitmq/sendAck</code>&#x8DEF;&#x5F84;&#xFF0C;&#x63A5;&#x6536;&#x7528;&#x6237;&#x8F93;&#x5165;&#x3002;</p>
+<pre><code class="lang-java"><span class="hljs-meta">@Autowired</span>
+RabbitMQProducerAck rabbitMQProducerAck;
+
+<span class="hljs-meta">@RequestMapping</span>(<span class="hljs-string">&quot;/sendAck&quot;</span>)
+<span class="hljs-function"><span class="hljs-keyword">public</span> String <span class="hljs-title">sendAckMsg</span><span class="hljs-params">(String msg)</span> </span>{
+    rabbitMQProducerAck.sendMessage(msg);
+    <span class="hljs-keyword">return</span> msg + <span class="hljs-string">&quot; Sended to lily.&quot;</span>;
+}
+</code></pre>
+<p>&#x8FD0;&#x884C;Spring Boot&#x5E94;&#x7528;&#xFF0C;&#x6253;&#x5F00;&#x6D4F;&#x89C8;&#x5668;&#x8BBF;&#x95EE;<a href="http://localhost:8080/rabbitmq/sendAck?msg=Lily is a GOODMAN." target="_blank">http://localhost:8080/rabbitmq/sendAck?msg=Lily is a GOODMAN.</a>&#xFF0C;&#x5411;RabbitMQ&#x53D1;&#x9001;&#x6D88;&#x606F;&#x3002;</p>
+<p><img src="images/image-20191213000914694.png" alt="image-20191213000914694"></p>
+<p>RabbitMQ&#x6D88;&#x8D39;&#x8005;RabbitMQConsumerAck&#x6D88;&#x8D39;&#x6D88;&#x606F;&#xFF0C;&#x7136;&#x540E;&#x544A;&#x8BC9;&#x670D;&#x52A1;&#x5668;&#x6536;&#x5230;&#x7684;&#x8FD9;&#x6761;&#x6D88;&#x606F;&#x5DF2;&#x7ECF;&#x88AB;&#x5F53;&#x524D;&#x6D88;&#x8D39;&#x8005;&#xFF08;RabbitMQConsumerAck&#xFF09;&#x6D88;&#x8D39;&#x4E86;&#xFF0C;&#x6D88;&#x606F;&#x670D;&#x52A1;&#x5668;&#x5C31;&#x53EF;&#x4EE5;&#x5220;&#x9664;&#x8FD9;&#x6761;&#x6D88;&#x606F;&#x4E86;&#x3002;</p>
+<p>RabbitMQ&#x751F;&#x4EA7;&#x8005;RabbitMQProducerAck&#x6536;&#x5230;&#x786E;&#x8BA4;&#x56DE;&#x8C03;&#x4FE1;&#x606F;&#x540E;&#xFF0C;&#x5728;&#x63A7;&#x5236;&#x53F0;&#x8F93;&#x51FA;<code>Send Message Success.</code>&#x7684;&#x4FE1;&#x606F;&#x3002;</p>
+<p>&#x8BF7;&#x4ED4;&#x7EC6;&#x67E5;&#x770B;&#x5728;&#x63A7;&#x5236;&#x53F0;&#x6253;&#x5370;&#x7684;&#x4FE1;&#x606F;&#x5E76;&#x7ED3;&#x5408;&#x4E0A;&#x8FF0;&#x4EE3;&#x7801;&#x7406;&#x89E3;&#x6D88;&#x606F;&#x751F;&#x4EA7;&#x3001;&#x6D88;&#x8D39;&#x3001;&#x786E;&#x8BA4;&#x7684;&#x8FC7;&#x7A0B;&#x3002;</p>
+<p><img src="images/image-20191213001003779.png" alt="image-20191213001003779"></p>
+<blockquote>
+<p>RabbitMQ ConsumerAck consume message: Lily is a GOODMAN., 2019-12-13T00:07:51.750 @2019-12-13T00:07:51.782&#xFF1A;&#x6839;&#x636E;&#x4EE3;&#x7801;&#xFF0C;&#x524D;&#x9762;&#x7684;&#x65F6;&#x95F4;&#x4E3A;&#x6D88;&#x606F;&#x7684;&#x751F;&#x4EA7;&#x65F6;&#x95F4;&#xFF0C;&#x540E;&#x9762;&#x7684;&#x65F6;&#x95F4;&#x4E3A;&#x6D88;&#x606F;&#x7684;&#x6D88;&#x8D39;&#x65F6;&#x95F4;&#x3002;</p>
+</blockquote>
+<p>&#x901A;&#x8FC7;<a href="http://localhost:15672/#/queues" target="_blank">&#x7BA1;&#x7406;&#x63A7;&#x5236;&#x53F0;</a>&#xFF0C;&#x53EF;&#x4EE5;&#x770B;&#x5230;&#x6D88;&#x606F;&#x961F;&#x5217;&#x7684;&#x76F8;&#x5173;&#x60C5;&#x51B5;&#x3002;</p>
+<blockquote>
+<p><img src="images/image-20191213001141397.png" alt="image-20191213001141397"></p>
+<p>kevin&#x961F;&#x5217;&#x6709;1&#x6761;&#x6D88;&#x606F;&#x6CA1;&#x6709;&#x786E;&#x8BA4;&#xFF0C;roy&#x961F;&#x5217;&#x6709;5&#x6761;&#x6D88;&#x606F;&#x6CA1;&#x6709;&#x786E;&#x8BA4;&#xFF0C;&#x6240;&#x4EE5;&#x8FD9;&#x6B21;Spring Boot&#x5E94;&#x7528;&#x542F;&#x52A8;&#x7684;&#x65F6;&#x5019;&#x8FD8;&#x80FD;&#x770B;&#x5230;<code>RabbitMQ Consumer1 consume message: Roy is a GOODMAN.No.3</code>&#x4E4B;&#x7C7B;&#x7684;&#x4FE1;&#x606F;&#x5C31;&#x662F;&#x56E0;&#x4E3A;&#x6CA1;&#x6709;&#x786E;&#x8BA4;&#x6D88;&#x606F;&#x5DF2;&#x88AB;&#x6D88;&#x8D39;&#xFF08;&#x670D;&#x52A1;&#x5668;&#x6CA1;&#x6709;&#x6536;&#x5230;&#x786E;&#x8BA4;&#x5C31;&#x4E0D;&#x4F1A;&#x5220;&#x9664;&#x6D88;&#x606F;&#xFF0C;&#x4E0B;&#x6B21;&#x8FDE;&#x63A5;&#x5230;&#x961F;&#x5217;&#xFF0C;&#x5C31;&#x4F1A;&#x7EE7;&#x7EED;&#x53D1;&#x9001;&#x6D88;&#x606F;&#x7ED9;&#x6D88;&#x8D39;&#x8005;&#xFF09;&#x3002;</p>
+<p>lily&#x961F;&#x5217;Unacked&#x6D88;&#x606F;&#x6570;&#x91CF;&#x4E3A;0&#xFF0C;&#x662F;&#x56E0;&#x4E3A;&#x6D88;&#x606F;&#x5DF2;&#x7ECF;&#x786E;&#x8BA4;&#x6D88;&#x8D39;&#x4E86;&#x3002;</p>
+<p>&#x672C;&#x5C0F;&#x8282;&#x793A;&#x4F8B;&#x9879;&#x76EE;&#x4EE3;&#x7801;&#xFF1A;</p>
+<p><a href="https://github.com/gyzhang/SpringBootCourseCode/tree/master/spring-boot-rabbitmq" target="_blank">https://github.com/gyzhang/SpringBootCourseCode/tree/master/spring-boot-rabbitmq</a></p>
+</blockquote>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="9.2activeMQ.html" class="navigation navigation-prev " aria-label="Previous page: 9.2 Spring Boot集成ActiveMQ">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="9.4rocketMQ.html" class="navigation navigation-next " aria-label="Next page: 9.4 Spring Boot集成RocketMQ">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"9.3 Spring Boot集成RabbitMQ","level":"1.10.3","depth":2,"next":{"title":"9.4 Spring Boot集成RocketMQ","level":"1.10.4","depth":2,"path":"第9章 Spring Boot与异步消息/9.4rocketMQ.md","ref":"第9章 Spring Boot与异步消息/9.4rocketMQ.md","articles":[]},"previous":{"title":"9.2 Spring Boot集成ActiveMQ","level":"1.10.2","depth":2,"path":"第9章 Spring Boot与异步消息/9.2activeMQ.md","ref":"第9章 Spring Boot与异步消息/9.2activeMQ.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-search","search-pro","code","splitter","expandable-chapters","page-toc-button","back-to-top-button","livereload"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"livereload":{},"splitter":{},"search-pro":{"cutWordLib":"nodejieba","defineWord":["Spring Boot"],"expandable-chapters":{}},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"code":{"copyButtons":true},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"page-toc-button":{},"back-to-top-button":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"expandable-chapters":{}},"theme":"default","author":"Kevin Zhang","pdf":{"pageNumbers":true,"fontSize":23,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"SpringBoot入门教程","language":"zh-hans","gitbook":"*","description":"针对初级程序员的Spring Boot入门教程，使用版本2.2.x"},"file":{"path":"第9章 Spring Boot与异步消息/9.3rabbitMQ.md","mtime":"2019-12-28T02:01:59.837Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-02-07T14:42:40.985Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-pro/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-code/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-page-toc-button/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-back-to-top-button/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

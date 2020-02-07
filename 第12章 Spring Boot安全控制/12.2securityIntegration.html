@@ -1,0 +1,2579 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>12.2 集成Spring Security · SpringBoot入门教程</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="Kevin Zhang">
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search-pro/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-code/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-page-toc-button/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-back-to-top-button/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="12.3securityOauth2.html" />
+    
+    
+    <link rel="prev" href="12.1securityOverview.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    前言
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../第1章 Spring Boot介绍/SpringBoot.html">
+            
+                <a href="../第1章 Spring Boot介绍/SpringBoot.html">
+            
+                    
+                    第1章 Spring Boot介绍
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../第1章 Spring Boot介绍/1.1spring.html">
+            
+                <a href="../第1章 Spring Boot介绍/1.1spring.html">
+            
+                    
+                    1.1 Spring介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../第1章 Spring Boot介绍/1.2springBoot.html">
+            
+                <a href="../第1章 Spring Boot介绍/1.2springBoot.html">
+            
+                    
+                    1.2 Spring Boot简介
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../第1章 Spring Boot介绍/1.3springBootModules.html">
+            
+                <a href="../第1章 Spring Boot介绍/1.3springBootModules.html">
+            
+                    
+                    1.3 Spring Boot的主要模块
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="../第1章 Spring Boot介绍/1.4helloSpringBoot.html">
+            
+                <a href="../第1章 Spring Boot介绍/1.4helloSpringBoot.html">
+            
+                    
+                    1.4 Hello Spring Boot
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="../第1章 Spring Boot介绍/1.5homework.html">
+            
+                <a href="../第1章 Spring Boot介绍/1.5homework.html">
+            
+                    
+                    1.5 课后作业
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../第2章 开发环境配置/IDE.html">
+            
+                <a href="../第2章 开发环境配置/IDE.html">
+            
+                    
+                    第2章 开发环境配置
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../第2章 开发环境配置/2.1jdk.html">
+            
+                <a href="../第2章 开发环境配置/2.1jdk.html">
+            
+                    
+                    2.1 安装JDK
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../第2章 开发环境配置/2.2maven.html">
+            
+                <a href="../第2章 开发环境配置/2.2maven.html">
+            
+                    
+                    2.2 安装配置Maven
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../第2章 开发环境配置/2.3sts.html">
+            
+                <a href="../第2章 开发环境配置/2.3sts.html">
+            
+                    
+                    2.3 安装配置STS
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="../第2章 开发环境配置/2.4mysql.html">
+            
+                <a href="../第2章 开发环境配置/2.4mysql.html">
+            
+                    
+                    2.4 安装MySQL和管理工具
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="../第2章 开发环境配置/2.5validation.html">
+            
+                <a href="../第2章 开发环境配置/2.5validation.html">
+            
+                    
+                    2.5 验证开发环境
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6" data-path="../第2章 开发环境配置/2.6postman.html">
+            
+                <a href="../第2章 开发环境配置/2.6postman.html">
+            
+                    
+                    2.6 安装Postman
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.7" data-path="../第2章 开发环境配置/2.7homework.html">
+            
+                <a href="../第2章 开发环境配置/2.7homework.html">
+            
+                    
+                    2.7 课后作业
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../第3章 Spring Boot原理剖析/SpringBootHow.html">
+            
+                <a href="../第3章 Spring Boot原理剖析/SpringBootHow.html">
+            
+                    
+                    第3章 Spring Boot原理剖析
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../第3章 Spring Boot原理剖析/3.1structure.html">
+            
+                <a href="../第3章 Spring Boot原理剖析/3.1structure.html">
+            
+                    
+                    3.1 项目结构
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../第3章 Spring Boot原理剖析/3.2baseConfig.html">
+            
+                <a href="../第3章 Spring Boot原理剖析/3.2baseConfig.html">
+            
+                    
+                    3.2 基本配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../第3章 Spring Boot原理剖析/3.3annotation.html">
+            
+                <a href="../第3章 Spring Boot原理剖析/3.3annotation.html">
+            
+                    
+                    3.3 启动类与核心注解
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="../第3章 Spring Boot原理剖析/3.4startFlow.html">
+            
+                <a href="../第3章 Spring Boot原理剖析/3.4startFlow.html">
+            
+                    
+                    3.4 启动过程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5" data-path="../第3章 Spring Boot原理剖析/3.5homework.html">
+            
+                <a href="../第3章 Spring Boot原理剖析/3.5homework.html">
+            
+                    
+                    3.5 课后作业
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../第4章 Spring Boot Web开发/SpringBootWeb.html">
+            
+                <a href="../第4章 Spring Boot Web开发/SpringBootWeb.html">
+            
+                    
+                    第4章 Spring Boot Web开发
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../第4章 Spring Boot Web开发/4.1mvc.html">
+            
+                <a href="../第4章 Spring Boot Web开发/4.1mvc.html">
+            
+                    
+                    4.1 Spring MVC介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../第4章 Spring Boot Web开发/4.2thymeleaf.html">
+            
+                <a href="../第4章 Spring Boot Web开发/4.2thymeleaf.html">
+            
+                    
+                    4.2 Thymeleaf介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" data-path="../第4章 Spring Boot Web开发/4.3legacy.html">
+            
+                <a href="../第4章 Spring Boot Web开发/4.3legacy.html">
+            
+                    
+                    4.3 使用Servlet、Listener和Filter
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4" data-path="../第4章 Spring Boot Web开发/4.4homework.html">
+            
+                <a href="../第4章 Spring Boot Web开发/4.4homework.html">
+            
+                    
+                    4.4 课后作业
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../第5章 Spring Boot数据访问/DataAccess.html">
+            
+                <a href="../第5章 Spring Boot数据访问/DataAccess.html">
+            
+                    
+                    第5章 Spring Boot数据访问
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../第5章 Spring Boot数据访问/5.1jdbc.html">
+            
+                <a href="../第5章 Spring Boot数据访问/5.1jdbc.html">
+            
+                    
+                    5.1 Spring Boot集成JdbcTemplate
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="../第5章 Spring Boot数据访问/5.2myBatis.html">
+            
+                <a href="../第5章 Spring Boot数据访问/5.2myBatis.html">
+            
+                    
+                    5.2 Spring Boot集成MyBatis
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="../第5章 Spring Boot数据访问/5.3pageHelper.html">
+            
+                <a href="../第5章 Spring Boot数据访问/5.3pageHelper.html">
+            
+                    
+                    5.3 MyBatis分页
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.4" data-path="../第5章 Spring Boot数据访问/5.4myBatisPlus.html">
+            
+                <a href="../第5章 Spring Boot数据访问/5.4myBatisPlus.html">
+            
+                    
+                    5.4 MyBatis-Plus
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.5" data-path="../第5章 Spring Boot数据访问/5.5homework.html">
+            
+                <a href="../第5章 Spring Boot数据访问/5.5homework.html">
+            
+                    
+                    5.5 课后作业
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../第6章 Spring Boot事务/SpringBootTransaction.html">
+            
+                <a href="../第6章 Spring Boot事务/SpringBootTransaction.html">
+            
+                    
+                    第6章 Spring Boot事务
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="../第6章 Spring Boot事务/6.1transaction.html">
+            
+                <a href="../第6章 Spring Boot事务/6.1transaction.html">
+            
+                    
+                    6.1 事务介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2" data-path="../第6章 Spring Boot事务/6.2usingTransaction.html">
+            
+                <a href="../第6章 Spring Boot事务/6.2usingTransaction.html">
+            
+                    
+                    6.2 事务的使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.3" data-path="../第6章 Spring Boot事务/6.3distributedTransaction.html">
+            
+                <a href="../第6章 Spring Boot事务/6.3distributedTransaction.html">
+            
+                    
+                    6.3 分布式事务
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.4" data-path="../第6章 Spring Boot事务/6.4homework.html">
+            
+                <a href="../第6章 Spring Boot事务/6.4homework.html">
+            
+                    
+                    6.4 课后作业
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="../第7章 Spring Boot集成Redis/Redis.html">
+            
+                <a href="../第7章 Spring Boot集成Redis/Redis.html">
+            
+                    
+                    第7章 Spring Boot集成Redis
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.1" data-path="../第7章 Spring Boot集成Redis/7.1redisOverview.html">
+            
+                <a href="../第7章 Spring Boot集成Redis/7.1redisOverview.html">
+            
+                    
+                    7.1 Redis简介
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.2" data-path="../第7章 Spring Boot集成Redis/7.2redisIntegration.html">
+            
+                <a href="../第7章 Spring Boot集成Redis/7.2redisIntegration.html">
+            
+                    
+                    7.2 集成Redis
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.3" data-path="../第7章 Spring Boot集成Redis/7.3redisSession.html">
+            
+                <a href="../第7章 Spring Boot集成Redis/7.3redisSession.html">
+            
+                    
+                    7.3 Session共享
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.4" data-path="../第7章 Spring Boot集成Redis/7.4redisCluster.html">
+            
+                <a href="../第7章 Spring Boot集成Redis/7.4redisCluster.html">
+            
+                    
+                    7.4 Redis集群
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.5" data-path="../第7章 Spring Boot集成Redis/7.5homework.html">
+            
+                <a href="../第7章 Spring Boot集成Redis/7.5homework.html">
+            
+                    
+                    7.5 课后作业
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="../第8章 Spring Boot集成MongoDB/MongoDB.html">
+            
+                <a href="../第8章 Spring Boot集成MongoDB/MongoDB.html">
+            
+                    
+                    第8章 Spring Boot集成MongoDB
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.9.1" data-path="../第8章 Spring Boot集成MongoDB/8.1mongoDBOverview.html">
+            
+                <a href="../第8章 Spring Boot集成MongoDB/8.1mongoDBOverview.html">
+            
+                    
+                    8.1 MongoDB简介
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.2" data-path="../第8章 Spring Boot集成MongoDB/8.2mongoDBIntegration.html">
+            
+                <a href="../第8章 Spring Boot集成MongoDB/8.2mongoDBIntegration.html">
+            
+                    
+                    8.2 集成MongoDB
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.3" data-path="../第8章 Spring Boot集成MongoDB/8.3homework.html">
+            
+                <a href="../第8章 Spring Boot集成MongoDB/8.3homework.html">
+            
+                    
+                    8.3 课后作业
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="../第9章 Spring Boot与异步消息/MQ.html">
+            
+                <a href="../第9章 Spring Boot与异步消息/MQ.html">
+            
+                    
+                    第9章 Spring Boot与异步消息
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.10.1" data-path="../第9章 Spring Boot与异步消息/9.1jms.html">
+            
+                <a href="../第9章 Spring Boot与异步消息/9.1jms.html">
+            
+                    
+                    9.1 有关消息的概念
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.2" data-path="../第9章 Spring Boot与异步消息/9.2activeMQ.html">
+            
+                <a href="../第9章 Spring Boot与异步消息/9.2activeMQ.html">
+            
+                    
+                    9.2 Spring Boot集成ActiveMQ
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.3" data-path="../第9章 Spring Boot与异步消息/9.3rabbitMQ.html">
+            
+                <a href="../第9章 Spring Boot与异步消息/9.3rabbitMQ.html">
+            
+                    
+                    9.3 Spring Boot集成RabbitMQ
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.4" data-path="../第9章 Spring Boot与异步消息/9.4rocketMQ.html">
+            
+                <a href="../第9章 Spring Boot与异步消息/9.4rocketMQ.html">
+            
+                    
+                    9.4 Spring Boot集成RocketMQ
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.5" data-path="../第9章 Spring Boot与异步消息/9.5kafka.html">
+            
+                <a href="../第9章 Spring Boot与异步消息/9.5kafka.html">
+            
+                    
+                    9.5 Spring Boot集成Kafka
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.6" data-path="../第9章 Spring Boot与异步消息/9.6homework.html">
+            
+                <a href="../第9章 Spring Boot与异步消息/9.6homework.html">
+            
+                    
+                    9.6 课后作业
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="../第10章 异常处理/Exception.html">
+            
+                <a href="../第10章 异常处理/Exception.html">
+            
+                    
+                    第10章 异常处理
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.11.1" data-path="../第10章 异常处理/10.1exceptionOverview.html">
+            
+                <a href="../第10章 异常处理/10.1exceptionOverview.html">
+            
+                    
+                    10.1 异常介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.2" data-path="../第10章 异常处理/10.2globalException.html">
+            
+                <a href="../第10章 异常处理/10.2globalException.html">
+            
+                    
+                    10.2 Spring Boot中全局异常的使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.3" data-path="../第10章 异常处理/10.3retry.html">
+            
+                <a href="../第10章 异常处理/10.3retry.html">
+            
+                    
+                    10.3 异常的重试
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.4" data-path="../第10章 异常处理/10.4homework.html">
+            
+                <a href="../第10章 异常处理/10.4homework.html">
+            
+                    
+                    10.4 课后作业
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" data-path="../第11章 单元测试与热部署/UnitTestHotDeploy.html">
+            
+                <a href="../第11章 单元测试与热部署/UnitTestHotDeploy.html">
+            
+                    
+                    第11章 单元测试与热部署
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.12.1" data-path="../第11章 单元测试与热部署/11.1unitTest.html">
+            
+                <a href="../第11章 单元测试与热部署/11.1unitTest.html">
+            
+                    
+                    11.1 Spring Boot中的单元测试
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.2" data-path="../第11章 单元测试与热部署/11.2hotDeploy.html">
+            
+                <a href="../第11章 单元测试与热部署/11.2hotDeploy.html">
+            
+                    
+                    11.2 Spring Boot对热部署的支持
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.3" data-path="../第11章 单元测试与热部署/11.3homework.html">
+            
+                <a href="../第11章 单元测试与热部署/11.3homework.html">
+            
+                    
+                    11.3 课后作业
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13" data-path="Security.html">
+            
+                <a href="Security.html">
+            
+                    
+                    第12章 Spring Boot安全控制
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.13.1" data-path="12.1securityOverview.html">
+            
+                <a href="12.1securityOverview.html">
+            
+                    
+                    12.1 Spring Security介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.13.2" data-path="12.2securityIntegration.html">
+            
+                <a href="12.2securityIntegration.html">
+            
+                    
+                    12.2 集成Spring Security
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.3" data-path="12.3securityOauth2.html">
+            
+                <a href="12.3securityOauth2.html">
+            
+                    
+                    12.3 OAuth 2
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.4" data-path="12.4homework.html">
+            
+                <a href="12.4homework.html">
+            
+                    
+                    12.4 课后作业
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14" data-path="../第13章 Spring Boot应用监控/Monitor.html">
+            
+                <a href="../第13章 Spring Boot应用监控/Monitor.html">
+            
+                    
+                    第13章 Spring Boot应用监控
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.14.1" data-path="../第13章 Spring Boot应用监控/13.1monitorOverview.html">
+            
+                <a href="../第13章 Spring Boot应用监控/13.1monitorOverview.html">
+            
+                    
+                    13.1 应用监控介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14.2" data-path="../第13章 Spring Boot应用监控/13.2monitorUse.html">
+            
+                <a href="../第13章 Spring Boot应用监控/13.2monitorUse.html">
+            
+                    
+                    13.2 使用应用监控
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14.3" data-path="../第13章 Spring Boot应用监控/13.3monitorCustomize.html">
+            
+                <a href="../第13章 Spring Boot应用监控/13.3monitorCustomize.html">
+            
+                    
+                    13.3 自定义端点
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14.4" data-path="../第13章 Spring Boot应用监控/13.4homework.html">
+            
+                <a href="../第13章 Spring Boot应用监控/13.4homework.html">
+            
+                    
+                    13.4 课后作业
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15" data-path="../第14章 企业级开发/Enterprise.html">
+            
+                <a href="../第14章 企业级开发/Enterprise.html">
+            
+                    
+                    第14章 企业级开发
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.15.1" data-path="../第14章 企业级开发/14.1mail.html">
+            
+                <a href="../第14章 企业级开发/14.1mail.html">
+            
+                    
+                    14.1 邮件发送
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.2" data-path="../第14章 企业级开发/14.2schedule.html">
+            
+                <a href="../第14章 企业级开发/14.2schedule.html">
+            
+                    
+                    14.2 定时任务
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.3" data-path="../第14章 企业级开发/14.3batch.html">
+            
+                <a href="../第14章 企业级开发/14.3batch.html">
+            
+                    
+                    14.3 批处理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.4" data-path="../第14章 企业级开发/14.4validation.html">
+            
+                <a href="../第14章 企业级开发/14.4validation.html">
+            
+                    
+                    14.4 数据校验
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.5" data-path="../第14章 企业级开发/14.5websocket.html">
+            
+                <a href="../第14章 企业级开发/14.5websocket.html">
+            
+                    
+                    14.5 WebSocket
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.6" data-path="../第14章 企业级开发/14.6swagger2.html">
+            
+                <a href="../第14章 企业级开发/14.6swagger2.html">
+            
+                    
+                    14.6 Swagger 2
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.7" data-path="../第14章 企业级开发/14.7homework.html">
+            
+                <a href="../第14章 企业级开发/14.7homework.html">
+            
+                    
+                    14.7 课后作业
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16" data-path="../第15章 多环境配置与部署/MultEnv.html">
+            
+                <a href="../第15章 多环境配置与部署/MultEnv.html">
+            
+                    
+                    第15章 多环境配置与部署
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.16.1" data-path="../第15章 多环境配置与部署/15.1multEnvUse.html">
+            
+                <a href="../第15章 多环境配置与部署/15.1multEnvUse.html">
+            
+                    
+                    15.1 使用多环境配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.2" data-path="../第15章 多环境配置与部署/15.2multEnvDeploy.html">
+            
+                <a href="../第15章 多环境配置与部署/15.2multEnvDeploy.html">
+            
+                    
+                    15.2 打包部署应用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.3" data-path="../第15章 多环境配置与部署/15.3homework.html">
+            
+                <a href="../第15章 多环境配置与部署/15.3homework.html">
+            
+                    
+                    15.3 课后作业
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17" data-path="../Postscript.html">
+            
+                <a href="../Postscript.html">
+            
+                    
+                    后记
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.18" data-path="../附录1 前后端分离的vue急速入门/Vue.html">
+            
+                <a href="../附录1 前后端分离的vue急速入门/Vue.html">
+            
+                    
+                    附录1 前后端分离的vue急速入门
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.18.1" data-path="../附录1 前后端分离的vue急速入门/0.1vueOverview.html">
+            
+                <a href="../附录1 前后端分离的vue急速入门/0.1vueOverview.html">
+            
+                    
+                    A.1 Vue介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.18.2" data-path="../附录1 前后端分离的vue急速入门/0.2vueConfig.html">
+            
+                <a href="../附录1 前后端分离的vue急速入门/0.2vueConfig.html">
+            
+                    
+                    A.2 Vue开发环境配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.18.3" data-path="../附录1 前后端分离的vue急速入门/0.3helloVue.html">
+            
+                <a href="../附录1 前后端分离的vue急速入门/0.3helloVue.html">
+            
+                    
+                    A.3 Hello Vue
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.18.4" data-path="../附录1 前后端分离的vue急速入门/0.4vueRouter.html">
+            
+                <a href="../附录1 前后端分离的vue急速入门/0.4vueRouter.html">
+            
+                    
+                    A.4 Vue路由示例
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.18.5" data-path="../附录1 前后端分离的vue急速入门/0.5deploy.html">
+            
+                <a href="../附录1 前后端分离的vue急速入门/0.5deploy.html">
+            
+                    
+                    A.5 前后端分离应用的部署
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.18.6" data-path="../附录1 前后端分离的vue急速入门/0.6vueSummary.html">
+            
+                <a href="../附录1 前后端分离的vue急速入门/0.6vueSummary.html">
+            
+                    
+                    A.6 急速入门总结
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.18.7" data-path="../附录1 前后端分离的vue急速入门/0.7homework.html">
+            
+                <a href="../附录1 前后端分离的vue急速入门/0.7homework.html">
+            
+                    
+                    A.7 课后作业
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.19" data-path="../附录2 Spring Boot配置大全/Configuration.html">
+            
+                <a href="../附录2 Spring Boot配置大全/Configuration.html">
+            
+                    
+                    附录2 Spring Boot配置大全
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.20" data-path="../附录3 在Docker中部署Spring Boot应用/Docker.html">
+            
+                <a href="../附录3 在Docker中部署Spring Boot应用/Docker.html">
+            
+                    
+                    附录3 在Docker中部署Spring Boot应用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.21" data-path="../EnrollmentAd.html">
+            
+                <a href="../EnrollmentAd.html">
+            
+                    
+                    广告 融宝大学堂招生
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >12.2 集成Spring Security</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h2 id="122-&#x96C6;&#x6210;spring-security">12.2 &#x96C6;&#x6210;Spring Security</h2>
+<p>&#x5728;Spring Boot&#x4E2D;&#x96C6;&#x6210;Spring Security&#x4E00;&#x5982;&#x65E2;&#x5F80;&#x5730;&#x4F7F;&#x7528;&#x4E86;&#x542F;&#x52A8;&#x5668;&#x4F9D;&#x8D56;&#xFF0C;&#x5728;&#x521B;&#x5EFA;Spring Starter&#x9879;&#x76EE;&#x65F6;&#x9009;&#x4E2D;&#x201C;Spring Security&#x201D;&#x4F9D;&#x8D56;&#x5373;&#x53EF;&#x3002;</p>
+<p><img src="images/image-20191230214146351.png" alt="image-20191230214146351"></p>
+<h3 id="1221-&#x57FA;&#x672C;&#x96C6;&#x6210;">12.2.1 &#x57FA;&#x672C;&#x96C6;&#x6210;</h3>
+<p>&#x6DFB;&#x52A0;&#x201C;Spring Security&#x201D;&#x542F;&#x52A8;&#x5668;&#x4F9D;&#x8D56;&#x540E;&#xFF0C;&#x5373;&#x5B8C;&#x6210;&#x4E86;Spring Security&#xFF0C;&#x9879;&#x76EE;&#x7684;pom&#x6587;&#x4EF6;&#x4E2D;&#x7684;&#x4F9D;&#x8D56;&#x4E3A;&#xFF1A;</p>
+<pre><code class="lang-xml"><span class="hljs-tag">&lt;<span class="hljs-name">dependency</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">groupId</span>&gt;</span>org.springframework.boot<span class="hljs-tag">&lt;/<span class="hljs-name">groupId</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">artifactId</span>&gt;</span>spring-boot-starter-security<span class="hljs-tag">&lt;/<span class="hljs-name">artifactId</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">dependency</span>&gt;</span>
+</code></pre>
+<p>&#x5728;&#x9879;&#x76EE;&#x4E2D;&#x6DFB;&#x52A0;&#x4E00;&#x4E2A;&#x63A7;&#x5236;&#x5668;HelloController&#x7C7B;&#xFF0C;&#x6D4B;&#x8BD5;Spring Security&#x662F;&#x5426;&#x6B63;&#x786E;&#x5DE5;&#x4F5C;&#x3002;</p>
+<pre><code class="lang-java"><span class="hljs-keyword">package</span> com.example.security.controller;
+
+<span class="hljs-keyword">import</span> org.springframework.web.bind.annotation.RequestMapping;
+<span class="hljs-keyword">import</span> org.springframework.web.bind.annotation.RestController;
+
+<span class="hljs-meta">@RestController</span>
+<span class="hljs-meta">@RequestMapping</span>(<span class="hljs-string">&quot;/security/&quot;</span>)
+<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">HelloController</span> </span>{
+
+    <span class="hljs-meta">@RequestMapping</span>(<span class="hljs-string">&quot;/hello&quot;</span>)
+    <span class="hljs-function"><span class="hljs-keyword">public</span> String <span class="hljs-title">hello</span><span class="hljs-params">()</span> </span>{
+        <span class="hljs-keyword">return</span> <span class="hljs-string">&quot;Hello, Security.&quot;</span>;
+    }
+
+}
+</code></pre>
+<p>&#x8FD0;&#x884C;&#x5E94;&#x7528;&#x540E;&#xFF0C;&#x6253;&#x5F00;&#x6D4F;&#x89C8;&#x5668;&#xFF0C;&#x8BBF;&#x95EE;<a href="http://localhost:8080/security/hello" target="_blank">http://localhost:8080/security/hello</a>&#xFF0C;&#x5F39;&#x51FA;Spring Security&#x63D0;&#x4F9B;&#x7684;&#x9ED8;&#x8BA4;&#x8BA4;&#x8BC1;&#x9875;&#x9762;&#xFF0C;&#x7528;&#x6237;&#x540D;&#x4E3A;user&#xFF0C;&#x5BC6;&#x7801;&#x662F;&#x5728;&#x542F;&#x52A8;&#x5E94;&#x7528;&#x65F6;&#x751F;&#x6210;&#x7684;&#x4E00;&#x4E2A;&#x968F;&#x673A;&#x5B57;&#x7B26;&#x4E32;&#xFF08;STS&#x63A7;&#x5236;&#x53F0;&#x4E2D;&#x7684;&#x5BC6;&#x7801;&#x4FE1;&#x606F;&#xFF1A;Using generated security password: 0585d7e0-dde1-4b9e-8352-27eb72517803&#xFF09;&#x3002;</p>
+<p><img src="images/image-20191231122309664.png" alt="image-20191231122309664"></p>
+<p>&#x9ED8;&#x8BA4;&#x5BC6;&#x7801;&#x5728;&#x5E94;&#x7528;&#x542F;&#x52A8;&#x65F6;&#xFF0C;&#x6253;&#x5370;&#x5728;&#x63A7;&#x5236;&#x53F0;&#x4E2D;&#xFF0C;&#x5F53;&#x7136;&#x6BCF;&#x6B21;&#x542F;&#x52A8;&#x65F6;&#x751F;&#x6210;&#x7684;&#x5BC6;&#x7801;&#x90FD;&#x4E0D;&#x4E00;&#x6837;&#x3002;</p>
+<p><img src="images/image-20191231122746947.png" alt="image-20191231122746947"></p>
+<p>&#x4F7F;&#x7528;user&#x7528;&#x6237;&#x540D;&#x548C;&#x751F;&#x6210;&#x7684;&#x5BC6;&#x7801;&#xFF08;&#x8FD9;&#x91CC;&#x662F;&#x201C;0585d7e0-dde1-4b9e-8352-27eb72517803&#x201D;&#xFF09;&#x767B;&#x5F55;&#x540E;&#xFF0C;&#x53EF;&#x6B63;&#x786E;&#x8BBF;&#x95EE;HelloController&#x8FD4;&#x56DE;&#x7684;&#x4FE1;&#x606F;&#x3002;</p>
+<p><img src="images/image-20191231122454366.png" alt="image-20191231122454366"></p>
+<p>&#x901A;&#x8FC7;&#x67E5;&#x770B;Spring Security&#x7684;&#x6E90;&#x7801;<code>org.springframework.boot.autoconfigure.security.servlet.UserDetailsServiceAutoConfiguration</code>&#x7C7B;&#xFF0C;&#x53EF;&#x4EE5;&#x770B;&#x5230;inMemoryUserDetailsManager&#x65B9;&#x6CD5;&#x4E2D;&#x4F7F;&#x7528;&#x7684;<code>SecurityProperties.User user</code>&#x5C5E;&#x6027;&#x63D0;&#x4F9B;&#x4E86;&#x7528;&#x6237;&#x540D;&#x548C;&#x5BC6;&#x7801;&#x3002;&#x7531;getOrDeducePassword&#x65B9;&#x6CD5;&#x901A;&#x8FC7;&#x65E5;&#x5FD7;<code>logger.info(String.format(&quot;%n%nUsing generated security password: %s%n&quot;, user.getPassword()));</code>&#x5C06;&#x751F;&#x6210;&#x7684;&#x9ED8;&#x8BA4;&#x5BC6;&#x7801;&#x6253;&#x5370;&#x5230;&#x63A7;&#x5236;&#x53F0;&#x3002;</p>
+<pre><code class="lang-java"><span class="hljs-function"><span class="hljs-keyword">public</span> InMemoryUserDetailsManager <span class="hljs-title">inMemoryUserDetailsManager</span><span class="hljs-params">(SecurityProperties properties,
+                                                             ObjectProvider&lt;PasswordEncoder&gt; passwordEncoder)</span> </span>{
+    SecurityProperties.User user = properties.getUser();
+    List&lt;String&gt; roles = user.getRoles();
+    <span class="hljs-keyword">return</span> <span class="hljs-keyword">new</span> InMemoryUserDetailsManager(
+        User.withUsername(user.getName()).password(getOrDeducePassword(user, passwordEncoder.getIfAvailable()))
+        .roles(StringUtils.toStringArray(roles)).build());
+}
+</code></pre>
+<p>&#x8FDB;&#x4E00;&#x6B65;&#x67E5;&#x770B;&#x8FD9;&#x4E2A;User&#x7C7B;&#xFF0C;&#x53EF;&#x4EE5;&#x770B;&#x5230;&#x9ED8;&#x8BA4;&#x767B;&#x5F55;&#x7528;&#x6237;&#x4E3A;user&#xFF0C;&#x5BC6;&#x7801;&#x4E3A;&#x4E00;&#x4E2A;uuid&#x5B57;&#x7B26;&#x4E32;&#x3002;</p>
+<pre><code class="lang-java"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">User</span> </span>{
+
+    <span class="hljs-comment">/**
+         * Default user name.
+         */</span>
+    <span class="hljs-keyword">private</span> String name = <span class="hljs-string">&quot;user&quot;</span>;
+
+    <span class="hljs-comment">/**
+         * Password for the default user name.
+         */</span>
+    <span class="hljs-keyword">private</span> String password = UUID.randomUUID().toString();
+
+    <span class="hljs-comment">/**
+         * Granted roles for the default user name.
+         */</span>
+    <span class="hljs-keyword">private</span> List&lt;String&gt; roles = <span class="hljs-keyword">new</span> ArrayList&lt;&gt;();
+
+    <span class="hljs-keyword">private</span> <span class="hljs-keyword">boolean</span> passwordGenerated = <span class="hljs-keyword">true</span>;
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> String <span class="hljs-title">getName</span><span class="hljs-params">()</span> </span>{
+        <span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>.name;
+    }
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">setName</span><span class="hljs-params">(String name)</span> </span>{
+        <span class="hljs-keyword">this</span>.name = name;
+    }
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> String <span class="hljs-title">getPassword</span><span class="hljs-params">()</span> </span>{
+        <span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>.password;
+    }
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">setPassword</span><span class="hljs-params">(String password)</span> </span>{
+        <span class="hljs-keyword">if</span> (!StringUtils.hasLength(password)) {
+            <span class="hljs-keyword">return</span>;
+        }
+        <span class="hljs-keyword">this</span>.passwordGenerated = <span class="hljs-keyword">false</span>;
+        <span class="hljs-keyword">this</span>.password = password;
+    }
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> List&lt;String&gt; <span class="hljs-title">getRoles</span><span class="hljs-params">()</span> </span>{
+        <span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>.roles;
+    }
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">setRoles</span><span class="hljs-params">(List&lt;String&gt; roles)</span> </span>{
+        <span class="hljs-keyword">this</span>.roles = <span class="hljs-keyword">new</span> ArrayList&lt;&gt;(roles);
+    }
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">boolean</span> <span class="hljs-title">isPasswordGenerated</span><span class="hljs-params">()</span> </span>{
+        <span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>.passwordGenerated;
+    }
+
+}
+</code></pre>
+<p>&#x5982;&#x679C;&#x6211;&#x4EEC;&#x7B80;&#x5355;&#x7684;&#x5728;application.properties&#x6587;&#x4EF6;&#x4E2D;&#x6307;&#x5B9A;&#x7528;&#x6237;&#x540D;&#x548C;&#x5BC6;&#x7801;&#xFF1A;</p>
+<pre><code class="lang-properties">spring.security.user.name=kevin
+spring.security.user.password=6998
+spring.security.user.roles=admin
+</code></pre>
+<p>&#x5219;&#x5E94;&#x7528;&#x5728;&#x542F;&#x52A8;&#x65F6;&#xFF0C;&#x5C31;&#x4E0D;&#x4F1A;&#x751F;&#x6210;&#x968F;&#x673A;&#x7684;uuid&#x5BC6;&#x7801;&#xFF0C;&#x4E5F;&#x4E0D;&#x4F1A;&#x5728;&#x63A7;&#x5236;&#x53F0;&#x4E2D;&#x6253;&#x5370;<code>Using generated security password: 0585d7e0-dde1-4b9e-8352-27eb72517803</code>&#x8FD9;&#x6837;&#x7684;&#x4FE1;&#x606F;&#x4E86;&#x3002;</p>
+<p>&#x8FD9;&#x4E2A;&#x65F6;&#x5019;&#xFF0C;&#x901A;&#x8FC7;&#x6D4F;&#x89C8;&#x5668;&#x8BBF;&#x95EE;<a href="http://localhost:8080/security/hello" target="_blank">http://localhost:8080/security/hello</a>&#x5219;&#x9700;&#x8981;&#x8F93;&#x5165;kevin&#x7528;&#x6237;&#x548C;6998&#x5BC6;&#x7801;&#xFF0C;&#x5C31;&#x53EF;&#x4EE5;&#x6B63;&#x5E38;&#x8BBF;&#x95EE;&#x540E;&#x53F0;&#x4E1A;&#x52A1;&#x903B;&#x8F91;&#x5E76;&#x8FD4;&#x56DE;&#x6B63;&#x786E;&#x7684;&#x7ED3;&#x679C;&#xFF0C;&#x5E76;&#x4E14;&#x8BE5;&#x7528;&#x6237;&#x5177;&#x6709;admin&#x89D2;&#x8272;&#xFF08;&#x867D;&#x7136;&#x8FD9;&#x4E2A;&#x793A;&#x4F8B;&#x4E2D;&#x89D2;&#x8272;&#x6CA1;&#x6709;&#x4EFB;&#x4F55;&#x7528;&#x5904;&#xFF09;&#x3002;</p>
+<h3 id="1222-&#x5BC6;&#x7801;&#x52A0;&#x5BC6;">12.2.2 &#x5BC6;&#x7801;&#x52A0;&#x5BC6;</h3>
+<p>&#x9664;&#x4E86;&#x5728;&#x5B66;&#x4E60;&#x73AF;&#x5883;&#x4E0B;&#xFF0C;&#x4E3A;&#x4E86;&#x5B89;&#x5168;&#x8D77;&#x89C1;&#xFF0C;&#x5BC6;&#x7801;&#x5B58;&#x50A8;&#x90FD;<strong>&#x5FC5;&#x987B;&#x8981;&#x52A0;&#x5BC6;</strong>&#x3002;</p>
+<p>Spring Security&#x901A;&#x8FC7;&#x5B9E;&#x73B0;PasswordEncoder&#x63A5;&#x53E3;&#xFF0C;&#x63D0;&#x4F9B;&#x4E86;&#x4F17;&#x591A;&#x7684;&#x5BC6;&#x7801;&#x52A0;&#x5BC6;&#x7C7B;&#xFF08;&#x5305;&#x62EC;&#x4F9B;&#x6211;&#x4EEC;&#x5728;&#x5B66;&#x4E60;&#x73AF;&#x5883;&#x4E0B;&#x4F7F;&#x7528;&#x7684;NoOpPasswordEncoder&#x660E;&#x6587;&#x5BC6;&#x7801;&#x7F16;&#x7801;&#x5668;&#xFF09;&#xFF0C;&#x4F9B;&#x6211;&#x4EEC;&#x5728;&#x5B9E;&#x9645;&#x5DE5;&#x4F5C;&#x4E2D;&#x6839;&#x636E;&#x9700;&#x8981;&#x9009;&#x7528;&#x3002;</p>
+<p><img src="images/image-20200102104426724.png" alt="image-20200102104426724"></p>
+<blockquote>
+<p>&#x5947;&#x8469;&#x7684;NoOpPasswordEncoder&#x7C7B;&#xFF1A;encode(CharSequence rawPassword) &#x65B9;&#x6CD5;&#x7684;&#x8FD4;&#x56DE;&#x503C;&#x4E3A;encode(CharSequence rawPassword) &#xFF0C;&#x4E5F;&#x5C31;&#x662F;&#x5BC6;&#x7801;&#x7F16;&#x7801;&#x8FD4;&#x56DE;&#x660E;&#x6587;&#xFF0C;&#x6240;&#x4EE5;&#x5343;&#x4E07;&#x4E0D;&#x8981;&#x5728;&#x751F;&#x4EA7;&#x73AF;&#x5883;&#x4E2D;&#x4F7F;&#x7528;&#x3002;</p>
+</blockquote>
+<p>&#x4FEE;&#x6539;SecurityConfiguration&#x7C7B;&#xFF0C;&#x6DFB;&#x52A0;BCryptPasswordEncoder&#x5BC6;&#x7801;&#x7F16;&#x7801;&#x5668;&#x3002;</p>
+<blockquote>
+<p>BCryptPasswordEncoder&#xFF0C;&#x4F7F;&#x7528;&#x4E86;BCrypt&#x5F3A;&#x54C8;&#x5E0C;&#x65B9;&#x6CD5;&#x6765;&#x52A0;&#x5BC6;&#x5BC6;&#x7801;&#x3002;</p>
+</blockquote>
+<pre><code class="lang-java"><span class="hljs-keyword">package</span> com.example.security.config;
+
+<span class="hljs-keyword">import</span> org.springframework.context.annotation.Bean;
+<span class="hljs-keyword">import</span> org.springframework.context.annotation.Configuration;
+<span class="hljs-keyword">import</span> org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
+<span class="hljs-keyword">import</span> org.springframework.security.config.annotation.web.builders.HttpSecurity;
+<span class="hljs-keyword">import</span> org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
+<span class="hljs-keyword">import</span> org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
+<span class="hljs-keyword">import</span> org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+<span class="hljs-keyword">import</span> org.springframework.security.crypto.password.PasswordEncoder;
+
+<span class="hljs-meta">@Configuration</span>
+<span class="hljs-meta">@EnableWebSecurity</span>
+<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">SecurityConfiguration</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">WebSecurityConfigurerAdapter</span> </span>{
+    <span class="hljs-meta">@Bean</span>
+    <span class="hljs-function">PasswordEncoder <span class="hljs-title">passwordEncoder</span><span class="hljs-params">()</span> </span>{
+        PasswordEncoder encoder = <span class="hljs-keyword">new</span> BCryptPasswordEncoder();
+        <span class="hljs-keyword">return</span> encoder;
+    }
+
+    <span class="hljs-meta">@Override</span>
+    <span class="hljs-function"><span class="hljs-keyword">protected</span> <span class="hljs-keyword">void</span> <span class="hljs-title">configure</span><span class="hljs-params">(AuthenticationManagerBuilder auth)</span> <span class="hljs-keyword">throws</span> Exception </span>{
+        auth.inMemoryAuthentication()
+        .withUser(<span class="hljs-string">&quot;admin&quot;</span>).password(<span class="hljs-keyword">new</span> BCryptPasswordEncoder().encode(<span class="hljs-string">&quot;admin&quot;</span>)).roles(<span class="hljs-string">&quot;ADMIN&quot;</span>, <span class="hljs-string">&quot;USER&quot;</span>)
+        .and()
+        .withUser(<span class="hljs-string">&quot;kevin&quot;</span>).password(<span class="hljs-keyword">new</span> BCryptPasswordEncoder().encode(<span class="hljs-string">&quot;6998&quot;</span>)).roles(<span class="hljs-string">&quot;USER&quot;</span>)
+        .and()
+        .withUser(<span class="hljs-string">&quot;roy&quot;</span>).password(<span class="hljs-keyword">new</span> BCryptPasswordEncoder().encode(<span class="hljs-string">&quot;3525&quot;</span>)).roles(<span class="hljs-string">&quot;USER&quot;</span>);
+    }
+
+    <span class="hljs-meta">@Override</span>
+    <span class="hljs-function"><span class="hljs-keyword">protected</span> <span class="hljs-keyword">void</span> <span class="hljs-title">configure</span><span class="hljs-params">(HttpSecurity http)</span> <span class="hljs-keyword">throws</span> Exception </span>{
+        http.authorizeRequests()
+        .antMatchers(<span class="hljs-string">&quot;/admin/**&quot;</span>)
+        .hasRole(<span class="hljs-string">&quot;ADMIN&quot;</span>)
+        .antMatchers(<span class="hljs-string">&quot;/user/**&quot;</span>)
+        .hasRole(<span class="hljs-string">&quot;USER&quot;</span>)
+        .anyRequest()
+        .authenticated()
+        .and()
+        .formLogin()
+        .loginProcessingUrl(<span class="hljs-string">&quot;/login&quot;</span>)
+        .permitAll();
+    }
+
+}
+</code></pre>
+<p>&#x4E0A;&#x9762;&#x7684;&#x793A;&#x4F8B;&#x4E2D;PasswordEncoder&#x4F7F;&#x7528;&#x4E86;BCryptPasswordEncoder&#x5B9E;&#x73B0;&#x7C7B;&#xFF0C;&#x5E76;&#x4E14;&#x5728;&#x57FA;&#x4E8E;&#x5185;&#x5B58;&#x7684;&#x8BA4;&#x8BC1;&#x5668;&#x4E2D;&#x7ED9;&#x51FA;&#x7528;&#x6237;&#x5BC6;&#x7801;&#x65F6;&#xFF0C;&#x4F7F;&#x7528;&#x4E86;BCryptPasswordEncoder&#x52A0;&#x5BC6;&#x5BC6;&#x7801;&#xFF08;password(new BCryptPasswordEncoder().encode(&quot;admin&quot;))&#xFF09;&#x3002;&#x8FD9;&#x6837;&#xFF0C;&#x5185;&#x5B58;&#x4E2D;&#x5B58;&#x50A8;&#x7684;&#x5BC6;&#x7801;&#x65F6;&#x901A;&#x8FC7;BCrypt&#x52A0;&#x5BC6;&#x7684;&#x5BC6;&#x7801;&#xFF0C;&#x7528;&#x6237;&#x5728;&#x767B;&#x5F55;&#x9875;&#x9762;&#x8F93;&#x5165;&#x5BC6;&#x7801;&#xFF08;&#x4F8B;&#x5982;admin&#x7528;&#x6237;&#x7684;&#x5BC6;&#x7801;admin&#xFF09;&#x540E;&#xFF0C;Spring Security&#x4F7F;&#x7528;PasswordEncoder&#x5BF9;&#x5BC6;&#x7801;&#x8FDB;&#x884C;&#x7F16;&#x7801;&#x540E;&#x4E0E;&#x5185;&#x5B58;&#x4E2D;&#x5B58;&#x50A8;&#x7684;&#x52A0;&#x5BC6;&#x540E;&#x7684;&#x5BC6;&#x7801;&#x5BF9;&#x6BD4;&#xFF0C;&#x5B8C;&#x6210;&#x8BA4;&#x8BC1;&#xFF0C;&#x6B63;&#x786E;&#x540E;&#x5C31;&#x653E;&#x884C;&#x3002;</p>
+<h3 id="1223-&#x57FA;&#x4E8E;&#x5185;&#x5B58;&#x7684;&#x8BA4;&#x8BC1;">12.2.3 &#x57FA;&#x4E8E;&#x5185;&#x5B58;&#x7684;&#x8BA4;&#x8BC1;</h3>
+<p>&#x5728;&#x672C;&#x5C0F;&#x8282;&#x7684;&#x5B66;&#x4E60;&#x8FC7;&#x7A0B;&#x4E2D;&#xFF0C;&#x901A;&#x8FC7;&#x5C06;&#x7528;&#x6237;&#x3001;&#x5BC6;&#x7801;&#x548C;&#x89D2;&#x8272;&#x914D;&#x7F6E;&#x5728;&#x5185;&#x5B58;&#x4E2D;&#xFF0C;&#x4F1A;&#x66F4;&#x65B9;&#x4FBF;&#x96C6;&#x4E2D;&#x7CBE;&#x529B;&#x5B66;&#x4E60;Spring Security&#x3002;</p>
+<p>&#x6CE8;&#x91CA;&#x6389;&#x4E0A;&#x4E00;&#x5C0F;&#x8282;application.properties&#x6587;&#x4EF6;&#x4E2D;&#x6307;&#x5B9A;&#x7684;&#x7528;&#x6237;&#x540D;&#x3001;&#x5BC6;&#x7801;&#x548C;&#x89D2;&#x8272;&#x3002;</p>
+<blockquote>
+<p>&#x540E;&#x7EED;&#x5C0F;&#x8282;&#x6211;&#x4EEC;&#x4F1A;&#x901A;&#x8FC7;&#x6570;&#x636E;&#x5E93;&#x6765;&#x5B8C;&#x6210;&#x4E00;&#x4E2A;RBAC&#x7684;&#x5B89;&#x5168;&#x63A7;&#x5236;&#x793A;&#x4F8B;&#x3002;</p>
+</blockquote>
+<pre><code class="lang-java"><span class="hljs-keyword">package</span> com.example.security.config;
+
+<span class="hljs-keyword">import</span> org.springframework.context.annotation.Bean;
+<span class="hljs-keyword">import</span> org.springframework.context.annotation.Configuration;
+<span class="hljs-keyword">import</span> org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
+<span class="hljs-keyword">import</span> org.springframework.security.config.annotation.web.builders.HttpSecurity;
+<span class="hljs-keyword">import</span> org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
+<span class="hljs-keyword">import</span> org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
+<span class="hljs-keyword">import</span> org.springframework.security.crypto.password.NoOpPasswordEncoder;
+<span class="hljs-keyword">import</span> org.springframework.security.crypto.password.PasswordEncoder;
+
+<span class="hljs-meta">@Configuration</span>
+<span class="hljs-meta">@EnableWebSecurity</span>
+<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">SecurityConfiguration</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">WebSecurityConfigurerAdapter</span> </span>{
+    <span class="hljs-meta">@Bean</span>
+    <span class="hljs-function">PasswordEncoder <span class="hljs-title">passwordEncoder</span><span class="hljs-params">()</span> </span>{
+        <span class="hljs-keyword">return</span> NoOpPasswordEncoder.getInstance();
+    }
+
+    <span class="hljs-meta">@Override</span>
+    <span class="hljs-function"><span class="hljs-keyword">protected</span> <span class="hljs-keyword">void</span> <span class="hljs-title">configure</span><span class="hljs-params">(AuthenticationManagerBuilder auth)</span> <span class="hljs-keyword">throws</span> Exception </span>{
+        auth.inMemoryAuthentication()
+            .withUser(<span class="hljs-string">&quot;admin&quot;</span>).password(<span class="hljs-string">&quot;admin&quot;</span>).roles(<span class="hljs-string">&quot;ADMIN&quot;</span>, <span class="hljs-string">&quot;USER&quot;</span>)
+        .and()
+            .withUser(<span class="hljs-string">&quot;kevin&quot;</span>).password(<span class="hljs-string">&quot;6998&quot;</span>).roles(<span class="hljs-string">&quot;USER&quot;</span>)
+        .and()
+            .withUser(<span class="hljs-string">&quot;roy&quot;</span>).password(<span class="hljs-string">&quot;3525&quot;</span>).roles(<span class="hljs-string">&quot;USER&quot;</span>);
+    }
+
+    <span class="hljs-meta">@Override</span>
+    <span class="hljs-function"><span class="hljs-keyword">protected</span> <span class="hljs-keyword">void</span> <span class="hljs-title">configure</span><span class="hljs-params">(HttpSecurity http)</span> <span class="hljs-keyword">throws</span> Exception </span>{
+        http.authorizeRequests()
+            .antMatchers(<span class="hljs-string">&quot;/admin/**&quot;</span>)
+            .hasRole(<span class="hljs-string">&quot;ADMIN&quot;</span>)
+            .antMatchers(<span class="hljs-string">&quot;/user/**&quot;</span>)
+            .hasRole(<span class="hljs-string">&quot;USER&quot;</span>)
+            .anyRequest()
+            .authenticated()
+        .and()
+            .formLogin()
+            .loginProcessingUrl(<span class="hljs-string">&quot;/login&quot;</span>)
+            .permitAll();
+    }
+
+}
+</code></pre>
+<p>&#x4E0A;&#x8FF0;&#x4EE3;&#x7801;&#xFF0C;&#x9996;&#x5148;&#x6CE8;&#x518C;&#x4E00;&#x4E2A;PasswordEncoder&#xFF08;&#x5BC6;&#x7801;&#x52A0;&#x5BC6;&#x7F16;&#x7801;&#x5668;&#x7C7B;&#xFF09;&#xFF0C;&#x8FD9;&#x91CC;&#x4E3A;&#x4E86;&#x6D4B;&#x8BD5;&#x7B80;&#x4FBF;&#xFF0C;&#x4F7F;&#x7528;&#x4E86;&#x4E0D;&#x52A0;&#x5BC6;&#x5BC6;&#x7801;&#x3002;&#x5728;&#x5B9E;&#x9645;&#x751F;&#x4EA7;&#x73AF;&#x5883;&#x4E0B;<strong>&#x7EDD;&#x5BF9;&#x4E0D;&#x80FD;&#x4F7F;&#x7528;</strong>&#x8FD9;&#x4E2A;&#x5BC6;&#x7801;&#x7F16;&#x7801;&#x5668;&#x7C7B;&#x3002;</p>
+<p>&#x7136;&#x540E;&#x4F7F;&#x7528;AuthenticationManagerBuilder.inMemoryAuthentication&#x7684;&#x5185;&#x5B58;&#x8BA4;&#x8BC1;&#xFF0C;&#x901A;&#x8FC7;&#x7F16;&#x7801;&#x6DFB;&#x52A0;&#x4E86;3&#x4E2A;&#x7528;&#x6237;&#x548C;&#x5BF9;&#x5E94;&#x7684;&#x89D2;&#x8272;&#xFF08;&quot;ADMIN&quot;, &quot;USER&quot;&#xFF09;&#x3002;</p>
+<p>&#x6700;&#x540E;&#x4F7F;&#x7528;HttpSecurity&#x4E3A;&#x4E0D;&#x540C;&#x7684;&#x8D44;&#x6E90;&#x5339;&#x914D;&#x4E86;&#x4E0D;&#x540C;&#x7684;&#x89D2;&#x8272;&#x8BBF;&#x95EE;&#x6743;&#x9650;&#x3002;</p>
+<p>&#x6DFB;&#x52A0;AdminController&#x63A7;&#x5236;&#x5668;&#x7C7B;&#xFF0C;&#x63D0;&#x4F9B;&#x201C;/admin/hello&#x201D;&#x8D44;&#x6E90;&#x3002;</p>
+<pre><code class="lang-java"><span class="hljs-keyword">package</span> com.example.security.controller;
+
+<span class="hljs-keyword">import</span> org.springframework.web.bind.annotation.RequestMapping;
+<span class="hljs-keyword">import</span> org.springframework.web.bind.annotation.RestController;
+
+<span class="hljs-meta">@RestController</span>
+<span class="hljs-meta">@RequestMapping</span>(<span class="hljs-string">&quot;/admin/&quot;</span>)
+<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">AdminController</span> </span>{
+
+    <span class="hljs-meta">@RequestMapping</span>(<span class="hljs-string">&quot;/hello&quot;</span>)
+    <span class="hljs-function"><span class="hljs-keyword">public</span> String <span class="hljs-title">hello</span><span class="hljs-params">()</span> </span>{
+        <span class="hljs-keyword">return</span> <span class="hljs-string">&quot;admin.hello&quot;</span>;
+    }
+
+}
+</code></pre>
+<p>&#x6DFB;&#x52A0;UserController&#x63A7;&#x5236;&#x5668;&#x7C7B;&#xFF0C;&#x63D0;&#x4F9B;&#x201C;/user/hello&#x201D;&#x8D44;&#x6E90;&#x3002;</p>
+<pre><code class="lang-java"><span class="hljs-keyword">package</span> com.example.security.controller;
+
+<span class="hljs-keyword">import</span> org.springframework.web.bind.annotation.RequestMapping;
+<span class="hljs-keyword">import</span> org.springframework.web.bind.annotation.RestController;
+
+<span class="hljs-meta">@RestController</span>
+<span class="hljs-meta">@RequestMapping</span>(<span class="hljs-string">&quot;/user/&quot;</span>)
+<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">UserController</span> </span>{
+
+    <span class="hljs-meta">@RequestMapping</span>(<span class="hljs-string">&quot;/hello&quot;</span>)
+    <span class="hljs-function"><span class="hljs-keyword">public</span> String <span class="hljs-title">hello</span><span class="hljs-params">()</span> </span>{
+        <span class="hljs-keyword">return</span> <span class="hljs-string">&quot;user.hello&quot;</span>;
+    }
+
+}
+</code></pre>
+<p>&#x542F;&#x52A8;&#x5E94;&#x7528;&#xFF0C;&#x6D4B;&#x8BD5;&#xFF1A;</p>
+<ul>
+<li><p>&#x4F7F;&#x7528;admin&#x7528;&#x6237;&#x767B;&#x5F55;&#xFF0C;&#x53EF;&#x4EE5;&#x6B63;&#x786E;&#x8BBF;&#x95EE;&#x201C;/admin/hello&#x201D;&#x548C;&#x201C;/user/hello&#x201D;&#x8D44;&#x6E90;&#x3002;</p>
+</li>
+<li><p>&#x4F7F;&#x7528;kevin&#x7528;&#x6237;&#x767B;&#x5F55;&#xFF0C;&#x53EF;&#x4EE5;&#x6B63;&#x786E;&#x8BBF;&#x95EE;&#x201C;/user/hello&#x201D;&#x8D44;&#x6E90;&#xFF0C;&#x4E0D;&#x80FD;&#x6B63;&#x786E;&#x8BBF;&#x95EE;&#x201C;/admin/hello&#x201D;&#x8D44;&#x6E90;&#xFF0C;&#x9519;&#x8BEF;&#x4FE1;&#x606F;&#x5982;&#x4E0B;&#xFF1A;</p>
+<p><img src="images/image-20200101233505995.png" alt="image-20200101233505995"></p>
+</li>
+</ul>
+<p>&#x4EE5;&#x4E0A;&#x5C31;&#x662F;&#x4E00;&#x4E2A;&#x57FA;&#x4E8E;&#x5185;&#x5B58;&#x8BA4;&#x8BC1;&#x7684;&#x6700;&#x7B80;&#x5355;&#x7684;RBAC&#xFF08;&#x57FA;&#x4E8E;&#x89D2;&#x8272;&#x7684;&#x5B58;&#x53D6;&#x63A7;&#x5236;&#xFF09;&#x6743;&#x9650;&#x63A7;&#x5236;&#x7CFB;&#x7EDF;&#xFF1A;</p>
+<ul>
+<li>kevin&#x62E5;&#x6709;USER&#x89D2;&#x8272;&#xFF1B;</li>
+<li>&#x201C;/user/**&#x201D;&#x8D44;&#x6E90;&#x6388;&#x6743;&#x7ED9;USER&#x89D2;&#x8272;&#xFF1B;</li>
+<li>kevin&#x767B;&#x5F55;&#x540E;&#x62E5;&#x6709;USER&#x89D2;&#x8272;&#xFF0C;&#x53EF;&#x4EE5;&#x8BBF;&#x95EE;&#x201C;/user/hello&#x201D;&#x8D44;&#x6E90;&#x3002;</li>
+</ul>
+<h3 id="1224-&#x767B;&#x5F55;&#x8868;&#x5355;&#x6CE8;&#x9500;&#x914D;&#x7F6E;">12.2.4 &#x767B;&#x5F55;&#x8868;&#x5355;/&#x6CE8;&#x9500;&#x914D;&#x7F6E;</h3>
+<p>&#x867D;&#x7136;Spring Security&#x63D0;&#x4F9B;&#x4E86;&#x9ED8;&#x8BA4;&#x7684;&#x767B;&#x5F55;&#x8868;&#x5355;&#xFF0C;&#x4F46;&#x662F;&#x5728;&#x5B9E;&#x9645;&#x5DE5;&#x4F5C;&#x4E2D;&#x7EDD;&#x5927;&#x591A;&#x6570;&#x60C5;&#x51B5;&#x90FD;&#x7528;&#x4E0D;&#x4E0A;&#x3002;&#x57FA;&#x672C;&#x4E0A;&#x5728;&#x6240;&#x6709;&#x7684;&#x9879;&#x76EE;/&#x4EA7;&#x54C1;&#x4E2D;&#xFF0C;&#x90FD;&#x4F1A;&#x4F7F;&#x7528;&#x81EA;&#x5B9A;&#x4E49;&#x7684;&#x767B;&#x5F55;&#x8868;&#x5355;&#x3002;&#x5F53;&#x7136;&#xFF0C;&#x6CE8;&#x9500;&#x767B;&#x5F55;&#xFF08;&#x6216;&#x8005;&#x53EB;&#x505A;&#x767B;&#x51FA;&#xFF09;&#xFF0C;&#x4E5F;&#x4F1A;&#x4F7F;&#x7528;&#x81EA;&#x5B9A;&#x4E49;&#x7684;&#x914D;&#x7F6E;&#x3002;</p>
+<p>&#x901A;&#x8FC7;&#x67E5;&#x770B;Spring Security&#x6E90;&#x7801;&#xFF0C;&#x53EF;&#x4EE5;&#x770B;&#x5230;&#x9ED8;&#x8BA4;&#x767B;&#x5F55;&#x8868;&#x5355;&#x5728;<code>org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter.generateLoginPageHtml</code>&#x65B9;&#x6CD5;&#x4E2D;&#x6784;&#x5EFA;&#x3002;</p>
+<p>&#x5728;DefaultLoginPageGeneratingFilter&#x7C7B;&#x7684;doFilter&#x65B9;&#x6CD5;&#x4E2D;<code>response.getWriter().write(loginPageHtml)</code>&#x4EE3;&#x7801;&#x5411;&#x6D4F;&#x89C8;&#x5668;&#x8F93;&#x51FA;&#x767B;&#x5F55;&#x8868;&#x5355;&#x3002;</p>
+<pre><code class="lang-java"><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">doFilter</span><span class="hljs-params">(ServletRequest req, ServletResponse res, FilterChain chain)</span>
+    <span class="hljs-keyword">throws</span> IOException, ServletException </span>{
+    HttpServletRequest request = (HttpServletRequest) req;
+    HttpServletResponse response = (HttpServletResponse) res;
+
+    <span class="hljs-keyword">boolean</span> loginError = isErrorPage(request);
+    <span class="hljs-keyword">boolean</span> logoutSuccess = isLogoutSuccess(request);
+    <span class="hljs-keyword">if</span> (isLoginUrlRequest(request) || loginError || logoutSuccess) {
+        String loginPageHtml = generateLoginPageHtml(request, loginError,
+                                                     logoutSuccess);
+        response.setContentType(<span class="hljs-string">&quot;text/html;charset=UTF-8&quot;</span>);
+        response.setContentLength(loginPageHtml.getBytes(StandardCharsets.UTF_8).length);
+        response.getWriter().write(loginPageHtml);
+
+        <span class="hljs-keyword">return</span>;
+    }
+
+    chain.doFilter(request, response);
+}
+</code></pre>
+<p>&#x672C;&#x5C0F;&#x8282;&#xFF0C;&#x6211;&#x4EEC;&#x4F7F;&#x7528;Thymeleaf&#x6A21;&#x677F;+&#x57FA;&#x4E8E;&#x5185;&#x5B58;&#x8BA4;&#x8BC1;&#x65B9;&#x5F0F;&#x6765;&#x5B66;&#x4E60;&#x5982;&#x4F55;&#x81EA;&#x5B9A;&#x4E49;&#x767B;&#x5F55;&#x8868;&#x5355;&#x3002;</p>
+<p>&#x9996;&#x5148;&#xFF0C;&#x6211;&#x4EEC;&#x6DFB;&#x52A0;&#x51E0;&#x4E2A;&#x7B80;&#x5355;&#x7684;&#x9875;&#x9762;&#xFF0C;&#x7136;&#x540E;&#x901A;&#x8FC7;Spring Security&#x57FA;&#x4E8E;&#x5185;&#x5B58;&#x7684;&#x914D;&#x7F6E;&#x8BBE;&#x7F6E;&#x5176;&#x7528;&#x6237;&#x3001;&#x89D2;&#x8272;&#x3001;&#x81EA;&#x5B9A;&#x4E49;&#x767B;&#x5F55;&#x8868;&#x5355;&#x3001;&#x6CE8;&#x9500;&#x7B49;&#x64CD;&#x4F5C;&#x3002;</p>
+<h4 id="12241-&#x9996;&#x9875;">12.2.4.1 &#x9996;&#x9875;</h4>
+<p>&#x521B;&#x5EFA;<code>src/main/resources/templates/index.html</code>&#x9875;&#x9762;&#xFF0C;&#x4F5C;&#x4E3A;&#x9879;&#x76EE;&#x7684;&#x9996;&#x9875;&#x3002;</p>
+<pre><code class="lang-html"><span class="hljs-meta">&lt;!DOCTYPE html&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">html</span> <span class="hljs-attr">xmlns:th</span>=<span class="hljs-string">&quot;http://www.thymeleaf.org&quot;</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">head</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">title</span>&gt;</span>&#x793A;&#x4F8B;&#x9996;&#x9875;<span class="hljs-tag">&lt;/<span class="hljs-name">title</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">head</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">body</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">h1</span>&gt;</span>&#x793A;&#x4F8B;&#x9996;&#x9875;<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>&#x767B;&#x5F55;&#x6210;&#x529F;&#x540E;&#xFF0C;&#x81EA;&#x52A8;&#x8DF3;&#x8F6C;&#x5230;&#x8FD9;&#x91CC;<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>
+        &#x70B9;&#x51FB; <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">th:href</span>=<span class="hljs-string">&quot;@{/user/hello}&quot;</span>&gt;</span>&#x8FD9;&#x91CC;<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span> &#x8FDB;&#x5165;User Hello&#x9875;&#x9762;&#x3002;
+    <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>
+        &#x70B9;&#x51FB; <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">th:href</span>=<span class="hljs-string">&quot;@{/admin/hello}&quot;</span>&gt;</span>&#x8FD9;&#x91CC;<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span> &#x8FDB;&#x5165;Admin Hello&#x9875;&#x9762;&#x3002;
+    <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">form</span> <span class="hljs-attr">th:action</span>=<span class="hljs-string">&quot;@{/logout}&quot;</span> <span class="hljs-attr">method</span>=<span class="hljs-string">&quot;post&quot;</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;submit&quot;</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;&#x9000;&#x51FA;&#xFF08;&#x767B;&#x51FA;&#xFF0C;logout&#xFF09;&quot;</span> /&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">form</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">body</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">html</span>&gt;</span>
+</code></pre>
+<h4 id="12242-&#x767B;&#x5F55;&#x9875;&#x9762;">12.2.4.2 &#x767B;&#x5F55;&#x9875;&#x9762;</h4>
+<p>&#x521B;&#x5EFA;<code>src/main/resources/templates/login.html</code>&#x9875;&#x9762;&#xFF0C;&#x4F5C;&#x4E3A;&#x9879;&#x76EE;&#x7684;&#x767B;&#x5F55;&#x9875;&#x9762;&#x3002;</p>
+<pre><code class="lang-html"><span class="hljs-meta">&lt;!DOCTYPE html&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">html</span> <span class="hljs-attr">xmlns:th</span>=<span class="hljs-string">&quot;http://www.thymeleaf.org&quot;</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">head</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">title</span>&gt;</span>&#x81EA;&#x5B9A;&#x4E49;&#x767B;&#x5F55;&#x793A;&#x4F8B;<span class="hljs-tag">&lt;/<span class="hljs-name">title</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">head</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">body</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">h1</span>&gt;</span>&#x8BF7;&#x4F60;&#x767B;&#x5F55;<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">th:if</span>=<span class="hljs-string">&quot;${param.error}&quot;</span>&gt;</span>&#x7528;&#x6237;&#x540D;&#x6216;&#x5BC6;&#x7801;&#x9519;<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">th:if</span>=<span class="hljs-string">&quot;${param.logout}&quot;</span>&gt;</span>&#x60A8;&#x5DF2;&#x6CE8;&#x9500;&#x6210;&#x529F;<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">form</span> <span class="hljs-attr">th:action</span>=<span class="hljs-string">&quot;@{/login}&quot;</span> <span class="hljs-attr">method</span>=<span class="hljs-string">&quot;post&quot;</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">label</span>&gt;</span> &#x7528;&#x6237;&#x540D; : <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;text&quot;</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;login_username&quot;</span> /&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">label</span>&gt;</span> &#x5BC6;&#x7801; : <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;password&quot;</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;login_password&quot;</span> /&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;submit&quot;</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;&#x767B;&#x5F55;&quot;</span> /&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">form</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">body</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">html</span>&gt;</span>
+</code></pre>
+<p>&#x5728;&#x767B;&#x5F55;&#x9875;&#x9762;&#x4E2D;&#xFF0C;&#x7279;&#x610F;&#x5C06;&#x7528;&#x6237;&#x540D;input&#x8BBE;&#x4E3A;login_username&#xFF0C;&#x6F14;&#x793A;&#x5339;&#x914D;&#x540E;&#x7EED;&#x7684;&#x81EA;&#x5B9A;&#x4E49;&#x767B;&#x5F55;&#x9875;&#x9762;&#x914D;&#x7F6E;&#x4FE1;&#x606F;&#x3002;</p>
+<h4 id="12243-&#x7BA1;&#x7406;&#x9875;&#x9762;">12.2.4.3 &#x7BA1;&#x7406;&#x9875;&#x9762;</h4>
+<p>&#x521B;&#x5EFA;<code>src/main/resources/templates/admin/hello.html</code>&#xFF0C;&#x4F5C;&#x4E3A;&#x9879;&#x76EE;&#x7684;&#x7BA1;&#x7406;&#x9875;&#x9762;&#xFF0C;&#x6309;&#x7167;&#x672C;&#x793A;&#x4F8B;&#x8BBE;&#x7F6E;&#xFF0C;&#x9700;&#x8981;ADMIN&#x89D2;&#x8272;&#x7684;&#x7528;&#x6237;&#x624D;&#x53EF;&#x4EE5;&#x8BBF;&#x95EE;&#x3002;</p>
+<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html xmlns:th=&quot;http://www.thymeleaf.org&quot;&gt;
+&lt;head&gt;
+&lt;title&gt;Admin.Hello Page&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1&gt;Admin Page&lt;/h1&gt;
+    &lt;p th:text=&quot;${user}&quot;/&gt;
+    &lt;p&gt;&lt;a th:href=&quot;@{/index}&quot;&gt;&#x8FD4;&#x56DE;&lt;/a&gt;&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre><h4 id="12244-&#x7528;&#x6237;&#x9875;&#x9762;">12.2.4.4 &#x7528;&#x6237;&#x9875;&#x9762;</h4>
+<p>&#x521B;&#x5EFA;<code>src/main/resources/templates/user/hello.html</code>&#xFF0C;&#x4F5C;&#x4E3A;&#x9879;&#x76EE;&#x7684;&#x7528;&#x6237;&#x9875;&#x9762;&#xFF0C;&#x6309;&#x7167;&#x672C;&#x793A;&#x4F8B;&#x8BBE;&#x7F6E;&#xFF0C;&#x9700;&#x8981;USER&#x89D2;&#x8272;&#x7684;&#x7528;&#x6237;&#x624D;&#x53EF;&#x4EE5;&#x8BBF;&#x95EE;&#x3002;</p>
+<pre><code class="lang-html"><span class="hljs-meta">&lt;!DOCTYPE html&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">html</span> <span class="hljs-attr">xmlns:th</span>=<span class="hljs-string">&quot;http://www.thymeleaf.org&quot;</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">head</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">title</span>&gt;</span>User.Hello Page<span class="hljs-tag">&lt;/<span class="hljs-name">title</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">head</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">body</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">h1</span>&gt;</span>User Page<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">th:text</span>=<span class="hljs-string">&quot;${user}&quot;</span>/&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">th:href</span>=<span class="hljs-string">&quot;@{/index}&quot;</span>&gt;</span>&#x8FD4;&#x56DE;<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">body</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">html</span>&gt;</span>
+</code></pre>
+<h4 id="12245-&#x5176;&#x4ED6;&#x9875;&#x9762;">12.2.4.5 &#x5176;&#x4ED6;&#x9875;&#x9762;</h4>
+<p>&#x521B;&#x5EFA;<code>src/main/resources/templates/other/hello.html</code>&#xFF0C;&#x4F5C;&#x4E3A;&#x9879;&#x76EE;&#x7684;&#x5176;&#x4ED6;&#x9875;&#x9762;&#xFF0C;&#x6309;&#x7167;&#x672C;&#x793A;&#x4F8B;&#x8BBE;&#x7F6E;&#xFF0C;&#x4EFB;&#x4F55;&#x767B;&#x5F55;&#x7528;&#x6237;&#xFF08;&#x4EFB;&#x4F55;&#x89D2;&#x8272;&#xFF09;&#x90FD;&#x53EF;&#x4EE5;&#x8BBF;&#x95EE;&#x3002;</p>
+<pre><code class="lang-html"><span class="hljs-meta">&lt;!DOCTYPE html&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">html</span> <span class="hljs-attr">xmlns:th</span>=<span class="hljs-string">&quot;http://www.thymeleaf.org&quot;</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">head</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">title</span>&gt;</span>Other.Hello Page<span class="hljs-tag">&lt;/<span class="hljs-name">title</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">head</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">body</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">h1</span>&gt;</span>Other Page<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">th:text</span>=<span class="hljs-string">&quot;${user}&quot;</span>/&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">th:href</span>=<span class="hljs-string">&quot;@{/index}&quot;</span>&gt;</span>&#x8FD4;&#x56DE;<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">body</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">html</span>&gt;</span>
+</code></pre>
+<h4 id="12246-&#x9875;&#x9762;controller">12.2.4.6 &#x9875;&#x9762;Controller</h4>
+<p>&#x65B0;&#x5EFA;&#x4E00;&#x4E2A;&#x63A7;&#x5236;&#x9875;&#x9762;&#x8DF3;&#x8F6C;&#x7684;PageController&#xFF0C;&#x5C06;&#x4E0A;&#x8FF0;4&#x4E2A;&#x9875;&#x9762;&#x4E32;&#x63A5;&#x8D77;&#x6765;&#x3002;</p>
+<pre><code class="lang-java"><span class="hljs-keyword">package</span> com.example.security.controller;
+
+<span class="hljs-keyword">import</span> org.springframework.stereotype.Controller;
+<span class="hljs-keyword">import</span> org.springframework.web.bind.annotation.RequestMapping;
+<span class="hljs-keyword">import</span> org.springframework.web.bind.annotation.RequestMethod;
+<span class="hljs-keyword">import</span> org.springframework.web.servlet.ModelAndView;
+
+<span class="hljs-meta">@Controller</span>
+<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">PagesController</span> </span>{
+
+    <span class="hljs-meta">@RequestMapping</span>(<span class="hljs-string">&quot;/index&quot;</span>)
+    <span class="hljs-function"><span class="hljs-keyword">public</span> String <span class="hljs-title">index</span><span class="hljs-params">()</span> </span>{
+        <span class="hljs-keyword">return</span> <span class="hljs-string">&quot;/index&quot;</span>;
+    }
+
+    <span class="hljs-meta">@RequestMapping</span>(value = <span class="hljs-string">&quot;/login&quot;</span>, method = RequestMethod.GET)
+    <span class="hljs-function"><span class="hljs-keyword">public</span> String <span class="hljs-title">login</span><span class="hljs-params">()</span> </span>{
+        <span class="hljs-keyword">return</span> <span class="hljs-string">&quot;/login&quot;</span>;
+    }
+
+    <span class="hljs-meta">@RequestMapping</span>(<span class="hljs-string">&quot;/admin/hello&quot;</span>)
+    <span class="hljs-function"><span class="hljs-keyword">public</span> ModelAndView <span class="hljs-title">adminHello</span><span class="hljs-params">()</span> </span>{
+        ModelAndView mv = <span class="hljs-keyword">new</span> ModelAndView();
+        mv.addObject(<span class="hljs-string">&quot;user&quot;</span>, <span class="hljs-string">&quot;admin&quot;</span>);
+        mv.setViewName(<span class="hljs-string">&quot;/admin/hello&quot;</span>);
+        <span class="hljs-keyword">return</span> mv;
+    }
+
+    <span class="hljs-meta">@RequestMapping</span>(<span class="hljs-string">&quot;/user/hello&quot;</span>)
+    <span class="hljs-function"><span class="hljs-keyword">public</span> ModelAndView <span class="hljs-title">userHello</span><span class="hljs-params">()</span> </span>{
+        ModelAndView mv = <span class="hljs-keyword">new</span> ModelAndView();
+        mv.addObject(<span class="hljs-string">&quot;user&quot;</span>, <span class="hljs-string">&quot;kevin&quot;</span>);
+        mv.setViewName(<span class="hljs-string">&quot;/user/hello&quot;</span>);
+        <span class="hljs-keyword">return</span> mv;
+    }
+
+    <span class="hljs-meta">@RequestMapping</span>(<span class="hljs-string">&quot;/other/hello&quot;</span>)
+    <span class="hljs-function"><span class="hljs-keyword">public</span> ModelAndView <span class="hljs-title">otherHello</span><span class="hljs-params">()</span> </span>{
+        ModelAndView mv = <span class="hljs-keyword">new</span> ModelAndView();
+        mv.addObject(<span class="hljs-string">&quot;user&quot;</span>, <span class="hljs-string">&quot;other&quot;</span>);
+        mv.setViewName(<span class="hljs-string">&quot;/other/hello&quot;</span>);
+        <span class="hljs-keyword">return</span> mv;
+    }
+
+}
+</code></pre>
+<h4 id="12247-spring-security&#x914D;&#x7F6E;">12.2.4.7 Spring Security&#x914D;&#x7F6E;</h4>
+<p>&#x5728;&#x542F;&#x7528;&#x4E86;Spring Security&#x7684;Spring Boot&#x5E94;&#x7528;&#x4E2D;&#xFF0C;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x81EA;&#x5B9A;&#x4E49;&#x8868;&#x5355;html&#x9875;&#x9762;&#xFF0C;&#x7136;&#x540E;&#x901A;&#x8FC7;HttpSecurity&#x7684;formLogin&#x548C;logout&#x81EA;&#x5B9A;&#x4E49;&#x767B;&#x5F55;&#x9875;&#x9762;&#x548C;&#x6CE8;&#x9500;&#xFF08;&#x767B;&#x51FA;&#xFF09;&#x64CD;&#x4F5C;&#x548C;&#x884C;&#x4E3A;&#x3002;</p>
+<pre><code class="lang-java"><span class="hljs-keyword">package</span> com.example.security.config;
+
+<span class="hljs-keyword">import</span> org.springframework.context.annotation.Configuration;
+<span class="hljs-keyword">import</span> org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
+<span class="hljs-keyword">import</span> org.springframework.security.config.annotation.web.builders.HttpSecurity;
+<span class="hljs-keyword">import</span> org.springframework.security.config.annotation.web.builders.WebSecurity;
+<span class="hljs-keyword">import</span> org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
+<span class="hljs-keyword">import</span> org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
+<span class="hljs-keyword">import</span> org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+
+<span class="hljs-meta">@Configuration</span>
+<span class="hljs-meta">@EnableWebSecurity</span>
+<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">SecurityConfiguration</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">WebSecurityConfigurerAdapter</span> </span>{
+
+    <span class="hljs-meta">@Override</span>
+    <span class="hljs-function"><span class="hljs-keyword">protected</span> <span class="hljs-keyword">void</span> <span class="hljs-title">configure</span><span class="hljs-params">(AuthenticationManagerBuilder auth)</span> <span class="hljs-keyword">throws</span> Exception </span>{
+        auth.inMemoryAuthentication()
+        .passwordEncoder(<span class="hljs-keyword">new</span> BCryptPasswordEncoder())
+        .withUser(<span class="hljs-string">&quot;admin&quot;</span>).password(<span class="hljs-keyword">new</span> BCryptPasswordEncoder().encode(<span class="hljs-string">&quot;admin&quot;</span>)).roles(<span class="hljs-string">&quot;ADMIN&quot;</span>, <span class="hljs-string">&quot;USER&quot;</span>)
+        .and()
+        .withUser(<span class="hljs-string">&quot;kevin&quot;</span>).password(<span class="hljs-keyword">new</span> BCryptPasswordEncoder().encode(<span class="hljs-string">&quot;6998&quot;</span>)).roles(<span class="hljs-string">&quot;USER&quot;</span>)
+        .and()
+        .withUser(<span class="hljs-string">&quot;roy&quot;</span>).password(<span class="hljs-keyword">new</span> BCryptPasswordEncoder().encode(<span class="hljs-string">&quot;3525&quot;</span>)).roles(<span class="hljs-string">&quot;OTHER&quot;</span>);
+    }
+
+    <span class="hljs-meta">@Override</span>
+    <span class="hljs-function"><span class="hljs-keyword">protected</span> <span class="hljs-keyword">void</span> <span class="hljs-title">configure</span><span class="hljs-params">(HttpSecurity http)</span> <span class="hljs-keyword">throws</span> Exception </span>{
+        http.formLogin()
+            .loginPage(<span class="hljs-string">&quot;/login&quot;</span>)
+            .usernameParameter(<span class="hljs-string">&quot;login_username&quot;</span>)
+            .passwordParameter(<span class="hljs-string">&quot;login_password&quot;</span>)
+            .failureUrl(<span class="hljs-string">&quot;/login?error&quot;</span>)
+            .defaultSuccessUrl(<span class="hljs-string">&quot;/index&quot;</span>)
+            .permitAll()
+        .and().logout()
+            .logoutUrl(<span class="hljs-string">&quot;/logout&quot;</span>)
+            .logoutSuccessUrl(<span class="hljs-string">&quot;/login?logout&quot;</span>)
+            .clearAuthentication(<span class="hljs-keyword">true</span>)
+            .invalidateHttpSession(<span class="hljs-keyword">true</span>)
+            .permitAll()
+        .and().authorizeRequests()
+            .antMatchers(<span class="hljs-string">&quot;/admin/**&quot;</span>).hasRole(<span class="hljs-string">&quot;ADMIN&quot;</span>)
+            .antMatchers(<span class="hljs-string">&quot;/user/**&quot;</span>).hasRole(<span class="hljs-string">&quot;USER&quot;</span>)
+            .anyRequest()
+            .authenticated();
+    }
+
+    <span class="hljs-meta">@Override</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">configure</span><span class="hljs-params">(WebSecurity web)</span> </span>{
+        web.ignoring().antMatchers(<span class="hljs-string">&quot;/config/**&quot;</span>, <span class="hljs-string">&quot;/css/**&quot;</span>, <span class="hljs-string">&quot;/images/**&quot;</span>, <span class="hljs-string">&quot;/js/**&quot;</span>);
+    }
+
+}
+</code></pre>
+<ul>
+<li><code>formLogin().permitAll()</code>&#x4EE3;&#x7801;&#x6307;&#x793A;Spring Security&#x5141;&#x8BB8;&#x4EFB;&#x4F55;&#x7528;&#x6237;&#x8BBF;&#x95EE;formLogin&#x4E0E;&#x4E4B;&#x5173;&#x8054;&#x7684;URL&#xFF08;/login&#xFF09;&#xFF1B;</li>
+<li><code>logout().permitAll()</code>&#x4EE3;&#x7801;&#x6307;&#x793A;Spring Security&#x5141;&#x8BB8;&#x4EFB;&#x4F55;&#x7528;&#x6237;&#x8BBF;&#x95EE;logout&#x4E0E;&#x4E4B;&#x5173;&#x8054;&#x7684;URL&#xFF08;/logout&#xFF09;&#xFF1B;</li>
+<li><code>authorizeRequests().anyRequest().authenticated()</code>&#x4EE3;&#x7801;&#x6307;&#x793A;Spring Security&#x5141;&#x8BB8;&#x767B;&#x5F55;&#xFF08;&#x901A;&#x8FC7;&#x8BA4;&#x8BC1;&#x7684;&#xFF09;&#x7528;&#x6237;&#x8BBF;&#x95EE;&#x6240;&#x6709;&#x7684;&#x9875;&#x9762;&#xFF08;&#x6BD4;&#x5982;&#x201C;other/hello.html&#x201D;&#x9875;&#x9762;&#xFF09;&#xFF1B;</li>
+<li><code>antMatchers(&quot;/admin/**&quot;).hasRole(&quot;ADMIN&quot;)</code>&#x5177;&#x6709;ADMIN&#x89D2;&#x8272;&#x7684;&#x767B;&#x5F55;&#x7528;&#x6237;&#x624D;&#x90FD;&#x8BBF;&#x95EE;/admin/&#x5F00;&#x5934;&#x7684;&#x9875;&#x9762;&#x3002;</li>
+</ul>
+<h4 id="12248-&#x6D4B;&#x8BD5;">12.2.4.8 &#x6D4B;&#x8BD5;</h4>
+<p>&#x542F;&#x52A8;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#xFF0C;&#x6253;&#x5F00;&#x6D4F;&#x89C8;&#x5668;&#xFF0C;&#x8F93;&#x51FA;<a href="http://localhost:8080/" target="_blank">http://localhost:8080/</a>&#x5730;&#x5740;&#xFF0C;&#x81EA;&#x52A8;&#x8DF3;&#x8F6C;&#x5230;&#x767B;&#x5F55;&#x9875;&#x9762;&#x3002;</p>
+<p><img src="images/image-20200104234551358.png" alt="image-20200104234551358"></p>
+<p>&#x8F93;&#x5165;&#x9519;&#x8BEF;&#x7684;&#x7528;&#x6237;&#x540D;&#xFF0C;&#x4F1A;&#x8DF3;&#x8F6C;&#x56DE;&#x767B;&#x5F55;&#x9875;&#x9762;&#xFF0C;&#x5E76;&#x4E14;&#x663E;&#x793A;&#x9519;&#x8BEF;&#x4FE1;&#x606F;&#xFF1A;&#x7528;&#x6237;&#x540D;&#x6216;&#x5BC6;&#x7801;&#x9519;&#x3002;</p>
+<p><img src="images/image-20200104235008590.png" alt="image-20200104235008590"></p>
+<p>&#x8F93;&#x5165;&#x6B63;&#x786E;&#x7684;&#x7528;&#x6237;&#x540D;&#x548C;&#x5BC6;&#x7801;&#xFF0C;&#x767B;&#x5F55;&#x540E;&#x4F1A;&#x8DF3;&#x8F6C;&#x5230;&#x9996;&#x9875;&#x3002;</p>
+<p><img src="images/image-20200104235203435.png" alt="image-20200104235203435"></p>
+<p>&#x70B9;&#x51FB;User Hello&#x9875;&#x9762;&#x7684;&#x94FE;&#x63A5;&#xFF0C;&#x53EF;&#x4EE5;&#x6B63;&#x786E;&#x8BBF;&#x95EE;User Hello&#x9875;&#x9762;&#x3002;</p>
+<p><img src="images/image-20200104235324026.png" alt="image-20200104235324026"></p>
+<p>&#x8FD4;&#x56DE;&#x9996;&#x9875;&#xFF0C;&#x540E;&#x70B9;&#x51FB;Admin Hello&#x9875;&#x9762;&#x7684;&#x94FE;&#x63A5;&#xFF0C;&#x7531;&#x4E8E;Kevin&#x7528;&#x6237;&#x4E0D;&#x5177;&#x6709;ADMIN&#x89D2;&#x8272;&#xFF0C;&#x6240;&#x4EE5;&#x4E0D;&#x53EF;&#x4EE5;&#x8BBF;&#x95EE;Admin Hello&#x9875;&#x9762;&#x3002;</p>
+<p><img src="images/image-20200104235456419.png" alt="image-20200104235456419"></p>
+<p>&#x4F7F;&#x7528;roy&#x7528;&#x6237;&#x767B;&#x5F55;&#xFF08;&#x5176;&#x7528;&#x6237;&#x89D2;&#x8272;&#x4E3A;OTHER&#xFF09;&#xFF0C;&#x65E2;&#x4E0D;&#x80FD;&#x8BBF;&#x95EE;admin/hello&#x9875;&#x9762;&#xFF0C;&#x4E5F;&#x4E0D;&#x80FD;&#x8BBF;&#x95EE;user/hello&#x9875;&#x9762;&#xFF0C;&#x53EA;&#x80FD;&#x8BBF;&#x95EE;other/hello&#x9875;&#x9762;&#x3002;&#x5F53;&#x7136;&#xFF0C;admin&#x548C;kevin&#x7528;&#x6237;&#x767B;&#x5F55;&#xFF0C;&#x90FD;&#x53EF;&#x4EE5;&#x8BBF;&#x95EE;other/hello&#x9875;&#x9762;&#x3002;</p>
+<p><img src="images/image-20200105120903188.png" alt="image-20200105120903188"></p>
+<p>&#x5728;&#x9996;&#x9875;&#xFF0C;&#x70B9;&#x51FB;<code>&#x9000;&#x51FA;&#xFF08;&#x767B;&#x51FA;&#xFF0C;logout&#xFF09;</code>&#x6309;&#x94AE;&#xFF0C;&#x53EF;&#x4EE5;&#x6B63;&#x786E;&#x6CE8;&#x9500;&#x5F53;&#x524D;&#x767B;&#x5F55;&#x3002;</p>
+<p><img src="images/image-20200105000355299.png" alt="image-20200105000355299"></p>
+<p>&#x4EE5;&#x4E0A;&#x6D4B;&#x8BD5;&#xFF0C;&#x7B26;&#x5408;&#x9879;&#x76EE;&#x6743;&#x9650;&#x63A7;&#x5236;&#x9884;&#x671F;&#x3002;</p>
+<blockquote>
+<p>&#x672C;&#x5C0F;&#x8282;&#x793A;&#x4F8B;&#x9879;&#x76EE;&#x4EE3;&#x7801;&#xFF1A;</p>
+<p><a href="https://github.com/gyzhang/SpringBootCourseCode/tree/master/spring-boot-security" target="_blank">https://github.com/gyzhang/SpringBootCourseCode/tree/master/spring-boot-security</a></p>
+</blockquote>
+<h3 id="1225-&#x57FA;&#x4E8E;&#x6570;&#x636E;&#x5E93;&#x7684;&#x8BA4;&#x8BC1;">12.2.5 &#x57FA;&#x4E8E;&#x6570;&#x636E;&#x5E93;&#x7684;&#x8BA4;&#x8BC1;</h3>
+<p>&#x5728;&#x6211;&#x4EEC;&#x5B9E;&#x9645;&#x7684;&#x5DE5;&#x4F5C;&#x4E2D;&#xFF0C;&#x51E0;&#x4E4E;&#x6240;&#x6709;&#x7684;&#x8BA4;&#x8BC1;&#x6388;&#x6743;&#xFF0C;&#x90FD;&#x662F;&#x57FA;&#x4E8E;&#x6570;&#x636E;&#x5E93;&#x4E2D;&#x5B58;&#x50A8;&#x7684;&#x7528;&#x6237;&#x6388;&#x6743;&#x6570;&#x636E;&#x6765;&#x7684;&#x5B8C;&#x6210;&#x7684;&#x3002;</p>
+<p>&#x5728;Spring Security&#x4E2D;&#xFF0C;&#x901A;&#x8FC7;<code>org.springframework.security.core.userdetails.UserDetails</code>l&#x548C;<code>org.springframework.security.core.userdetails.UserDetailsService</code>&#x4E24;&#x4E2A;&#x63A5;&#x53E3;&#x5B8C;&#x6210;&#x7A0B;&#x5E8F;&#x5B9A;&#x4E49;&#xFF08;&#x5728;&#x8FD9;&#x4E24;&#x4E2A;&#x63A5;&#x53E3;&#x7684;&#x5B9E;&#x73B0;&#x7C7B;&#x4E2D;&#x8BBF;&#x95EE;&#x6570;&#x636E;&#x5E93;&#x4E2D;&#x7684;&#x6570;&#x636E;&#xFF09;&#x7684;&#x7528;&#x6237;&#x670D;&#x52A1;&#xFF0C;&#x7136;&#x540E;&#x901A;&#x8FC7;<code>AuthenticationManagerBuilder.userDetailsService(customUserService())</code>&#x5C06;&#x6211;&#x4EEC;&#x901A;&#x8FC7;&#x6570;&#x636E;&#x5E93;&#x5B58;&#x50A8;&#x7684;&#x7528;&#x6237;&#x89D2;&#x8272;&#xFF08;&#x6388;&#x6743;&#xFF09;&#x8FDE;&#x63A5;&#x5230;Spring Security&#xFF0C;&#x5B8C;&#x6210;&#x7528;&#x6237;&#x8BA4;&#x8BC1;&#x4E0E;&#x6388;&#x6743;&#xFF08;Authentication&#x548C;Authorization&#xFF09;&#x3002;</p>
+<pre><code class="lang-java"><span class="hljs-meta">@Bean</span>
+<span class="hljs-function">UserDetailsService <span class="hljs-title">customUserService</span><span class="hljs-params">()</span> </span>{ <span class="hljs-comment">// &#x6CE8;&#x518C;UserDetailsService &#x7684;bean</span>
+    <span class="hljs-keyword">return</span> <span class="hljs-keyword">new</span> CustomUserDetailsService();
+}
+<span class="hljs-meta">@Bean</span>
+<span class="hljs-function">PasswordEncoder <span class="hljs-title">passwordEncoder</span><span class="hljs-params">()</span> </span>{
+    PasswordEncoder encoder = <span class="hljs-keyword">new</span> BCryptPasswordEncoder();
+    <span class="hljs-keyword">return</span> encoder;
+}
+
+<span class="hljs-meta">@Override</span>
+<span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">configure</span><span class="hljs-params">(AuthenticationManagerBuilder auth)</span> <span class="hljs-keyword">throws</span> Exception </span>{
+    auth.userDetailsService(customUserService()).passwordEncoder(passwordEncoder());
+}
+</code></pre>
+<p>&#x672C;&#x5C0F;&#x8282;&#xFF0C;&#x6211;&#x4EEC;&#x4F7F;&#x7528;MySQL&#x6570;&#x636E;&#x5E93;&#xFF0C;&#x901A;&#x8FC7;MyBatis&#x6765;&#x5B66;&#x4E60;&#x5982;&#x4F55;&#x57FA;&#x4E8E;&#x6570;&#x636E;&#x5E93;&#x6765;&#x652F;&#x6301;Spring Security&#x7684;&#x7528;&#x6237;&#x8BA4;&#x8BC1;&#x3002;</p>
+<p>&#x521B;&#x5EFA;&#x9879;&#x76EE;&#xFF0C;&#x6DFB;&#x52A0;&#x6570;&#x636E;&#x5E93;&#x53CA;Spring Security&#x76F8;&#x5173;&#x7684;&#x542F;&#x52A8;&#x5668;&#x4F9D;&#x8D56;&#x3002;</p>
+<p><img src="images/image-20200105122749728.png" alt="image-20200105122749728"></p>
+<p>&#x9879;&#x76EE;&#x7684;pom&#x4F9D;&#x8D56;&#x4E3A;&#xFF1A;</p>
+<pre><code class="lang-xml"><span class="hljs-tag">&lt;<span class="hljs-name">dependency</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">groupId</span>&gt;</span>org.springframework.boot<span class="hljs-tag">&lt;/<span class="hljs-name">groupId</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">artifactId</span>&gt;</span>spring-boot-starter-security<span class="hljs-tag">&lt;/<span class="hljs-name">artifactId</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">dependency</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">dependency</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">groupId</span>&gt;</span>org.springframework.boot<span class="hljs-tag">&lt;/<span class="hljs-name">groupId</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">artifactId</span>&gt;</span>spring-boot-starter-thymeleaf<span class="hljs-tag">&lt;/<span class="hljs-name">artifactId</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">dependency</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">dependency</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">groupId</span>&gt;</span>org.springframework.boot<span class="hljs-tag">&lt;/<span class="hljs-name">groupId</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">artifactId</span>&gt;</span>spring-boot-starter-web<span class="hljs-tag">&lt;/<span class="hljs-name">artifactId</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">dependency</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">dependency</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">groupId</span>&gt;</span>org.mybatis.spring.boot<span class="hljs-tag">&lt;/<span class="hljs-name">groupId</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">artifactId</span>&gt;</span>mybatis-spring-boot-starter<span class="hljs-tag">&lt;/<span class="hljs-name">artifactId</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">version</span>&gt;</span>2.1.1<span class="hljs-tag">&lt;/<span class="hljs-name">version</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">dependency</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">dependency</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">groupId</span>&gt;</span>org.springframework.boot<span class="hljs-tag">&lt;/<span class="hljs-name">groupId</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">artifactId</span>&gt;</span>spring-boot-devtools<span class="hljs-tag">&lt;/<span class="hljs-name">artifactId</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">scope</span>&gt;</span>runtime<span class="hljs-tag">&lt;/<span class="hljs-name">scope</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">optional</span>&gt;</span>true<span class="hljs-tag">&lt;/<span class="hljs-name">optional</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">dependency</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">dependency</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">groupId</span>&gt;</span>mysql<span class="hljs-tag">&lt;/<span class="hljs-name">groupId</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">artifactId</span>&gt;</span>mysql-connector-java<span class="hljs-tag">&lt;/<span class="hljs-name">artifactId</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">scope</span>&gt;</span>runtime<span class="hljs-tag">&lt;/<span class="hljs-name">scope</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">dependency</span>&gt;</span>
+</code></pre>
+<p>&#x9879;&#x76EE;&#x7684;application.yml&#x6587;&#x4EF6;&#x4E2D;&#x914D;&#x7F6E;&#x6570;&#x636E;&#x5E93;&#x8FDE;&#x63A5;&#x53CA;MyBatis&#x5C5E;&#x6027;&#x3002;</p>
+<pre><code class="lang-yaml"><span class="hljs-comment"># mysql&#x6570;&#x636E;&#x6E90;&#x914D;&#x7F6E;</span>
+<span class="hljs-attr">spring:</span>
+<span class="hljs-attr">  datasource:</span>
+<span class="hljs-attr">    url:</span> jdbc:mysql://localhost:<span class="hljs-number">3306</span>/ssdemo?useUnicode=<span class="hljs-literal">true</span>&amp;characterEncoding=utf<span class="hljs-bullet">-8</span>&amp;serverTimezone=GMT%<span class="hljs-number">2</span>B8
+<span class="hljs-attr">    username:</span> root
+<span class="hljs-attr">    password:</span> <span class="hljs-number">123456</span>
+<span class="hljs-attr">    driver-class-name:</span> com.mysql.cj.jdbc.Driver
+<span class="hljs-comment"># mybatis &#x914D;&#x7F6E;&#x4FE1;&#x606F;</span>
+<span class="hljs-attr">mybatis:</span>
+<span class="hljs-attr">  mapper-locations:</span> classpath:mapping/*Mapper.xml
+<span class="hljs-attr">  type-aliases-package:</span> com.example.security.db.entity
+<span class="hljs-attr">  configuration:</span>
+<span class="hljs-attr">    map-underscore-to-camel-case:</span> <span class="hljs-literal">true</span>
+</code></pre>
+<blockquote>
+<p><code>mybatis.configuration.map-underscore-to-camel-case=true</code>&#x662F;&#x6253;&#x5F00;&#x5B57;&#x6BB5;&#x4E0B;&#x5212;&#x7EBF;&#x548C;java&#x5B9E;&#x4F53;&#x7C7B;&#x4E2D;&#x5C5E;&#x6027;&#x201C;&#x9A7C;&#x5CF0;&#x547D;&#x540D;&#x201D;&#x4E4B;&#x95F4;&#x7684;&#x6620;&#x5C04;&#x3002;&#x4F8B;&#x5982;role_code&#x5B57;&#x6BB5;&#x81EA;&#x52A8;&#x6620;&#x5C04;&#x4E3A;roleCode&#xFF0C;&#x53CD;&#x4E4B;&#x4EA6;&#x7136;&#x3002;</p>
+</blockquote>
+<h4 id="12251-&#x521B;&#x5EFA;&#x6570;&#x636E;&#x5E93;&#x8868;">12.2.5.1 &#x521B;&#x5EFA;&#x6570;&#x636E;&#x5E93;&#x8868;</h4>
+<p>&#x57FA;&#x4E8E;&#x6700;&#x7B80;&#x5B66;&#x4E60;&#x6848;&#x4F8B;&#x539F;&#x5219;&#xFF0C;&#x8BBE;&#x8BA1;&#x7684;&#x6570;&#x636E;&#x5E93;&#x8868;&#xFF08;&#x7528;&#x6237;&#x3001;&#x89D2;&#x8272;&#x548C;&#x7528;&#x6237;&#x89D2;&#x8272;&#x5173;&#x8054;&#x8868;&#xFF09;&#x53EA;&#x5305;&#x542B;&#x6700;&#x5C11;&#x7684;&#x5B57;&#x6BB5;&#x3002;</p>
+<pre><code class="lang-sql"><span class="hljs-keyword">drop</span> <span class="hljs-keyword">table</span> <span class="hljs-keyword">if</span> <span class="hljs-keyword">exists</span> sys_role;
+
+<span class="hljs-keyword">drop</span> <span class="hljs-keyword">table</span> <span class="hljs-keyword">if</span> <span class="hljs-keyword">exists</span> sys_user;
+
+<span class="hljs-keyword">drop</span> <span class="hljs-keyword">table</span> <span class="hljs-keyword">if</span> <span class="hljs-keyword">exists</span> sys_user_role;
+
+<span class="hljs-comment">/*==============================================================*/</span>
+<span class="hljs-comment">/* Table: sys_role                                              */</span>
+<span class="hljs-comment">/*==============================================================*/</span>
+<span class="hljs-keyword">create</span> <span class="hljs-keyword">table</span> sys_role
+(
+   role_code            <span class="hljs-built_in">varchar</span>(<span class="hljs-number">64</span>) <span class="hljs-keyword">not</span> <span class="hljs-literal">null</span>,
+   role_name            <span class="hljs-built_in">varchar</span>(<span class="hljs-number">64</span>),
+   primary <span class="hljs-keyword">key</span> (role_code)
+);
+
+<span class="hljs-comment">/*==============================================================*/</span>
+<span class="hljs-comment">/* Table: sys_user                                              */</span>
+<span class="hljs-comment">/*==============================================================*/</span>
+<span class="hljs-keyword">create</span> <span class="hljs-keyword">table</span> sys_user
+(
+   username             <span class="hljs-built_in">varchar</span>(<span class="hljs-number">64</span>) <span class="hljs-keyword">not</span> <span class="hljs-literal">null</span>,
+   <span class="hljs-keyword">password</span>             <span class="hljs-built_in">varchar</span>(<span class="hljs-number">64</span>),
+   primary <span class="hljs-keyword">key</span> (username)
+);
+
+<span class="hljs-comment">/*==============================================================*/</span>
+<span class="hljs-comment">/* Table: sys_user_role                                         */</span>
+<span class="hljs-comment">/*==============================================================*/</span>
+<span class="hljs-keyword">create</span> <span class="hljs-keyword">table</span> sys_user_role
+(
+   <span class="hljs-keyword">id</span>                   <span class="hljs-built_in">varchar</span>(<span class="hljs-number">64</span>) <span class="hljs-keyword">not</span> <span class="hljs-literal">null</span>,
+   username             <span class="hljs-built_in">varchar</span>(<span class="hljs-number">64</span>),
+   role_code            <span class="hljs-built_in">varchar</span>(<span class="hljs-number">64</span>),
+   primary <span class="hljs-keyword">key</span> (<span class="hljs-keyword">id</span>)
+);
+
+<span class="hljs-keyword">alter</span> <span class="hljs-keyword">table</span> sys_user_role <span class="hljs-keyword">add</span> <span class="hljs-keyword">constraint</span> FK_Reference_1 foreign <span class="hljs-keyword">key</span> (username)
+      <span class="hljs-keyword">references</span> sys_user (username) <span class="hljs-keyword">on</span> <span class="hljs-keyword">delete</span> restrict <span class="hljs-keyword">on</span> <span class="hljs-keyword">update</span> restrict;
+
+<span class="hljs-keyword">alter</span> <span class="hljs-keyword">table</span> sys_user_role <span class="hljs-keyword">add</span> <span class="hljs-keyword">constraint</span> FK_Reference_2 foreign <span class="hljs-keyword">key</span> (role_code)
+      <span class="hljs-keyword">references</span> sys_role (role_code) <span class="hljs-keyword">on</span> <span class="hljs-keyword">delete</span> restrict <span class="hljs-keyword">on</span> <span class="hljs-keyword">update</span> restrict;
+</code></pre>
+<p><img src="images/image-20200106211139765.png" alt="image-20200106211139765"></p>
+<p>&#x5728;3&#x5F20;&#x8868;&#x4E2D;&#x63D2;&#x5165;&#x4E00;&#x4E9B;&#x6D4B;&#x8BD5;&#x6570;&#x636E;&#x3002;</p>
+<pre><code class="lang-sql"><span class="hljs-keyword">INSERT</span> <span class="hljs-keyword">INTO</span> <span class="hljs-string">`sys_user`</span> <span class="hljs-keyword">VALUES</span> (<span class="hljs-string">&apos;admin&apos;</span>, <span class="hljs-string">&apos;admin&apos;</span>);
+<span class="hljs-keyword">INSERT</span> <span class="hljs-keyword">INTO</span> <span class="hljs-string">`sys_user`</span> <span class="hljs-keyword">VALUES</span> (<span class="hljs-string">&apos;kevin&apos;</span>, <span class="hljs-string">&apos;6998&apos;</span>);
+<span class="hljs-keyword">INSERT</span> <span class="hljs-keyword">INTO</span> <span class="hljs-string">`sys_user`</span> <span class="hljs-keyword">VALUES</span> (<span class="hljs-string">&apos;roy&apos;</span>, <span class="hljs-string">&apos;3525&apos;</span>);
+
+<span class="hljs-keyword">INSERT</span> <span class="hljs-keyword">INTO</span> <span class="hljs-string">`sys_role`</span> <span class="hljs-keyword">VALUES</span> (<span class="hljs-string">&apos;ROLE_ADMIN&apos;</span>, <span class="hljs-string">&apos;&#x7BA1;&#x7406;&#x89D2;&#x8272;&apos;</span>);
+<span class="hljs-keyword">INSERT</span> <span class="hljs-keyword">INTO</span> <span class="hljs-string">`sys_role`</span> <span class="hljs-keyword">VALUES</span> (<span class="hljs-string">&apos;ROLE_OTHER&apos;</span>, <span class="hljs-string">&apos;&#x5176;&#x4ED6;&#x89D2;&#x8272;&apos;</span>);
+<span class="hljs-keyword">INSERT</span> <span class="hljs-keyword">INTO</span> <span class="hljs-string">`sys_role`</span> <span class="hljs-keyword">VALUES</span> (<span class="hljs-string">&apos;ROLE_USER&apos;</span>, <span class="hljs-string">&apos;&#x7528;&#x6237;&#x89D2;&#x8272;&apos;</span>);
+
+<span class="hljs-keyword">INSERT</span> <span class="hljs-keyword">INTO</span> <span class="hljs-string">`sys_user_role`</span> <span class="hljs-keyword">VALUES</span> (<span class="hljs-string">&apos;1&apos;</span>, <span class="hljs-string">&apos;admin&apos;</span>, <span class="hljs-string">&apos;ROLE_ADMIN&apos;</span>);
+<span class="hljs-keyword">INSERT</span> <span class="hljs-keyword">INTO</span> <span class="hljs-string">`sys_user_role`</span> <span class="hljs-keyword">VALUES</span> (<span class="hljs-string">&apos;2&apos;</span>, <span class="hljs-string">&apos;admin&apos;</span>, <span class="hljs-string">&apos;ROLE_USER&apos;</span>);
+<span class="hljs-keyword">INSERT</span> <span class="hljs-keyword">INTO</span> <span class="hljs-string">`sys_user_role`</span> <span class="hljs-keyword">VALUES</span> (<span class="hljs-string">&apos;3&apos;</span>, <span class="hljs-string">&apos;kevin&apos;</span>, <span class="hljs-string">&apos;ROLE_USER&apos;</span>);
+<span class="hljs-keyword">INSERT</span> <span class="hljs-keyword">INTO</span> <span class="hljs-string">`sys_user_role`</span> <span class="hljs-keyword">VALUES</span> (<span class="hljs-string">&apos;4&apos;</span>, <span class="hljs-string">&apos;roy&apos;</span>, <span class="hljs-string">&apos;ROLE_OTHER&apos;</span>);
+</code></pre>
+<h4 id="12252-&#x521B;&#x5EFA;&#x5B9E;&#x4F53;&#x7C7B;">12.2.5.2 &#x521B;&#x5EFA;&#x5B9E;&#x4F53;&#x7C7B;</h4>
+<p>&#x6839;&#x636E;&#x6570;&#x636E;&#x5E93;&#x8BBE;&#x8BA1;&#xFF0C;&#x521B;&#x5EFA;3&#x4E2A;&#x5B9E;&#x4F53;&#x7C7B;&#xFF0C;&#x4F9B;&#x540E;&#x7EED;MyBatis&#x8F93;&#x51FA;&#x636E;&#x5E93;&#x64CD;&#x4F5C;&#x7528;&#x3002;</p>
+<p>&#x521B;&#x5EFA;SysUser&#x5B9E;&#x4F53;&#x7C7B;&#xFF08;&#x5BF9;&#x5E94;sys_user&#x8868;&#xFF09;&#x3002;</p>
+<pre><code class="lang-java"><span class="hljs-keyword">package</span> com.example.security.db.entity;
+
+<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">SysUser</span> </span>{
+
+    <span class="hljs-keyword">private</span> String username;
+    <span class="hljs-keyword">private</span> String password;
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> String <span class="hljs-title">getUsername</span><span class="hljs-params">()</span> </span>{
+        <span class="hljs-keyword">return</span> username;
+    }
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">setUsername</span><span class="hljs-params">(String username)</span> </span>{
+        <span class="hljs-keyword">this</span>.username = username;
+    }
+    <span class="hljs-function"><span class="hljs-keyword">public</span> String <span class="hljs-title">getPassword</span><span class="hljs-params">()</span> </span>{
+        <span class="hljs-keyword">return</span> password;
+    }
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">setPassword</span><span class="hljs-params">(String password)</span> </span>{
+        <span class="hljs-keyword">this</span>.password = password;
+    }
+
+}
+</code></pre>
+<p>&#x521B;&#x5EFA;SysRole&#x5B9E;&#x4F53;&#x7C7B;&#xFF08;&#x5BF9;&#x5E94;sys_role&#x8868;&#xFF09;&#x3002;</p>
+<pre><code class="lang-java"><span class="hljs-keyword">package</span> com.example.security.db.entity;
+
+<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">SysRole</span> </span>{
+
+    <span class="hljs-keyword">private</span> String roleCode;
+    <span class="hljs-keyword">private</span> String roleName;
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> String <span class="hljs-title">getRoleCode</span><span class="hljs-params">()</span> </span>{
+        <span class="hljs-keyword">return</span> roleCode;
+    }
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">setRoleCode</span><span class="hljs-params">(String roleCode)</span> </span>{
+        <span class="hljs-keyword">this</span>.roleCode = roleCode;
+    }
+    <span class="hljs-function"><span class="hljs-keyword">public</span> String <span class="hljs-title">getRoleName</span><span class="hljs-params">()</span> </span>{
+        <span class="hljs-keyword">return</span> roleName;
+    }
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">setRoleName</span><span class="hljs-params">(String roleName)</span> </span>{
+        <span class="hljs-keyword">this</span>.roleName = roleName;
+    }    
+
+}
+</code></pre>
+<p>&#x521B;&#x5EFA;SysUserRole&#x5B9E;&#x4F53;&#x7C7B;&#xFF08;&#x5BF9;&#x5E94;sys_user_role&#x8868;&#xFF09;&#x3002;</p>
+<pre><code class="lang-java"><span class="hljs-keyword">package</span> com.example.security.db.entity;
+
+<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">SysUserRole</span> </span>{
+
+    <span class="hljs-keyword">private</span> String id;
+    <span class="hljs-keyword">private</span> String username;
+    <span class="hljs-keyword">private</span> String roleCode;
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> String <span class="hljs-title">getId</span><span class="hljs-params">()</span> </span>{
+        <span class="hljs-keyword">return</span> id;
+    }
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">setId</span><span class="hljs-params">(String id)</span> </span>{
+        <span class="hljs-keyword">this</span>.id = id;
+    }
+    <span class="hljs-function"><span class="hljs-keyword">public</span> String <span class="hljs-title">getUsername</span><span class="hljs-params">()</span> </span>{
+        <span class="hljs-keyword">return</span> username;
+    }
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">setUsername</span><span class="hljs-params">(String username)</span> </span>{
+        <span class="hljs-keyword">this</span>.username = username;
+    }
+    <span class="hljs-function"><span class="hljs-keyword">public</span> String <span class="hljs-title">getRoleCode</span><span class="hljs-params">()</span> </span>{
+        <span class="hljs-keyword">return</span> roleCode;
+    }
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">setRoleCode</span><span class="hljs-params">(String roleCode)</span> </span>{
+        <span class="hljs-keyword">this</span>.roleCode = roleCode;
+    }
+
+}
+</code></pre>
+<h4 id="12253-&#x521B;&#x5EFA;dao">12.2.5.3 &#x521B;&#x5EFA;DAO</h4>
+<p>&#x6700;&#x7B80;&#x8D77;&#x89C1;&#xFF0C;&#x6211;&#x4EEC;&#x521B;&#x5EFA;SysUser&#x548C;SysUserRole&#x5BF9;&#x5E94;&#x7684;DAO&#xFF08;mapper&#xFF09;&#x3002;</p>
+<p>SysUser&#x7684;mapper.xml&#xFF1A;</p>
+<pre><code class="lang-xml"><span class="php"><span class="hljs-meta">&lt;?</span>xml version=<span class="hljs-string">&quot;1.0&quot;</span> encoding=<span class="hljs-string">&quot;UTF-8&quot;</span><span class="hljs-meta">?&gt;</span></span>
+<span class="hljs-meta">&lt;!DOCTYPE mapper PUBLIC &quot;-//mybatis.org//DTD Mapper 3.0//EN&quot; &quot;http://mybatis.org/dtd/mybatis-3-mapper.dtd&quot;&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">mapper</span> <span class="hljs-attr">namespace</span>=<span class="hljs-string">&quot;com.example.security.db.mapper.SysUserMapper&quot;</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">select</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;selectSysUser&quot;</span> <span class="hljs-attr">resultType</span>=<span class="hljs-string">&quot;SysUser&quot;</span>&gt;</span>
+        select * from sys_user where username = #{username}
+    <span class="hljs-tag">&lt;/<span class="hljs-name">select</span>&gt;</span>
+
+<span class="hljs-tag">&lt;/<span class="hljs-name">mapper</span>&gt;</span>
+</code></pre>
+<p>SysUser&#x7684;Mapper&#xFF1A;</p>
+<pre><code class="lang-java"><span class="hljs-keyword">package</span> com.example.security.db.mapper;
+
+<span class="hljs-keyword">import</span> org.springframework.stereotype.Repository;
+
+<span class="hljs-keyword">import</span> com.example.security.db.entity.SysUser;
+
+<span class="hljs-meta">@Repository</span>
+<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">interface</span> <span class="hljs-title">SysUserMapper</span> </span>{
+
+    <span class="hljs-function">SysUser <span class="hljs-title">selectSysUser</span><span class="hljs-params">(String username)</span></span>;
+
+}
+</code></pre>
+<p>SysUserRole&#x7684;mapper.xml&#xFF1A;</p>
+<pre><code class="lang-xml"><span class="php"><span class="hljs-meta">&lt;?</span>xml version=<span class="hljs-string">&quot;1.0&quot;</span> encoding=<span class="hljs-string">&quot;UTF-8&quot;</span><span class="hljs-meta">?&gt;</span></span>
+<span class="hljs-meta">&lt;!DOCTYPE mapper PUBLIC &quot;-//mybatis.org//DTD Mapper 3.0//EN&quot; &quot;http://mybatis.org/dtd/mybatis-3-mapper.dtd&quot;&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">mapper</span> <span class="hljs-attr">namespace</span>=<span class="hljs-string">&quot;com.example.security.db.mapper.SysUserRoleMapper&quot;</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">select</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;selectSysUserRole&quot;</span> <span class="hljs-attr">resultType</span>=<span class="hljs-string">&quot;SysUserRole&quot;</span>&gt;</span>
+        select * from sys_user_role where username = #{username}
+    <span class="hljs-tag">&lt;/<span class="hljs-name">select</span>&gt;</span>
+
+<span class="hljs-tag">&lt;/<span class="hljs-name">mapper</span>&gt;</span>
+</code></pre>
+<p>SysUserRole&#x7684;Mapper&#xFF1A;</p>
+<pre><code class="lang-java"><span class="hljs-keyword">package</span> com.example.security.db.mapper;
+
+<span class="hljs-keyword">import</span> java.util.List;
+
+<span class="hljs-keyword">import</span> org.springframework.stereotype.Repository;
+
+<span class="hljs-keyword">import</span> com.example.security.db.entity.SysUserRole;
+
+<span class="hljs-meta">@Repository</span>
+<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">interface</span> <span class="hljs-title">SysUserRoleMapper</span> </span>{
+
+    <span class="hljs-function">List&lt;SysUserRole&gt; <span class="hljs-title">selectSysUserRole</span><span class="hljs-params">(String username)</span></span>;
+
+}
+</code></pre>
+<p>&#x4EE5;&#x4E0A;&#x4E24;&#x4E2A;mapper&#xFF0C;&#x5B8C;&#x6210;&#x7528;&#x6237;&#x7684;&#x7528;&#x6237;&#x89D2;&#x8272;&#x5173;&#x7CFB;&#x8FD9;&#x4E24;&#x5F20;&#x8868;&#x7684;&#x8BBF;&#x95EE;&#x3002;</p>
+<h4 id="12254-&#x521B;&#x5EFA;customuserservice">12.2.5.4 &#x521B;&#x5EFA;CustomUserService</h4>
+<p>CustomUserService&#x5B9E;&#x73B0;<code>org.springframework.security.core.userdetails.UserDetailsService</code>&#x63A5;&#x53E3;&#xFF0C;&#x5B8C;&#x6210;&#x7528;&#x6237;&#x53CA;&#x7528;&#x6237;&#x6240;&#x62E5;&#x6709;&#x7684;&#x89D2;&#x8272;&#x4FE1;&#x606F;&#x4ECE;&#x6570;&#x636E;&#x5E93;&#x4E2D;&#x83B7;&#x53D6;&#x7684;&#x529F;&#x80FD;&#x3002;</p>
+<p>&#x521B;&#x5EFA;CustomUserService&#x7C7B;&#xFF1A;</p>
+<pre><code class="lang-java"><span class="hljs-keyword">package</span> com.example.security.db.service;
+
+<span class="hljs-keyword">import</span> java.util.ArrayList;
+<span class="hljs-keyword">import</span> java.util.List;
+
+<span class="hljs-keyword">import</span> org.springframework.beans.factory.annotation.Autowired;
+<span class="hljs-keyword">import</span> org.springframework.security.core.authority.SimpleGrantedAuthority;
+<span class="hljs-keyword">import</span> org.springframework.security.core.userdetails.User;
+<span class="hljs-keyword">import</span> org.springframework.security.core.userdetails.UserDetails;
+<span class="hljs-keyword">import</span> org.springframework.security.core.userdetails.UserDetailsService;
+<span class="hljs-keyword">import</span> org.springframework.security.core.userdetails.UsernameNotFoundException;
+
+<span class="hljs-keyword">import</span> com.example.security.db.entity.SysUser;
+<span class="hljs-keyword">import</span> com.example.security.db.entity.SysUserRole;
+<span class="hljs-keyword">import</span> com.example.security.db.mapper.SysUserMapper;
+<span class="hljs-keyword">import</span> com.example.security.db.mapper.SysUserRoleMapper;
+
+<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">CustomUserService</span> <span class="hljs-keyword">implements</span> <span class="hljs-title">UserDetailsService</span> </span>{
+    <span class="hljs-meta">@Autowired</span>
+    SysUserMapper sysUserMapper;
+    <span class="hljs-meta">@Autowired</span>
+    SysUserRoleMapper sysUserRoleMapper;
+
+    <span class="hljs-meta">@Override</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> UserDetails <span class="hljs-title">loadUserByUsername</span><span class="hljs-params">(String username)</span> <span class="hljs-keyword">throws</span> UsernameNotFoundException </span>{
+        SysUser sysUser = sysUserMapper.selectSysUser(username);
+        String password = sysUser.getPassword();
+        List&lt;SysUserRole&gt; sysUserRoles = sysUserRoleMapper.selectSysUserRole(username);
+        List&lt;SimpleGrantedAuthority&gt; authorities = <span class="hljs-keyword">new</span> ArrayList&lt;&gt;();
+        <span class="hljs-keyword">for</span> (SysUserRole sysUserRole : sysUserRoles) {
+            authorities.add(<span class="hljs-keyword">new</span> SimpleGrantedAuthority(sysUserRole.getRoleCode()));
+        }
+
+        <span class="hljs-keyword">return</span> <span class="hljs-keyword">new</span> User(username, password, authorities);
+    }
+
+}
+</code></pre>
+<h4 id="12255-&#x521B;&#x5EFA;controller">12.2.5.5 &#x521B;&#x5EFA;Controller</h4>
+<p>&#x6309;&#x7167;&#x4E0A;&#x4E00;&#x5C0F;&#x8282;&#x521B;&#x5EFA;&#x9875;&#x9762;&#x8BBF;&#x95EE;&#x7684;&#x63A7;&#x5236;&#x5668;PagesController&#xFF1A;</p>
+<pre><code class="lang-java"><span class="hljs-keyword">package</span> com.example.security.db.controller;
+
+<span class="hljs-keyword">import</span> org.springframework.stereotype.Controller;
+<span class="hljs-keyword">import</span> org.springframework.web.bind.annotation.RequestMapping;
+<span class="hljs-keyword">import</span> org.springframework.web.bind.annotation.RequestMethod;
+<span class="hljs-keyword">import</span> org.springframework.web.servlet.ModelAndView;
+
+<span class="hljs-meta">@Controller</span>
+<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">PagesController</span> </span>{
+
+    <span class="hljs-meta">@RequestMapping</span>(<span class="hljs-string">&quot;/index&quot;</span>)
+    <span class="hljs-function"><span class="hljs-keyword">public</span> String <span class="hljs-title">index</span><span class="hljs-params">()</span> </span>{
+        <span class="hljs-keyword">return</span> <span class="hljs-string">&quot;/index&quot;</span>;
+    }
+
+    <span class="hljs-meta">@RequestMapping</span>(value = <span class="hljs-string">&quot;/login&quot;</span>, method = RequestMethod.GET)
+    <span class="hljs-function"><span class="hljs-keyword">public</span> String <span class="hljs-title">login</span><span class="hljs-params">()</span> </span>{
+        <span class="hljs-keyword">return</span> <span class="hljs-string">&quot;/login&quot;</span>;
+    }
+
+    <span class="hljs-meta">@RequestMapping</span>(<span class="hljs-string">&quot;/admin/hello&quot;</span>)
+    <span class="hljs-function"><span class="hljs-keyword">public</span> ModelAndView <span class="hljs-title">adminHello</span><span class="hljs-params">()</span> </span>{
+        ModelAndView mv = <span class="hljs-keyword">new</span> ModelAndView();
+        mv.addObject(<span class="hljs-string">&quot;user&quot;</span>, <span class="hljs-string">&quot;admin&quot;</span>);
+        mv.setViewName(<span class="hljs-string">&quot;/admin/hello&quot;</span>);
+        <span class="hljs-keyword">return</span> mv;
+    }
+
+    <span class="hljs-meta">@RequestMapping</span>(<span class="hljs-string">&quot;/user/hello&quot;</span>)
+    <span class="hljs-function"><span class="hljs-keyword">public</span> ModelAndView <span class="hljs-title">userHello</span><span class="hljs-params">()</span> </span>{
+        ModelAndView mv = <span class="hljs-keyword">new</span> ModelAndView();
+        mv.addObject(<span class="hljs-string">&quot;user&quot;</span>, <span class="hljs-string">&quot;kevin&quot;</span>);
+        mv.setViewName(<span class="hljs-string">&quot;/user/hello&quot;</span>);
+        <span class="hljs-keyword">return</span> mv;
+    }
+
+    <span class="hljs-meta">@RequestMapping</span>(<span class="hljs-string">&quot;/other/hello&quot;</span>)
+    <span class="hljs-function"><span class="hljs-keyword">public</span> ModelAndView <span class="hljs-title">otherHello</span><span class="hljs-params">()</span> </span>{
+        ModelAndView mv = <span class="hljs-keyword">new</span> ModelAndView();
+        mv.addObject(<span class="hljs-string">&quot;user&quot;</span>, <span class="hljs-string">&quot;other&quot;</span>);
+        mv.setViewName(<span class="hljs-string">&quot;/other/hello&quot;</span>);
+        <span class="hljs-keyword">return</span> mv;
+    }
+
+}
+</code></pre>
+<h4 id="12256-thymeleaf&#x9875;&#x9762;">12.2.5.6 Thymeleaf&#x9875;&#x9762;</h4>
+<p>&#x590D;&#x7528;&#x4E0A;&#x4E00;&#x5C0F;&#x8282;&#xFF08;12.2.4&#xFF09;&#x4E2D;&#x7684;Thymeleaf&#x9875;&#x9762;&#x3002;</p>
+<h4 id="12257-spring-security&#x914D;&#x7F6E;">12.2.5.7 Spring Security&#x914D;&#x7F6E;</h4>
+<p>&#x521B;&#x5EFA;&#x914D;&#x7F6E;&#x7C7B;SecurityConfiguration&#xFF0C;&#x5176;&#x4E2D;&#x5173;&#x952E;&#x7684;&#x4E00;&#x53E5;&#x4EE3;&#x7801;&#xFF08;&#x5C06;&#x6570;&#x636E;&#x5E93;&#x8BBF;&#x95EE;&#x7528;&#x6237;&#x4FE1;&#x606F;&#x7684;CustomUserService&#x7C7B;&#x6CE8;&#x5165;&#xFF09;&#x662F;<code>auth.userDetailsService(customUserService());</code></p>
+<pre><code class="lang-java"><span class="hljs-keyword">package</span> com.example.security.db.config;
+
+<span class="hljs-keyword">import</span> org.springframework.context.annotation.Bean;
+<span class="hljs-keyword">import</span> org.springframework.context.annotation.Configuration;
+<span class="hljs-keyword">import</span> org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
+<span class="hljs-keyword">import</span> org.springframework.security.config.annotation.web.builders.HttpSecurity;
+<span class="hljs-keyword">import</span> org.springframework.security.config.annotation.web.builders.WebSecurity;
+<span class="hljs-keyword">import</span> org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
+<span class="hljs-keyword">import</span> org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
+<span class="hljs-keyword">import</span> org.springframework.security.core.userdetails.UserDetailsService;
+<span class="hljs-keyword">import</span> org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+<span class="hljs-keyword">import</span> org.springframework.security.crypto.password.NoOpPasswordEncoder;
+<span class="hljs-keyword">import</span> org.springframework.security.crypto.password.PasswordEncoder;
+
+<span class="hljs-keyword">import</span> com.example.security.db.service.CustomUserService;
+
+<span class="hljs-meta">@Configuration</span>
+<span class="hljs-meta">@EnableWebSecurity</span>
+<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">SecurityConfiguration</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">WebSecurityConfigurerAdapter</span> </span>{
+
+    <span class="hljs-meta">@Bean</span>
+    <span class="hljs-function">PasswordEncoder <span class="hljs-title">passwordEncoder</span><span class="hljs-params">()</span> </span>{
+        <span class="hljs-keyword">return</span> NoOpPasswordEncoder.getInstance();
+    }    
+
+    <span class="hljs-meta">@Bean</span>
+    <span class="hljs-function">UserDetailsService <span class="hljs-title">customUserService</span><span class="hljs-params">()</span></span>{
+        <span class="hljs-keyword">return</span> <span class="hljs-keyword">new</span> CustomUserService();
+    }
+
+    <span class="hljs-meta">@Override</span>
+    <span class="hljs-function"><span class="hljs-keyword">protected</span> <span class="hljs-keyword">void</span> <span class="hljs-title">configure</span><span class="hljs-params">(AuthenticationManagerBuilder auth)</span> <span class="hljs-keyword">throws</span> Exception </span>{
+        auth.userDetailsService(customUserService()); 
+    }
+
+    <span class="hljs-meta">@Override</span>
+    <span class="hljs-function"><span class="hljs-keyword">protected</span> <span class="hljs-keyword">void</span> <span class="hljs-title">configure</span><span class="hljs-params">(HttpSecurity http)</span> <span class="hljs-keyword">throws</span> Exception </span>{
+        http.formLogin()
+            .loginPage(<span class="hljs-string">&quot;/login&quot;</span>)
+            .usernameParameter(<span class="hljs-string">&quot;login_username&quot;</span>)
+            .passwordParameter(<span class="hljs-string">&quot;login_password&quot;</span>)
+            .failureUrl(<span class="hljs-string">&quot;/login?error&quot;</span>)
+            .defaultSuccessUrl(<span class="hljs-string">&quot;/index&quot;</span>)
+            .permitAll()
+        .and().logout()
+            .logoutUrl(<span class="hljs-string">&quot;/logout&quot;</span>)
+            .logoutSuccessUrl(<span class="hljs-string">&quot;/login?logout&quot;</span>)
+            .clearAuthentication(<span class="hljs-keyword">true</span>)
+            .invalidateHttpSession(<span class="hljs-keyword">true</span>)
+            .permitAll()
+        .and().authorizeRequests()
+            .antMatchers(<span class="hljs-string">&quot;/admin/**&quot;</span>).hasRole(<span class="hljs-string">&quot;ADMIN&quot;</span>)
+            .antMatchers(<span class="hljs-string">&quot;/user/**&quot;</span>).hasRole(<span class="hljs-string">&quot;USER&quot;</span>)
+            .anyRequest()
+            .authenticated();
+    }
+
+    <span class="hljs-meta">@Override</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">configure</span><span class="hljs-params">(WebSecurity web)</span> </span>{
+        web.ignoring().antMatchers(<span class="hljs-string">&quot;/config/**&quot;</span>, <span class="hljs-string">&quot;/css/**&quot;</span>, <span class="hljs-string">&quot;/images/**&quot;</span>, <span class="hljs-string">&quot;/js/**&quot;</span>);
+    }
+
+}
+</code></pre>
+<blockquote>
+<p>&#x5728;&#x5B66;&#x4E60;&#x8FC7;&#x7A0B;&#x4E2D;&#x4E3A;&#x4E86;&#x65B9;&#x4FBF;&#x5F80;&#x6570;&#x636E;&#x5E93;&#x4E2D;&#x5F55;&#x5165;&#x7528;&#x6237;&#x5BC6;&#x7801;&#x4FE1;&#x606F;&#xFF08;&#x660E;&#x6587;&#xFF09;&#xFF0C;&#x6240;&#x4EE5;&#x4E0A;&#x9762;&#x7684;&#x914D;&#x7F6E;&#x4E2D;&#x4F7F;&#x7528;&#x4E86;NoOpPasswordEncoder&#x8FD9;&#x4E2A;&#x5947;&#x8469;&#x7684;&#x5BC6;&#x7801;&#x7F16;&#x7801;&#x5668;&#xFF0C;&#x4E00;&#x5982;&#x65E2;&#x5F80;&#x5730;&#x5F3A;&#x8C03;&#xFF1A;&#x4E25;&#x7981;&#x5728;&#x975E;&#x5B66;&#x4E60;&#x7CFB;&#x7EDF;&#x4E2D;&#x4F7F;&#x7528;&#x8FD9;&#x4E2A;&#xFF08;&#x660E;&#x6587;&#x7684;&#xFF09;&#x5BC6;&#x7801;&#x7F16;&#x7801;&#x5668;&#x3002;</p>
+<p>Spring Security&#x914D;&#x7F6E;&#x4E2D;&#x4F7F;&#x7528;&#x89D2;&#x8272;&#x9ED8;&#x8BA4;&#x524D;&#x7F00;&#x4E3A;&#x201C;ROLE_&#x201D;&#xFF0C;&#x4F8B;&#x5982;&#x4F7F;&#x7528;&#x89D2;&#x8272;&#x201C;ADMIN&#x201D;&#xFF0C;&#x5728;&#x6570;&#x636E;&#x5E93;&#x8868;&#x4E2D;&#x5E94;&#x8BE5;&#x5B58;&#x50A8;&#x4E3A;&#x201C;ROLE_ADMIN&#x201D;&#x3002;&#x53C2;&#x8003;<code>org.springframework.security.access.vote.RoleVoter</code>&#x7C7B;&#x4E2D;&#x7684;<code>rolePrefix</code>&#x5C5E;&#x6027;&#x3002;</p>
+</blockquote>
+<h4 id="12258-&#x542F;&#x52A8;&#x7C7B;">12.2.5.8 &#x542F;&#x52A8;&#x7C7B;</h4>
+<p>&#x542F;&#x52A8;&#x7C7B;&#x4E2D;&#x522B;&#x5FD8;&#x4E86;MyBatis&#x7684;@MapperScan&#x6CE8;&#x89E3;&#x3002;</p>
+<pre><code class="lang-java"><span class="hljs-keyword">package</span> com.example.security.db;
+
+<span class="hljs-keyword">import</span> org.mybatis.spring.annotation.MapperScan;
+<span class="hljs-keyword">import</span> org.springframework.boot.SpringApplication;
+<span class="hljs-keyword">import</span> org.springframework.boot.autoconfigure.SpringBootApplication;
+
+<span class="hljs-meta">@SpringBootApplication</span>
+<span class="hljs-meta">@MapperScan</span>(<span class="hljs-string">&quot;com.example.security.db.mapper&quot;</span>)
+<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">SpringBootSecurityDbApplication</span> </span>{
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{
+        SpringApplication.run(SpringBootSecurityDbApplication.class, args);
+    }
+
+}
+</code></pre>
+<h4 id="12259-&#x6D4B;&#x8BD5;">12.2.5.9 &#x6D4B;&#x8BD5;</h4>
+<p>&#x542F;&#x52A8;&#x9879;&#x76EE;&#x6D4B;&#x8BD5;&#xFF0C;&#x548C;&#x4E0A;&#x4E00;&#x5C0F;&#x8282;&#xFF08;12.2.4&#xFF09;&#x6548;&#x679C;&#x4E00;&#x81F4;&#x3002;</p>
+<blockquote>
+<p>&#x672C;&#x5C0F;&#x8282;&#x793A;&#x4F8B;&#x9879;&#x76EE;&#x4EE3;&#x7801;&#xFF1A;</p>
+<p><a href="https://github.com/gyzhang/SpringBootCourseCode/tree/master/spring-boot-security-db" target="_blank">https://github.com/gyzhang/SpringBootCourseCode/tree/master/spring-boot-security-db</a></p>
+</blockquote>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="12.1securityOverview.html" class="navigation navigation-prev " aria-label="Previous page: 12.1 Spring Security介绍">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="12.3securityOauth2.html" class="navigation navigation-next " aria-label="Next page: 12.3 OAuth 2">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"12.2 集成Spring Security","level":"1.13.2","depth":2,"next":{"title":"12.3 OAuth 2","level":"1.13.3","depth":2,"path":"第12章 Spring Boot安全控制/12.3securityOauth2.md","ref":"第12章 Spring Boot安全控制/12.3securityOauth2.md","articles":[]},"previous":{"title":"12.1 Spring Security介绍","level":"1.13.1","depth":2,"path":"第12章 Spring Boot安全控制/12.1securityOverview.md","ref":"第12章 Spring Boot安全控制/12.1securityOverview.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-search","search-pro","code","splitter","expandable-chapters","page-toc-button","back-to-top-button","livereload"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"livereload":{},"splitter":{},"search-pro":{"cutWordLib":"nodejieba","defineWord":["Spring Boot"],"expandable-chapters":{}},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"code":{"copyButtons":true},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"page-toc-button":{},"back-to-top-button":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"expandable-chapters":{}},"theme":"default","author":"Kevin Zhang","pdf":{"pageNumbers":true,"fontSize":23,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"SpringBoot入门教程","language":"zh-hans","gitbook":"*","description":"针对初级程序员的Spring Boot入门教程，使用版本2.2.x"},"file":{"path":"第12章 Spring Boot安全控制/12.2securityIntegration.md","mtime":"2020-02-03T16:02:12.083Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-02-07T14:42:40.985Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-pro/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-code/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-page-toc-button/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-back-to-top-button/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

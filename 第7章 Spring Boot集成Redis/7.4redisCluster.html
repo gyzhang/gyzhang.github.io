@@ -1,0 +1,1943 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>7.4 Redis集群 · SpringBoot入门教程</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="Kevin Zhang">
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search-pro/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-code/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-page-toc-button/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-back-to-top-button/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="7.5homework.html" />
+    
+    
+    <link rel="prev" href="7.3redisSession.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    前言
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../第1章 Spring Boot介绍/SpringBoot.html">
+            
+                <a href="../第1章 Spring Boot介绍/SpringBoot.html">
+            
+                    
+                    第1章 Spring Boot介绍
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../第1章 Spring Boot介绍/1.1spring.html">
+            
+                <a href="../第1章 Spring Boot介绍/1.1spring.html">
+            
+                    
+                    1.1 Spring介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../第1章 Spring Boot介绍/1.2springBoot.html">
+            
+                <a href="../第1章 Spring Boot介绍/1.2springBoot.html">
+            
+                    
+                    1.2 Spring Boot简介
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../第1章 Spring Boot介绍/1.3springBootModules.html">
+            
+                <a href="../第1章 Spring Boot介绍/1.3springBootModules.html">
+            
+                    
+                    1.3 Spring Boot的主要模块
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="../第1章 Spring Boot介绍/1.4helloSpringBoot.html">
+            
+                <a href="../第1章 Spring Boot介绍/1.4helloSpringBoot.html">
+            
+                    
+                    1.4 Hello Spring Boot
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="../第1章 Spring Boot介绍/1.5homework.html">
+            
+                <a href="../第1章 Spring Boot介绍/1.5homework.html">
+            
+                    
+                    1.5 课后作业
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../第2章 开发环境配置/IDE.html">
+            
+                <a href="../第2章 开发环境配置/IDE.html">
+            
+                    
+                    第2章 开发环境配置
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../第2章 开发环境配置/2.1jdk.html">
+            
+                <a href="../第2章 开发环境配置/2.1jdk.html">
+            
+                    
+                    2.1 安装JDK
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../第2章 开发环境配置/2.2maven.html">
+            
+                <a href="../第2章 开发环境配置/2.2maven.html">
+            
+                    
+                    2.2 安装配置Maven
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../第2章 开发环境配置/2.3sts.html">
+            
+                <a href="../第2章 开发环境配置/2.3sts.html">
+            
+                    
+                    2.3 安装配置STS
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="../第2章 开发环境配置/2.4mysql.html">
+            
+                <a href="../第2章 开发环境配置/2.4mysql.html">
+            
+                    
+                    2.4 安装MySQL和管理工具
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="../第2章 开发环境配置/2.5validation.html">
+            
+                <a href="../第2章 开发环境配置/2.5validation.html">
+            
+                    
+                    2.5 验证开发环境
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6" data-path="../第2章 开发环境配置/2.6postman.html">
+            
+                <a href="../第2章 开发环境配置/2.6postman.html">
+            
+                    
+                    2.6 安装Postman
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.7" data-path="../第2章 开发环境配置/2.7homework.html">
+            
+                <a href="../第2章 开发环境配置/2.7homework.html">
+            
+                    
+                    2.7 课后作业
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../第3章 Spring Boot原理剖析/SpringBootHow.html">
+            
+                <a href="../第3章 Spring Boot原理剖析/SpringBootHow.html">
+            
+                    
+                    第3章 Spring Boot原理剖析
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../第3章 Spring Boot原理剖析/3.1structure.html">
+            
+                <a href="../第3章 Spring Boot原理剖析/3.1structure.html">
+            
+                    
+                    3.1 项目结构
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../第3章 Spring Boot原理剖析/3.2baseConfig.html">
+            
+                <a href="../第3章 Spring Boot原理剖析/3.2baseConfig.html">
+            
+                    
+                    3.2 基本配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../第3章 Spring Boot原理剖析/3.3annotation.html">
+            
+                <a href="../第3章 Spring Boot原理剖析/3.3annotation.html">
+            
+                    
+                    3.3 启动类与核心注解
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="../第3章 Spring Boot原理剖析/3.4startFlow.html">
+            
+                <a href="../第3章 Spring Boot原理剖析/3.4startFlow.html">
+            
+                    
+                    3.4 启动过程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5" data-path="../第3章 Spring Boot原理剖析/3.5homework.html">
+            
+                <a href="../第3章 Spring Boot原理剖析/3.5homework.html">
+            
+                    
+                    3.5 课后作业
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../第4章 Spring Boot Web开发/SpringBootWeb.html">
+            
+                <a href="../第4章 Spring Boot Web开发/SpringBootWeb.html">
+            
+                    
+                    第4章 Spring Boot Web开发
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../第4章 Spring Boot Web开发/4.1mvc.html">
+            
+                <a href="../第4章 Spring Boot Web开发/4.1mvc.html">
+            
+                    
+                    4.1 Spring MVC介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../第4章 Spring Boot Web开发/4.2thymeleaf.html">
+            
+                <a href="../第4章 Spring Boot Web开发/4.2thymeleaf.html">
+            
+                    
+                    4.2 Thymeleaf介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" data-path="../第4章 Spring Boot Web开发/4.3legacy.html">
+            
+                <a href="../第4章 Spring Boot Web开发/4.3legacy.html">
+            
+                    
+                    4.3 使用Servlet、Listener和Filter
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4" data-path="../第4章 Spring Boot Web开发/4.4homework.html">
+            
+                <a href="../第4章 Spring Boot Web开发/4.4homework.html">
+            
+                    
+                    4.4 课后作业
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../第5章 Spring Boot数据访问/DataAccess.html">
+            
+                <a href="../第5章 Spring Boot数据访问/DataAccess.html">
+            
+                    
+                    第5章 Spring Boot数据访问
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../第5章 Spring Boot数据访问/5.1jdbc.html">
+            
+                <a href="../第5章 Spring Boot数据访问/5.1jdbc.html">
+            
+                    
+                    5.1 Spring Boot集成JdbcTemplate
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="../第5章 Spring Boot数据访问/5.2myBatis.html">
+            
+                <a href="../第5章 Spring Boot数据访问/5.2myBatis.html">
+            
+                    
+                    5.2 Spring Boot集成MyBatis
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="../第5章 Spring Boot数据访问/5.3pageHelper.html">
+            
+                <a href="../第5章 Spring Boot数据访问/5.3pageHelper.html">
+            
+                    
+                    5.3 MyBatis分页
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.4" data-path="../第5章 Spring Boot数据访问/5.4myBatisPlus.html">
+            
+                <a href="../第5章 Spring Boot数据访问/5.4myBatisPlus.html">
+            
+                    
+                    5.4 MyBatis-Plus
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.5" data-path="../第5章 Spring Boot数据访问/5.5homework.html">
+            
+                <a href="../第5章 Spring Boot数据访问/5.5homework.html">
+            
+                    
+                    5.5 课后作业
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../第6章 Spring Boot事务/SpringBootTransaction.html">
+            
+                <a href="../第6章 Spring Boot事务/SpringBootTransaction.html">
+            
+                    
+                    第6章 Spring Boot事务
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="../第6章 Spring Boot事务/6.1transaction.html">
+            
+                <a href="../第6章 Spring Boot事务/6.1transaction.html">
+            
+                    
+                    6.1 事务介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2" data-path="../第6章 Spring Boot事务/6.2usingTransaction.html">
+            
+                <a href="../第6章 Spring Boot事务/6.2usingTransaction.html">
+            
+                    
+                    6.2 事务的使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.3" data-path="../第6章 Spring Boot事务/6.3distributedTransaction.html">
+            
+                <a href="../第6章 Spring Boot事务/6.3distributedTransaction.html">
+            
+                    
+                    6.3 分布式事务
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.4" data-path="../第6章 Spring Boot事务/6.4homework.html">
+            
+                <a href="../第6章 Spring Boot事务/6.4homework.html">
+            
+                    
+                    6.4 课后作业
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="Redis.html">
+            
+                <a href="Redis.html">
+            
+                    
+                    第7章 Spring Boot集成Redis
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.1" data-path="7.1redisOverview.html">
+            
+                <a href="7.1redisOverview.html">
+            
+                    
+                    7.1 Redis简介
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.2" data-path="7.2redisIntegration.html">
+            
+                <a href="7.2redisIntegration.html">
+            
+                    
+                    7.2 集成Redis
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.3" data-path="7.3redisSession.html">
+            
+                <a href="7.3redisSession.html">
+            
+                    
+                    7.3 Session共享
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.8.4" data-path="7.4redisCluster.html">
+            
+                <a href="7.4redisCluster.html">
+            
+                    
+                    7.4 Redis集群
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.5" data-path="7.5homework.html">
+            
+                <a href="7.5homework.html">
+            
+                    
+                    7.5 课后作业
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="../第8章 Spring Boot集成MongoDB/MongoDB.html">
+            
+                <a href="../第8章 Spring Boot集成MongoDB/MongoDB.html">
+            
+                    
+                    第8章 Spring Boot集成MongoDB
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.9.1" data-path="../第8章 Spring Boot集成MongoDB/8.1mongoDBOverview.html">
+            
+                <a href="../第8章 Spring Boot集成MongoDB/8.1mongoDBOverview.html">
+            
+                    
+                    8.1 MongoDB简介
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.2" data-path="../第8章 Spring Boot集成MongoDB/8.2mongoDBIntegration.html">
+            
+                <a href="../第8章 Spring Boot集成MongoDB/8.2mongoDBIntegration.html">
+            
+                    
+                    8.2 集成MongoDB
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.3" data-path="../第8章 Spring Boot集成MongoDB/8.3homework.html">
+            
+                <a href="../第8章 Spring Boot集成MongoDB/8.3homework.html">
+            
+                    
+                    8.3 课后作业
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="../第9章 Spring Boot与异步消息/MQ.html">
+            
+                <a href="../第9章 Spring Boot与异步消息/MQ.html">
+            
+                    
+                    第9章 Spring Boot与异步消息
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.10.1" data-path="../第9章 Spring Boot与异步消息/9.1jms.html">
+            
+                <a href="../第9章 Spring Boot与异步消息/9.1jms.html">
+            
+                    
+                    9.1 有关消息的概念
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.2" data-path="../第9章 Spring Boot与异步消息/9.2activeMQ.html">
+            
+                <a href="../第9章 Spring Boot与异步消息/9.2activeMQ.html">
+            
+                    
+                    9.2 Spring Boot集成ActiveMQ
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.3" data-path="../第9章 Spring Boot与异步消息/9.3rabbitMQ.html">
+            
+                <a href="../第9章 Spring Boot与异步消息/9.3rabbitMQ.html">
+            
+                    
+                    9.3 Spring Boot集成RabbitMQ
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.4" data-path="../第9章 Spring Boot与异步消息/9.4rocketMQ.html">
+            
+                <a href="../第9章 Spring Boot与异步消息/9.4rocketMQ.html">
+            
+                    
+                    9.4 Spring Boot集成RocketMQ
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.5" data-path="../第9章 Spring Boot与异步消息/9.5kafka.html">
+            
+                <a href="../第9章 Spring Boot与异步消息/9.5kafka.html">
+            
+                    
+                    9.5 Spring Boot集成Kafka
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.6" data-path="../第9章 Spring Boot与异步消息/9.6homework.html">
+            
+                <a href="../第9章 Spring Boot与异步消息/9.6homework.html">
+            
+                    
+                    9.6 课后作业
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="../第10章 异常处理/Exception.html">
+            
+                <a href="../第10章 异常处理/Exception.html">
+            
+                    
+                    第10章 异常处理
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.11.1" data-path="../第10章 异常处理/10.1exceptionOverview.html">
+            
+                <a href="../第10章 异常处理/10.1exceptionOverview.html">
+            
+                    
+                    10.1 异常介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.2" data-path="../第10章 异常处理/10.2globalException.html">
+            
+                <a href="../第10章 异常处理/10.2globalException.html">
+            
+                    
+                    10.2 Spring Boot中全局异常的使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.3" data-path="../第10章 异常处理/10.3retry.html">
+            
+                <a href="../第10章 异常处理/10.3retry.html">
+            
+                    
+                    10.3 异常的重试
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.4" data-path="../第10章 异常处理/10.4homework.html">
+            
+                <a href="../第10章 异常处理/10.4homework.html">
+            
+                    
+                    10.4 课后作业
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" data-path="../第11章 单元测试与热部署/UnitTestHotDeploy.html">
+            
+                <a href="../第11章 单元测试与热部署/UnitTestHotDeploy.html">
+            
+                    
+                    第11章 单元测试与热部署
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.12.1" data-path="../第11章 单元测试与热部署/11.1unitTest.html">
+            
+                <a href="../第11章 单元测试与热部署/11.1unitTest.html">
+            
+                    
+                    11.1 Spring Boot中的单元测试
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.2" data-path="../第11章 单元测试与热部署/11.2hotDeploy.html">
+            
+                <a href="../第11章 单元测试与热部署/11.2hotDeploy.html">
+            
+                    
+                    11.2 Spring Boot对热部署的支持
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.3" data-path="../第11章 单元测试与热部署/11.3homework.html">
+            
+                <a href="../第11章 单元测试与热部署/11.3homework.html">
+            
+                    
+                    11.3 课后作业
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13" data-path="../第12章 Spring Boot安全控制/Security.html">
+            
+                <a href="../第12章 Spring Boot安全控制/Security.html">
+            
+                    
+                    第12章 Spring Boot安全控制
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.13.1" data-path="../第12章 Spring Boot安全控制/12.1securityOverview.html">
+            
+                <a href="../第12章 Spring Boot安全控制/12.1securityOverview.html">
+            
+                    
+                    12.1 Spring Security介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.2" data-path="../第12章 Spring Boot安全控制/12.2securityIntegration.html">
+            
+                <a href="../第12章 Spring Boot安全控制/12.2securityIntegration.html">
+            
+                    
+                    12.2 集成Spring Security
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.3" data-path="../第12章 Spring Boot安全控制/12.3securityOauth2.html">
+            
+                <a href="../第12章 Spring Boot安全控制/12.3securityOauth2.html">
+            
+                    
+                    12.3 OAuth 2
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.4" data-path="../第12章 Spring Boot安全控制/12.4homework.html">
+            
+                <a href="../第12章 Spring Boot安全控制/12.4homework.html">
+            
+                    
+                    12.4 课后作业
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14" data-path="../第13章 Spring Boot应用监控/Monitor.html">
+            
+                <a href="../第13章 Spring Boot应用监控/Monitor.html">
+            
+                    
+                    第13章 Spring Boot应用监控
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.14.1" data-path="../第13章 Spring Boot应用监控/13.1monitorOverview.html">
+            
+                <a href="../第13章 Spring Boot应用监控/13.1monitorOverview.html">
+            
+                    
+                    13.1 应用监控介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14.2" data-path="../第13章 Spring Boot应用监控/13.2monitorUse.html">
+            
+                <a href="../第13章 Spring Boot应用监控/13.2monitorUse.html">
+            
+                    
+                    13.2 使用应用监控
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14.3" data-path="../第13章 Spring Boot应用监控/13.3monitorCustomize.html">
+            
+                <a href="../第13章 Spring Boot应用监控/13.3monitorCustomize.html">
+            
+                    
+                    13.3 自定义端点
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14.4" data-path="../第13章 Spring Boot应用监控/13.4homework.html">
+            
+                <a href="../第13章 Spring Boot应用监控/13.4homework.html">
+            
+                    
+                    13.4 课后作业
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15" data-path="../第14章 企业级开发/Enterprise.html">
+            
+                <a href="../第14章 企业级开发/Enterprise.html">
+            
+                    
+                    第14章 企业级开发
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.15.1" data-path="../第14章 企业级开发/14.1mail.html">
+            
+                <a href="../第14章 企业级开发/14.1mail.html">
+            
+                    
+                    14.1 邮件发送
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.2" data-path="../第14章 企业级开发/14.2schedule.html">
+            
+                <a href="../第14章 企业级开发/14.2schedule.html">
+            
+                    
+                    14.2 定时任务
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.3" data-path="../第14章 企业级开发/14.3batch.html">
+            
+                <a href="../第14章 企业级开发/14.3batch.html">
+            
+                    
+                    14.3 批处理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.4" data-path="../第14章 企业级开发/14.4validation.html">
+            
+                <a href="../第14章 企业级开发/14.4validation.html">
+            
+                    
+                    14.4 数据校验
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.5" data-path="../第14章 企业级开发/14.5websocket.html">
+            
+                <a href="../第14章 企业级开发/14.5websocket.html">
+            
+                    
+                    14.5 WebSocket
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.6" data-path="../第14章 企业级开发/14.6swagger2.html">
+            
+                <a href="../第14章 企业级开发/14.6swagger2.html">
+            
+                    
+                    14.6 Swagger 2
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.7" data-path="../第14章 企业级开发/14.7homework.html">
+            
+                <a href="../第14章 企业级开发/14.7homework.html">
+            
+                    
+                    14.7 课后作业
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16" data-path="../第15章 多环境配置与部署/MultEnv.html">
+            
+                <a href="../第15章 多环境配置与部署/MultEnv.html">
+            
+                    
+                    第15章 多环境配置与部署
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.16.1" data-path="../第15章 多环境配置与部署/15.1multEnvUse.html">
+            
+                <a href="../第15章 多环境配置与部署/15.1multEnvUse.html">
+            
+                    
+                    15.1 使用多环境配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.2" data-path="../第15章 多环境配置与部署/15.2multEnvDeploy.html">
+            
+                <a href="../第15章 多环境配置与部署/15.2multEnvDeploy.html">
+            
+                    
+                    15.2 打包部署应用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.3" data-path="../第15章 多环境配置与部署/15.3homework.html">
+            
+                <a href="../第15章 多环境配置与部署/15.3homework.html">
+            
+                    
+                    15.3 课后作业
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17" data-path="../Postscript.html">
+            
+                <a href="../Postscript.html">
+            
+                    
+                    后记
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.18" data-path="../附录1 前后端分离的vue急速入门/Vue.html">
+            
+                <a href="../附录1 前后端分离的vue急速入门/Vue.html">
+            
+                    
+                    附录1 前后端分离的vue急速入门
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.18.1" data-path="../附录1 前后端分离的vue急速入门/0.1vueOverview.html">
+            
+                <a href="../附录1 前后端分离的vue急速入门/0.1vueOverview.html">
+            
+                    
+                    A.1 Vue介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.18.2" data-path="../附录1 前后端分离的vue急速入门/0.2vueConfig.html">
+            
+                <a href="../附录1 前后端分离的vue急速入门/0.2vueConfig.html">
+            
+                    
+                    A.2 Vue开发环境配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.18.3" data-path="../附录1 前后端分离的vue急速入门/0.3helloVue.html">
+            
+                <a href="../附录1 前后端分离的vue急速入门/0.3helloVue.html">
+            
+                    
+                    A.3 Hello Vue
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.18.4" data-path="../附录1 前后端分离的vue急速入门/0.4vueRouter.html">
+            
+                <a href="../附录1 前后端分离的vue急速入门/0.4vueRouter.html">
+            
+                    
+                    A.4 Vue路由示例
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.18.5" data-path="../附录1 前后端分离的vue急速入门/0.5deploy.html">
+            
+                <a href="../附录1 前后端分离的vue急速入门/0.5deploy.html">
+            
+                    
+                    A.5 前后端分离应用的部署
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.18.6" data-path="../附录1 前后端分离的vue急速入门/0.6vueSummary.html">
+            
+                <a href="../附录1 前后端分离的vue急速入门/0.6vueSummary.html">
+            
+                    
+                    A.6 急速入门总结
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.18.7" data-path="../附录1 前后端分离的vue急速入门/0.7homework.html">
+            
+                <a href="../附录1 前后端分离的vue急速入门/0.7homework.html">
+            
+                    
+                    A.7 课后作业
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.19" data-path="../附录2 Spring Boot配置大全/Configuration.html">
+            
+                <a href="../附录2 Spring Boot配置大全/Configuration.html">
+            
+                    
+                    附录2 Spring Boot配置大全
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.20" data-path="../附录3 在Docker中部署Spring Boot应用/Docker.html">
+            
+                <a href="../附录3 在Docker中部署Spring Boot应用/Docker.html">
+            
+                    
+                    附录3 在Docker中部署Spring Boot应用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.21" data-path="../EnrollmentAd.html">
+            
+                <a href="../EnrollmentAd.html">
+            
+                    
+                    广告 融宝大学堂招生
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >7.4 Redis集群</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h2 id="74-redis&#x96C6;&#x7FA4;">7.4 Redis&#x96C6;&#x7FA4;</h2>
+<p>Redis&#x5B98;&#x65B9;&#x4E0D;&#x652F;&#x6301;Windows&#xFF0C;&#x6240;&#x4EE5;&#xFF0C;&#x8FD9;&#x4E00;&#x5C0F;&#x8282;&#x6211;&#x4EEC;&#x4EE5;macOS&#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;&#x4E3A;&#x4F8B;&#xFF0C;&#x6765;&#x642D;&#x5EFA;Redis&#x96C6;&#x7FA4;&#xFF0C;Linux&#xFF08;&#x5982;CentOS&#xFF09;&#x4E0B;&#x7684;&#x96C6;&#x7FA4;&#x642D;&#x5EFA;&#x6B65;&#x9AA4;&#x548C;macOS&#x76F8;&#x540C;&#x3002;</p>
+<p>&#x672C;&#x5C0F;&#x8282;&#x53C2;&#x8003;<a href="http://redis.io/topics/cluster-tutorial" target="_blank">&#x5B98;&#x65B9;&#x96C6;&#x7FA4;&#x642D;&#x5EFA;</a>&#x6587;&#x6863;&#x8BF4;&#x660E;&#x6765;&#x5728;&#x672C;&#x673A;&#x4E0A;&#x642D;&#x5EFA;&#x4E09;&#x4E3B;&#x4E09;&#x4ECE;&#x7684;&#x96C6;&#x7FA4;&#xFF0C;&#x7AEF;&#x53E3;&#x5206;&#x5E03;&#x4E3A;7001-7006&#x3002;</p>
+<blockquote>
+<p>Redis&#x96C6;&#x7FA4;&#x9700;&#x8981;&#x81F3;&#x5C11;3&#x4E2A;&#x8282;&#x70B9;&#xFF0C;&#x4E3B;&#x4ECE;&#x590D;&#x5236;&#x96C6;&#x7FA4;&#x81F3;&#x5C11;&#x9700;&#x8981;6&#x4E2A;&#x8282;&#x70B9;&#x3002;&#x5426;&#x5219;&#x4F1A;&#x63D0;&#x793A;&#x5982;&#x4E0B;&#x9519;&#x8BEF;&#x4FE1;&#x606F;&#xFF1A;</p>
+<pre><code>*** ERROR: Invalid configuration for cluster creation.
+*** Redis Cluster requires at least 3 master nodes.
+*** This is not possible with 2 nodes and 1 replicas per node.
+*** At least 6 nodes are required.
+</code></pre></blockquote>
+<h3 id="741-&#x4E0B;&#x8F7D;&#x5B89;&#x88C5;">7.4.1 &#x4E0B;&#x8F7D;&#x5B89;&#x88C5;</h3>
+<p>&#x5728;<a href="http://download.redis.io/releases/redis-5.0.7.tar.gz" target="_blank">&#x5B98;&#x65B9;&#x4E0B;&#x8F7D;</a>&#x6700;&#x65B0;&#x7684;&#x7A33;&#x5B9A;&#x7248;Redis 5.0.7&#xFF0C;&#x5C06;&#x4E0B;&#x8F7D;&#x7684;&#x6587;&#x4EF6;<code>redis-5.0.7.tar.gz</code>&#x62F7;&#x8D1D;&#x5230;&#x7528;&#x6237;&#x76EE;&#x5F55;&#x4E0B;&#x3002;</p>
+<p>&#x6253;&#x5F00;&#x7EC8;&#x7AEF;&#xFF0C;&#x8F93;&#x5165;<code>tar -zxf redis-5.0.7.tar.gz</code>&#x5C06;&#x5176;&#x89E3;&#x538B;&#x5230;<code>/Users/kevin/redis-5.0.7</code>&#x76EE;&#x5F55;&#x3002;</p>
+<p>&#x8FDB;&#x5165;Redis&#x76EE;&#x5F55;&#xFF08;<code>/Users/kevin/redis-5.0.7</code>&#xFF09;&#x540E;&#x8F93;&#x5165;<code>make install</code>&#x7F16;&#x8BD1;&#x5B89;&#x88C5;Redis&#x670D;&#x52A1;&#x5668;&#x3002;</p>
+<blockquote>
+<p>&#x4F60;&#x7684;mac&#x53EF;&#x80FD;&#x4F1A;&#x51FA;&#x73B0;<code>xcrun: error: invalid active developer path (/Library/Developer/CommandLineTools), missing xcrun at: /Library/Developer/CommandLineTools/usr/bin/xcrun</code>&#x9519;&#x8BEF;&#xFF0C;&#x53EF;&#x4EE5;&#x6267;&#x884C;<code>xcode-select --install</code>&#x547D;&#x4EE4;&#xFF0C;&#x5B89;&#x88C5;&#x7F16;&#x8BD1;&#x4F9D;&#x8D56;&#x73AF;&#x5883;&#x3002;</p>
+</blockquote>
+<p><img src="images/image-20191129232411577.png" alt="image-20191129232411577"></p>
+<h3 id="742-&#x5355;&#x673A;&#x914D;&#x7F6E;">7.4.2 &#x5355;&#x673A;&#x914D;&#x7F6E;</h3>
+<p>&#x6211;&#x4EEC;&#x7F16;&#x8BD1;&#x5B89;&#x88C5;&#x5B8C;Redis&#x540E;&#xFF0C;&#x5EFA;&#x8BAE;&#x5148;&#x914D;&#x7F6E;&#x5355;&#x673A;&#x73AF;&#x5883;&#xFF0C;&#x68C0;&#x67E5;Redis&#x670D;&#x52A1;&#x5668;&#x662F;&#x5426;&#x80FD;&#x6B63;&#x5E38;&#x5DE5;&#x4F5C;&#x3002;</p>
+<p>&#x4E3A;&#x4E86;&#x65B9;&#x4FBF;&#x6587;&#x4EF6;&#x5206;&#x7C7B;&#x5B58;&#x653E;&#xFF0C;&#x5EFA;&#x8BAE;&#x521B;&#x5EFA;&#x914D;&#x7F6E;etc&#x548C;&#x6570;&#x636E;&#x5E93;db&#x76EE;&#x5F55;&#x3002;</p>
+<pre><code class="lang-bash">mkdir etc
+mkdir db
+</code></pre>
+<p>&#x5728;<code>/Users/kevin/redis-5.0.7/etc/redis-single-7001.conf</code>&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x4E2D;&#x914D;&#x7F6E;Redis&#x53C2;&#x6570;&#x3002;</p>
+<pre><code>#&#x4FEE;&#x6539;&#x4E3A;&#x5B88;&#x62A4;&#x6A21;&#x5F0F;
+daemonize yes
+#&#x8BBE;&#x7F6E;&#x8FDB;&#x7A0B;&#x9501;&#x6587;&#x4EF6;
+pidfile /Users/kevin/redis-5.0.7/db/redis-7001.pid
+#ip&#x5730;&#x5740;
+bind 127.0.0.1
+#&#x7AEF;&#x53E3;
+port 7001
+#&#x5BA2;&#x6237;&#x7AEF;&#x8D85;&#x65F6;&#x65F6;&#x95F4;
+timeout 300
+#&#x65E5;&#x5FD7;&#x7EA7;&#x522B;
+loglevel debug
+#&#x65E5;&#x5FD7;&#x6587;&#x4EF6;&#x4F4D;&#x7F6E;
+logfile /Users/kevin/redis-5.0.7/logs/redis-7001.log
+#&#x8BBE;&#x7F6E;&#x6570;&#x636E;&#x5E93;&#x7684;&#x6570;&#x91CF;&#xFF0C;&#x9ED8;&#x8BA4;&#x6570;&#x636E;&#x5E93;&#x4E3A;0&#xFF0C;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;SELECT &lt;dbid&gt;&#x547D;&#x4EE4;&#x5728;&#x8FDE;&#x63A5;&#x4E0A;&#x6307;&#x5B9A;&#x6570;&#x636E;&#x5E93;id
+databases 16
+##&#x6307;&#x5B9A;&#x5728;&#x591A;&#x957F;&#x65F6;&#x95F4;&#x5185;&#xFF0C;&#x6709;&#x591A;&#x5C11;&#x6B21;&#x66F4;&#x65B0;&#x64CD;&#x4F5C;&#xFF0C;&#x5C31;&#x5C06;&#x6570;&#x636E;&#x540C;&#x6B65;&#x5230;&#x6570;&#x636E;&#x6587;&#x4EF6;&#xFF0C;&#x53EF;&#x4EE5;&#x591A;&#x4E2A;&#x6761;&#x4EF6;&#x914D;&#x5408;
+#save &lt;seconds&gt; &lt;changes&gt;
+#Redis&#x9ED8;&#x8BA4;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x4E2D;&#x63D0;&#x4F9B;&#x4E86;&#x4E09;&#x4E2A;&#x6761;&#x4EF6;&#xFF1A;
+save 900 1
+save 300 10
+save 60 10000
+#&#x6307;&#x5B9A;&#x5B58;&#x50A8;&#x81F3;&#x672C;&#x5730;&#x6570;&#x636E;&#x5E93;&#x65F6;&#x662F;&#x5426;&#x538B;&#x7F29;&#x6570;&#x636E;&#xFF0C;&#x9ED8;&#x8BA4;&#x4E3A;yes&#xFF0C;Redis&#x91C7;&#x7528;LZF&#x538B;&#x7F29;&#xFF0C;&#x5982;&#x679C;&#x4E3A;&#x4E86;&#x8282;&#x7701;CPU&#x65F6;&#x95F4;&#xFF0C;&#x53EF;&#x4EE5;&#x5173;&#x95ED;&#x8BE5;&#x9009;&#x9879;&#xFF0C;&#x4F46;&#x4F1A;&#x5BFC;&#x81F4;&#x6570;&#x636E;&#x5E93;&#x6587;&#x4EF6;&#x53D8;&#x7684;&#x5DE8;&#x5927;
+rdbcompression yes
+#&#x6307;&#x5B9A;&#x672C;&#x5730;&#x6570;&#x636E;&#x5E93;&#x6587;&#x4EF6;&#x540D;
+dbfilename dump-7001.rdb
+#&#x6307;&#x5B9A;&#x672C;&#x5730;&#x6570;&#x636E;&#x5E93;&#x8DEF;&#x5F84;
+dir /Users/kevin/redis-5.0.7/db/
+#&#x6307;&#x5B9A;&#x662F;&#x5426;&#x5728;&#x6BCF;&#x6B21;&#x66F4;&#x65B0;&#x64CD;&#x4F5C;&#x540E;&#x8FDB;&#x884C;&#x65E5;&#x5FD7;&#x8BB0;&#x5F55;&#xFF0C;Redis&#x5728;&#x9ED8;&#x8BA4;&#x60C5;&#x51B5;&#x4E0B;&#x662F;&#x5F02;&#x6B65;&#x7684;&#x628A;&#x6570;&#x636E;&#x5199;&#x5165;&#x78C1;&#x76D8;&#xFF0C;&#x5982;&#x679C;&#x4E0D;&#x5F00;&#x542F;&#xFF0C;&#x53EF;&#x80FD;&#x4F1A;&#x5728;&#x65AD;&#x7535;&#x65F6;&#x5BFC;&#x81F4;&#x4E00;&#x6BB5;&#x65F6;&#x95F4;&#x5185;&#x7684;&#x6570;&#x636E;&#x4E22;&#x5931;&#x3002;&#x56E0;&#x4E3A; redis&#x672C;&#x8EAB;&#x540C;&#x6B65;&#x6570;&#x636E;&#x6587;&#x4EF6;&#x662F;&#x6309;&#x4E0A;&#x9762;save&#x6761;&#x4EF6;&#x6765;&#x540C;&#x6B65;&#x7684;&#xFF0C;&#x6240;&#x4EE5;&#x6709;&#x7684;&#x6570;&#x636E;&#x4F1A;&#x5728;&#x4E00;&#x6BB5;&#x65F6;&#x95F4;&#x5185;&#x53EA;&#x5B58;&#x5728;&#x4E8E;&#x5185;&#x5B58;&#x4E2D;
+appendonly no
+#&#x6307;&#x5B9A;&#x66F4;&#x65B0;&#x65E5;&#x5FD7;&#x6761;&#x4EF6;&#xFF0C;&#x5171;&#x6709;3&#x4E2A;&#x53EF;&#x9009;&#x503C;&#xFF1A;
+#no&#xFF1A;&#x8868;&#x793A;&#x7B49;&#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;&#x8FDB;&#x884C;&#x6570;&#x636E;&#x7F13;&#x5B58;&#x540C;&#x6B65;&#x5230;&#x78C1;&#x76D8;&#xFF08;&#x5FEB;&#xFF09;
+#always&#xFF1A;&#x8868;&#x793A;&#x6BCF;&#x6B21;&#x66F4;&#x65B0;&#x64CD;&#x4F5C;&#x540E;&#x624B;&#x52A8;&#x8C03;&#x7528;fsync()&#x5C06;&#x6570;&#x636E;&#x5199;&#x5230;&#x78C1;&#x76D8;&#xFF08;&#x6162;&#xFF0C;&#x5B89;&#x5168;&#xFF09;
+#everysec&#xFF1A;&#x8868;&#x793A;&#x6BCF;&#x79D2;&#x540C;&#x6B65;&#x4E00;&#x6B21;&#xFF08;&#x6298;&#x8877;&#xFF0C;&#x9ED8;&#x8BA4;&#x503C;&#xFF09;
+appendfsync everysec
+</code></pre><p>&#x5728;&#x547D;&#x4EE4;&#x7EC8;&#x7AEF;&#x6267;&#x884C;&#x5982;&#x4E0B;&#x547D;&#x4EE4;&#xFF0C;&#x5728;7001&#x7AEF;&#x53E3;&#x4E0A;&#x542F;&#x52A8;Redis&#x5355;&#x673A;&#x670D;&#x52A1;&#x5668;&#x3002;</p>
+<pre><code class="lang-bash">/Users/kevin/redis-5.0.7/src/redis-server /Users/kevin/redis-5.0.7/etc/redis-single-7001.conf
+</code></pre>
+<p>&#x8F93;&#x5165;&#x547D;&#x4EE4;<code>ps -ef | grep redis</code>&#x68C0;&#x67E5;Redis&#x662F;&#x5426;&#x5728;7001&#x7AEF;&#x53E3;&#x4E0A;&#x542F;&#x52A8;&#x3002;</p>
+<pre><code>kevin@KevindeMacBook-Pro src % ps -ef | grep redis                   
+  501  2048     1   0  9:12&#x4E0A;&#x5348; ??         0:00.84 /Users/kevin/redis-5.0.7/src/redis-server *:7001 
+  501  2070   943   0  9:15&#x4E0A;&#x5348; ttys000    0:00.00 grep redis
+</code></pre><p>&#x5728;&#x547D;&#x4EE4;&#x7EC8;&#x7AEF;&#x6267;&#x884C;&#x547D;&#x4EE4;<code>redis-cli -h 127.0.0.1 -p 7001</code>&#xFF0C;&#x542F;&#x52A8;Redis&#x5BA2;&#x6237;&#x7AEF;&#xFF0C;&#x5F80;Redis&#x4E2D;&#x6DFB;&#x52A0;&#x4E00;&#x6761;&#x8BB0;&#x5F55;&#x5E76;&#x83B7;&#x53D6;&#xFF0C;&#x68C0;&#x67E5;&#x662F;&#x5426;&#x6B63;&#x786E;&#x4FDD;&#x5B58;&#x548C;&#x67E5;&#x8BE2;&#x8BB0;&#x5F55;&#x3002;</p>
+<pre><code class="lang-bash">kevin@KevindeMacBook-Pro src % /Users/kevin/redis-5.0.7/src/redis-cli -h 127.0.0.1 -p 7001
+127.0.0.1:7001&gt; <span class="hljs-built_in">set</span> name <span class="hljs-string">&apos;Kevin&apos;</span>
+OK
+127.0.0.1:7001&gt; get name
+<span class="hljs-string">&quot;Kevin&quot;</span>
+127.0.0.1:7001&gt;
+</code></pre>
+<h3 id="743-&#x96C6;&#x7FA4;&#x914D;&#x7F6E;">7.4.3 &#x96C6;&#x7FA4;&#x914D;&#x7F6E;</h3>
+<p>&#x672C;&#x6D4B;&#x8BD5;&#x96C6;&#x7FA4;&#x4E3A;6&#x53F0;&#x5728;&#x672C;&#x5730;&#x673A;&#x5668;&#x4E0A;&#x7684;Redis&#x670D;&#x52A1;&#x5668;&#xFF0C;&#x53EA;&#x662F;&#x7AEF;&#x53E3;&#x53F7;&#x4E0D;&#x540C;&#x3002;</p>
+<p>&#x5C06;<code>redis-single-7001.conf</code>&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x62F7;&#x8D1D;&#x4E3A;<code>redis-7001.conf</code>&#xFF0C;&#x5E76;&#x5728;&#x6587;&#x4EF6;&#x672B;&#x5C3E;&#x6DFB;&#x52A0;&#x96C6;&#x7FA4;&#x914D;&#x7F6E;&#x5185;&#x5BB9;&#x3002;</p>
+<pre><code>#&#x5F00;&#x542F;&#x96C6;&#x7FA4;
+cluster-enabled yes
+#&#x8BE5;&#x8282;&#x70B9;&#x7684;&#x5BF9;&#x5E94;&#x7684;&#x8282;&#x70B9;&#x914D;&#x7F6E;&#x6587;&#x4EF6;
+cluster-config-file redis-7001.conf
+#&#x96C6;&#x7FA4;&#x8D85;&#x65F6;&#x65F6;&#x95F4;
+cluster-node-timeout 5000
+</code></pre><p>&#x5B8C;&#x6574;&#x7684;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code>#&#x4FEE;&#x6539;&#x4E3A;&#x5B88;&#x62A4;&#x6A21;&#x5F0F;
+daemonize yes
+#&#x8BBE;&#x7F6E;&#x8FDB;&#x7A0B;&#x9501;&#x6587;&#x4EF6;
+pidfile /Users/kevin/redis-5.0.7/db/redis-7001.pid
+#ip&#x5730;&#x5740;
+bind 127.0.0.1
+#&#x7AEF;&#x53E3;
+port 7001
+#&#x5BA2;&#x6237;&#x7AEF;&#x8D85;&#x65F6;&#x65F6;&#x95F4;
+timeout 300
+#&#x65E5;&#x5FD7;&#x7EA7;&#x522B;
+loglevel debug
+#&#x65E5;&#x5FD7;&#x6587;&#x4EF6;&#x4F4D;&#x7F6E;
+logfile /Users/kevin/redis-5.0.7/logs/redis-7001.log
+#&#x8BBE;&#x7F6E;&#x6570;&#x636E;&#x5E93;&#x7684;&#x6570;&#x91CF;&#xFF0C;&#x9ED8;&#x8BA4;&#x6570;&#x636E;&#x5E93;&#x4E3A;0&#xFF0C;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;SELECT &lt;dbid&gt;&#x547D;&#x4EE4;&#x5728;&#x8FDE;&#x63A5;&#x4E0A;&#x6307;&#x5B9A;&#x6570;&#x636E;&#x5E93;id
+databases 16
+##&#x6307;&#x5B9A;&#x5728;&#x591A;&#x957F;&#x65F6;&#x95F4;&#x5185;&#xFF0C;&#x6709;&#x591A;&#x5C11;&#x6B21;&#x66F4;&#x65B0;&#x64CD;&#x4F5C;&#xFF0C;&#x5C31;&#x5C06;&#x6570;&#x636E;&#x540C;&#x6B65;&#x5230;&#x6570;&#x636E;&#x6587;&#x4EF6;&#xFF0C;&#x53EF;&#x4EE5;&#x591A;&#x4E2A;&#x6761;&#x4EF6;&#x914D;&#x5408;
+#save &lt;seconds&gt; &lt;changes&gt;
+#Redis&#x9ED8;&#x8BA4;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x4E2D;&#x63D0;&#x4F9B;&#x4E86;&#x4E09;&#x4E2A;&#x6761;&#x4EF6;&#xFF1A;
+save 900 1
+save 300 10
+save 60 10000
+#&#x6307;&#x5B9A;&#x5B58;&#x50A8;&#x81F3;&#x672C;&#x5730;&#x6570;&#x636E;&#x5E93;&#x65F6;&#x662F;&#x5426;&#x538B;&#x7F29;&#x6570;&#x636E;&#xFF0C;&#x9ED8;&#x8BA4;&#x4E3A;yes&#xFF0C;Redis&#x91C7;&#x7528;LZF&#x538B;&#x7F29;&#xFF0C;&#x5982;&#x679C;&#x4E3A;&#x4E86;&#x8282;&#x7701;CPU&#x65F6;&#x95F4;&#xFF0C;&#x53EF;&#x4EE5;&#x5173;&#x95ED;&#x8BE5;&#x9009;&#x9879;&#xFF0C;&#x4F46;&#x4F1A;&#x5BFC;&#x81F4;&#x6570;&#x636E;&#x5E93;&#x6587;&#x4EF6;&#x53D8;&#x7684;&#x5DE8;&#x5927;
+rdbcompression yes
+#&#x6307;&#x5B9A;&#x672C;&#x5730;&#x6570;&#x636E;&#x5E93;&#x6587;&#x4EF6;&#x540D;
+dbfilename dump-7001.rdb
+#&#x6307;&#x5B9A;&#x672C;&#x5730;&#x6570;&#x636E;&#x5E93;&#x8DEF;&#x5F84;
+dir /Users/kevin/redis-5.0.7/db/
+#&#x6307;&#x5B9A;&#x662F;&#x5426;&#x5728;&#x6BCF;&#x6B21;&#x66F4;&#x65B0;&#x64CD;&#x4F5C;&#x540E;&#x8FDB;&#x884C;&#x65E5;&#x5FD7;&#x8BB0;&#x5F55;&#xFF0C;Redis&#x5728;&#x9ED8;&#x8BA4;&#x60C5;&#x51B5;&#x4E0B;&#x662F;&#x5F02;&#x6B65;&#x7684;&#x628A;&#x6570;&#x636E;&#x5199;&#x5165;&#x78C1;&#x76D8;&#xFF0C;&#x5982;&#x679C;&#x4E0D;&#x5F00;&#x542F;&#xFF0C;&#x53EF;&#x80FD;&#x4F1A;&#x5728;&#x65AD;&#x7535;&#x65F6;&#x5BFC;&#x81F4;&#x4E00;&#x6BB5;&#x65F6;&#x95F4;&#x5185;&#x7684;&#x6570;&#x636E;&#x4E22;&#x5931;&#x3002;&#x56E0;&#x4E3A; redis&#x672C;&#x8EAB;&#x540C;&#x6B65;&#x6570;&#x636E;&#x6587;&#x4EF6;&#x662F;&#x6309;&#x4E0A;&#x9762;save&#x6761;&#x4EF6;&#x6765;&#x540C;&#x6B65;&#x7684;&#xFF0C;&#x6240;&#x4EE5;&#x6709;&#x7684;&#x6570;&#x636E;&#x4F1A;&#x5728;&#x4E00;&#x6BB5;&#x65F6;&#x95F4;&#x5185;&#x53EA;&#x5B58;&#x5728;&#x4E8E;&#x5185;&#x5B58;&#x4E2D;
+appendonly no
+#&#x6307;&#x5B9A;&#x66F4;&#x65B0;&#x65E5;&#x5FD7;&#x6761;&#x4EF6;&#xFF0C;&#x5171;&#x6709;3&#x4E2A;&#x53EF;&#x9009;&#x503C;&#xFF1A;
+#no&#xFF1A;&#x8868;&#x793A;&#x7B49;&#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;&#x8FDB;&#x884C;&#x6570;&#x636E;&#x7F13;&#x5B58;&#x540C;&#x6B65;&#x5230;&#x78C1;&#x76D8;&#xFF08;&#x5FEB;&#xFF09;
+#always&#xFF1A;&#x8868;&#x793A;&#x6BCF;&#x6B21;&#x66F4;&#x65B0;&#x64CD;&#x4F5C;&#x540E;&#x624B;&#x52A8;&#x8C03;&#x7528;fsync()&#x5C06;&#x6570;&#x636E;&#x5199;&#x5230;&#x78C1;&#x76D8;&#xFF08;&#x6162;&#xFF0C;&#x5B89;&#x5168;&#xFF09;
+#everysec&#xFF1A;&#x8868;&#x793A;&#x6BCF;&#x79D2;&#x540C;&#x6B65;&#x4E00;&#x6B21;&#xFF08;&#x6298;&#x8877;&#xFF0C;&#x9ED8;&#x8BA4;&#x503C;&#xFF09;
+appendfsync everysec
+
+#&#x5F00;&#x542F;&#x96C6;&#x7FA4;
+cluster-enabled yes
+#&#x8BE5;&#x8282;&#x70B9;&#x7684;&#x5BF9;&#x5E94;&#x7684;&#x8282;&#x70B9;&#x914D;&#x7F6E;&#x6587;&#x4EF6;
+cluster-config-file redis-7001.conf
+#&#x96C6;&#x7FA4;&#x8D85;&#x65F6;&#x65F6;&#x95F4;
+cluster-node-timeout 5000
+</code></pre><p>&#x62F7;&#x8D1D;<code>redis-7001.conf</code>&#x4E3A;7002-7006&#xFF0C;&#x5E76;&#x4FEE;&#x6539;&#x6587;&#x4EF6;&#x4E2D;&#x7684;&#x6240;&#x6709;&#x7684;7001&#x4E3A;&#x5BF9;&#x5E94;&#x7AEF;&#x53E3;&#xFF0C;&#x7136;&#x540E;&#x4FDD;&#x5B58;&#x3002;</p>
+<blockquote>
+<p>&#x4F7F;&#x7528;&#x67E5;&#x627E;&#x66FF;&#x6362;&#x529F;&#x80FD;&#xFF0C;&#x5C06;redis-7001.conf&#x6587;&#x4EF6;&#x4E2D;&#x7684;&#x6240;&#x6709;7001&#x66FF;&#x6362;&#x4E3A;7002&#xFF0C;7003...</p>
+</blockquote>
+<p>&#x5206;&#x522B;&#x542F;&#x52A8;7001-7006&#x670D;&#x52A1;&#x5668;&#x3002;</p>
+<pre><code class="lang-bash">/Users/kevin/redis-5.0.7/src/redis-server /Users/kevin/redis-5.0.7/etc/redis-7001.conf
+/Users/kevin/redis-5.0.7/src/redis-server /Users/kevin/redis-5.0.7/etc/redis-7002.conf
+/Users/kevin/redis-5.0.7/src/redis-server /Users/kevin/redis-5.0.7/etc/redis-7003.conf
+/Users/kevin/redis-5.0.7/src/redis-server /Users/kevin/redis-5.0.7/etc/redis-7004.conf
+/Users/kevin/redis-5.0.7/src/redis-server /Users/kevin/redis-5.0.7/etc/redis-7005.conf
+/Users/kevin/redis-5.0.7/src/redis-server /Users/kevin/redis-5.0.7/etc/redis-7006.conf
+</code></pre>
+<p>&#x6267;&#x884C;<code>ps -ef | grep redis</code>&#x547D;&#x4EE4;&#xFF0C;&#x68C0;&#x67E5;&#x516D;&#x53F0;Redis&#x670D;&#x52A1;&#x5668;&#x662F;&#x5426;&#x6B63;&#x786E;&#x542F;&#x52A8;&#x3002;</p>
+<pre><code class="lang-bash">kevin@KevindeMacBook-Pro src % ps -ef | grep redis
+  501  2209     1   0 10:14&#x4E0A;&#x5348; ??         0:01.43 /Users/kevin/redis-5.0.7/src/redis-server 127.0.0.1:7001 [cluster] 
+  501  2212     1   0 10:15&#x4E0A;&#x5348; ??         0:01.35 /Users/kevin/redis-5.0.7/src/redis-server 127.0.0.1:7002 [cluster] 
+  501  2229     1   0 10:19&#x4E0A;&#x5348; ??         0:00.14 /Users/kevin/redis-5.0.7/src/redis-server 127.0.0.1:7003 [cluster] 
+  501  2231     1   0 10:19&#x4E0A;&#x5348; ??         0:00.13 /Users/kevin/redis-5.0.7/src/redis-server 127.0.0.1:7004 [cluster] 
+  501  2233     1   0 10:19&#x4E0A;&#x5348; ??         0:00.10 /Users/kevin/redis-5.0.7/src/redis-server 127.0.0.1:7005 [cluster] 
+  501  2235     1   0 10:19&#x4E0A;&#x5348; ??         0:00.09 /Users/kevin/redis-5.0.7/src/redis-server 127.0.0.1:7006 [cluster] 
+  501  2237   943   0 10:20&#x4E0A;&#x5348; ttys000    0:00.00 grep redis
+</code></pre>
+<p>&#x6267;&#x884C;&#x547D;&#x4EE4;<code>redis-cli --cluster create 127.0.0.1:7001 127.0.0.1:7002 127.0.0.1:7003 127.0.0.1:7004 127.0.0.1:7005 127.0.0.1:7006 --cluster-replicas 1</code>&#x521B;&#x5EFA;&#x96C6;&#x7FA4;&#x3002;</p>
+<pre><code class="lang-bash">/Users/kevin/redis-5.0.7/src/redis-cli --cluster create 127.0.0.1:7001 127.0.0.1:7002 127.0.0.1:7003 127.0.0.1:7004 127.0.0.1:7005 127.0.0.1:7006 --cluster-replicas 1
+</code></pre>
+<p>&#x5982;&#x679C;&#x4F60;&#x4E25;&#x683C;&#x6309;&#x7167;&#x672C;&#x5C0F;&#x8282;&#x7684;&#x6B65;&#x9AA4;&#x64CD;&#x4F5C;&#xFF0C;&#x5F88;&#x6709;&#x53EF;&#x80FD;&#x8981;&#x62A5;&#x9519;&#xFF0C;&#x9519;&#x8BEF;&#x4FE1;&#x606F;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code>[ERR] Node 127.0.0.1:7001 is not empty. Either the node already knows other nodes (check with CLUSTER NODES) or contains some key in database 0.
+</code></pre><p>&#x539F;&#x56E0;&#x5982;&#x4E0A;&#x9762;&#x9519;&#x8BEF;&#x63D0;&#x793A;&#x201C;contains some key in database 0&#x201D;&#xFF0C;&#x662F;&#x56E0;&#x4E3A;&#x6211;&#x4EEC;&#x4E4B;&#x524D;&#x7684;&#x6D4B;&#x8BD5;&#x6570;&#x636E;&#x672C;&#x5730;&#x843D;&#x76D8;&#x540E;&#x6570;&#x636E;&#x5E93;&#x4E2D;&#x6709;&#x8BB0;&#x5F55;&#x4E86;&#x3002;&#x89E3;&#x51B3;&#x529E;&#x6CD5;&#x662F;&#x5220;&#x9664;<code>/Users/kevin/redis-5.0.7/db</code>&#x76EE;&#x5F55;&#x4E0B;&#x7684;&#x6240;&#x6709;&#x6587;&#x4EF6;&#x3002;</p>
+<p>&#x7136;&#x540E;&#x518D;&#x6B21;&#x6267;&#x884C;&#x547D;&#x4EE4;<code>redis-cli --cluster create 127.0.0.1:7001 127.0.0.1:7002 127.0.0.1:7003 127.0.0.1:7004 127.0.0.1:7005 127.0.0.1:7006 --cluster-replicas 1</code>&#x521B;&#x5EFA;&#x96C6;&#x7FA4;&#x3002;</p>
+<p><img src="images/image-20191130102800578.png" alt="image-20191130102800578"></p>
+<p>&#x8F93;&#x5165;<code>yes</code>&#x786E;&#x8BA4;&#x4FE1;&#x606F;&#x540E;&#xFF0C;Redis&#x5F00;&#x59CB;&#x521B;&#x5EFA;&#x4E3B;&#x4ECE;&#x590D;&#x5236;&#x96C6;&#x7FA4;&#xFF0C;&#x8010;&#x5FC3;&#x7B49;&#x5F85;&#xFF08;&#x65F6;&#x95F4;&#x5E94;&#x8BE5;&#x5C11;&#x4E8E;2&#x5206;&#x949F;&#xFF09;&#xFF0C;&#x76F4;&#x5230;&#x96C6;&#x7FA4;&#x521B;&#x5EFA;&#x5B8C;&#x6210;&#x3002;</p>
+<p><img src="images/image-20191130103521112.png" alt="image-20191130103521112"></p>
+<p>&#x4F7F;&#x7528;&#x547D;&#x4EE4;<code>redis-cli -h 127.0.0.1 -p 7003 -c cluster nodes</code>&#x8FDE;&#x63A5;&#x5230;&#x4EFB;&#x610F;&#x96C6;&#x7FA4;&#x8282;&#x70B9;&#x670D;&#x52A1;&#x5668;&#xFF08;&#x8FD9;&#x91CC;&#x6211;&#x4EEC;&#x8FDE;&#x63A5;&#x7684;&#x662F;7003&#x7AEF;&#x53E3;&#x7684;&#x90A3;&#x53F0;Redis&#x670D;&#x52A1;&#x5668;&#xFF09;&#xFF0C;&#x68C0;&#x67E5;&#x96C6;&#x7FA4;&#x8282;&#x70B9;&#x60C5;&#x51B5;&#x3002;</p>
+<pre><code class="lang-bash">kevin@KevindeMacBook-Pro src % redis-cli -h 127.0.0.1 -p 7003 -c cluster nodes
+96566556628bcea7deff9f50cb8b59b77c2fad6b 127.0.0.1:7005@17005 slave acbb54dc08ee4525ee0b978b16c7b1495fe0<span class="hljs-built_in">fc</span>90 0 1575081455088 5 connected
+5ed24cb77a7775a9887ceeff19650393b70e08e5 127.0.0.1:7002@17002 master - 0 1575081456099 2 connected 5461-10922
+f21ed6f9cce15836d288184d3db363fe7e4b1d71 127.0.0.1:7006@17006 slave 5ed24cb77a7775a9887ceeff19650393b70e08e5 0 1575081455086 6 connected
+78d9c15de0020fb110aefe9<span class="hljs-built_in">fc</span>8dad85bffad2e55 127.0.0.1:7004@17004 slave 6a6c66c8863a9718ced1a91d2cb08d5b82da384f 0 1575081454073 4 connected
+6a6c66c8863a9718ced1a91d2cb08d5b82da384f 127.0.0.1:7003@17003 myself,master - 0 1575081454000 3 connected 10923-16383
+acbb54dc08ee4525ee0b978b16c7b1495fe0<span class="hljs-built_in">fc</span>90 127.0.0.1:7001@17001 master - 0 1575081454000 1 connected 0-5460
+</code></pre>
+<p>&#x4F7F;&#x7528;&#x547D;&#x4EE4;<code>redis-cli --cluster check 127.0.0.1:7002</code>&#x68C0;&#x67E5;&#x96C6;&#x7FA4;&#x60C5;&#x51B5;&#x3002;</p>
+<pre><code>kevin@KevindeMacBook-Pro src % redis-cli --cluster check 127.0.0.1:7002
+127.0.0.1:7002 (5ed24cb7...) -&gt; 0 keys | 5462 slots | 1 slaves.
+127.0.0.1:7003 (6a6c66c8...) -&gt; 0 keys | 5461 slots | 1 slaves.
+127.0.0.1:7001 (acbb54dc...) -&gt; 0 keys | 5461 slots | 1 slaves.
+[OK] 0 keys in 3 masters.
+0.00 keys per slot on average.
+&gt;&gt;&gt; Performing Cluster Check (using node 127.0.0.1:7002)
+M: 5ed24cb77a7775a9887ceeff19650393b70e08e5 127.0.0.1:7002
+   slots:[5461-10922] (5462 slots) master
+   1 additional replica(s)
+M: 6a6c66c8863a9718ced1a91d2cb08d5b82da384f 127.0.0.1:7003
+   slots:[10923-16383] (5461 slots) master
+   1 additional replica(s)
+S: f21ed6f9cce15836d288184d3db363fe7e4b1d71 127.0.0.1:7006
+   slots: (0 slots) slave
+   replicates 5ed24cb77a7775a9887ceeff19650393b70e08e5
+M: acbb54dc08ee4525ee0b978b16c7b1495fe0fc90 127.0.0.1:7001
+   slots:[0-5460] (5461 slots) master
+   1 additional replica(s)
+S: 78d9c15de0020fb110aefe9fc8dad85bffad2e55 127.0.0.1:7004
+   slots: (0 slots) slave
+   replicates 6a6c66c8863a9718ced1a91d2cb08d5b82da384f
+S: 96566556628bcea7deff9f50cb8b59b77c2fad6b 127.0.0.1:7005
+   slots: (0 slots) slave
+   replicates acbb54dc08ee4525ee0b978b16c7b1495fe0fc90
+[OK] All nodes agree about slots configuration.
+&gt;&gt;&gt; Check for open slots...
+&gt;&gt;&gt; Check slots coverage...
+[OK] All 16384 slots covered.
+</code></pre><h3 id="744-&#x96C6;&#x7FA4;&#x6D4B;&#x8BD5;">7.4.4 &#x96C6;&#x7FA4;&#x6D4B;&#x8BD5;</h3>
+<p>&#x4F7F;&#x7528;&#x547D;&#x4EE4;<code>redis-cli -c -h 127.0.0.1 -p 7002</code>&#x542F;&#x52A8;Redis&#x5BA2;&#x6237;&#x7AEF;&#xFF0C;&#x8FDE;&#x63A5;&#x5230;&#x96C6;&#x7FA4;&#x4E2D;&#x7684;7002&#x670D;&#x52A1;&#x5668;&#xFF0C;&#x5F80;Redis&#x96C6;&#x7FA4;&#x4E2D;&#x6DFB;&#x52A0;&#x4E00;&#x6761;&#x8BB0;&#x5F55;&#x5E76;&#x83B7;&#x53D6;&#xFF0C;&#x68C0;&#x67E5;&#x662F;&#x5426;&#x6B63;&#x786E;&#x4FDD;&#x5B58;&#x548C;&#x67E5;&#x8BE2;&#x8BB0;&#x5F55;&#x3002;</p>
+<pre><code class="lang-bash">kevin@KevindeMacBook-Pro src % redis-cli -c -h 127.0.0.1 -p 7002
+127.0.0.1:7002&gt; <span class="hljs-built_in">set</span> name <span class="hljs-string">&apos;Kevin&apos;</span>
+OK
+127.0.0.1:7002&gt; get name
+<span class="hljs-string">&quot;Kevin&quot;</span>
+127.0.0.1:7002&gt;
+</code></pre>
+<p>&#x9000;&#x51FA;&#x8FDE;&#x63A5;7002&#x670D;&#x52A1;&#x5668;&#x7684;Redis&#x5BA2;&#x6237;&#x7AEF;&#x3002;&#x4F7F;&#x7528;&#x547D;&#x4EE4;<code>redis-cli -c -h 127.0.0.1 -p 7005</code>&#x542F;&#x52A8;Redis&#x5BA2;&#x6237;&#x7AEF;&#xFF0C;&#x8FDE;&#x63A5;&#x5230;&#x96C6;&#x7FA4;&#x4E2D;&#x7684;7005&#x670D;&#x52A1;&#x5668;&#xFF0C;&#x5728;Redis&#x96C6;&#x7FA4;&#x4E2D;&#x83B7;&#x53D6;&#x521A;&#x624D;&#x901A;&#x8FC7;7002&#x670D;&#x52A1;&#x5668;&#x6DFB;&#x52A0;&#x7684;name=Kevin&#x7684;&#x90A3;&#x6761;&#x8BB0;&#x5F55;&#x3002;</p>
+<pre><code>kevin@KevindeMacBook-Pro src % redis-cli -c -h 127.0.0.1 -p 7005
+127.0.0.1:7005&gt; get name
+-&gt; Redirected to slot [5798] located at 127.0.0.1:7002
+&quot;Kevin&quot;
+127.0.0.1:7002&gt;
+</code></pre><p>&#x7ECF;&#x68C0;&#x67E5;&#xFF0C;&#x96C6;&#x7FA4;&#x53EF;&#x4EE5;&#x6B63;&#x5E38;&#x5DE5;&#x4F5C;&#x3002;</p>
+<p>&#x5982;&#x679C;&#x662F;&#x751F;&#x4EA7;&#x73AF;&#x5883;&#x4E0B;&#x7684;Redis&#x96C6;&#x7FA4;&#xFF0C;&#x4E0D;&#x8981;&#x5FD8;&#x4E86;&#x4F7F;&#x7528;<code>redis-benchmark -h 127.0.0.1 -p 7006 -c 100 -n 10000</code>&#x547D;&#x4EE4;&#x68C0;&#x67E5;&#x670D;&#x52A1;&#x5668;&#x6027;&#x80FD;&#x3002;</p>
+<blockquote>
+<p>100&#x4E2A;&#x5E76;&#x53D1;&#x8FDE;&#x63A5;&#xFF0C;10000&#x4E2A;&#x8BF7;&#x6C42;&#xFF0C;&#x68C0;&#x6D4B;host&#x4E3A;127.0.0.1&#x7AEF;&#x53E3;&#x4E3A;7006&#x7684;redis&#x670D;&#x52A1;&#x5668;&#x6027;&#x80FD; </p>
+</blockquote>
+<p><img src="images/image-20191130110015034.png" alt="image-20191130110015034"></p>
+<p>&#x5982;&#x4E0A;&#x56FE;&#x6240;&#x793A;&#xFF0C;&#x5728;&#x6211;&#x7684;MacBook Pro&#xFF08;i5+8G&#x5185;&#x5B58;&#xFF09;&#x7B14;&#x8BB0;&#x672C;&#x4E0A;&#xFF0C;&#x6BCF;&#x79D2;&#x80FD;&#x5904;&#x7406;7&#x4E07;&#x591A;&#x4E2A;&#x8BF7;&#x6C42;&#xFF0C;&#x8D85;&#x8FC7;98%&#x7684;&#x8BF7;&#x6C42;&#x54CD;&#x5E94;&#x65F6;&#x95F4;&#x5C11;&#x4E8E;2&#x6BEB;&#x79D2;&#x3002;</p>
+<h3 id="745-spring-boot&#x4F7F;&#x7528;redis&#x96C6;&#x7FA4;">7.4.5 Spring Boot&#x4F7F;&#x7528;Redis&#x96C6;&#x7FA4;</h3>
+<p>&#x5728;<code>Spring Boot 1.x</code>&#x7CFB;&#x5217;&#x4E2D;&#xFF0C;&#x8BBF;&#x95EE;Redis&#x4F7F;&#x7528;&#x7684;&#x5BA2;&#x6237;&#x7AEF;&#x662F;<code>Jedis</code>&#xFF0C;&#x4F46;&#x662F;&#x5230;&#x4E86;<code>Spring Boot 2.x</code>&#x4F7F;&#x7528;&#x7684;&#x5BA2;&#x6237;&#x7AEF;&#x662F;<code>Lettuce</code>&#x3002; 
+&#x5173;&#x4E8E;<code>Jedis</code>&#x8DDF;<code>Lettuce</code>&#x7684;&#x533A;&#x522B;&#x5982;&#x4E0B;&#xFF1A;</p>
+<ul>
+<li>Lettuce &#x548C; Jedis &#x7684;&#x5B9A;&#x4F4D;&#x90FD;&#x662F;Redis&#x7684;Client&#xFF0C;&#x6240;&#x4EE5;&#x4ED6;&#x4EEC;&#x90FD;&#x53EF;&#x4EE5;&#x76F4;&#x63A5;&#x8FDE;&#x63A5;Redis Server&#x3002;</li>
+<li>Jedis&#x5728;&#x5B9E;&#x73B0;&#x4E0A;&#x662F;&#x76F4;&#x63A5;&#x8FDE;&#x63A5;&#x7684;Redis Server&#xFF0C;&#x5982;&#x679C;&#x5728;&#x591A;&#x7EBF;&#x7A0B;&#x73AF;&#x5883;&#x4E0B;&#x662F;&#x975E;&#x7EBF;&#x7A0B;&#x5B89;&#x5168;&#x7684;&#xFF0C;&#x8FD9;&#x4E2A;&#x65F6;&#x5019;&#x53EA;&#x6709;&#x4F7F;&#x7528;&#x8FDE;&#x63A5;&#x6C60;&#xFF0C;&#x4E3A;&#x6BCF;&#x4E2A;Jedis&#x5B9E;&#x4F8B;&#x589E;&#x52A0;&#x7269;&#x7406;&#x8FDE;&#x63A5;&#x3002;</li>
+<li>Lettuce&#x7684;&#x8FDE;&#x63A5;&#x662F;&#x57FA;&#x4E8E;Netty&#x7684;&#xFF0C;&#x8FDE;&#x63A5;&#x5B9E;&#x4F8B;&#xFF08;StatefulRedisConnection&#xFF09;&#x53EF;&#x4EE5;&#x5728;&#x591A;&#x4E2A;&#x7EBF;&#x7A0B;&#x95F4;&#x5E76;&#x53D1;&#x8BBF;&#x95EE;&#xFF0C;&#x56E0;&#x4E3A;StatefulRedisConnection&#x662F;&#x7EBF;&#x7A0B;&#x5B89;&#x5168;&#x7684;&#xFF0C;&#x6240;&#x4EE5;&#x4E00;&#x4E2A;&#x8FDE;&#x63A5;&#x5B9E;&#x4F8B;&#xFF08;StatefulRedisConnection&#xFF09;&#x5C31;&#x53EF;&#x4EE5;&#x6EE1;&#x8DB3;&#x591A;&#x7EBF;&#x7A0B;&#x73AF;&#x5883;&#x4E0B;&#x7684;&#x5E76;&#x53D1;&#x8BBF;&#x95EE;&#xFF0C;&#x5F53;&#x7136;&#x8FD9;&#x4E2A;&#x4E5F;&#x662F;&#x53EF;&#x4F38;&#x7F29;&#x7684;&#x8BBE;&#x8BA1;&#xFF0C;&#x4E00;&#x4E2A;&#x8FDE;&#x63A5;&#x5B9E;&#x4F8B;&#x4E0D;&#x591F;&#x7684;&#x60C5;&#x51B5;&#x4E5F;&#x53EF;&#x4EE5;&#x6309;&#x9700;&#x589E;&#x52A0;&#x8FDE;&#x63A5;&#x5B9E;&#x4F8B;&#x3002;</li>
+</ul>
+<p>&#x6240;&#x4EE5;&#xFF0C;&#x5728;Spring Boot 2.x&#x4E2D;&#x4F7F;&#x7528;Redis&#x96C6;&#x7FA4;&#xFF0C;&#x5EFA;&#x8BAE;&#x6700;&#x597D;&#x4F7F;&#x7528;<code>Lettuce</code>&#x8FDE;&#x63A5;Redis&#x96C6;&#x7FA4;&#x670D;&#x52A1;&#x5668;&#x3002;</p>
+<p>&#x5728;Spring Boot&#x4E2D;&#x8BBF;&#x95EE;&#x5355;&#x673A;Redis&#x670D;&#x52A1;&#x5668;&#x548C;&#x96C6;&#x7FA4;&#x670D;&#x52A1;&#x5668;&#xFF0C;&#x5DEE;&#x522B;&#x5728;&#x4E8E;&#x914D;&#x7F6E;&#xFF0C;&#x6700;&#x7EC8;&#x4EE3;&#x7801;&#x90FD;&#x662F;&#x4F7F;&#x7528;StringRedisTemplate&#xFF08;&#x6216;RedisTemplate&#xFF09;&#x6A21;&#x677F;&#x7C7B;&#x6765;&#x64CD;&#x4F5C;Redis&#x6570;&#x636E;&#x3002;</p>
+<p>&#x5728;&#x914D;&#x7F6E;&#x6587;&#x4EF6;<code>application.yml</code>&#x4E2D;&#x6DFB;&#x52A0;Redis&#x96C6;&#x7FA4;&#x914D;&#x7F6E;&#x3002;</p>
+<pre><code class="lang-yaml"><span class="hljs-attr">server:</span>
+<span class="hljs-attr">  port:</span> <span class="hljs-number">8080</span>
+<span class="hljs-attr">spring:</span>
+<span class="hljs-attr">  redis:</span>
+<span class="hljs-attr">    timeout:</span> <span class="hljs-number">6000</span>ms
+<span class="hljs-attr">    cluster:</span>
+<span class="hljs-attr">      max-redirects:</span> <span class="hljs-number">3</span>
+<span class="hljs-attr">      nodes:</span>
+<span class="hljs-bullet">        -</span> <span class="hljs-number">127.0</span><span class="hljs-number">.0</span><span class="hljs-number">.1</span>:<span class="hljs-number">7001</span>
+<span class="hljs-bullet">        -</span> <span class="hljs-number">127.0</span><span class="hljs-number">.0</span><span class="hljs-number">.1</span>:<span class="hljs-number">7002</span>
+<span class="hljs-bullet">        -</span> <span class="hljs-number">127.0</span><span class="hljs-number">.0</span><span class="hljs-number">.1</span>:<span class="hljs-number">7003</span>
+<span class="hljs-bullet">        -</span> <span class="hljs-number">127.0</span><span class="hljs-number">.0</span><span class="hljs-number">.1</span>:<span class="hljs-number">7004</span>
+<span class="hljs-bullet">        -</span> <span class="hljs-number">127.0</span><span class="hljs-number">.0</span><span class="hljs-number">.1</span>:<span class="hljs-number">7005</span>
+<span class="hljs-bullet">        -</span> <span class="hljs-number">127.0</span><span class="hljs-number">.0</span><span class="hljs-number">.1</span>:<span class="hljs-number">7006</span>
+</code></pre>
+<p>&#x7F16;&#x5199;<code>RedisController</code>&#x63A7;&#x5236;&#x5668;&#x7C7B;&#xFF0C;&#x6D4B;&#x8BD5;&#x8BBF;&#x95EE;&#x548C;&#x4FDD;&#x5B58;Redis&#x96C6;&#x7FA4;&#x670D;&#x52A1;&#x5668;&#x4E2D;&#x503C;&#x5BF9;&#x8BB0;&#x5F55;&#x3002;</p>
+<pre><code class="lang-java"><span class="hljs-keyword">package</span> com.example.redis.controller;
+
+<span class="hljs-keyword">import</span> javax.annotation.Resource;
+
+<span class="hljs-keyword">import</span> org.springframework.data.redis.core.StringRedisTemplate;
+<span class="hljs-keyword">import</span> org.springframework.web.bind.annotation.RequestMapping;
+<span class="hljs-keyword">import</span> org.springframework.web.bind.annotation.RestController;
+
+<span class="hljs-meta">@RestController</span>
+<span class="hljs-meta">@RequestMapping</span>(<span class="hljs-string">&quot;/redis/cluster&quot;</span>)
+<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">RedisController</span> </span>{
+
+    <span class="hljs-meta">@Resource</span>
+    <span class="hljs-keyword">private</span> StringRedisTemplate strTemplate;    
+
+    <span class="hljs-meta">@RequestMapping</span>(<span class="hljs-string">&quot;/save&quot;</span>)
+    <span class="hljs-function"><span class="hljs-keyword">public</span> String <span class="hljs-title">save</span><span class="hljs-params">(String key, String value)</span> </span>{
+        strTemplate.opsForValue().set(key, value);
+        <span class="hljs-keyword">return</span> <span class="hljs-string">&quot;success.&quot;</span>;
+    }
+
+    <span class="hljs-meta">@RequestMapping</span>(<span class="hljs-string">&quot;/get&quot;</span>)
+    <span class="hljs-function"><span class="hljs-keyword">public</span> String <span class="hljs-title">get</span><span class="hljs-params">(String key)</span> </span>{
+        String value = strTemplate.opsForValue().get(key);
+        <span class="hljs-keyword">return</span> value;
+    }
+
+}
+</code></pre>
+<p>&#x5728;&#x6D4F;&#x89C8;&#x5668;&#x4E2D;&#x8BBF;&#x95EE;<a href="http://localhost:8080/redis/cluster/get?key=name" target="_blank">http://localhost:8080/redis/cluster/get?key=name</a>&#x8FD9;&#x4E2A;&#x5730;&#x5740;&#xFF0C;&#x8BBF;&#x95EE;&#x4E4B;&#x524D;&#x96C6;&#x7FA4;&#x6D4B;&#x8BD5;&#x4E2D;&#x653E;&#x5165;&#x5230;Redis&#x96C6;&#x7FA4;&#x4E2D;&#x7684;name&#x8FD9;&#x4E2A;key&#x5BF9;&#x5E94;&#x7684;&#x503C;&#x3002;</p>
+<p><img src="images/image-20191130142556998.png" alt="image-20191130142556998"></p>
+<p>&#x5728;&#x6D4F;&#x89C8;&#x5668;&#x4E2D;&#x8BBF;&#x95EE;<a href="http://localhost:8080/redis/cluster/save?key=age&amp;value=18" target="_blank">http://localhost:8080/redis/cluster/save?key=age&amp;value=18</a>&#x8FD9;&#x4E2A;&#x5730;&#x5740;&#xFF0C;&#x5C06;age=18&#x8FD9;&#x4E2A;Key-Value&#x503C;&#x5BF9;&#x5B58;&#x5165;Redis&#x96C6;&#x7FA4;&#x4E2D;&#x3002;</p>
+<p><img src="images/image-20191130141913145.png" alt="image-20191130141913145"></p>
+<p>&#x5728;&#x6D4F;&#x89C8;&#x5668;&#x4E2D;&#x8BBF;&#x95EE;<a href="http://localhost:8080/redis/cluster/get?key=age" target="_blank">http://localhost:8080/redis/cluster/get?key=age</a>&#x8FD9;&#x4E2A;&#x5730;&#x5740;&#xFF0C;&#x8BBF;&#x95EE;Redis&#x96C6;&#x7FA4;&#x670D;&#x52A1;&#x5668;&#x4E2D;&#x7684;age&#x8FD9;&#x4E2A;key&#x5BF9;&#x5E94;&#x7684;&#x503C;&#x3002;</p>
+<p><img src="images/image-20191130142644625.png" alt="image-20191130142644625"></p>
+<p>&#x5728;&#x547D;&#x4EE4;&#x7EC8;&#x7AEF;&#x4E2D;&#xFF0C;&#x8FDE;&#x63A5;&#x5230;Redis&#x96C6;&#x7FA4;&#x7684;7005&#x670D;&#x52A1;&#x5668;&#xFF0C;&#x67E5;&#x8BE2;name&#x548C;age&#xFF0C;&#x53EF;&#x4EE5;&#x770B;&#x5230;name&#x5B58;&#x653E;&#x5728;7002&#x670D;&#x52A1;&#x5668;&#x7684;slot&#x4E2D;&#xFF0C;age&#x5B58;&#x653E;&#x5728;7001&#x670D;&#x52A1;&#x5668;&#x7684;slot&#x4E2D;&#x3002;</p>
+<pre><code class="lang-bash">kevin@KevindeMacBook-Pro src % redis-cli -c -h 127.0.0.1 -p 7005
+127.0.0.1:7005&gt; get name
+-&gt; Redirected to slot [5798] located at 127.0.0.1:7002
+<span class="hljs-string">&quot;Kevin&quot;</span>
+127.0.0.1:7002&gt; get age
+-&gt; Redirected to slot [741] located at 127.0.0.1:7001
+<span class="hljs-string">&quot;18&quot;</span>
+</code></pre>
+<p>&#x901A;&#x8FC7;<code>redis-cli --cluster check 127.0.0.1:7002</code>&#x547D;&#x4EE4;&#x518D;&#x6B21;&#x68C0;&#x67E5;&#x96C6;&#x7FA4;&#x670D;&#x52A1;&#x5668;&#xFF0C;&#x80FD;&#x591F;&#x770B;&#x5230;<code>[OK] 2 keys in 3 masters.</code>&#x4FE1;&#x606F;&#xFF0C;&#x5C31;&#x662F;&#x6211;&#x4EEC;&#x4E0A;&#x9762;&#x901A;&#x8FC7;&#x547D;&#x4EE4;&#x5B58;&#x5165;Redis&#x96C6;&#x7FA4;&#x7684;name&#x548C;&#x901A;&#x8FC7;Spring Boot&#x5E94;&#x7528;&#x5B58;&#x5165;&#x7684;age&#x8FD9;&#x4E24;&#x6761;&#x8BB0;&#x5F55;&#x4E86;&#x3002;</p>
+<pre><code class="lang-bash">kevin@KevindeMacBook-Pro src % redis-cli --cluster check 127.0.0.1:7002
+127.0.0.1:7002 (5ed24cb7...) -&gt; 1 keys | 5462 slots | 1 slaves.
+127.0.0.1:7003 (6a6c66c8...) -&gt; 0 keys | 5461 slots | 1 slaves.
+127.0.0.1:7001 (acbb54dc...) -&gt; 1 keys | 5461 slots | 1 slaves.
+[OK] 2 keys <span class="hljs-keyword">in</span> 3 masters.
+0.00 keys per slot on average.
+&gt;&gt;&gt; Performing Cluster Check (using node 127.0.0.1:7002)
+M: 5ed24cb77a7775a9887ceeff19650393b70e08e5 127.0.0.1:7002
+   slots:[5461-10922] (5462 slots) master
+   1 additional replica(s)
+M: 6a6c66c8863a9718ced1a91d2cb08d5b82da384f 127.0.0.1:7003
+   slots:[10923-16383] (5461 slots) master
+   1 additional replica(s)
+S: f21ed6f9cce15836d288184d3db363fe7e4b1d71 127.0.0.1:7006
+   slots: (0 slots) slave
+   replicates 5ed24cb77a7775a9887ceeff19650393b70e08e5
+M: acbb54dc08ee4525ee0b978b16c7b1495fe0<span class="hljs-built_in">fc</span>90 127.0.0.1:7001
+   slots:[0-5460] (5461 slots) master
+   1 additional replica(s)
+S: 78d9c15de0020fb110aefe9<span class="hljs-built_in">fc</span>8dad85bffad2e55 127.0.0.1:7004
+   slots: (0 slots) slave
+   replicates 6a6c66c8863a9718ced1a91d2cb08d5b82da384f
+S: 96566556628bcea7deff9f50cb8b59b77c2fad6b 127.0.0.1:7005
+   slots: (0 slots) slave
+   replicates acbb54dc08ee4525ee0b978b16c7b1495fe0<span class="hljs-built_in">fc</span>90
+[OK] All nodes agree about slots configuration.
+&gt;&gt;&gt; Check <span class="hljs-keyword">for</span> open slots...
+&gt;&gt;&gt; Check slots coverage...
+[OK] All 16384 slots covered.
+</code></pre>
+<blockquote>
+<p>&#x672C;&#x5C0F;&#x8282;&#x793A;&#x4F8B;&#x9879;&#x76EE;&#x4EE3;&#x7801;&#xFF1A;</p>
+<p><a href="https://github.com/gyzhang/SpringBootCourseCode/tree/master/spring-boot-redis" target="_blank">https://github.com/gyzhang/SpringBootCourseCode/tree/master/spring-boot-redis</a></p>
+</blockquote>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="7.3redisSession.html" class="navigation navigation-prev " aria-label="Previous page: 7.3 Session共享">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="7.5homework.html" class="navigation navigation-next " aria-label="Next page: 7.5 课后作业">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"7.4 Redis集群","level":"1.8.4","depth":2,"next":{"title":"7.5 课后作业","level":"1.8.5","depth":2,"path":"第7章 Spring Boot集成Redis/7.5homework.md","ref":"第7章 Spring Boot集成Redis/7.5homework.md","articles":[]},"previous":{"title":"7.3 Session共享","level":"1.8.3","depth":2,"path":"第7章 Spring Boot集成Redis/7.3redisSession.md","ref":"第7章 Spring Boot集成Redis/7.3redisSession.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-search","search-pro","code","splitter","expandable-chapters","page-toc-button","back-to-top-button","livereload"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"livereload":{},"splitter":{},"search-pro":{"cutWordLib":"nodejieba","defineWord":["Spring Boot"],"expandable-chapters":{}},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"code":{"copyButtons":true},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"page-toc-button":{},"back-to-top-button":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"expandable-chapters":{}},"theme":"default","author":"Kevin Zhang","pdf":{"pageNumbers":true,"fontSize":23,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"SpringBoot入门教程","language":"zh-hans","gitbook":"*","description":"针对初级程序员的Spring Boot入门教程，使用版本2.2.x"},"file":{"path":"第7章 Spring Boot集成Redis/7.4redisCluster.md","mtime":"2019-12-28T02:08:54.927Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-02-07T14:42:40.985Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-pro/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-code/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-page-toc-button/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-back-to-top-button/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

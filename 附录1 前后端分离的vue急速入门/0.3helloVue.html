@@ -1,0 +1,1818 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>A.3 Hello Vue · SpringBoot入门教程</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="Kevin Zhang">
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search-pro/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-code/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-page-toc-button/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-back-to-top-button/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="0.4vueRouter.html" />
+    
+    
+    <link rel="prev" href="0.2vueConfig.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    前言
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../第1章 Spring Boot介绍/SpringBoot.html">
+            
+                <a href="../第1章 Spring Boot介绍/SpringBoot.html">
+            
+                    
+                    第1章 Spring Boot介绍
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../第1章 Spring Boot介绍/1.1spring.html">
+            
+                <a href="../第1章 Spring Boot介绍/1.1spring.html">
+            
+                    
+                    1.1 Spring介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../第1章 Spring Boot介绍/1.2springBoot.html">
+            
+                <a href="../第1章 Spring Boot介绍/1.2springBoot.html">
+            
+                    
+                    1.2 Spring Boot简介
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../第1章 Spring Boot介绍/1.3springBootModules.html">
+            
+                <a href="../第1章 Spring Boot介绍/1.3springBootModules.html">
+            
+                    
+                    1.3 Spring Boot的主要模块
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="../第1章 Spring Boot介绍/1.4helloSpringBoot.html">
+            
+                <a href="../第1章 Spring Boot介绍/1.4helloSpringBoot.html">
+            
+                    
+                    1.4 Hello Spring Boot
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="../第1章 Spring Boot介绍/1.5homework.html">
+            
+                <a href="../第1章 Spring Boot介绍/1.5homework.html">
+            
+                    
+                    1.5 课后作业
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../第2章 开发环境配置/IDE.html">
+            
+                <a href="../第2章 开发环境配置/IDE.html">
+            
+                    
+                    第2章 开发环境配置
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../第2章 开发环境配置/2.1jdk.html">
+            
+                <a href="../第2章 开发环境配置/2.1jdk.html">
+            
+                    
+                    2.1 安装JDK
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../第2章 开发环境配置/2.2maven.html">
+            
+                <a href="../第2章 开发环境配置/2.2maven.html">
+            
+                    
+                    2.2 安装配置Maven
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../第2章 开发环境配置/2.3sts.html">
+            
+                <a href="../第2章 开发环境配置/2.3sts.html">
+            
+                    
+                    2.3 安装配置STS
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="../第2章 开发环境配置/2.4mysql.html">
+            
+                <a href="../第2章 开发环境配置/2.4mysql.html">
+            
+                    
+                    2.4 安装MySQL和管理工具
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="../第2章 开发环境配置/2.5validation.html">
+            
+                <a href="../第2章 开发环境配置/2.5validation.html">
+            
+                    
+                    2.5 验证开发环境
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6" data-path="../第2章 开发环境配置/2.6postman.html">
+            
+                <a href="../第2章 开发环境配置/2.6postman.html">
+            
+                    
+                    2.6 安装Postman
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.7" data-path="../第2章 开发环境配置/2.7homework.html">
+            
+                <a href="../第2章 开发环境配置/2.7homework.html">
+            
+                    
+                    2.7 课后作业
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../第3章 Spring Boot原理剖析/SpringBootHow.html">
+            
+                <a href="../第3章 Spring Boot原理剖析/SpringBootHow.html">
+            
+                    
+                    第3章 Spring Boot原理剖析
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../第3章 Spring Boot原理剖析/3.1structure.html">
+            
+                <a href="../第3章 Spring Boot原理剖析/3.1structure.html">
+            
+                    
+                    3.1 项目结构
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../第3章 Spring Boot原理剖析/3.2baseConfig.html">
+            
+                <a href="../第3章 Spring Boot原理剖析/3.2baseConfig.html">
+            
+                    
+                    3.2 基本配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../第3章 Spring Boot原理剖析/3.3annotation.html">
+            
+                <a href="../第3章 Spring Boot原理剖析/3.3annotation.html">
+            
+                    
+                    3.3 启动类与核心注解
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="../第3章 Spring Boot原理剖析/3.4startFlow.html">
+            
+                <a href="../第3章 Spring Boot原理剖析/3.4startFlow.html">
+            
+                    
+                    3.4 启动过程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5" data-path="../第3章 Spring Boot原理剖析/3.5homework.html">
+            
+                <a href="../第3章 Spring Boot原理剖析/3.5homework.html">
+            
+                    
+                    3.5 课后作业
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../第4章 Spring Boot Web开发/SpringBootWeb.html">
+            
+                <a href="../第4章 Spring Boot Web开发/SpringBootWeb.html">
+            
+                    
+                    第4章 Spring Boot Web开发
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../第4章 Spring Boot Web开发/4.1mvc.html">
+            
+                <a href="../第4章 Spring Boot Web开发/4.1mvc.html">
+            
+                    
+                    4.1 Spring MVC介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../第4章 Spring Boot Web开发/4.2thymeleaf.html">
+            
+                <a href="../第4章 Spring Boot Web开发/4.2thymeleaf.html">
+            
+                    
+                    4.2 Thymeleaf介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" data-path="../第4章 Spring Boot Web开发/4.3legacy.html">
+            
+                <a href="../第4章 Spring Boot Web开发/4.3legacy.html">
+            
+                    
+                    4.3 使用Servlet、Listener和Filter
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4" data-path="../第4章 Spring Boot Web开发/4.4homework.html">
+            
+                <a href="../第4章 Spring Boot Web开发/4.4homework.html">
+            
+                    
+                    4.4 课后作业
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../第5章 Spring Boot数据访问/DataAccess.html">
+            
+                <a href="../第5章 Spring Boot数据访问/DataAccess.html">
+            
+                    
+                    第5章 Spring Boot数据访问
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../第5章 Spring Boot数据访问/5.1jdbc.html">
+            
+                <a href="../第5章 Spring Boot数据访问/5.1jdbc.html">
+            
+                    
+                    5.1 Spring Boot集成JdbcTemplate
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="../第5章 Spring Boot数据访问/5.2myBatis.html">
+            
+                <a href="../第5章 Spring Boot数据访问/5.2myBatis.html">
+            
+                    
+                    5.2 Spring Boot集成MyBatis
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="../第5章 Spring Boot数据访问/5.3pageHelper.html">
+            
+                <a href="../第5章 Spring Boot数据访问/5.3pageHelper.html">
+            
+                    
+                    5.3 MyBatis分页
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.4" data-path="../第5章 Spring Boot数据访问/5.4myBatisPlus.html">
+            
+                <a href="../第5章 Spring Boot数据访问/5.4myBatisPlus.html">
+            
+                    
+                    5.4 MyBatis-Plus
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.5" data-path="../第5章 Spring Boot数据访问/5.5homework.html">
+            
+                <a href="../第5章 Spring Boot数据访问/5.5homework.html">
+            
+                    
+                    5.5 课后作业
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../第6章 Spring Boot事务/SpringBootTransaction.html">
+            
+                <a href="../第6章 Spring Boot事务/SpringBootTransaction.html">
+            
+                    
+                    第6章 Spring Boot事务
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="../第6章 Spring Boot事务/6.1transaction.html">
+            
+                <a href="../第6章 Spring Boot事务/6.1transaction.html">
+            
+                    
+                    6.1 事务介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2" data-path="../第6章 Spring Boot事务/6.2usingTransaction.html">
+            
+                <a href="../第6章 Spring Boot事务/6.2usingTransaction.html">
+            
+                    
+                    6.2 事务的使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.3" data-path="../第6章 Spring Boot事务/6.3distributedTransaction.html">
+            
+                <a href="../第6章 Spring Boot事务/6.3distributedTransaction.html">
+            
+                    
+                    6.3 分布式事务
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.4" data-path="../第6章 Spring Boot事务/6.4homework.html">
+            
+                <a href="../第6章 Spring Boot事务/6.4homework.html">
+            
+                    
+                    6.4 课后作业
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="../第7章 Spring Boot集成Redis/Redis.html">
+            
+                <a href="../第7章 Spring Boot集成Redis/Redis.html">
+            
+                    
+                    第7章 Spring Boot集成Redis
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.1" data-path="../第7章 Spring Boot集成Redis/7.1redisOverview.html">
+            
+                <a href="../第7章 Spring Boot集成Redis/7.1redisOverview.html">
+            
+                    
+                    7.1 Redis简介
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.2" data-path="../第7章 Spring Boot集成Redis/7.2redisIntegration.html">
+            
+                <a href="../第7章 Spring Boot集成Redis/7.2redisIntegration.html">
+            
+                    
+                    7.2 集成Redis
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.3" data-path="../第7章 Spring Boot集成Redis/7.3redisSession.html">
+            
+                <a href="../第7章 Spring Boot集成Redis/7.3redisSession.html">
+            
+                    
+                    7.3 Session共享
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.4" data-path="../第7章 Spring Boot集成Redis/7.4redisCluster.html">
+            
+                <a href="../第7章 Spring Boot集成Redis/7.4redisCluster.html">
+            
+                    
+                    7.4 Redis集群
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.5" data-path="../第7章 Spring Boot集成Redis/7.5homework.html">
+            
+                <a href="../第7章 Spring Boot集成Redis/7.5homework.html">
+            
+                    
+                    7.5 课后作业
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="../第8章 Spring Boot集成MongoDB/MongoDB.html">
+            
+                <a href="../第8章 Spring Boot集成MongoDB/MongoDB.html">
+            
+                    
+                    第8章 Spring Boot集成MongoDB
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.9.1" data-path="../第8章 Spring Boot集成MongoDB/8.1mongoDBOverview.html">
+            
+                <a href="../第8章 Spring Boot集成MongoDB/8.1mongoDBOverview.html">
+            
+                    
+                    8.1 MongoDB简介
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.2" data-path="../第8章 Spring Boot集成MongoDB/8.2mongoDBIntegration.html">
+            
+                <a href="../第8章 Spring Boot集成MongoDB/8.2mongoDBIntegration.html">
+            
+                    
+                    8.2 集成MongoDB
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.3" data-path="../第8章 Spring Boot集成MongoDB/8.3homework.html">
+            
+                <a href="../第8章 Spring Boot集成MongoDB/8.3homework.html">
+            
+                    
+                    8.3 课后作业
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="../第9章 Spring Boot与异步消息/MQ.html">
+            
+                <a href="../第9章 Spring Boot与异步消息/MQ.html">
+            
+                    
+                    第9章 Spring Boot与异步消息
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.10.1" data-path="../第9章 Spring Boot与异步消息/9.1jms.html">
+            
+                <a href="../第9章 Spring Boot与异步消息/9.1jms.html">
+            
+                    
+                    9.1 有关消息的概念
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.2" data-path="../第9章 Spring Boot与异步消息/9.2activeMQ.html">
+            
+                <a href="../第9章 Spring Boot与异步消息/9.2activeMQ.html">
+            
+                    
+                    9.2 Spring Boot集成ActiveMQ
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.3" data-path="../第9章 Spring Boot与异步消息/9.3rabbitMQ.html">
+            
+                <a href="../第9章 Spring Boot与异步消息/9.3rabbitMQ.html">
+            
+                    
+                    9.3 Spring Boot集成RabbitMQ
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.4" data-path="../第9章 Spring Boot与异步消息/9.4rocketMQ.html">
+            
+                <a href="../第9章 Spring Boot与异步消息/9.4rocketMQ.html">
+            
+                    
+                    9.4 Spring Boot集成RocketMQ
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.5" data-path="../第9章 Spring Boot与异步消息/9.5kafka.html">
+            
+                <a href="../第9章 Spring Boot与异步消息/9.5kafka.html">
+            
+                    
+                    9.5 Spring Boot集成Kafka
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.6" data-path="../第9章 Spring Boot与异步消息/9.6homework.html">
+            
+                <a href="../第9章 Spring Boot与异步消息/9.6homework.html">
+            
+                    
+                    9.6 课后作业
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="../第10章 异常处理/Exception.html">
+            
+                <a href="../第10章 异常处理/Exception.html">
+            
+                    
+                    第10章 异常处理
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.11.1" data-path="../第10章 异常处理/10.1exceptionOverview.html">
+            
+                <a href="../第10章 异常处理/10.1exceptionOverview.html">
+            
+                    
+                    10.1 异常介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.2" data-path="../第10章 异常处理/10.2globalException.html">
+            
+                <a href="../第10章 异常处理/10.2globalException.html">
+            
+                    
+                    10.2 Spring Boot中全局异常的使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.3" data-path="../第10章 异常处理/10.3retry.html">
+            
+                <a href="../第10章 异常处理/10.3retry.html">
+            
+                    
+                    10.3 异常的重试
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.4" data-path="../第10章 异常处理/10.4homework.html">
+            
+                <a href="../第10章 异常处理/10.4homework.html">
+            
+                    
+                    10.4 课后作业
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" data-path="../第11章 单元测试与热部署/UnitTestHotDeploy.html">
+            
+                <a href="../第11章 单元测试与热部署/UnitTestHotDeploy.html">
+            
+                    
+                    第11章 单元测试与热部署
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.12.1" data-path="../第11章 单元测试与热部署/11.1unitTest.html">
+            
+                <a href="../第11章 单元测试与热部署/11.1unitTest.html">
+            
+                    
+                    11.1 Spring Boot中的单元测试
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.2" data-path="../第11章 单元测试与热部署/11.2hotDeploy.html">
+            
+                <a href="../第11章 单元测试与热部署/11.2hotDeploy.html">
+            
+                    
+                    11.2 Spring Boot对热部署的支持
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.3" data-path="../第11章 单元测试与热部署/11.3homework.html">
+            
+                <a href="../第11章 单元测试与热部署/11.3homework.html">
+            
+                    
+                    11.3 课后作业
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13" data-path="../第12章 Spring Boot安全控制/Security.html">
+            
+                <a href="../第12章 Spring Boot安全控制/Security.html">
+            
+                    
+                    第12章 Spring Boot安全控制
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.13.1" data-path="../第12章 Spring Boot安全控制/12.1securityOverview.html">
+            
+                <a href="../第12章 Spring Boot安全控制/12.1securityOverview.html">
+            
+                    
+                    12.1 Spring Security介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.2" data-path="../第12章 Spring Boot安全控制/12.2securityIntegration.html">
+            
+                <a href="../第12章 Spring Boot安全控制/12.2securityIntegration.html">
+            
+                    
+                    12.2 集成Spring Security
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.3" data-path="../第12章 Spring Boot安全控制/12.3securityOauth2.html">
+            
+                <a href="../第12章 Spring Boot安全控制/12.3securityOauth2.html">
+            
+                    
+                    12.3 OAuth 2
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.4" data-path="../第12章 Spring Boot安全控制/12.4homework.html">
+            
+                <a href="../第12章 Spring Boot安全控制/12.4homework.html">
+            
+                    
+                    12.4 课后作业
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14" data-path="../第13章 Spring Boot应用监控/Monitor.html">
+            
+                <a href="../第13章 Spring Boot应用监控/Monitor.html">
+            
+                    
+                    第13章 Spring Boot应用监控
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.14.1" data-path="../第13章 Spring Boot应用监控/13.1monitorOverview.html">
+            
+                <a href="../第13章 Spring Boot应用监控/13.1monitorOverview.html">
+            
+                    
+                    13.1 应用监控介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14.2" data-path="../第13章 Spring Boot应用监控/13.2monitorUse.html">
+            
+                <a href="../第13章 Spring Boot应用监控/13.2monitorUse.html">
+            
+                    
+                    13.2 使用应用监控
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14.3" data-path="../第13章 Spring Boot应用监控/13.3monitorCustomize.html">
+            
+                <a href="../第13章 Spring Boot应用监控/13.3monitorCustomize.html">
+            
+                    
+                    13.3 自定义端点
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14.4" data-path="../第13章 Spring Boot应用监控/13.4homework.html">
+            
+                <a href="../第13章 Spring Boot应用监控/13.4homework.html">
+            
+                    
+                    13.4 课后作业
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15" data-path="../第14章 企业级开发/Enterprise.html">
+            
+                <a href="../第14章 企业级开发/Enterprise.html">
+            
+                    
+                    第14章 企业级开发
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.15.1" data-path="../第14章 企业级开发/14.1mail.html">
+            
+                <a href="../第14章 企业级开发/14.1mail.html">
+            
+                    
+                    14.1 邮件发送
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.2" data-path="../第14章 企业级开发/14.2schedule.html">
+            
+                <a href="../第14章 企业级开发/14.2schedule.html">
+            
+                    
+                    14.2 定时任务
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.3" data-path="../第14章 企业级开发/14.3batch.html">
+            
+                <a href="../第14章 企业级开发/14.3batch.html">
+            
+                    
+                    14.3 批处理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.4" data-path="../第14章 企业级开发/14.4validation.html">
+            
+                <a href="../第14章 企业级开发/14.4validation.html">
+            
+                    
+                    14.4 数据校验
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.5" data-path="../第14章 企业级开发/14.5websocket.html">
+            
+                <a href="../第14章 企业级开发/14.5websocket.html">
+            
+                    
+                    14.5 WebSocket
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.6" data-path="../第14章 企业级开发/14.6swagger2.html">
+            
+                <a href="../第14章 企业级开发/14.6swagger2.html">
+            
+                    
+                    14.6 Swagger 2
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.7" data-path="../第14章 企业级开发/14.7homework.html">
+            
+                <a href="../第14章 企业级开发/14.7homework.html">
+            
+                    
+                    14.7 课后作业
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16" data-path="../第15章 多环境配置与部署/MultEnv.html">
+            
+                <a href="../第15章 多环境配置与部署/MultEnv.html">
+            
+                    
+                    第15章 多环境配置与部署
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.16.1" data-path="../第15章 多环境配置与部署/15.1multEnvUse.html">
+            
+                <a href="../第15章 多环境配置与部署/15.1multEnvUse.html">
+            
+                    
+                    15.1 使用多环境配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.2" data-path="../第15章 多环境配置与部署/15.2multEnvDeploy.html">
+            
+                <a href="../第15章 多环境配置与部署/15.2multEnvDeploy.html">
+            
+                    
+                    15.2 打包部署应用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.3" data-path="../第15章 多环境配置与部署/15.3homework.html">
+            
+                <a href="../第15章 多环境配置与部署/15.3homework.html">
+            
+                    
+                    15.3 课后作业
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17" data-path="../Postscript.html">
+            
+                <a href="../Postscript.html">
+            
+                    
+                    后记
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.18" data-path="Vue.html">
+            
+                <a href="Vue.html">
+            
+                    
+                    附录1 前后端分离的vue急速入门
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.18.1" data-path="0.1vueOverview.html">
+            
+                <a href="0.1vueOverview.html">
+            
+                    
+                    A.1 Vue介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.18.2" data-path="0.2vueConfig.html">
+            
+                <a href="0.2vueConfig.html">
+            
+                    
+                    A.2 Vue开发环境配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.18.3" data-path="0.3helloVue.html">
+            
+                <a href="0.3helloVue.html">
+            
+                    
+                    A.3 Hello Vue
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.18.4" data-path="0.4vueRouter.html">
+            
+                <a href="0.4vueRouter.html">
+            
+                    
+                    A.4 Vue路由示例
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.18.5" data-path="0.5deploy.html">
+            
+                <a href="0.5deploy.html">
+            
+                    
+                    A.5 前后端分离应用的部署
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.18.6" data-path="0.6vueSummary.html">
+            
+                <a href="0.6vueSummary.html">
+            
+                    
+                    A.6 急速入门总结
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.18.7" data-path="0.7homework.html">
+            
+                <a href="0.7homework.html">
+            
+                    
+                    A.7 课后作业
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.19" data-path="../附录2 Spring Boot配置大全/Configuration.html">
+            
+                <a href="../附录2 Spring Boot配置大全/Configuration.html">
+            
+                    
+                    附录2 Spring Boot配置大全
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.20" data-path="../附录3 在Docker中部署Spring Boot应用/Docker.html">
+            
+                <a href="../附录3 在Docker中部署Spring Boot应用/Docker.html">
+            
+                    
+                    附录3 在Docker中部署Spring Boot应用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.21" data-path="../EnrollmentAd.html">
+            
+                <a href="../EnrollmentAd.html">
+            
+                    
+                    广告 融宝大学堂招生
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >A.3 Hello Vue</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h2 id="a13-hello-vue">A1.3 Hello Vue</h2>
+<p>&#x672C;&#x5C0F;&#x8282;&#x4F7F;&#x7528; vue + Spring Boot &#x6F14;&#x793A;&#x4E00;&#x4E2A;&#x524D;&#x540E;&#x7AEF;&#x5206;&#x79BB;&#x7684;&#x573A;&#x666F;&#x4E0B;&#x8BFB;&#x53D6;&#x548C;&#x5C55;&#x793A;&#x4FE1;&#x606F;&#x7684;&#x9879;&#x76EE;&#xFF0C;&#x662F;&#x4F7F;&#x7528;vue&#x524D;&#x540E;&#x7AEF;&#x5206;&#x79BB;&#x7684;&#x201C;Hello World.&#x201D;&#x3002;</p>
+<p>&#x672C;&#x793A;&#x4F8B;&#x4F7F;&#x7528;&#x7684;&#x540E;&#x53F0;&#x4EE3;&#x7801;&#x5982;&#x4E0B;&#xFF0C;&#x5176;&#x4E2D;&#x9700;&#x8981;&#x5173;&#x6CE8;&#x7684;&#x662F;<code>@CrossOrigin(origins = &quot;*&quot;)</code>&#x8FD9;&#x4E2A;&#x6CE8;&#x89E3;&#xFF0C;&#x5B83;&#x6CE8;&#x89E3;&#x4E86;&#x8FD9;&#x4E2A;&#x65B9;&#x6CD5;&#xFF08;sayHello&#xFF09;&#x662F;&#x652F;&#x6301;&#x8DE8;&#x57DF;&#x8BBF;&#x95EE;&#x7684;&#x3002;</p>
+<pre><code class="lang-java"><span class="hljs-keyword">package</span> com.example.hello.controller;
+
+<span class="hljs-keyword">import</span> org.springframework.beans.factory.annotation.Value;
+<span class="hljs-keyword">import</span> org.springframework.web.bind.annotation.CrossOrigin;
+<span class="hljs-keyword">import</span> org.springframework.web.bind.annotation.RequestMapping;
+<span class="hljs-keyword">import</span> org.springframework.web.bind.annotation.RestController;
+
+<span class="hljs-meta">@RestController</span>
+<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">SayHelloController</span> </span>{
+    <span class="hljs-meta">@Value</span>(<span class="hljs-string">&quot;${net.xprogrammer.author}&quot;</span>)
+    <span class="hljs-keyword">private</span> String author;
+
+    <span class="hljs-meta">@Value</span>(<span class="hljs-string">&quot;${net.xprogrammer.book}&quot;</span>)
+    <span class="hljs-keyword">private</span> String book;
+
+    <span class="hljs-meta">@RequestMapping</span>(<span class="hljs-string">&quot;/hello&quot;</span>)
+    <span class="hljs-meta">@CrossOrigin</span>(origins = <span class="hljs-string">&quot;*&quot;</span>)
+    <span class="hljs-function"><span class="hljs-keyword">public</span> String <span class="hljs-title">sayHello</span><span class="hljs-params">()</span> </span>{
+        <span class="hljs-keyword">return</span> <span class="hljs-string">&quot;Hello Spring Boot. Author=&quot;</span> + author + <span class="hljs-string">&quot;, Book=&quot;</span> + book;
+    }
+
+}
+</code></pre>
+<p>&#x4E0A;&#x9762;&#x7ED9;&#x51FA;&#x7684;&#x540E;&#x53F0;&#x4EE3;&#x7801;&#x8BBF;&#x95EE;&#x8FD4;&#x56DE;&#x7684;&#x6570;&#x636E;&#x60C5;&#x51B5;&#x5982;&#x4E0B;&#xFF1A;</p>
+<p><img src="images/image-20191130195936780.png" alt="image-20191130195936780"></p>
+<p>&#x9996;&#x5148;&#xFF0C;&#x5728;tomcat&#x7684;ROOT&#x5E94;&#x7528;&#x4E0B;&#x76F4;&#x63A5;&#x5EFA;&#x7ACB;&#x4E00;&#x4E2A;hello.html&#xFF0C;&#x65B9;&#x4FBF;&#x6211;&#x4EEC;&#x6D4B;&#x8BD5;&#x3002;</p>
+<blockquote>
+<p>&#x4F8B;&#x5982;&#xFF0C;&#x8FD9;&#x4E2A;&#x8DEF;&#x5F84;&#xFF1A;C:\Java\apache-tomcat-8.5.47\webapps\ROOT\hello.html&#xFF0C;&#x975E;&#x5E38;&#x7B80;&#x5355;&#x7C97;&#x66B4;&#x3002;</p>
+</blockquote>
+<pre><code class="lang-html"><span class="hljs-meta">&lt;!DOCTYPE html&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">html</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">head</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">charset</span>=<span class="hljs-string">&quot;UTF-8&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">title</span>&gt;</span>Hello Vue<span class="hljs-tag">&lt;/<span class="hljs-name">title</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;https://cdn.jsdelivr.net/npm/vue/dist/vue.js&quot;</span>&gt;</span><span class="undefined"></span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;https://unpkg.com/axios/dist/axios.min.js&quot;</span>&gt;</span><span class="undefined"></span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">head</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">body</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;app&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>&#x6700;&#x7B80;&#x5355;&#x7684;&#x524D;&#x540E;&#x7AEF;&#x5206;&#x79BB;&#x5E94;&#x7528;&#xFF1A;&#x8BBF;&#x95EE;&#x540E;&#x53F0;Spring Boot&#x670D;&#x52A1;&#xFF0C;&#x8FD4;&#x56DE;&#x4E00;&#x4E2A;&#x5B57;&#x7B26;&#x4E32;&#x6D88;&#x606F;&#x663E;&#x793A;&#x5728;&#x4E0B;&#x9762;&#x3002;<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">v-on:click</span>=<span class="hljs-string">&quot;sayHello&quot;</span>&gt;</span>&#x8BBF;&#x95EE;&#x540E;&#x53F0;<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">h1</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+  <span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="javascript">
+    <span class="hljs-keyword">var</span> app = <span class="hljs-keyword">new</span> Vue({
+      el: <span class="hljs-string">&apos;#app&apos;</span>,
+      data: {
+        helloSpringBoot: <span class="hljs-string">&apos;&#x8BF7;&#x70B9;&#x51FB;&#x201C;&#x8BBF;&#x95EE;&#x540E;&#x53F0;&#x201D;&#x6309;&#x94AE;&#x3002;&apos;</span>
+      },
+      methods: {
+          sayHello() {
+            <span class="hljs-keyword">var</span> vm = <span class="hljs-keyword">this</span>;
+            axios({
+              method: <span class="hljs-string">&apos;get&apos;</span>,
+              url: <span class="hljs-string">&apos;http://localhost:8080/hello&apos;</span>,
+            }).then(<span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">res</span>) </span>{
+              vm.helloSpringBoot = res.data;
+            }).catch(<span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">error</span>) </span>{
+              <span class="hljs-built_in">console</span>.log(error);
+            });
+          }          
+      }
+    })
+  </span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">body</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">html</span>&gt;</span>
+</code></pre>
+<ul>
+<li>&#x5728;&#x521B;&#x5EFA;&#x7684; hello.html &#x6587;&#x4EF6;&#x5185;&#xFF0C;&#x5F15;&#x5165; vue.js&#xFF0C;&#x6B64;&#x5904;&#x91C7;&#x7528; CDN &#x65B9;&#x5F0F;&#x76F4;&#x63A5;&#x5F15;&#x5165; vue.js &#x3002;&#x5F53;&#x5F15;&#x5165; vue.js &#x540E;&#xFF0C;&#x4F1A;&#x58F0;&#x660E;&#x4E00;&#x4E2A; Vue &#x5168;&#x5C40;&#x53D8;&#x91CF;&#xFF0C;&#x901A;&#x8FC7; <code>new Vue()</code> &#x7684;&#x65B9;&#x5F0F;&#x53EF;&#x4EE5;&#x83B7;&#x5F97;&#x4E00;&#x4E2A; vue &#x5E94;&#x7528;&#x3002;</li>
+<li>vue.js &#x6CA1;&#x6709;&#x96C6;&#x6210; ajax &#x529F;&#x80FD;&#xFF0C;&#x8981;&#x4F7F;&#x7528; ajax &#x529F;&#x80FD;&#xFF0C;&#x53EF;&#x4EE5;&#x4F7F;&#x7528; vue &#x5B98;&#x65B9;&#x63A8;&#x8350;&#x7684; axios.js &#x5E93;&#x6765;&#x505A; ajax &#x7684;&#x4EA4;&#x4E92;&#xFF0C;&#x8FD9;&#x4E2A;&#x793A;&#x4F8B;&#x4E2D;&#x6211;&#x4EEC;&#x4E5F;&#x901A;&#x8FC7;CDN&#x5F15;&#x5165;axios&#x3002; </li>
+<li>&#x5728;&#x9875;&#x9762;&#x58F0;&#x660E;&#x4E00;&#x4E2A; <code>id=&quot;app&quot;</code> &#x7684; div &#x6807;&#x7B7E;&#xFF0C;&#x5728; div &#x5185;&#x90E8;&#x4F7F;&#x7528; vue &#x5E38;&#x89C1;&#x7684;&#x6587;&#x672C;&#x63D2;&#x503C;&#x65B9;&#x5F0F;&#x63D2;&#x5165;&#x4E00;&#x4E2A; helloSpringBoot &#x53D8;&#x91CF;&#x3002;</li>
+<li>&#x4F7F;&#x7528; ID &#x9009;&#x62E9;&#x5668;&#x5C06; <code>#app</code> &#x8D4B;&#x7ED9; Vue &#x7684;&#x9009;&#x9879;&#x7684; el &#x5C5E;&#x6027;&#xFF0C;&#x5373;&#x7ED1;&#x5B9A; vue &#x89C6;&#x56FE;&#x3002;</li>
+<li>&#x5728;vue&#x5185;&#x90E8;&#x7684;data&#x90E8;&#x5206;&#xFF0C;&#x5B9A;&#x4E49;helloSpringBoot&#x5E76;&#x4E3A;&#x5176;&#x8D4B;&#x4E00;&#x4E2A;&#x521D;&#x59CB;&#x503C;&#x201C;&#x8BF7;&#x70B9;&#x51FB;&#x201C;&#x8BBF;&#x95EE;&#x540E;&#x53F0;&#x201D;&#x6309;&#x94AE;&#x3002;&#x201D;&#x3002;</li>
+<li>&#x6DFB;&#x52A0;&#x4E00;&#x4E2A;&#x6309;&#x94AE;&#xFF0C;&#x7ED1;&#x5B9A;&#x5230;sayHello&#x65B9;&#x6CD5;&#x3002;</li>
+<li>&#x5728;sayHello&#x65B9;&#x6CD5;&#x5185;&#x8BBF;&#x95EE;&#x540E;&#x53F0;&#x670D;&#x52A1;&#xFF08;<a href="http://localhost:8080/hello&#xFF09;&#xFF0C;&#x5C06;&#x8FD4;&#x56DE;&#x7684;&#x6570;&#x636E;&#x8D4B;&#x7ED9;helloSpringBoot" target="_blank">http://localhost:8080/hello&#xFF09;&#xFF0C;&#x5C06;&#x8FD4;&#x56DE;&#x7684;&#x6570;&#x636E;&#x8D4B;&#x7ED9;helloSpringBoot</a> &#x53D8;&#x91CF;&#xFF08;<code>vm.helloSpringBoot = res.data;</code>&#xFF09;&#x3002;</li>
+<li>vue&#x81EA;&#x884C;&#x5904;&#x7406;&#x66F4;&#x65B0;&#x9875;&#x9762;&#x4E0A;&#x7684;&#x6570;&#x636E;&#x3002;</li>
+</ul>
+<p>&#x8BBF;&#x95EE;Tomcat&#x7684;hello.html&#x9875;&#x9762;&#xFF0C;&#x663E;&#x793A;&#x7684;&#x662F;&#x9875;&#x9762;&#x53CA;vue&#x521D;&#x59CB;&#x5316;&#x540E;&#x7684;&#x6548;&#x679C;&#xFF0C;&#x5176;&#x4E2D;helloSpringBoot&#x663E;&#x793A;&#x7684;&#x662F;&#x521D;&#x59CB;&#x503C;&#x3002;</p>
+<p><img src="images/image-20191130195850542.png" alt="image-20191130195850542"></p>
+<p>&#x70B9;&#x51FB;&#x201C;&#x8BBF;&#x95EE;&#x540E;&#x53F0;&#x201D;&#x6309;&#x94AE;&#x540E;&#xFF0C;&#x9875;&#x9762;&#x901A;&#x8FC7;axios&#x53D1;&#x8D77;ajax&#x8BF7;&#x6C42;&#x540E;&#x53F0;&#x670D;&#x52A1;&#xFF0C;&#x83B7;&#x53D6;&#x6570;&#x636E;&#xFF0C;&#x5E76;&#x663E;&#x793A;&#xFF0C;&#x6548;&#x679C;&#x5982;&#x4E0B;&#xFF1A;</p>
+<p><img src="images/image-20191130195821360.png" alt="image-20191130195821360"></p>
+<p><strong>&#x8865;&#x5145;&#x5185;&#x5BB9;&#xFF1A;&#x8DE8;&#x57DF;</strong></p>
+<p>&#x8DE8;&#x57DF;&#x95EE;&#x9898;&#x7684;&#x4EA7;&#x751F;&#x662F;&#x51FA;&#x4E8E;&#x6D4F;&#x89C8;&#x5668;&#x7684;&#x540C;&#x6E90;&#x7B56;&#x7565;&#x9650;&#x5236;&#x3002;</p>
+<p>&#x540C;&#x6E90;&#x7B56;&#x7565;&#xFF08;Sameoriginpolicy&#xFF09;&#x662F;&#x4E00;&#x79CD;&#x7EA6;&#x5B9A;&#xFF0C;&#x5B83;&#x662F;&#x6D4F;&#x89C8;&#x5668;&#x6700;&#x6838;&#x5FC3;&#x4E5F;&#x6700;&#x57FA;&#x672C;&#x7684;&#x5B89;&#x5168;&#x529F;&#x80FD;&#xFF0C;&#x5982;&#x679C;&#x7F3A;&#x5C11;&#x4E86;&#x540C;&#x6E90;&#x7B56;&#x7565;&#xFF0C;&#x5219;&#x6D4F;&#x89C8;&#x5668;&#x7684;&#x6B63;&#x5E38;&#x529F;&#x80FD;&#x53EF;&#x80FD;&#x90FD;&#x4F1A;&#x53D7;&#x5230;&#x5F71;&#x54CD;&#x3002;&#x53EF;&#x4EE5;&#x8BF4;Web&#x662F;&#x6784;&#x5EFA;&#x5728;&#x540C;&#x6E90;&#x7B56;&#x7565;&#x57FA;&#x7840;&#x4E4B;&#x4E0A;&#x7684;&#xFF0C;&#x6D4F;&#x89C8;&#x5668;&#x53EA;&#x662F;&#x9488;&#x5BF9;&#x540C;&#x6E90;&#x7B56;&#x7565;&#x7684;&#x4E00;&#x79CD;&#x5B9E;&#x73B0;&#x3002;&#x540C;&#x6E90;&#x7B56;&#x7565;&#x4F1A;&#x963B;&#x6B62;&#x4E00;&#x4E2A;&#x57DF;&#x7684;javascript&#x811A;&#x672C;&#x548C;&#x53E6;&#x5916;&#x4E00;&#x4E2A;&#x57DF;&#x7684;&#x5185;&#x5BB9;&#x8FDB;&#x884C;&#x4EA4;&#x4E92;&#x3002;&#x6240;&#x8C13;&#x540C;&#x6E90;&#xFF08;&#x5373;&#x6307;&#x5728;&#x540C;&#x4E00;&#x4E2A;&#x57DF;&#xFF09;&#x5C31;&#x662F;&#x4E24;&#x4E2A;&#x9875;&#x9762;&#x5177;&#x6709;&#x76F8;&#x540C;&#x7684;&#x534F;&#x8BAE;&#xFF08;protocol&#xFF09;&#xFF0C;&#x4E3B;&#x673A;&#xFF08;host&#xFF09;&#x548C;&#x7AEF;&#x53E3;&#x53F7;&#xFF08;port&#xFF09;&#x3002;</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">&#x5F53;&#x524D;&#x9875;&#x9762;url</th>
+<th style="text-align:left">&#x88AB;&#x8BF7;&#x6C42;&#x9875;&#x9762;url</th>
+<th style="text-align:center">&#x662F;&#x5426;&#x8DE8;&#x57DF;</th>
+<th style="text-align:left">&#x539F;&#x56E0;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><a href="http://www.test.com/" target="_blank">http://www.test.com/</a></td>
+<td style="text-align:left"><a href="http://www.test.com/index.html" target="_blank">http://www.test.com/index.html</a></td>
+<td style="text-align:center">&#x5426;</td>
+<td style="text-align:left">&#x540C;&#x6E90;&#xFF08;&#x534F;&#x8BAE;&#x3001;&#x57DF;&#x540D;&#x3001;&#x7AEF;&#x53E3;&#x53F7;&#x76F8;&#x540C;&#xFF09;</td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="http://www.test.com/" target="_blank">http://www.test.com/</a></td>
+<td style="text-align:left"><a href="https://www.test.com/index.html" target="_blank">https://www.test.com/index.html</a></td>
+<td style="text-align:center">&#x662F;</td>
+<td style="text-align:left">&#x534F;&#x8BAE;&#x4E0D;&#x540C;&#xFF08;http/https&#xFF09;</td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="http://www.test.com/" target="_blank">http://www.test.com/</a></td>
+<td style="text-align:left"><a href="http://www.baidu.com/" target="_blank">http://www.baidu.com/</a></td>
+<td style="text-align:center">&#x662F;</td>
+<td style="text-align:left">&#x4E3B;&#x57DF;&#x540D;&#x4E0D;&#x540C;&#xFF08;test/baidu&#xFF09;</td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="http://www.test.com/" target="_blank">http://www.test.com/</a></td>
+<td style="text-align:left"><a href="http://blog.test.com/" target="_blank">http://blog.test.com/</a></td>
+<td style="text-align:center">&#x662F;</td>
+<td style="text-align:left">&#x5B50;&#x57DF;&#x540D;&#x4E0D;&#x540C;&#xFF08;www/blog&#xFF09;</td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="http://www.test.com:8080/" target="_blank">http://www.test.com:8080/</a></td>
+<td style="text-align:left"><a href="http://www.test.com:7001/" target="_blank">http://www.test.com:7001/</a></td>
+<td style="text-align:center">&#x662F;</td>
+<td style="text-align:left">&#x7AEF;&#x53E3;&#x53F7;&#x4E0D;&#x540C;&#xFF08;8080/7001&#xFF09;</td>
+</tr>
+</tbody>
+</table>
+<p>&#x8DE8;&#x57DF;&#x8BF7;&#x6C42;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x5BA2;&#x6237;&#x7AEF;&#x4F1A;&#x81EA;&#x52A8;&#x53D1;&#x8D77;&#x4E00;&#x4E2A; OPTIONS &#x65B9;&#x6CD5;&#x5230;&#x670D;&#x52A1;&#x5668;&#xFF0C;&#x5BA2;&#x6237;&#x7AEF;&#x53D1;&#x8D77;&#x7684;&#x8FD9;&#x4E2A; OPTIONS &#x53EF;&#x4EE5;&#x8BF4;&#x662F;&#x4E00;&#x4E2A;&#x201C;&#x9884;&#x8BF7;&#x6C42;&#x201D;&#xFF0C;&#x7528;&#x4E8E;&#x63A2;&#x6D4B;&#x540E;&#x7EED;&#x771F;&#x6B63;&#x9700;&#x8981;&#x53D1;&#x8D77;&#x7684;&#x8DE8;&#x57DF;&#x8BF7;&#x6C42;&#x5BF9;&#x4E8E;&#x670D;&#x52A1;&#x5668;&#x6765;&#x8BF4;&#x662F;&#x5426;&#x662F;&#x5B89;&#x5168;&#x53EF;&#x63A5;&#x53D7;&#x7684;&#x3002;</p>
+<p>&#x8BF7;&#x6C42;&#x5934; Access-Control-Request-Method &#x7528;&#x4E8E;&#x63D0;&#x9192;&#x670D;&#x52A1;&#x5668;&#x5728;&#x63A5;&#x4E0B;&#x6765;&#x7684;&#x8BF7;&#x6C42;&#x4E2D;&#x5C06;&#x4F1A;&#x4F7F;&#x7528;&#x4EC0;&#x4E48;&#x6837;&#x7684;&#x65B9;&#x6CD5;&#x6765;&#x53D1;&#x8D77;&#x8BF7;&#x6C42;&#xFF1A;</p>
+<ul>
+<li><p>Access-Control-Allow-Method &#x548C; Access-Control-Allow-Origin &#x5206;&#x522B;&#x544A;&#x77E5;&#x5BA2;&#x6237;&#x7AEF;&#xFF0C;&#x670D;&#x52A1;&#x5668;&#x5141;&#x8BB8;&#x5BA2;&#x6237;&#x7AEF;&#x7528;&#x4E8E;&#x8DE8;&#x57DF;&#x7684;&#x65B9;&#x6CD5;&#x548C;&#x57DF;&#x540D;&#x3002;</p>
+</li>
+<li><p>&#x5F53;&#x4F60;&#x7684;&#x8BF7;&#x6C42;&#x5730;&#x5740;&#x548C;&#x6D4F;&#x89C8;&#x5668;&#x4E0A;&#x7684;url&#x5730;&#x5740;&#x4E0D;&#x4E00;&#x6837;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x7531;&#x4E8E;&#x540C;&#x6E90;&#x7B56;&#x7565;&#xFF0C;&#x5C06;&#x8BF7;&#x6C42;&#x4E0D;&#x5230;&#x8D44;&#x6E90;&#xFF0C;&#x5C06;&#x65E0;&#x6CD5;&#x201C;&#x8DE8;&#x57DF;&#x201D;&#x83B7;&#x53D6;&#x8D44;&#x6E90;&#x3002;ajax&#xFF0C;vue&#x4E2D;&#x7684;axios&#x90FD;&#x4F1A;&#x51FA;&#x73B0;&#x8DE8;&#x57DF;&#x95EE;&#x9898;&#x3002;</p>
+</li>
+</ul>
+<p>Spring&#x540E;&#x53F0;&#x652F;&#x6301;CORS&#x8DE8;&#x57DF;&#x7684;&#x529E;&#x6CD5;&#x6709;&#x5982;&#x4E0B;3&#x79CD;&#xFF1A;</p>
+<ol>
+<li>&#x901A;&#x8FC7;&#x914D;&#x7F6E;&#x7C7B;&#xFF0C;&#x4E3A;&#x6574;&#x4E2A;&#x5E94;&#x7528;&#x63D0;&#x4F9B;CORS&#x8DE8;&#x57DF;&#x652F;&#x6301;&#x3002;</li>
+</ol>
+<pre><code class="lang-java"><span class="hljs-meta">@Configuration</span>
+<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">MyConfiguration</span> </span>{
+
+    <span class="hljs-meta">@Bean</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> WebMvcConfigurer <span class="hljs-title">corsConfigurer</span><span class="hljs-params">()</span> </span>{
+        <span class="hljs-keyword">return</span> <span class="hljs-keyword">new</span> WebMvcConfigurerAdapter() {
+            <span class="hljs-meta">@Override</span>
+            <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">addCorsMappings</span><span class="hljs-params">(CorsRegistry registry)</span> </span>{
+                registry.addMapping(<span class="hljs-string">&quot;/**&quot;</span>);
+            }
+        };
+    }
+}
+</code></pre>
+<ol>
+<li>&#x63A7;&#x5236;&#x5668;&#x6216;&#x63A7;&#x5236;&#x5668;&#x65B9;&#x6CD5;&#x63D0;&#x4F9B;CORS&#x8DE8;&#x57DF;&#x652F;&#x6301;&#x3002;</li>
+</ol>
+<pre><code class="lang-java"><span class="hljs-meta">@CrossOrigin</span>(maxAge = <span class="hljs-number">3600</span>)
+<span class="hljs-meta">@RestController</span>
+<span class="hljs-meta">@RequestMapping</span>(<span class="hljs-string">&quot;/account&quot;</span>)
+<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">AccountController</span> </span>{
+
+    <span class="hljs-meta">@CrossOrigin</span>(origins = <span class="hljs-string">&quot;http://domain2.com&quot;</span>)
+    <span class="hljs-meta">@GetMapping</span>(<span class="hljs-string">&quot;/{id}&quot;</span>)
+    <span class="hljs-function"><span class="hljs-keyword">public</span> Account <span class="hljs-title">retrieve</span><span class="hljs-params">(@PathVariable Long id)</span> </span>{
+        <span class="hljs-comment">// ...</span>
+    }
+
+    <span class="hljs-meta">@DeleteMapping</span>(<span class="hljs-string">&quot;/{id}&quot;</span>)
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">remove</span><span class="hljs-params">(@PathVariable Long id)</span> </span>{
+        <span class="hljs-comment">// ...</span>
+    }
+}
+</code></pre>
+<ol>
+<li>&#x57FA;&#x4E8E;&#x8FC7;&#x6EE4;&#x5668;&#x7684;CORS&#x8DE8;&#x57DF;&#x652F;&#x6301;&#x3002;</li>
+</ol>
+<pre><code class="lang-java"><span class="hljs-meta">@Configuration</span>
+<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">MyConfiguration</span> </span>{
+
+    <span class="hljs-meta">@Bean</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> FilterRegistrationBean <span class="hljs-title">corsFilter</span><span class="hljs-params">()</span> </span>{
+        UrlBasedCorsConfigurationSource source = <span class="hljs-keyword">new</span> UrlBasedCorsConfigurationSource();
+        CorsConfiguration config = <span class="hljs-keyword">new</span> CorsConfiguration();
+        config.setAllowCredentials(<span class="hljs-keyword">true</span>);
+        config.addAllowedOrigin(<span class="hljs-string">&quot;http://domain1.com&quot;</span>);
+        config.addAllowedHeader(<span class="hljs-string">&quot;*&quot;</span>);
+        config.addAllowedMethod(<span class="hljs-string">&quot;*&quot;</span>);
+        source.registerCorsConfiguration(<span class="hljs-string">&quot;/**&quot;</span>, config);
+        FilterRegistrationBean bean = <span class="hljs-keyword">new</span> FilterRegistrationBean(<span class="hljs-keyword">new</span> CorsFilter(source));
+        bean.setOrder(<span class="hljs-number">0</span>);
+        <span class="hljs-keyword">return</span> bean;
+    }
+}
+</code></pre>
+<blockquote>
+<p>&#x672C;&#x5C0F;&#x8282;&#x793A;&#x4F8B;&#x9879;&#x76EE;&#x4EE3;&#x7801;&#xFF1A;</p>
+<p><a href="https://github.com/gyzhang/SpringBootCourseCode/tree/master/spring-boot-vue" target="_blank">https://github.com/gyzhang/SpringBootCourseCode/tree/master/spring-boot-vue</a></p>
+</blockquote>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="0.2vueConfig.html" class="navigation navigation-prev " aria-label="Previous page: A.2 Vue开发环境配置">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="0.4vueRouter.html" class="navigation navigation-next " aria-label="Next page: A.4 Vue路由示例">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"A.3 Hello Vue","level":"1.18.3","depth":2,"next":{"title":"A.4 Vue路由示例","level":"1.18.4","depth":2,"path":"附录1 前后端分离的vue急速入门/0.4vueRouter.md","ref":"附录1 前后端分离的vue急速入门/0.4vueRouter.md","articles":[]},"previous":{"title":"A.2 Vue开发环境配置","level":"1.18.2","depth":2,"path":"附录1 前后端分离的vue急速入门/0.2vueConfig.md","ref":"附录1 前后端分离的vue急速入门/0.2vueConfig.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-search","search-pro","code","splitter","expandable-chapters","page-toc-button","back-to-top-button","livereload"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"livereload":{},"splitter":{},"search-pro":{"cutWordLib":"nodejieba","defineWord":["Spring Boot"],"expandable-chapters":{}},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"code":{"copyButtons":true},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"page-toc-button":{},"back-to-top-button":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"expandable-chapters":{}},"theme":"default","author":"Kevin Zhang","pdf":{"pageNumbers":true,"fontSize":23,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"SpringBoot入门教程","language":"zh-hans","gitbook":"*","description":"针对初级程序员的Spring Boot入门教程，使用版本2.2.x"},"file":{"path":"附录1 前后端分离的vue急速入门/0.3helloVue.md","mtime":"2019-12-28T02:18:57.125Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-02-07T14:42:40.985Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-pro/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-code/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-page-toc-button/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-back-to-top-button/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

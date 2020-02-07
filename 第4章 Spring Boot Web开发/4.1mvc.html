@@ -1,0 +1,2051 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>4.1 Spring MVC介绍 · SpringBoot入门教程</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="Kevin Zhang">
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search-pro/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-code/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-page-toc-button/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-back-to-top-button/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="4.2thymeleaf.html" />
+    
+    
+    <link rel="prev" href="SpringBootWeb.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    前言
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../第1章 Spring Boot介绍/SpringBoot.html">
+            
+                <a href="../第1章 Spring Boot介绍/SpringBoot.html">
+            
+                    
+                    第1章 Spring Boot介绍
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../第1章 Spring Boot介绍/1.1spring.html">
+            
+                <a href="../第1章 Spring Boot介绍/1.1spring.html">
+            
+                    
+                    1.1 Spring介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../第1章 Spring Boot介绍/1.2springBoot.html">
+            
+                <a href="../第1章 Spring Boot介绍/1.2springBoot.html">
+            
+                    
+                    1.2 Spring Boot简介
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../第1章 Spring Boot介绍/1.3springBootModules.html">
+            
+                <a href="../第1章 Spring Boot介绍/1.3springBootModules.html">
+            
+                    
+                    1.3 Spring Boot的主要模块
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="../第1章 Spring Boot介绍/1.4helloSpringBoot.html">
+            
+                <a href="../第1章 Spring Boot介绍/1.4helloSpringBoot.html">
+            
+                    
+                    1.4 Hello Spring Boot
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="../第1章 Spring Boot介绍/1.5homework.html">
+            
+                <a href="../第1章 Spring Boot介绍/1.5homework.html">
+            
+                    
+                    1.5 课后作业
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../第2章 开发环境配置/IDE.html">
+            
+                <a href="../第2章 开发环境配置/IDE.html">
+            
+                    
+                    第2章 开发环境配置
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../第2章 开发环境配置/2.1jdk.html">
+            
+                <a href="../第2章 开发环境配置/2.1jdk.html">
+            
+                    
+                    2.1 安装JDK
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../第2章 开发环境配置/2.2maven.html">
+            
+                <a href="../第2章 开发环境配置/2.2maven.html">
+            
+                    
+                    2.2 安装配置Maven
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../第2章 开发环境配置/2.3sts.html">
+            
+                <a href="../第2章 开发环境配置/2.3sts.html">
+            
+                    
+                    2.3 安装配置STS
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="../第2章 开发环境配置/2.4mysql.html">
+            
+                <a href="../第2章 开发环境配置/2.4mysql.html">
+            
+                    
+                    2.4 安装MySQL和管理工具
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="../第2章 开发环境配置/2.5validation.html">
+            
+                <a href="../第2章 开发环境配置/2.5validation.html">
+            
+                    
+                    2.5 验证开发环境
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6" data-path="../第2章 开发环境配置/2.6postman.html">
+            
+                <a href="../第2章 开发环境配置/2.6postman.html">
+            
+                    
+                    2.6 安装Postman
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.7" data-path="../第2章 开发环境配置/2.7homework.html">
+            
+                <a href="../第2章 开发环境配置/2.7homework.html">
+            
+                    
+                    2.7 课后作业
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../第3章 Spring Boot原理剖析/SpringBootHow.html">
+            
+                <a href="../第3章 Spring Boot原理剖析/SpringBootHow.html">
+            
+                    
+                    第3章 Spring Boot原理剖析
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../第3章 Spring Boot原理剖析/3.1structure.html">
+            
+                <a href="../第3章 Spring Boot原理剖析/3.1structure.html">
+            
+                    
+                    3.1 项目结构
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../第3章 Spring Boot原理剖析/3.2baseConfig.html">
+            
+                <a href="../第3章 Spring Boot原理剖析/3.2baseConfig.html">
+            
+                    
+                    3.2 基本配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../第3章 Spring Boot原理剖析/3.3annotation.html">
+            
+                <a href="../第3章 Spring Boot原理剖析/3.3annotation.html">
+            
+                    
+                    3.3 启动类与核心注解
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="../第3章 Spring Boot原理剖析/3.4startFlow.html">
+            
+                <a href="../第3章 Spring Boot原理剖析/3.4startFlow.html">
+            
+                    
+                    3.4 启动过程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5" data-path="../第3章 Spring Boot原理剖析/3.5homework.html">
+            
+                <a href="../第3章 Spring Boot原理剖析/3.5homework.html">
+            
+                    
+                    3.5 课后作业
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="SpringBootWeb.html">
+            
+                <a href="SpringBootWeb.html">
+            
+                    
+                    第4章 Spring Boot Web开发
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter active" data-level="1.5.1" data-path="4.1mvc.html">
+            
+                <a href="4.1mvc.html">
+            
+                    
+                    4.1 Spring MVC介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="4.2thymeleaf.html">
+            
+                <a href="4.2thymeleaf.html">
+            
+                    
+                    4.2 Thymeleaf介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" data-path="4.3legacy.html">
+            
+                <a href="4.3legacy.html">
+            
+                    
+                    4.3 使用Servlet、Listener和Filter
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4" data-path="4.4homework.html">
+            
+                <a href="4.4homework.html">
+            
+                    
+                    4.4 课后作业
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../第5章 Spring Boot数据访问/DataAccess.html">
+            
+                <a href="../第5章 Spring Boot数据访问/DataAccess.html">
+            
+                    
+                    第5章 Spring Boot数据访问
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../第5章 Spring Boot数据访问/5.1jdbc.html">
+            
+                <a href="../第5章 Spring Boot数据访问/5.1jdbc.html">
+            
+                    
+                    5.1 Spring Boot集成JdbcTemplate
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="../第5章 Spring Boot数据访问/5.2myBatis.html">
+            
+                <a href="../第5章 Spring Boot数据访问/5.2myBatis.html">
+            
+                    
+                    5.2 Spring Boot集成MyBatis
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="../第5章 Spring Boot数据访问/5.3pageHelper.html">
+            
+                <a href="../第5章 Spring Boot数据访问/5.3pageHelper.html">
+            
+                    
+                    5.3 MyBatis分页
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.4" data-path="../第5章 Spring Boot数据访问/5.4myBatisPlus.html">
+            
+                <a href="../第5章 Spring Boot数据访问/5.4myBatisPlus.html">
+            
+                    
+                    5.4 MyBatis-Plus
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.5" data-path="../第5章 Spring Boot数据访问/5.5homework.html">
+            
+                <a href="../第5章 Spring Boot数据访问/5.5homework.html">
+            
+                    
+                    5.5 课后作业
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../第6章 Spring Boot事务/SpringBootTransaction.html">
+            
+                <a href="../第6章 Spring Boot事务/SpringBootTransaction.html">
+            
+                    
+                    第6章 Spring Boot事务
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="../第6章 Spring Boot事务/6.1transaction.html">
+            
+                <a href="../第6章 Spring Boot事务/6.1transaction.html">
+            
+                    
+                    6.1 事务介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2" data-path="../第6章 Spring Boot事务/6.2usingTransaction.html">
+            
+                <a href="../第6章 Spring Boot事务/6.2usingTransaction.html">
+            
+                    
+                    6.2 事务的使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.3" data-path="../第6章 Spring Boot事务/6.3distributedTransaction.html">
+            
+                <a href="../第6章 Spring Boot事务/6.3distributedTransaction.html">
+            
+                    
+                    6.3 分布式事务
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.4" data-path="../第6章 Spring Boot事务/6.4homework.html">
+            
+                <a href="../第6章 Spring Boot事务/6.4homework.html">
+            
+                    
+                    6.4 课后作业
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="../第7章 Spring Boot集成Redis/Redis.html">
+            
+                <a href="../第7章 Spring Boot集成Redis/Redis.html">
+            
+                    
+                    第7章 Spring Boot集成Redis
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.1" data-path="../第7章 Spring Boot集成Redis/7.1redisOverview.html">
+            
+                <a href="../第7章 Spring Boot集成Redis/7.1redisOverview.html">
+            
+                    
+                    7.1 Redis简介
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.2" data-path="../第7章 Spring Boot集成Redis/7.2redisIntegration.html">
+            
+                <a href="../第7章 Spring Boot集成Redis/7.2redisIntegration.html">
+            
+                    
+                    7.2 集成Redis
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.3" data-path="../第7章 Spring Boot集成Redis/7.3redisSession.html">
+            
+                <a href="../第7章 Spring Boot集成Redis/7.3redisSession.html">
+            
+                    
+                    7.3 Session共享
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.4" data-path="../第7章 Spring Boot集成Redis/7.4redisCluster.html">
+            
+                <a href="../第7章 Spring Boot集成Redis/7.4redisCluster.html">
+            
+                    
+                    7.4 Redis集群
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.5" data-path="../第7章 Spring Boot集成Redis/7.5homework.html">
+            
+                <a href="../第7章 Spring Boot集成Redis/7.5homework.html">
+            
+                    
+                    7.5 课后作业
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="../第8章 Spring Boot集成MongoDB/MongoDB.html">
+            
+                <a href="../第8章 Spring Boot集成MongoDB/MongoDB.html">
+            
+                    
+                    第8章 Spring Boot集成MongoDB
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.9.1" data-path="../第8章 Spring Boot集成MongoDB/8.1mongoDBOverview.html">
+            
+                <a href="../第8章 Spring Boot集成MongoDB/8.1mongoDBOverview.html">
+            
+                    
+                    8.1 MongoDB简介
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.2" data-path="../第8章 Spring Boot集成MongoDB/8.2mongoDBIntegration.html">
+            
+                <a href="../第8章 Spring Boot集成MongoDB/8.2mongoDBIntegration.html">
+            
+                    
+                    8.2 集成MongoDB
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.3" data-path="../第8章 Spring Boot集成MongoDB/8.3homework.html">
+            
+                <a href="../第8章 Spring Boot集成MongoDB/8.3homework.html">
+            
+                    
+                    8.3 课后作业
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="../第9章 Spring Boot与异步消息/MQ.html">
+            
+                <a href="../第9章 Spring Boot与异步消息/MQ.html">
+            
+                    
+                    第9章 Spring Boot与异步消息
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.10.1" data-path="../第9章 Spring Boot与异步消息/9.1jms.html">
+            
+                <a href="../第9章 Spring Boot与异步消息/9.1jms.html">
+            
+                    
+                    9.1 有关消息的概念
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.2" data-path="../第9章 Spring Boot与异步消息/9.2activeMQ.html">
+            
+                <a href="../第9章 Spring Boot与异步消息/9.2activeMQ.html">
+            
+                    
+                    9.2 Spring Boot集成ActiveMQ
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.3" data-path="../第9章 Spring Boot与异步消息/9.3rabbitMQ.html">
+            
+                <a href="../第9章 Spring Boot与异步消息/9.3rabbitMQ.html">
+            
+                    
+                    9.3 Spring Boot集成RabbitMQ
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.4" data-path="../第9章 Spring Boot与异步消息/9.4rocketMQ.html">
+            
+                <a href="../第9章 Spring Boot与异步消息/9.4rocketMQ.html">
+            
+                    
+                    9.4 Spring Boot集成RocketMQ
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.5" data-path="../第9章 Spring Boot与异步消息/9.5kafka.html">
+            
+                <a href="../第9章 Spring Boot与异步消息/9.5kafka.html">
+            
+                    
+                    9.5 Spring Boot集成Kafka
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.6" data-path="../第9章 Spring Boot与异步消息/9.6homework.html">
+            
+                <a href="../第9章 Spring Boot与异步消息/9.6homework.html">
+            
+                    
+                    9.6 课后作业
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="../第10章 异常处理/Exception.html">
+            
+                <a href="../第10章 异常处理/Exception.html">
+            
+                    
+                    第10章 异常处理
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.11.1" data-path="../第10章 异常处理/10.1exceptionOverview.html">
+            
+                <a href="../第10章 异常处理/10.1exceptionOverview.html">
+            
+                    
+                    10.1 异常介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.2" data-path="../第10章 异常处理/10.2globalException.html">
+            
+                <a href="../第10章 异常处理/10.2globalException.html">
+            
+                    
+                    10.2 Spring Boot中全局异常的使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.3" data-path="../第10章 异常处理/10.3retry.html">
+            
+                <a href="../第10章 异常处理/10.3retry.html">
+            
+                    
+                    10.3 异常的重试
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.4" data-path="../第10章 异常处理/10.4homework.html">
+            
+                <a href="../第10章 异常处理/10.4homework.html">
+            
+                    
+                    10.4 课后作业
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" data-path="../第11章 单元测试与热部署/UnitTestHotDeploy.html">
+            
+                <a href="../第11章 单元测试与热部署/UnitTestHotDeploy.html">
+            
+                    
+                    第11章 单元测试与热部署
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.12.1" data-path="../第11章 单元测试与热部署/11.1unitTest.html">
+            
+                <a href="../第11章 单元测试与热部署/11.1unitTest.html">
+            
+                    
+                    11.1 Spring Boot中的单元测试
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.2" data-path="../第11章 单元测试与热部署/11.2hotDeploy.html">
+            
+                <a href="../第11章 单元测试与热部署/11.2hotDeploy.html">
+            
+                    
+                    11.2 Spring Boot对热部署的支持
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.3" data-path="../第11章 单元测试与热部署/11.3homework.html">
+            
+                <a href="../第11章 单元测试与热部署/11.3homework.html">
+            
+                    
+                    11.3 课后作业
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13" data-path="../第12章 Spring Boot安全控制/Security.html">
+            
+                <a href="../第12章 Spring Boot安全控制/Security.html">
+            
+                    
+                    第12章 Spring Boot安全控制
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.13.1" data-path="../第12章 Spring Boot安全控制/12.1securityOverview.html">
+            
+                <a href="../第12章 Spring Boot安全控制/12.1securityOverview.html">
+            
+                    
+                    12.1 Spring Security介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.2" data-path="../第12章 Spring Boot安全控制/12.2securityIntegration.html">
+            
+                <a href="../第12章 Spring Boot安全控制/12.2securityIntegration.html">
+            
+                    
+                    12.2 集成Spring Security
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.3" data-path="../第12章 Spring Boot安全控制/12.3securityOauth2.html">
+            
+                <a href="../第12章 Spring Boot安全控制/12.3securityOauth2.html">
+            
+                    
+                    12.3 OAuth 2
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.4" data-path="../第12章 Spring Boot安全控制/12.4homework.html">
+            
+                <a href="../第12章 Spring Boot安全控制/12.4homework.html">
+            
+                    
+                    12.4 课后作业
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14" data-path="../第13章 Spring Boot应用监控/Monitor.html">
+            
+                <a href="../第13章 Spring Boot应用监控/Monitor.html">
+            
+                    
+                    第13章 Spring Boot应用监控
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.14.1" data-path="../第13章 Spring Boot应用监控/13.1monitorOverview.html">
+            
+                <a href="../第13章 Spring Boot应用监控/13.1monitorOverview.html">
+            
+                    
+                    13.1 应用监控介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14.2" data-path="../第13章 Spring Boot应用监控/13.2monitorUse.html">
+            
+                <a href="../第13章 Spring Boot应用监控/13.2monitorUse.html">
+            
+                    
+                    13.2 使用应用监控
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14.3" data-path="../第13章 Spring Boot应用监控/13.3monitorCustomize.html">
+            
+                <a href="../第13章 Spring Boot应用监控/13.3monitorCustomize.html">
+            
+                    
+                    13.3 自定义端点
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14.4" data-path="../第13章 Spring Boot应用监控/13.4homework.html">
+            
+                <a href="../第13章 Spring Boot应用监控/13.4homework.html">
+            
+                    
+                    13.4 课后作业
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15" data-path="../第14章 企业级开发/Enterprise.html">
+            
+                <a href="../第14章 企业级开发/Enterprise.html">
+            
+                    
+                    第14章 企业级开发
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.15.1" data-path="../第14章 企业级开发/14.1mail.html">
+            
+                <a href="../第14章 企业级开发/14.1mail.html">
+            
+                    
+                    14.1 邮件发送
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.2" data-path="../第14章 企业级开发/14.2schedule.html">
+            
+                <a href="../第14章 企业级开发/14.2schedule.html">
+            
+                    
+                    14.2 定时任务
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.3" data-path="../第14章 企业级开发/14.3batch.html">
+            
+                <a href="../第14章 企业级开发/14.3batch.html">
+            
+                    
+                    14.3 批处理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.4" data-path="../第14章 企业级开发/14.4validation.html">
+            
+                <a href="../第14章 企业级开发/14.4validation.html">
+            
+                    
+                    14.4 数据校验
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.5" data-path="../第14章 企业级开发/14.5websocket.html">
+            
+                <a href="../第14章 企业级开发/14.5websocket.html">
+            
+                    
+                    14.5 WebSocket
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.6" data-path="../第14章 企业级开发/14.6swagger2.html">
+            
+                <a href="../第14章 企业级开发/14.6swagger2.html">
+            
+                    
+                    14.6 Swagger 2
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.7" data-path="../第14章 企业级开发/14.7homework.html">
+            
+                <a href="../第14章 企业级开发/14.7homework.html">
+            
+                    
+                    14.7 课后作业
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16" data-path="../第15章 多环境配置与部署/MultEnv.html">
+            
+                <a href="../第15章 多环境配置与部署/MultEnv.html">
+            
+                    
+                    第15章 多环境配置与部署
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.16.1" data-path="../第15章 多环境配置与部署/15.1multEnvUse.html">
+            
+                <a href="../第15章 多环境配置与部署/15.1multEnvUse.html">
+            
+                    
+                    15.1 使用多环境配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.2" data-path="../第15章 多环境配置与部署/15.2multEnvDeploy.html">
+            
+                <a href="../第15章 多环境配置与部署/15.2multEnvDeploy.html">
+            
+                    
+                    15.2 打包部署应用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.3" data-path="../第15章 多环境配置与部署/15.3homework.html">
+            
+                <a href="../第15章 多环境配置与部署/15.3homework.html">
+            
+                    
+                    15.3 课后作业
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17" data-path="../Postscript.html">
+            
+                <a href="../Postscript.html">
+            
+                    
+                    后记
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.18" data-path="../附录1 前后端分离的vue急速入门/Vue.html">
+            
+                <a href="../附录1 前后端分离的vue急速入门/Vue.html">
+            
+                    
+                    附录1 前后端分离的vue急速入门
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.18.1" data-path="../附录1 前后端分离的vue急速入门/0.1vueOverview.html">
+            
+                <a href="../附录1 前后端分离的vue急速入门/0.1vueOverview.html">
+            
+                    
+                    A.1 Vue介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.18.2" data-path="../附录1 前后端分离的vue急速入门/0.2vueConfig.html">
+            
+                <a href="../附录1 前后端分离的vue急速入门/0.2vueConfig.html">
+            
+                    
+                    A.2 Vue开发环境配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.18.3" data-path="../附录1 前后端分离的vue急速入门/0.3helloVue.html">
+            
+                <a href="../附录1 前后端分离的vue急速入门/0.3helloVue.html">
+            
+                    
+                    A.3 Hello Vue
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.18.4" data-path="../附录1 前后端分离的vue急速入门/0.4vueRouter.html">
+            
+                <a href="../附录1 前后端分离的vue急速入门/0.4vueRouter.html">
+            
+                    
+                    A.4 Vue路由示例
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.18.5" data-path="../附录1 前后端分离的vue急速入门/0.5deploy.html">
+            
+                <a href="../附录1 前后端分离的vue急速入门/0.5deploy.html">
+            
+                    
+                    A.5 前后端分离应用的部署
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.18.6" data-path="../附录1 前后端分离的vue急速入门/0.6vueSummary.html">
+            
+                <a href="../附录1 前后端分离的vue急速入门/0.6vueSummary.html">
+            
+                    
+                    A.6 急速入门总结
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.18.7" data-path="../附录1 前后端分离的vue急速入门/0.7homework.html">
+            
+                <a href="../附录1 前后端分离的vue急速入门/0.7homework.html">
+            
+                    
+                    A.7 课后作业
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.19" data-path="../附录2 Spring Boot配置大全/Configuration.html">
+            
+                <a href="../附录2 Spring Boot配置大全/Configuration.html">
+            
+                    
+                    附录2 Spring Boot配置大全
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.20" data-path="../附录3 在Docker中部署Spring Boot应用/Docker.html">
+            
+                <a href="../附录3 在Docker中部署Spring Boot应用/Docker.html">
+            
+                    
+                    附录3 在Docker中部署Spring Boot应用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.21" data-path="../EnrollmentAd.html">
+            
+                <a href="../EnrollmentAd.html">
+            
+                    
+                    广告 融宝大学堂招生
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >4.1 Spring MVC介绍</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h2 id="41-spring-mvc&#x4ECB;&#x7ECD;">4.1 Spring MVC&#x4ECB;&#x7ECD;</h2>
+<p>&#x4EE5;&#x524D;&#xFF0C;&#x6211;&#x4EEC;&#x5927;&#x91CF;&#x7684;&#x4F7F;&#x7528;JSP+Servlet&#x6280;&#x672F;&#x5F00;&#x53D1;web&#x5E94;&#x7528;&#x3002;&#x901A;&#x8FC7;&#x4F7F;&#x7528;jstl&#x6280;&#x672F;&#xFF08; Java server pages standarded tag library&#xFF0C;&#x5373;JSP&#x6807;&#x51C6;&#x6807;&#x7B7E;&#x5E93;&#xFF09;&#x5C01;&#x88C5;&#x4E00;&#x4E9B;&#x5E38;&#x7528;&#x7EC4;&#x4EF6;&#xFF0C;&#x7B80;&#x5316;&#x524D;&#x7AEF;jsp&#x9875;&#x9762;&#x7684;&#x5F00;&#x53D1;&#x3002;</p>
+<blockquote>
+<p>&#x90A3;&#x4E2A;&#x65F6;&#x5019;&#x65F6;&#x95F4;&#x8FC7;&#x5F97;&#x5F88;&#x6162;&#xFF0C;</p>
+<p>&#x6162;&#x5230;&#x53EA;&#x80FD;&#x7528;&#x4E00;&#x79CD;&#x6280;&#x672F;&#x89C4;&#x8303;&#xFF0C;</p>
+<p>&#x5F00;&#x53D1;web&#x5E94;&#x7528;&#x4E00;&#x8F88;&#x5B50;&#x3002; </p>
+</blockquote>
+<p>&#x73B0;&#x5728;&#xFF0C;&#x6211;&#x4EEC;&#x66F4;&#x591A;&#x7684;&#x662F;&#x4F7F;&#x7528;&#x524D;&#x540E;&#x7AEF;&#x5206;&#x79BB;&#x7684;MVVM&#x6280;&#x672F;&#x6765;&#x6784;&#x5EFA;web&#x5E94;&#x7528;&#x3002;&#x4F8B;&#x5982;&#x524D;&#x7AEF;&#x4F7F;&#x7528;vue&#xFF0C;&#x540E;&#x7AEF;&#x4F7F;&#x7528;rest&#x65B9;&#x5F0F;&#xFF08;Representational State Transfer&#xFF09;&#x5F00;&#x53D1;&#x4E1A;&#x52A1;&#x529F;&#x80FD;&#x63A5;&#x53E3;&#xFF0C;&#x4F9B;&#x524D;&#x7AEF;&#x901A;&#x8FC7;ajax&#x65B9;&#x5F0F;&#x8C03;&#x7528;&#x3002;</p>
+<blockquote>
+<p>MVVM&#xFF1A;Model-View-ViewModel&#x7684;&#x7B80;&#x5199;&#xFF0C;&#x5B83;&#x672C;&#x8D28;&#x4E0A;&#x5C31;&#x662F;MVC &#x7684;&#x6539;&#x8FDB;&#x7248;&#x3002;</p>
+</blockquote>
+<p>&#x65E0;&#x8BBA;&#x662F;&#x5728;&#x4EE5;&#x524D;&#x8FD8;&#x662F;&#x73B0;&#x5728;&#xFF0C;&#x4F7F;&#x7528;Spring&#x5F00;&#x53D1;web&#x5E94;&#x7528;&#xFF0C;&#x9996;&#x9009;&#x7684;&#x90FD;&#x662F;Spring MVC&#x5F00;&#x53D1;&#x6846;&#x67B6;&#x3002;</p>
+<p>Spring MVC&#x5E76;&#x4E0D;&#x77E5;&#x9053;&#x524D;&#x7AEF;&#x4F7F;&#x7528;&#x7684;&#x89C6;&#x56FE;&#x6280;&#x672F;&#xFF0C;&#x6240;&#x4EE5;&#x4E0D;&#x4F1A;&#x5F3A;&#x8FEB;&#x60A8;&#x53EA;&#x4F7F;&#x7528; JSP &#x6280;&#x672F;&#x3002;&#x5B9E;&#x9645;&#x4E0A;&#x5728;Spring Boot 2.0&#x6846;&#x67B6;&#x4E2D;&#xFF0C;Spring MVC&#x63A8;&#x8350;&#x4F7F;&#x7528;Thymeleaf&#x6A21;&#x677F;&#x6280;&#x672F;&#x3002;</p>
+<p>Spring MVC&#x5206;&#x79BB;&#x4E86;&#x63A7;&#x5236;&#x5668;&#x3001;&#x6A21;&#x578B;&#x5BF9;&#x8C61;&#x3001;&#x5206;&#x6D3E;&#x5668;&#x4EE5;&#x53CA;&#x5904;&#x7406;&#x7A0B;&#x5E8F;&#x5BF9;&#x8C61;&#x7684;&#x89D2;&#x8272;&#xFF0C;&#x8FD9;&#x79CD;&#x5206;&#x79BB;&#x8BA9;&#x5B83;&#x4EEC;&#x66F4;&#x5BB9;&#x6613;&#x8FDB;&#x884C;&#x5B9A;&#x5236;&#x3002;</p>
+<p>Spring &#x7684; Web MVC &#x6846;&#x67B6;&#x662F;&#x56F4;&#x7ED5; <code>DispatcherServlet</code> &#x524D;&#x7AEF;&#x5206;&#x53D1;&#x5668;&#x8BBE;&#x8BA1;&#x7684;&#xFF0C;&#x5B83;&#x628A;&#x8BF7;&#x6C42;&#x5206;&#x6D3E;&#x7ED9;&#x5904;&#x7406;&#x7A0B;&#x5E8F;&#xFF0C;&#x540C;&#x65F6;&#x5E26;&#x6709;&#x53EF;&#x914D;&#x7F6E;&#x7684;&#x5904;&#x7406;&#x7A0B;&#x5E8F;&#x6620;&#x5C04;&#x3001;&#x89C6;&#x56FE;&#x89E3;&#x6790;&#x3001;&#x672C;&#x5730;&#x8BED;&#x8A00;&#xFF08;&#x56FD;&#x9645;&#x5316;&#xFF0C;&#x591A;&#x8BED;&#x8A00;&#x652F;&#x6301;&#xFF09;&#x3001;&#x4E3B;&#x9898;&#x89E3;&#x6790;&#x4EE5;&#x53CA;&#x4E0A;&#x8F7D;&#x6587;&#x4EF6;&#x7B49;&#x652F;&#x6301;&#x3002;&#x9ED8;&#x8BA4;&#x7684;&#x5904;&#x7406;&#x7A0B;&#x5E8F;&#x662F;&#x975E;&#x5E38;&#x7B80;&#x5355;&#x7684; <code>Controller</code> &#x63A5;&#x53E3;&#xFF0C;&#x53EA;&#x6709;&#x4E00;&#x4E2A;&#x65B9;&#x6CD5; <code>ModelAndView handleRequest(request, response)</code>&#x3002;Spring &#x63D0;&#x4F9B;&#x4E86;&#x4E00;&#x4E2A;&#x63A7;&#x5236;&#x5668;&#x5C42;&#x6B21;&#x7ED3;&#x6784;&#xFF0C;&#x53EF;&#x4EE5;&#x6D3E;&#x751F;&#x5B50;&#x7C7B;&#x3002;&#x5982;&#x679C;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x9700;&#x8981;&#x5904;&#x7406;&#x7528;&#x6237;&#x8F93;&#x5165;&#x8868;&#x5355;&#xFF0C;&#x90A3;&#x4E48;&#x53EF;&#x4EE5;&#x7EE7;&#x627F; <code>AbstractFormController</code>&#x3002;&#x5982;&#x679C;&#x9700;&#x8981;&#x628A;&#x591A;&#x9875;&#x8F93;&#x5165;&#x5904;&#x7406;&#x5230;&#x4E00;&#x4E2A;&#x8868;&#x5355;&#xFF0C;&#x90A3;&#x4E48;&#x53EF;&#x4EE5;&#x7EE7;&#x627F; <code>AbstractWizardFormController</code>&#x3002;</p>
+<h3 id="411-&#x5E38;&#x7528;&#x6CE8;&#x89E3;">4.1.1 &#x5E38;&#x7528;&#x6CE8;&#x89E3;</h3>
+<p>Spring MVC&#x5728;&#x53D1;&#x5C55;&#x8FC7;&#x7A0B;&#x4E2D;&#x4E5F;&#x7ECF;&#x5386;&#x4E86;&#x4E00;&#x6BB5;&#x201C;&#x9ED1;&#x6697;&#x201D;&#x65F6;&#x95F4;&#xFF1A;&#x975E;&#x5E38;&#x7E41;&#x6742;&#x7684;xml&#x914D;&#x7F6E;&#xFF0C;&#x7B80;&#x76F4;&#x5C31;&#x662F;&#x201C;xml hell&#x201D;&#xFF08;xml&#x914D;&#x7F6E;&#x5730;&#x72F1;&#xFF0C;&#x6307;&#x7E41;&#x6742;&#x5230;&#x5931;&#x63A7;&#x7684;xml&#x914D;&#x7F6E;&#x4FE1;&#x606F;&#xFF09;&#x3002;&#x540E;&#x6765;&#xFF0C;&#x4F7F;&#x7528;&#x4E0A;&#x6CE8;&#x89E3;&#x4EE5;&#x540E;&#xFF0C;&#x624D;&#x7B80;&#x6D01;&#x6613;&#x7528;&#x8D77;&#x6765;&#x3002;</p>
+<p>&#x6240;&#x4EE5;&#xFF0C;&#x8981;&#x60F3;&#x4E86;&#x89E3;&#x4F1A;&#x7528;Spring MVC&#x5C31;&#x5FC5;&#x987B;&#x638C;&#x63E1;&#x5176;&#x6700;&#x5E38;&#x7528;&#x7684;&#x6CE8;&#x89E3;&#x3002;</p>
+<h4 id="4111-controller">4.1.1.1 @Controller</h4>
+<p>&#x5728;SpringMVC &#x4E2D;&#xFF0C;&#x63A7;&#x5236;&#x5668;Controller &#x8D1F;&#x8D23;&#x5904;&#x7406;&#x7531;&#x524D;&#x7AEF;&#x5206;&#x53D1;&#x5668;DispatcherServlet &#x5206;&#x53D1;&#x7684;&#x8BF7;&#x6C42;&#xFF0C;&#x5B83;&#x628A;&#x7528;&#x6237;&#x8BF7;&#x6C42;&#x7684;&#x6570;&#x636E;&#x7ECF;&#x8FC7;&#x4E1A;&#x52A1;&#x5904;&#x7406;&#x5C42;&#x5904;&#x7406;&#x4E4B;&#x540E;&#x5C01;&#x88C5;&#x6210;&#x4E00;&#x4E2A;Model &#xFF0C;&#x7136;&#x540E;&#x518D;&#x628A;&#x8BE5;Model &#x8FD4;&#x56DE;&#x7ED9;&#x5BF9;&#x5E94;&#x7684;View &#x8FDB;&#x884C;&#x5C55;&#x793A;&#x3002;</p>
+<p>&#x5728;Spring MVC&#x4E2D;&#x5B9A;&#x4E49;&#x4E00;&#x4E2A;Controller&#x4E0D;&#x9700;&#x8981;&#x7EE7;&#x627F;&#x67D0;&#x4E2A;&#x7236;&#x7C7B;&#xFF0C;&#x4E5F;&#x65E0;&#x9700;&#x5B9E;&#x73B0;&#x67D0;&#x4E2A;&#x63A5;&#x53E3;&#x3002;&#x4F60;&#x53EA;&#x9700;&#x8981;&#x4F7F;&#x7528;@Controller &#x6807;&#x8BB0;&#x4E00;&#x4E2A;&#x7C7B;&#x662F;Controller&#x5373;&#x53EF;&#x3002;  </p>
+<p>&#x524D;&#x7AEF;&#x5206;&#x53D1;&#x5668;DispatcherServlet&#x5C06;&#x4F1A;&#x626B;&#x63CF;&#x4F7F;&#x7528;&#x4E86;&#x8BE5;&#x6CE8;&#x89E3;&#x7684;&#x7C7B;&#x7684;&#x65B9;&#x6CD5;&#xFF0C;&#x5E76;&#x68C0;&#x6D4B;&#x8BE5;&#x65B9;&#x6CD5;&#x662F;&#x5426;&#x4F7F;&#x7528;&#x4E86;@RequestMapping &#x6CE8;&#x89E3;&#x3002;@Controller &#x53EA;&#x662F;&#x5B9A;&#x4E49;&#x4E86;&#x4E00;&#x4E2A;<strong>&#x63A7;&#x5236;&#x5668;&#x7C7B;</strong>&#xFF0C;&#x800C;&#x4F7F;&#x7528;@RequestMapping &#x6CE8;&#x89E3;&#x7684;&#x65B9;&#x6CD5;&#x624D;&#x662F;&#x771F;&#x6B63;&#x5904;&#x7406;&#x8BF7;&#x6C42;&#x7684;<strong>&#x5904;&#x7406;&#x5668;</strong>&#x3002;&#x5355;&#x5355;&#x4F7F;&#x7528;@Controller &#x6807;&#x8BB0;&#x5728;&#x4E00;&#x4E2A;&#x7C7B;&#x4E0A;&#x8FD8;&#x4E0D;&#x80FD;&#x771F;&#x6B63;&#x610F;&#x4E49;&#x4E0A;&#x7684;&#x8BF4;&#x5B83;&#x5C31;&#x662F;Spring MVC &#x7684;&#x4E00;&#x4E2A;&#x63A7;&#x5236;&#x5668;&#x7C7B;&#xFF0C;&#x56E0;&#x4E3A;&#x8FD9;&#x4E2A;&#x65F6;&#x5019;Spring &#x8FD8;&#x4E0D;&#x8BA4;&#x8BC6;&#x5B83;&#x3002;&#x90A3;&#x4E48;&#x8981;&#x5982;&#x4F55;&#x505A;Spring &#x624D;&#x80FD;&#x8BA4;&#x8BC6;&#x5B83;&#x5462;&#xFF1F;&#x8FD9;&#x4E2A;&#x65F6;&#x5019;&#x5C31;&#x9700;&#x8981;&#x6211;&#x4EEC;&#x628A;&#x8FD9;&#x4E2A;&#x63A7;&#x5236;&#x5668;&#x7C7B;&#x4EA4;&#x7ED9;Spring &#x6765;&#x7BA1;&#x7406;&#x3002;</p>
+<p>&#x5404;&#x4F4D;&#xFF0C;&#x662F;&#x5426;&#x8FD8;&#x8BB0;&#x5F97;Spring Boot&#x542F;&#x52A8;&#x7C7B;&#x7684;&#x6CE8;&#x89E3;<code>@SpringBootApplication</code>&#xFF0C;&#x8FD9;&#x4E2A;&#x6CE8;&#x89E3;&#x662F;&#x4E2A;&#x590D;&#x5408;&#x6CE8;&#x89E3;&#xFF0C;&#x5176;&#x4E2D;&#x5305;&#x542B;<code>@ComponentScan</code>&#x4F1A;&#x626B;&#x63CF;&#x5230;&#x542F;&#x52A8;&#x7C7B;&#x5305;&#x53CA;&#x5176;&#x5B50;&#x5305;&#x4E0B;&#x7684;Controller&#x63A7;&#x5236;&#x5668;&#x7C7B;&#xFF0C;&#x5E76;&#x5C06;&#x5176;&#x52A0;&#x8F7D;&#x5230;Spring&#x5BB9;&#x5668;&#x4E2D;&#x3002;</p>
+<pre><code class="lang-java"><span class="hljs-meta">@ComponentScan</span>(excludeFilters = { <span class="hljs-meta">@Filter</span>(type = FilterType.CUSTOM, classes = TypeExcludeFilter.class),
+        <span class="hljs-meta">@Filter</span>(type = FilterType.CUSTOM, classes = AutoConfigurationExcludeFilter.class) })
+<span class="hljs-keyword">public</span> <span class="hljs-meta">@interface</span> SpringBootApplication {
+    ...
+}
+</code></pre>
+<h4 id="4112-requestmapping">4.1.1.2 @RequestMapping</h4>
+<p>RequestMapping&#x662F;&#x4E00;&#x4E2A;&#x7528;&#x6765;&#x5904;&#x7406;&#x8BF7;&#x6C42;&#x5730;&#x5740;&#x6620;&#x5C04;&#x7684;&#x6CE8;&#x89E3;&#xFF0C;&#x53EF;&#x7528;&#x4E8E;&#x7C7B;&#x6216;&#x65B9;&#x6CD5;&#x4E0A;&#x3002;&#x7528;&#x4E8E;&#x7C7B;&#x4E0A;&#xFF0C;&#x8868;&#x793A;&#x7C7B;&#x4E2D;&#x7684;&#x6240;&#x6709;&#x54CD;&#x5E94;&#x8BF7;&#x6C42;&#x7684;&#x65B9;&#x6CD5;&#x90FD;&#x662F;&#x4EE5;&#x8BE5;&#x5730;&#x5740;&#x4F5C;&#x4E3A;&#x7236;&#x8DEF;&#x5F84;&#x3002; </p>
+<p>RequestMapping&#x6CE8;&#x89E3;&#x6709;&#x516D;&#x4E2A;&#x5C5E;&#x6027;&#xFF0C;&#x4E0B;&#x9762;&#x6211;&#x4EEC;&#x628A;&#x5979;&#x5206;&#x6210;&#x4E09;&#x7C7B;&#x8FDB;&#x884C;&#x8BF4;&#x660E;&#xFF08;&#x4E0B;&#x9762;&#x6709;&#x76F8;&#x5E94;&#x793A;&#x4F8B;&#xFF09;&#x3002;</p>
+<ol>
+<li><p>value&#xFF0C; method&#xFF1A;</p>
+</li>
+<li><p>value&#xFF1A;   &#x6307;&#x5B9A;&#x8BF7;&#x6C42;&#x7684;&#x5B9E;&#x9645;&#x5730;&#x5740;&#xFF0C;&#x6307;&#x5B9A;&#x7684;&#x5730;&#x5740;&#x53EF;&#x4EE5;&#x662F;URI Template &#x6A21;&#x5F0F;&#xFF08;&#x540E;&#x9762;&#x5C06;&#x4F1A;&#x8BF4;&#x660E;&#xFF09;&#xFF1B;</p>
+</li>
+<li><p>method&#xFF1A; &#x6307;&#x5B9A;&#x8BF7;&#x6C42;&#x7684;method&#x7C7B;&#x578B;&#xFF0C; GET&#x3001;POST&#x3001;PUT&#x3001;DELETE&#x7B49;&#xFF1B;</p>
+</li>
+<li><p>consumes&#xFF0C;produces&#xFF1A;</p>
+</li>
+<li><p>consumes&#xFF1A;&#x6307;&#x5B9A;&#x5904;&#x7406;&#x8BF7;&#x6C42;&#x7684;&#x63D0;&#x4EA4;&#x5185;&#x5BB9;&#x7C7B;&#x578B;&#xFF08;Content-Type&#xFF09;&#xFF0C;&#x4F8B;&#x5982;application/json, text/html;</p>
+</li>
+<li><p>produces:  &#x6307;&#x5B9A;&#x8FD4;&#x56DE;&#x7684;&#x5185;&#x5BB9;&#x7C7B;&#x578B;&#xFF0C;&#x4EC5;&#x5F53;request&#x8BF7;&#x6C42;&#x5934;&#x4E2D;&#x7684;(Accept)&#x7C7B;&#x578B;&#x4E2D;&#x5305;&#x542B;&#x8BE5;&#x6307;&#x5B9A;&#x7C7B;&#x578B;&#x624D;&#x8FD4;&#x56DE;&#xFF1B;</p>
+</li>
+<li><p>params&#xFF0C;headers&#xFF1A;</p>
+</li>
+<li><p>params&#xFF1A; &#x6307;&#x5B9A;request&#x4E2D;&#x5FC5;&#x987B;&#x5305;&#x542B;&#x67D0;&#x4E9B;&#x53C2;&#x6570;&#x503C;&#x662F;&#xFF0C;&#x624D;&#x8BA9;&#x8BE5;&#x65B9;&#x6CD5;&#x5904;&#x7406;&#x3002;</p>
+</li>
+<li><p>headers&#xFF1A; &#x6307;&#x5B9A;request&#x4E2D;&#x5FC5;&#x987B;&#x5305;&#x542B;&#x67D0;&#x4E9B;&#x6307;&#x5B9A;&#x7684;header&#x503C;&#xFF0C;&#x624D;&#x80FD;&#x8BA9;&#x8BE5;&#x65B9;&#x6CD5;&#x5904;&#x7406;&#x8BF7;&#x6C42;&#x3002;</p>
+</li>
+</ol>
+<h5 id="41121-pathvariables">4.1.1.2.1 @PathVariables</h5>
+<p>&#x7528;&#x4E8E;&#x5C06;&#x8BF7;&#x6C42;URL&#x4E2D;&#x7684;&#x6A21;&#x677F;&#x53D8;&#x91CF;&#x6620;&#x5C04;&#x5230;&#x529F;&#x80FD;&#x5904;&#x7406;&#x65B9;&#x6CD5;&#x7684;&#x53C2;&#x6570;&#x4E0A;&#xFF0C;&#x5373;&#x53D6;&#x51FA;uri&#x6A21;&#x677F;&#x4E2D;&#x7684;&#x53D8;&#x91CF;&#x4F5C;&#x4E3A;&#x53C2;&#x6570;&#x3002; </p>
+<pre><code class="lang-java"><span class="hljs-meta">@Controller</span>  
+<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">TestController</span> </span>{  
+
+     <span class="hljs-meta">@RequestMapping</span>(value=<span class="hljs-string">&quot;/product/{productId}&quot;</span>,method = RequestMethod.GET)  
+     <span class="hljs-function"><span class="hljs-keyword">public</span> String <span class="hljs-title">getProduct</span><span class="hljs-params">(@PathVariable(<span class="hljs-string">&quot;productId&quot;</span>)</span> String productId)</span>{  
+           System.out.println(<span class="hljs-string">&quot;Product Id : &quot;</span> + productId);  
+           <span class="hljs-keyword">return</span> <span class="hljs-string">&quot;hello&quot;</span>;  
+     }  
+
+     <span class="hljs-meta">@RequestMapping</span>(value=<span class="hljs-string">&quot;/javabeat/{regexp1:[a-z-]+}&quot;</span>, method = RequestMethod.GET) 
+     <span class="hljs-function"><span class="hljs-keyword">public</span> String <span class="hljs-title">getRegExp</span><span class="hljs-params">(@PathVariable(<span class="hljs-string">&quot;regexp1&quot;</span>)</span> String regexp1)</span>{  
+           System.out.println(<span class="hljs-string">&quot;URI Part 1 : &quot;</span> + regexp1);  
+           <span class="hljs-keyword">return</span> <span class="hljs-string">&quot;hello&quot;</span>;  
+     }  
+}
+</code></pre>
+<h5 id="41122-requstparams">4.1.1.2.2 @RequstParams</h5>
+<p>&#x7528;&#x4E8E;&#x5728;Spring MVC&#x540E;&#x53F0;&#x63A7;&#x5236;&#x5C42;&#x83B7;&#x53D6;&#x53C2;&#x6570;&#xFF0C;&#x7C7B;&#x4F3C;&#x4E00;&#x79CD;&#x662F;request.getParameter(&quot;name&quot;)&#xFF0C;&#x5B83;&#x6709;&#x4E09;&#x4E2A;&#x5E38;&#x7528;&#x53C2;&#x6570;&#xFF1A;defaultValue = &quot;0&quot;, required = false, value = &quot;isApp&quot;&#xFF1B;defaultValue &#x8868;&#x793A;&#x8BBE;&#x7F6E;&#x9ED8;&#x8BA4;&#x503C;&#xFF0C;required&#x901A;&#x8FC7;boolean&#x503C;&#x8BBE;&#x7F6E;&#x662F;&#x5426;&#x662F;&#x5FC5;&#x987B;&#x8981;&#x4F20;&#x5165;&#x7684;&#x53C2;&#x6570;&#xFF0C;value &#x503C;&#x8868;&#x793A;&#x63A5;&#x53D7;&#x7684;&#x4F20;&#x5165;&#x7684;&#x53C2;&#x6570;&#x7C7B;&#x578B;&#x3002;</p>
+<p>&#x591A;&#x6570;&#x60C5;&#x51B5;&#x4E0B;<code>@RequestParam</code>&#x53EF;&#x4EE5;&#x7701;&#x7565;&#x3002;</p>
+<pre><code class="lang-java">    <span class="hljs-meta">@RequestMapping</span>(<span class="hljs-string">&quot;genUsers&quot;</span>)
+    <span class="hljs-function"><span class="hljs-keyword">public</span> String <span class="hljs-title">genUsers</span><span class="hljs-params">(@RequestParam <span class="hljs-keyword">int</span> count)</span> </span>{
+    <span class="hljs-comment">//public String genUsers(int count) {</span>
+        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i=<span class="hljs-number">2</span>; i&lt;count+<span class="hljs-number">2</span>; i++) {
+            String str = UUID.randomUUID().toString().substring(<span class="hljs-number">16</span>);
+            User user = <span class="hljs-keyword">new</span> User();
+            user.setId(i);
+            user.setUserName(str);
+            user.setRealName(str);
+            user.setPassWord(str);
+
+            userService.saveUser(user);
+        }
+        <span class="hljs-keyword">return</span> <span class="hljs-string">&quot;&#x751F;&#x6210;&#x4E86;&quot;</span> + count + <span class="hljs-string">&quot;&#x4E2A;&#x7528;&#x6237;&#x3002;&quot;</span>;
+    }
+</code></pre>
+<h4 id="4113-responsebody">4.1.1.3 @ResponseBody</h4>
+<p>&#x8BE5;&#x6CE8;&#x89E3;&#x7528;&#x4E8E;&#x5C06;Controller&#x7684;&#x65B9;&#x6CD5;&#x8FD4;&#x56DE;&#x7684;&#x5BF9;&#x8C61;&#xFF0C;&#x901A;&#x8FC7;&#x9002;&#x5F53;&#x7684;HttpMessageConverter&#x8F6C;&#x6362;&#x4E3A;&#x6307;&#x5B9A;&#x683C;&#x5F0F;&#x540E;&#xFF0C;&#x5199;&#x5165;&#x5230;Response&#x5BF9;&#x8C61;&#x7684;body&#x6570;&#x636E;&#x533A;&#x3002; </p>
+<blockquote>
+<p>&#x8FD4;&#x56DE;&#x7684;&#x6570;&#x636E;&#x4E0D;&#x662F;html&#x9875;&#x9762;&#xFF0C;&#x800C;&#x662F;&#x5176;&#x4ED6;&#x67D0;&#x79CD;&#x683C;&#x5F0F;&#x7684;&#x6570;&#x636E;&#x65F6;&#xFF08;&#x5982;json&#x3001;xml&#x7B49;&#xFF09;&#x4F7F;&#x7528;&#x3002;</p>
+</blockquote>
+<h4 id="4114-modelandview">4.1.1.4 @ModelAndView</h4>
+<p>&#x7528;&#x6765;&#x5B58;&#x50A8;&#x5904;&#x7406;&#x5B8C;&#x540E;&#x7684;&#x7ED3;&#x679C;&#x6570;&#x636E;&#xFF0C;&#x4EE5;&#x53CA;&#x663E;&#x793A;&#x8BE5;&#x6570;&#x636E;&#x7684;&#x89C6;&#x56FE;&#x3002;&#x4ECE;&#x540D;&#x5B57;&#x4E0A;&#x770B;ModelAndView&#x4E2D;&#x7684;Model&#x4EE3;&#x8868;&#x6A21;&#x578B;&#xFF0C;View&#x4EE3;&#x8868;&#x89C6;&#x56FE;&#xFF0C;&#x8FD9;&#x4E2A;&#x540D;&#x5B57;&#x5C31;&#x5F88;&#x597D;&#x5730;&#x89E3;&#x91CA;&#x4E86;&#x8BE5;&#x7C7B;&#x7684;&#x4F5C;&#x7528;&#x3002;&#x4E1A;&#x52A1;&#x5904;&#x7406;&#x5668;&#x8C03;&#x7528;&#x6A21;&#x578B;&#x5C42;&#x5904;&#x7406;&#x5B8C;&#x7528;&#x6237;&#x8BF7;&#x6C42;&#x540E;&#xFF0C;&#x628A;&#x7ED3;&#x679C;&#x6570;&#x636E;&#x5B58;&#x50A8;&#x5728;&#x8BE5;&#x7C7B;&#x7684;model&#x5C5E;&#x6027;&#x4E2D;&#xFF0C;&#x628A;&#x8981;&#x8FD4;&#x56DE;&#x7684;&#x89C6;&#x56FE;&#x4FE1;&#x606F;&#x5B58;&#x50A8;&#x5728;&#x8BE5;&#x7C7B;&#x7684;view&#x5C5E;&#x6027;&#x4E2D;&#xFF0C;&#x7136;&#x540E;&#x8BA9;&#x8BE5;ModelAndView&#x8FD4;&#x56DE;&#x8BE5;Spring MVC&#x6846;&#x67B6;&#x3002;&#x6846;&#x67B6;&#x901A;&#x8FC7;&#x8C03;&#x7528;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x4E2D;&#x5B9A;&#x4E49;&#x7684;&#x89C6;&#x56FE;&#x89E3;&#x6790;&#x5668;&#xFF0C;&#x5BF9;&#x8BE5;&#x5BF9;&#x8C61;&#x8FDB;&#x884C;&#x89E3;&#x6790;&#xFF0C;&#x6700;&#x540E;&#x628A;&#x7ED3;&#x679C;&#x6570;&#x636E;&#x663E;&#x793A;&#x5728;&#x6307;&#x5B9A;&#x7684;&#x9875;&#x9762;&#x4E0A;&#x3002;  </p>
+<pre><code class="lang-java">    <span class="hljs-function"><span class="hljs-keyword">public</span> ModelAndView <span class="hljs-title">handleRequestInternal</span><span class="hljs-params">(HttpServletRequest request,  
+        HttpServletResponse response)</span><span class="hljs-keyword">throws</span> Exception</span>{  
+        ...  
+        Map&lt;String,Object&gt; model = <span class="hljs-keyword">new</span> HashMap&lt;String,Object&gt;();  
+        <span class="hljs-keyword">if</span>(courtName != <span class="hljs-keyword">null</span>){  
+            model.put(<span class="hljs-string">&quot;courtName&quot;</span>,courtName);  
+            model.put(<span class="hljs-string">&quot;reservations&quot;</span>,reservationService.query(courtName));  
+        }  
+        <span class="hljs-keyword">return</span> <span class="hljs-keyword">new</span> ModelAndView(<span class="hljs-string">&quot;reservationQuery&quot;</span>,model);  
+    }
+</code></pre>
+<h4 id="4115-restcontroller">4.1.1.5 @RestController</h4>
+<p>@RestController&#x662F;&#x4E00;&#x4E2A;&#x590D;&#x5408;&#x6CE8;&#x89E3;&#xFF0C;&#x5176;&#x4F5C;&#x7528;&#x7B49;&#x540C;&#x4E8E;@Controller + @ResponseBody&#x3002; </p>
+<pre><code class="lang-java"><span class="hljs-meta">@Target</span>(ElementType.TYPE)
+<span class="hljs-meta">@Retention</span>(RetentionPolicy.RUNTIME)
+<span class="hljs-meta">@Documented</span>
+<span class="hljs-meta">@Controller</span>
+<span class="hljs-meta">@ResponseBody</span>
+<span class="hljs-keyword">public</span> <span class="hljs-meta">@interface</span> RestController {
+
+    <span class="hljs-comment">/**
+     * The value may indicate a suggestion for a logical component name,
+     * to be turned into a Spring bean in case of an autodetected component.
+     * <span class="hljs-doctag">@return</span> the suggested component name, if any (or empty String otherwise)
+     * <span class="hljs-doctag">@since</span> 4.0.1
+     */</span>
+    <span class="hljs-meta">@AliasFor</span>(annotation = Controller.class)
+    <span class="hljs-function">String <span class="hljs-title">value</span><span class="hljs-params">()</span> <span class="hljs-keyword">default</span> &quot;&quot;</span>;
+
+}
+</code></pre>
+<p>&#x8FD9;&#x4E2A;&#x6CE8;&#x89E3;&#xFF0C;&#x5927;&#x91CF;&#x5730;&#x7528;&#x5728;&#x524D;&#x540E;&#x7AEF;&#x5206;&#x79BB;&#x7684;&#x5E94;&#x7528;&#x4E2D;&#x3002;</p>
+<h3 id="412-spring-mvc&#x5256;&#x6790;">4.1.2 Spring MVC&#x5256;&#x6790;</h3>
+<p>&#x8981;&#x60F3;&#x5F7B;&#x5E95;&#x638C;&#x63E1;Spring MVC&#xFF0C;&#x5C31;&#x5FC5;&#x987B;&#x6DF1;&#x5165;&#x5176;&#x8BBE;&#x8BA1;&#x3001;&#x8FD0;&#x884C;&#x673A;&#x5236;&#xFF0C;&#x624D;&#x80FD;&#x505A;&#x5230;&#x201C;<strong>&#x77E5;&#x5176;&#x7136;&#xFF0C;&#x4E5F;&#x77E5;&#x5176;&#x6240;&#x4EE5;&#x7136;</strong>&#x201D;&#x3002;</p>
+<p>&#x5F53;&#x7136;&#xFF0C;&#x5F7B;&#x5E95;&#x638C;&#x63E1;&#x4EFB;&#x4F55;&#x4E00;&#x4E2A;&#x6846;&#x67B6;&#xFF0C;&#x90FD;&#x662F;&#x901A;&#x8FC7;&#x9605;&#x8BFB;&#x5B98;&#x65B9;&#x6587;&#x6863;&#xFF08;&#x7EDD;&#x5927;&#x591A;&#x6570;&#x65F6;&#x5019;&#x662F;&#x82F1;&#x6587;&#x7684;&#xFF09;&#x548C;&#x6E90;&#x7801;&#x6765;&#x5B8C;&#x6210;&#x7684;&#x3002;</p>
+<p>&#x6700;&#x65E9;&#xFF0C;Spring MVC&#x5927;&#x90E8;&#x5206;&#x662F;&#x548C;JSP&#x4E00;&#x8D77;&#x4F7F;&#x7528;&#x7684;&#xFF0C;&#x8FD9;&#x91CC;&#x6211;&#x4EEC;&#x4E5F;&#x4EE5;JSP&#x4E3A;&#x4F8B;&#xFF0C;&#x4EE5;&#x4FBF;&#x4E8E;&#x8BB2;&#x89E3;&#x5176;&#x8FD0;&#x884C;&#x673A;&#x7406;&#x3002;</p>
+<h4 id="4121-&#x52A0;&#x8F7D;&#x8FC7;&#x7A0B;">4.1.2.1 &#x52A0;&#x8F7D;&#x8FC7;&#x7A0B;</h4>
+<p>Spring MVC&#x5E94;&#x7528;&#x5728;&#x542F;&#x52A8;&#x8FC7;&#x7A0B;&#x4E2D;&#x4F1A;&#x521B;&#x5EFA;&#x4E24;&#x4E2A;Spring&#x5BB9;&#x5668;&#xFF1A;&#x57FA;&#x7840;&#x5BB9;&#x5668;&#xFF08;&#x542B;@Repository&#xFF0C;@Service&#xFF0C;@Component&#x7B49;&#x7EC4;&#x4EF6;&#xFF09;&#x548C;&#x63A7;&#x5236;&#x5668;&#x5BB9;&#x5668;&#xFF08;&#x542B;@Controller&#xFF09;&#x3002;</p>
+<p>&#x63A7;&#x5236;&#x5668;&#x5BB9;&#x5668;&#x5BB9;&#x5668;&#x201C;&#x7EE7;&#x627F;&#x201D;&#x81EA;&#x57FA;&#x7840;&#x5BB9;&#x5668;&#xFF0C;&#x6240;&#x4EE5;&#x5728;&#x6211;&#x4EEC;&#x5199;&#x7684;Controller&#x91CC;&#x9762;&#x53EF;&#x4EE5;&#x6CE8;&#x5165;@Service&#x548C;@Component&#x7EC4;&#x4EF6;&#xFF08;&#x5F53;&#x7136;&#xFF0C;&#x4E5F;&#x53EF;&#x4EE5;&#x6CE8;&#x5165;@Repository&#xFF0C;&#x53EA;&#x662F;&#x57FA;&#x4E8E;&#x4E8B;&#x52A1;&#x7BA1;&#x7406;&#x7EDD;&#x5BF9;&#x4E0D;&#x63A8;&#x8350;&#x8FD9;&#x6837;&#x505A;&#xFF09;&#xFF0C;&#x800C;@Service&#x7EC4;&#x4EF6;&#x4E2D;&#x4E0D;&#x80FD;&#x6CE8;&#x5165;@Controller&#x7EC4;&#x4EF6;&#x3002;</p>
+<blockquote>
+<p>&#x4ECE;&#x4F9D;&#x8D56;&#x5012;&#x7F6E;&#x539F;&#x5219;&#x6765;&#x8BB2;&#xFF0C;@Service&#x7EC4;&#x4EF6;&#x7EDD;&#x4E0D;&#x5E94;&#x8BE5;&#x4F9D;&#x8D56;@Controller&#x7EC4;&#x4EF6;&#x3002;</p>
+</blockquote>
+<p>&#x9879;&#x76EE;&#x4E2D;&#xFF0C;&#x6211;&#x4EEC;&#x5199;&#x5728;Controller&#x4E2D;&#x7684;&#x6807;&#x6CE8;&#x4E86;@RequestMapping&#x7684;&#x65B9;&#x6CD5;&#xFF08;&#x5982;&#x4E0B;&#x9762;&#x4EE3;&#x7801;&#x7247;&#x6BB5;&#x7684;getUser&#x65B9;&#x6CD5;&#xFF09;&#xFF0C;&#x5728;&#x542F;&#x52A8;&#x65F6;&#x4F1A;&#x88AB;&#x626B;&#x63CF;&#x540E;&#x88C5;&#x5165;DispatcherServlet&#x7684;handlerMappings&#x5C5E;&#x6027;&#x4E2D;&#x3002;</p>
+<pre><code class="lang-java"><span class="hljs-meta">@RestController</span>
+<span class="hljs-meta">@RequestMapping</span>(<span class="hljs-string">&quot;/user&quot;</span>)
+<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">UserController</span> </span>{
+
+    <span class="hljs-meta">@Autowired</span>
+    <span class="hljs-keyword">private</span> UserService userService;
+
+    <span class="hljs-meta">@RequestMapping</span>(<span class="hljs-string">&quot;get/{id}&quot;</span>)
+    <span class="hljs-function"><span class="hljs-keyword">public</span> String <span class="hljs-title">getUser</span><span class="hljs-params">(@PathVariable <span class="hljs-keyword">int</span> id)</span></span>{
+        <span class="hljs-keyword">return</span> userService.selectUser(id).toString();
+    }
+...
+</code></pre>
+<p>DispatcherServlet&#x7684;handlerMappings&#x5C5E;&#x6027;&#x4E2D;&#x5B58;&#x653E;&#x4E86;Spring MVC Web&#x5E94;&#x7528;&#x7684;&#x6240;&#x6709;&#x8DEF;&#x5F84;&#x6620;&#x5C04;&#x5904;&#x7406;&#x5668;&#x3002;</p>
+<pre><code class="lang-java"><span class="hljs-meta">@SuppressWarnings</span>(<span class="hljs-string">&quot;serial&quot;</span>)
+<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">DispatcherServlet</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">FrameworkServlet</span> </span>{
+...
+    <span class="hljs-comment">/** List of HandlerMappings used by this servlet. */</span>
+    <span class="hljs-meta">@Nullable</span>
+    <span class="hljs-keyword">private</span> List&lt;HandlerMapping&gt; handlerMappings;
+...
+</code></pre>
+<p>HandlerMapping&#x63A5;&#x53E3;&#x7684;&#x6700;&#x5E38;&#x7528;&#x5B9E;&#x73B0;&#x5C31;&#x662F;RequestMappingHandlerMapping&#x7C7B;&#xFF0C;&#x5177;&#x4F53;&#x7EE7;&#x627F;&#x5C42;&#x7EA7;&#x5982;&#x4E0B;&#x56FE;&#xFF1A;</p>
+<p><img src="images/image-20191120195949041.png" alt="image-20191120195949041"></p>
+<p>&#x5F53;&#x7136;&#xFF0C;&#x542F;&#x52A8;&#x8FC7;&#x7A0B;&#x8FD8;&#x4F1A;&#x5728;DispatcherServlet&#x5BF9;&#x8C61;&#x4E2D;&#x52A0;&#x8F7D;ViewResolver&#x3001;MultipartResolver&#x7B49;&#x5BF9;&#x8C61;&#xFF0C;&#x8FD9;&#x91CC;&#x6211;&#x4EEC;&#x4E0D;&#x8FC7;&#x591A;&#x4ECB;&#x7ECD;&#x3002;&#x611F;&#x5174;&#x8DA3;&#x7684;&#x540C;&#x5B66;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x65AD;&#x70B9;Debug&#x7684;&#x65B9;&#x5F0F;&#x8BE6;&#x7EC6;&#x89C2;&#x5BDF;DispatcherServlet&#x7684;&#x52A0;&#x8F7D;&#x8FC7;&#x7A0B;&#x3002;</p>
+<h4 id="4122-&#x524D;&#x7AEF;&#x5206;&#x53D1;&#x5668;">4.1.2.2 &#x524D;&#x7AEF;&#x5206;&#x53D1;&#x5668;</h4>
+<p>DispatcherServlet&#x5C31;&#x662F;Spring MVC&#x7684;&#x524D;&#x7AEF;&#x5206;&#x53D1;&#x5668;&#x3002;</p>
+<p>&#x5728;&#x8FD0;&#x884C;&#x65F6;&#xFF0C;&#x4ECE;&#x524D;&#x7AEF;&#xFF08;&#x4E00;&#x822C;&#x90FD;&#x662F;&#x6D4F;&#x89C8;&#x5668;&#x53D1;&#x8D77;&#x4E00;&#x4E2A;http&#x8BF7;&#x6C42;&#xFF09;&#x8FC7;&#x6765;&#x7684;&#x8BF7;&#x6C42;&#xFF0C;&#x88AB;DispatcherServlet&#x622A;&#x83B7;&#x540E;&#xFF0C;&#x5C31;&#x8C03;&#x7528;doDispatch&#x65B9;&#x6CD5;&#xFF0C;&#x5BFB;&#x6C42;&#x5408;&#x9002;&#x7684;&#x5904;&#x7406;&#x5668;&#xFF08;&#x53C2;&#x8003;&#x4E0B;&#x9762;&#x4EE3;&#x7801;&#x7247;&#x6BB5;&#x4E2D;&#x7684;&#x7B2C;17&#x884C;&#xFF0C;<code>mappedHandler = getHandler(processedRequest)</code>&#xFF09;&#x5904;&#x7406;&#x8FD9;&#x4E2A;&#x8BF7;&#x6C42;&#x3002;</p>
+<pre><code class="lang-java">    <span class="hljs-function"><span class="hljs-keyword">protected</span> <span class="hljs-keyword">void</span> <span class="hljs-title">doDispatch</span><span class="hljs-params">(HttpServletRequest request, HttpServletResponse response)</span> <span class="hljs-keyword">throws</span> Exception </span>{
+        HttpServletRequest processedRequest = request;
+        HandlerExecutionChain mappedHandler = <span class="hljs-keyword">null</span>;
+        <span class="hljs-keyword">boolean</span> multipartRequestParsed = <span class="hljs-keyword">false</span>;
+
+        WebAsyncManager asyncManager = WebAsyncUtils.getAsyncManager(request);
+
+        <span class="hljs-keyword">try</span> {
+            ModelAndView mv = <span class="hljs-keyword">null</span>;
+            Exception dispatchException = <span class="hljs-keyword">null</span>;
+
+            <span class="hljs-keyword">try</span> {
+                processedRequest = checkMultipart(request);
+                multipartRequestParsed = (processedRequest != request);
+
+                <span class="hljs-comment">// Determine handler for the current request.</span>
+                mappedHandler = getHandler(processedRequest);
+                <span class="hljs-keyword">if</span> (mappedHandler == <span class="hljs-keyword">null</span>) {
+                    noHandlerFound(processedRequest, response);
+                    <span class="hljs-keyword">return</span>;
+                }
+
+                <span class="hljs-comment">// Determine handler adapter for the current request.</span>
+                HandlerAdapter ha = getHandlerAdapter(mappedHandler.getHandler());
+
+                <span class="hljs-comment">// Process last-modified header, if supported by the handler.</span>
+                String method = request.getMethod();
+                <span class="hljs-keyword">boolean</span> isGet = <span class="hljs-string">&quot;GET&quot;</span>.equals(method);
+                <span class="hljs-keyword">if</span> (isGet || <span class="hljs-string">&quot;HEAD&quot;</span>.equals(method)) {
+                    <span class="hljs-keyword">long</span> lastModified = ha.getLastModified(request, mappedHandler.getHandler());
+                    <span class="hljs-keyword">if</span> (<span class="hljs-keyword">new</span> ServletWebRequest(request, response).checkNotModified(lastModified) &amp;&amp; isGet) {
+                        <span class="hljs-keyword">return</span>;
+                    }
+                }
+
+                <span class="hljs-keyword">if</span> (!mappedHandler.applyPreHandle(processedRequest, response)) {
+                    <span class="hljs-keyword">return</span>;
+                }
+
+                <span class="hljs-comment">// Actually invoke the handler.</span>
+                mv = ha.handle(processedRequest, response, mappedHandler.getHandler());
+
+                <span class="hljs-keyword">if</span> (asyncManager.isConcurrentHandlingStarted()) {
+                    <span class="hljs-keyword">return</span>;
+                }
+
+                applyDefaultViewName(processedRequest, mv);
+                mappedHandler.applyPostHandle(processedRequest, response, mv);
+            }
+            <span class="hljs-keyword">catch</span> (Exception ex) {
+                dispatchException = ex;
+            }
+            <span class="hljs-keyword">catch</span> (Throwable err) {
+                <span class="hljs-comment">// As of 4.3, we&apos;re processing Errors thrown from handler methods as well,</span>
+                <span class="hljs-comment">// making them available for @ExceptionHandler methods and other scenarios.</span>
+                dispatchException = <span class="hljs-keyword">new</span> NestedServletException(<span class="hljs-string">&quot;Handler dispatch failed&quot;</span>, err);
+            }
+            processDispatchResult(processedRequest, response, mappedHandler, mv, dispatchException);
+        }
+        <span class="hljs-keyword">catch</span> (Exception ex) {
+            triggerAfterCompletion(processedRequest, response, mappedHandler, ex);
+        }
+        <span class="hljs-keyword">catch</span> (Throwable err) {
+            triggerAfterCompletion(processedRequest, response, mappedHandler,
+                    <span class="hljs-keyword">new</span> NestedServletException(<span class="hljs-string">&quot;Handler processing failed&quot;</span>, err));
+        }
+        <span class="hljs-keyword">finally</span> {
+            <span class="hljs-keyword">if</span> (asyncManager.isConcurrentHandlingStarted()) {
+                <span class="hljs-comment">// Instead of postHandle and afterCompletion</span>
+                <span class="hljs-keyword">if</span> (mappedHandler != <span class="hljs-keyword">null</span>) {
+                    mappedHandler.applyAfterConcurrentHandlingStarted(processedRequest, response);
+                }
+            }
+            <span class="hljs-keyword">else</span> {
+                <span class="hljs-comment">// Clean up any resources used by a multipart request.</span>
+                <span class="hljs-keyword">if</span> (multipartRequestParsed) {
+                    cleanupMultipart(processedRequest);
+                }
+            }
+        }
+    }
+</code></pre>
+<p>&#x66F4;&#x8BE6;&#x7EC6;&#x7684;&#x5904;&#x7406;&#x8FC7;&#x7A0B;&#xFF0C;&#x8BF7;&#x5728;&#x8FD0;&#x884C;&#x65F6;&#x8DDF;&#x8E2A;doDispatch&#x4E86;&#x89E3;&#x66F4;&#x591A;&#x3002;</p>
+<h4 id="4123-&#x63A7;&#x5236;&#x5668;&#x65B9;&#x6CD5;">4.1.2.3 &#x63A7;&#x5236;&#x5668;&#x65B9;&#x6CD5;</h4>
+<p>&#x5728;Controller&#x4E2D;&#x7684;&#x6807;&#x6CE8;&#x4E86;@RequestMapping&#x7684;&#x65B9;&#x6CD5;&#x5C31;&#x662F;&#x63A7;&#x5236;&#x5668;&#x65B9;&#x6CD5;&#xFF0C;&#x4E5F;&#x53EB;&#x5904;&#x7406;&#x5668;&#xFF08;handler&#xFF09;&#x3002;</p>
+<p>&#x5982;&#x524D;&#x6240;&#x8FF0;&#xFF0C;web&#x5E94;&#x7528;&#x542F;&#x52A8;&#x65F6;&#xFF0C;&#x4F1A;&#x5C06;&#x6240;&#x6709;&#x7684;&#x5904;&#x7406;&#x5668;&#x626B;&#x63CF;&#x5230;DispatcherServlet&#x7684;handlerMappings&#x5C5E;&#x6027;&#x4E2D;&#xFF0C;&#x4F9B;&#x5176;doDispatch&#x65B9;&#x6CD5;&#x5339;&#x914D;&#x5408;&#x9002;&#x7684;&#x5904;&#x7406;&#x5668;&#xFF0C;&#x7136;&#x540E;&#x6267;&#x884C;&#x5904;&#x7406;&#x5668;&#x4E2D;&#x7684;&#x903B;&#x8F91;&#x3002;</p>
+<blockquote>
+<p>&#x63A7;&#x5236;&#x5668;&#x65B9;&#x6CD5;&#xFF08;&#x5904;&#x7406;&#x5668;&#xFF09;&#x4E00;&#x822C;&#x5B8C;&#x6210;&#x524D;&#x7AEF;&#x6570;&#x636E;&#x7684;&#x51C6;&#x5907;&#x5C01;&#x88C5;&#x5DE5;&#x4F5C;&#xFF0C;&#x7136;&#x540E;&#x8C03;&#x7528;&#x670D;&#x52A1;&#x5C42;&#x65B9;&#x6CD5;&#x5B8C;&#x6210;&#x7279;&#x5B9A;&#x7684;&#x4E1A;&#x52A1;&#x903B;&#x8F91;&#x529F;&#x80FD;&#x5904;&#x7406;&#x3002;</p>
+</blockquote>
+<pre><code class="lang-java">    <span class="hljs-meta">@RequestMapping</span>(<span class="hljs-string">&quot;get/{id}&quot;</span>)
+    <span class="hljs-function"><span class="hljs-keyword">public</span> String <span class="hljs-title">getUser</span><span class="hljs-params">(@PathVariable <span class="hljs-keyword">int</span> id)</span></span>{
+        <span class="hljs-keyword">return</span> userService.selectUser(id).toString();
+    }
+</code></pre>
+<p>&#x5982;&#x4E0A;&#xFF0C;getUser&#x65B9;&#x6CD5;&#x5C31;&#x662F;&#x63A7;&#x5236;&#x5668;&#x65B9;&#x6CD5;&#xFF0C;&#x5728;&#x8FD0;&#x884C;&#x65F6;&#x5C31;&#x662F;&#x4E00;&#x4E2A;&#x5904;&#x7406;&#x5668;&#x3002;</p>
+<h4 id="4124--&#x89C6;&#x56FE;&#x89E3;&#x6790;&#x5668;">4.1.2.4  &#x89C6;&#x56FE;&#x89E3;&#x6790;&#x5668;</h4>
+<p>&#x89C6;&#x56FE;&#x89E3;&#x6790;&#x5668;&#x51B3;&#x5B9A;&#x4E86;&#x63A7;&#x5236;&#x5668;&#x65B9;&#x6CD5;&#x8FD4;&#x56DE;&#x7684;&#x89C6;&#x56FE;&#x5982;&#x4F55;&#x5904;&#x7406;&#xFF0C;&#x6BD4;&#x5982;InternalResourceViewResolver&#x5C31;&#x662F;&#x7528;JSP&#x89C6;&#x56FE;&#x6280;&#x672F;&#x7684;&#x89E3;&#x6790;&#x5668;&#x3002;</p>
+<p><img src="images/image-20191120203703968.png" alt="image-20191120203703968"></p>
+<p>&#x5176;&#x6784;&#x9020;&#x5668;&#x65B9;&#x6CD5;&#xFF0C;&#x4F1A;&#x4E3A;&#x5176;&#x8BBE;&#x7F6E;&#x89C6;&#x56FE;&#x7684;&#x524D;&#x7F00;&#x548C;&#x540E;&#x7F00;&#x3002;</p>
+<pre><code class="lang-java">    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">InternalResourceViewResolver</span><span class="hljs-params">(String prefix, String suffix)</span> </span>{
+        <span class="hljs-keyword">this</span>();
+        setPrefix(prefix);
+        setSuffix(suffix);
+    }
+</code></pre>
+<p>&#x5728;&#x4E0B;&#x9762;&#x7684;&#x914D;&#x7F6E;&#x7247;&#x6BB5;&#x573A;&#x666F;&#x4E2D;&#xFF0C;&#x5982;&#x679C;&#x63A7;&#x5236;&#x5668;&#x65B9;&#x6CD5;&#x4E2D;&#x8FD4;&#x56DE;&#x201C;hello&#x201D;&#x5B57;&#x7B26;&#x4E32;&#xFF0C;&#x5219;Spring MVC&#x6846;&#x67B6;&#x4F1A;&#x627E;&#x5230;<code>/WEB-INF/views/hello.jsp</code>&#x8FD9;&#x4E2A;&#x9875;&#x9762;&#xFF0C;&#x6765;&#x6E32;&#x67D3;&#x7ED9;&#x6D4F;&#x89C8;&#x5668;&#x3002;</p>
+<pre><code class="lang-xml">    <span class="hljs-comment">&lt;!-- &#x8FD9;&#x4E2A;&#x7C7B;&#x7528;&#x4E8E;Spring MVC&#x89C6;&#x56FE;&#x89E3;&#x6790; --&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">beans:bean</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;viewResolver&quot;</span>
+        <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;org.springframework.web.servlet.view.InternalResourceViewResolver&quot;</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">beans:property</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;prefix&quot;</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;/WEB-INF/views/&quot;</span> /&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">beans:property</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;suffix&quot;</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;.jsp&quot;</span> /&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">beans:bean</span>&gt;</span>
+</code></pre>
+<h4 id="4125-&#x52A8;&#x6001;&#x8D44;&#x6E90;">4.1.2.5 &#x52A8;&#x6001;&#x8D44;&#x6E90;</h4>
+<p>&#x4F20;&#x7EDF;&#x4E0A;&#xFF0C;&#x52A8;&#x6001;&#x8D44;&#x6E90;&#x5C31;&#x662F;JSP&#x6587;&#x4EF6;&#x3002;</p>
+<p>&#x4E00;&#x822C;&#x800C;&#x8A00;&#xFF0C;&#x6211;&#x4EEC;&#x90FD;&#x4F1A;&#x4E3A;DispatcherServlet&#x914D;&#x7F6E;&#x62E6;&#x622A;&#x6240;&#x6709;&#x7684;&#x524D;&#x7AEF;&#x8BF7;&#x6C42;&#xFF0C;&#x5728;&#x63A7;&#x5236;&#x5668;&#xFF08;Controller&#xFF09;&#x65B9;&#x6CD5;&#x8FD4;&#x56DE;&#x7684;&#x89C6;&#x56FE;&#xFF08;View&#xFF09;&#x4E2D;&#x52A0;&#x8F7D;&#x4E1A;&#x52A1;&#x6570;&#x636E;&#xFF08;Model&#xFF09;&#x3002;</p>
+<pre><code class="lang-xml"><span class="hljs-tag">&lt;<span class="hljs-name">servlet</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">servlet-name</span>&gt;</span>dispatcherServlet<span class="hljs-tag">&lt;/<span class="hljs-name">servlet-name</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">servlet-class</span>&gt;</span>org.springframework.web.servlet.DispatcherServlet<span class="hljs-tag">&lt;/<span class="hljs-name">servlet-class</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">init-param</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">param-name</span>&gt;</span>contextConfigLocation<span class="hljs-tag">&lt;/<span class="hljs-name">param-name</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">param-value</span>&gt;</span>classpath:META-INF/spring/springmvc-context.xml<span class="hljs-tag">&lt;/<span class="hljs-name">param-value</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">init-param</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">load-on-startup</span>&gt;</span>1<span class="hljs-tag">&lt;/<span class="hljs-name">load-on-startup</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">servlet</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">servlet-mapping</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">servlet-name</span>&gt;</span>dispatcherServlet<span class="hljs-tag">&lt;/<span class="hljs-name">servlet-name</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">url-pattern</span>&gt;</span>/<span class="hljs-tag">&lt;/<span class="hljs-name">url-pattern</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">servlet-mapping</span>&gt;</span>
+</code></pre>
+<h4 id="4126-&#x9759;&#x6001;&#x8D44;&#x6E90;">4.1.2.6 &#x9759;&#x6001;&#x8D44;&#x6E90;</h4>
+<p>&#x670D;&#x52A1;&#x5668;&#x4E0A;&#x7684;&#x89C6;&#x56FE;&#xFF08;&#x9875;&#x9762;&#xFF09;&#x8D44;&#x6E90;&#xFF0C;&#x4E0D;&#x90FD;&#x662F;JSP&#x6587;&#x4EF6;&#xFF0C;&#x8FD8;&#x5305;&#x62EC;JavaScript&#x6587;&#x4EF6;&#x3001;&#x56FE;&#x7247;&#x3001;CSS&#x6837;&#x5F0F;&#x6587;&#x4EF6;&#x7B49;&#xFF0C;&#x8FD9;&#x4E9B;&#x5C31;&#x662F;&#x9759;&#x6001;&#x8D44;&#x6E90;&#x3002;&#x9759;&#x6001;&#x8D44;&#x6E90;&#x90FD;&#x662F;&#x5728;&#x5BA2;&#x6237;&#x6D4F;&#x89C8;&#x5668;&#x7AEF;&#x52A0;&#x8F7D;&#x7684;&#xFF0C;&#x663E;&#x7136;&#x5E76;&#x4E0D;&#x9700;&#x8981;DispatcherServlet&#x62E6;&#x622A;&#x5904;&#x7406;&#xFF0C;&#x66F4;&#x4E0D;&#x80FD;&#x89E3;&#x6790;&#x5230;<code>/WEB-INF/views/arrow.png</code>&#x8FD9;&#x6837;&#x7684;&#x9519;&#x8BEF;&#x4F4D;&#x7F6E;&#x4E0A;&#x3002;</p>
+<p>Spring MVC&#x4E3A;&#x9759;&#x6001;&#x8D44;&#x6E90;&#x63D0;&#x4F9B;&#x4E86;&#x8FC7;&#x6EE4;&#x673A;&#x5236;&#x3002;&#x6240;&#x6709;&#x8FC7;&#x6EE4;&#x6389;&#x7684;&#x9759;&#x6001;&#x8D44;&#x6E90;&#xFF0C;DispatcherServlet&#x76F4;&#x63A5;&#x653E;&#x884C;&#x3002;</p>
+<pre><code class="lang-xml"><span class="hljs-tag">&lt;<span class="hljs-name">mvc:resources</span> <span class="hljs-attr">mapping</span>=<span class="hljs-string">&quot;/images/**&quot;</span> <span class="hljs-attr">location</span>=<span class="hljs-string">&quot;/images/&quot;</span> /&gt;</span>
+</code></pre>
+<h4 id="4127-&#x4E00;&#x4E2A;&#x5B8C;&#x6574;&#x7684;&#x8BF7;&#x6C42;&#x8FC7;&#x7A0B;">4.1.2.7 &#x4E00;&#x4E2A;&#x5B8C;&#x6574;&#x7684;&#x8BF7;&#x6C42;&#x8FC7;&#x7A0B;</h4>
+<p>&#x524D;&#x9762;&#xFF0C;&#x6211;&#x4EEC;&#x5DF2;&#x7ECF;&#x5927;&#x81F4;&#x4E86;&#x89E3;&#x4E86;Spring&#x7684;&#x8FD0;&#x884C;&#x673A;&#x5236;&#xFF0C;&#x4E0B;&#x9762;&#x4EE5;&#x6D4F;&#x89C8;&#x5668;&#x53D1;&#x8D77;http&#x8BF7;&#x6C42;&#x5230;&#x63A5;&#x6536;&#x5230;&#x8FD4;&#x56DE;&#x7ED3;&#x679C;&#x7684;&#x5168;&#x8FC7;&#x7A0B;&#x6765;&#x52A0;&#x6DF1;&#x7406;&#x89E3;Spring MVC&#x7684;&#x5904;&#x7406;&#x6D41;&#x7A0B;&#x3002;</p>
+<p><img src="images/image-20191120234549136.png" alt="image-20191120234549136"></p>
+<ol>
+<li>Spring MVC&#x7684;Spring&#x5BB9;&#x5668;&#x53CA;&#x524D;&#x7AEF;&#x5206;&#x53D1;&#x5668;&#x52A0;&#x8F7D;SpringMVC.xml&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#xFF0C;&#x5B8C;&#x6210;Spring MVC&#x7684;&#x521D;&#x59CB;&#x5316;&#xFF1B;</li>
+<li>&#x6D4F;&#x89C8;&#x5668;&#x53D1;&#x8D77;&#x4E00;&#x4E2A;http&#x8BF7;&#x6C42;&#xFF08;Request&#xFF09;&#xFF0C;&#x88AB;DispatcherServlet&#x62E6;&#x622A;&#x5230;&#xFF1B;</li>
+<li>DispatcherServlet&#x67E5;&#x8BE2;handlerMappings&#x5339;&#x914D;&#x4E00;&#x4E2A;handler&#xFF1B;</li>
+<li>&#x8C03;&#x7528;handler&#xFF1B;</li>
+<li>handler&#x8C03;&#x7528;&#x670D;&#x52A1;&#x5C42;&#x5BF9;&#x5E94;&#x7684;&#x65B9;&#x6CD5;&#xFF0C;&#x5B8C;&#x6210;&#x4E1A;&#x52A1;&#x903B;&#x8F91;&#x5904;&#x7406;&#xFF1B;</li>
+<li>&#x4E1A;&#x52A1;&#x903B;&#x8F91;&#x8FD4;&#x56DE;&#x7684;&#x7ED3;&#x679C;&#x88AB;handler&#x5305;&#x88C5;&#x5230;&#x4E00;&#x4E2A;ModelAndView&#x4E2D;&#xFF1B;</li>
+<li>DispatcherServlet&#x901A;&#x8FC7;ViewResolver&#x83B7;&#x53D6;&#x89E3;&#x6790;&#x89C6;&#x56FE;&#xFF1B;</li>
+<li>&#x5C06;Model&#x4E0A;&#x7684;&#x6570;&#x636E;&#x52A0;&#x8F7D;&#x5230;View&#x4E0A;&#xFF1B;</li>
+<li>View&#xFF08;JSP&#x9875;&#x9762;&#xFF09;&#x5411;&#x6D4F;&#x89C8;&#x5668;&#x8FD4;&#x56DE;http&#x54CD;&#x5E94;&#xFF08;Response&#xFF09;&#x3002;</li>
+</ol>
+<h3 id="413-&#x4F20;&#x7EDF;spring-mvc&#x793A;&#x4F8B;">4.1.3 &#x4F20;&#x7EDF;Spring MVC&#x793A;&#x4F8B;</h3>
+<p>&#x4E3A;&#x4E86;&#x66F4;&#x597D;&#x7684;&#x89C2;&#x5BDF;Spring MVC&#x7684;&#x914D;&#x7F6E;&#x3001;&#x52A0;&#x8F7D;&#x3001;&#x8FD0;&#x884C;&#x673A;&#x5236;&#xFF0C;&#x6211;&#x4EEC;&#x4EE5;&#x4E00;&#x4E2A;&#x7528;JSP&#x9875;&#x9762;&#x7684;Spring MVC&#x9879;&#x76EE;&#x4E3A;&#x4F8B;&#xFF0C;&#x6765;&#x4ECB;&#x7ECD;&#x6211;&#x4EEC;&#x524D;&#x9762;&#x4ECB;&#x7ECD;&#x5230;&#x7684;&#x4E00;&#x4E9B;&#x77E5;&#x8BC6;&#x70B9;&#x3002;</p>
+<blockquote>
+<p>&#x672C;&#x793A;&#x4F8B;&#xFF0C;&#x4F7F;&#x7528;&#x7684;8.5&#x7248;&#x672C;&#x7684;Tomcat&#x3002;</p>
+</blockquote>
+<p>&#x521B;&#x5EFA;maven&#x9879;&#x76EE;&#xFF0C;&#x9009;&#x62E9;<code>maven-archetype-webapp</code>&#x9AA8;&#x67B6;&#x3002;</p>
+<p><img src="images/image-20191121010319572.png" alt="image-20191121010319572"></p>
+<p>&#x5728;pom&#x6587;&#x4EF6;&#x4E2D;&#x6DFB;&#x52A0;Spring MVC&#x7684;&#x4F9D;&#x8D56;&#x3002;</p>
+<pre><code class="lang-xml"><span class="hljs-tag">&lt;<span class="hljs-name">dependency</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">groupId</span>&gt;</span>org.springframework<span class="hljs-tag">&lt;/<span class="hljs-name">groupId</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">artifactId</span>&gt;</span>spring-webmvc<span class="hljs-tag">&lt;/<span class="hljs-name">artifactId</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">version</span>&gt;</span>5.2.1.RELEASE<span class="hljs-tag">&lt;/<span class="hljs-name">version</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">dependency</span>&gt;</span>
+</code></pre>
+<p>&#x4E3A;&#x9879;&#x76EE;&#x914D;&#x7F6E;web.xml&#xFF1A;</p>
+<pre><code class="lang-xml"><span class="php"><span class="hljs-meta">&lt;?</span>xml version=<span class="hljs-string">&quot;1.0&quot;</span> encoding=<span class="hljs-string">&quot;UTF-8&quot;</span><span class="hljs-meta">?&gt;</span></span>
+<span class="hljs-tag">&lt;<span class="hljs-name">web-app</span> <span class="hljs-attr">xmlns:xsi</span>=<span class="hljs-string">&quot;http://www.w3.org/2001/XMLSchema-instance&quot;</span>
+    <span class="hljs-attr">xmlns</span>=<span class="hljs-string">&quot;http://java.sun.com/xml/ns/javaee&quot;</span>
+    <span class="hljs-attr">xsi:schemaLocation</span>=<span class="hljs-string">&quot;http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd&quot;</span>
+    <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;WebApp_ID&quot;</span> <span class="hljs-attr">version</span>=<span class="hljs-string">&quot;3.0&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">display-name</span>&gt;</span>spring-mvc-jsp<span class="hljs-tag">&lt;/<span class="hljs-name">display-name</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">servlet</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">servlet-name</span>&gt;</span>SpringMVC<span class="hljs-tag">&lt;/<span class="hljs-name">servlet-name</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">servlet-class</span>&gt;</span>org.springframework.web.servlet.DispatcherServlet<span class="hljs-tag">&lt;/<span class="hljs-name">servlet-class</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">init-param</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">param-name</span>&gt;</span>contextConfigLocation<span class="hljs-tag">&lt;/<span class="hljs-name">param-name</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">param-value</span>&gt;</span>classpath:spring-context.xml<span class="hljs-tag">&lt;/<span class="hljs-name">param-value</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">init-param</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">load-on-startup</span>&gt;</span>1<span class="hljs-tag">&lt;/<span class="hljs-name">load-on-startup</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">servlet</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">servlet-mapping</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">servlet-name</span>&gt;</span>SpringMVC<span class="hljs-tag">&lt;/<span class="hljs-name">servlet-name</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">url-pattern</span>&gt;</span>/<span class="hljs-tag">&lt;/<span class="hljs-name">url-pattern</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">servlet-mapping</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">welcome-file-list</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">welcome-file</span>&gt;</span>index.jsp<span class="hljs-tag">&lt;/<span class="hljs-name">welcome-file</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">welcome-file-list</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">web-app</span>&gt;</span>
+</code></pre>
+<p>&#x4E3A;Spring MVC&#x524D;&#x7AEF;&#x5206;&#x53D1;&#x5668;DispatcherServlet&#x6307;&#x5B9A;&#x7684;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x4E3A;<code>classpath:spring-context.xml</code>&#x3002;</p>
+<pre><code class="lang-xml"><span class="hljs-tag">&lt;<span class="hljs-name">beans</span> <span class="hljs-attr">xmlns</span>=<span class="hljs-string">&quot;http://www.springframework.org/schema/beans&quot;</span>
+    <span class="hljs-attr">xmlns:xsi</span>=<span class="hljs-string">&quot;http://www.w3.org/2001/XMLSchema-instance&quot;</span>
+    <span class="hljs-attr">xmlns:mvc</span>=<span class="hljs-string">&quot;http://www.springframework.org/schema/mvc&quot;</span>
+    <span class="hljs-attr">xmlns:context</span>=<span class="hljs-string">&quot;http://www.springframework.org/schema/context&quot;</span>
+    <span class="hljs-attr">xsi:schemaLocation</span>=<span class="hljs-string">&quot;http://www.springframework.org/schema/beans 
+        http://www.springframework.org/schema/beans/spring-beans.xsd 
+        http://www.springframework.org/schema/mvc 
+        http://www.springframework.org/schema/mvc/spring-mvc.xsd 
+        http://www.springframework.org/schema/context 
+        http://www.springframework.org/schema/context/spring-context.xsd&quot;</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">context:component-scan</span> <span class="hljs-attr">base-package</span>=<span class="hljs-string">&quot;com.example&quot;</span>/&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">mvc:annotation-driven</span>/&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">mvc:resources</span> <span class="hljs-attr">location</span>=<span class="hljs-string">&quot;/images/&quot;</span> <span class="hljs-attr">mapping</span>=<span class="hljs-string">&quot;/images/**&quot;</span>/&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">bean</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;org.springframework.web.servlet.view.InternalResourceViewResolver&quot;</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">property</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;prefix&quot;</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;/WEB-INF/views&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">property</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">property</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;suffix&quot;</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;.jsp&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">property</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">bean</span>&gt;</span>
+
+<span class="hljs-tag">&lt;/<span class="hljs-name">beans</span>&gt;</span>
+</code></pre>
+<p>&#x8FD9;&#x4E2A;&#x6587;&#x4EF6;&#x4E2D;&#x914D;&#x7F6E;&#x4E86;&#x7EC4;&#x4EF6;&#x626B;&#x63CF;&#x8DEF;&#x5F84;&#xFF08;12&#x884C;&#xFF09;&#x3001;&#x6CE8;&#x89E3;&#x9A71;&#x52A8;&#xFF08;13&#x884C;&#xFF09;&#x548C;&#x9759;&#x6001;&#x8D44;&#x6E90;&#x8FC7;&#x6EE4;&#xFF08;14&#x884C;&#xFF09;&#x3002;</p>
+<p>&#x4E3A;JSP&#x89C6;&#x56FE;&#x89E3;&#x6790;&#x5668;InternalResourceViewResolver&#x914D;&#x7F6E;&#x4E86;&#x524D;&#x7F00;&#x3001;&#x540E;&#x7F00;&#x5C5E;&#x6027;&#x3002;</p>
+<p>&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x63A7;&#x5236;&#x5668;&#xFF0C;&#x63D0;&#x4F9B;&#x4E00;&#x4E2A;&#x63A7;&#x5236;&#x5668;&#x65B9;&#x6CD5;&#xFF08;&#x8BF7;&#x6C42;&#x5904;&#x7406;&#x5668;&#xFF09;&#xFF0C;&#x670D;&#x52A1;&#x9879;&#x76EE;&#x4E0A;&#x4E0B;&#x6587;&#x7684;<code>/sayHello</code>&#x8BF7;&#x6C42;&#x8DEF;&#x5F84;&#xFF0C;&#x8FD4;&#x56DE;&#x4E00;&#x4E2A;ModelAndView&#xFF1A;</p>
+<ul>
+<li>Model&#x4E2D;&#x5B58;&#x50A8;&#x4E86;&#x6A21;&#x62DF;&#x670D;&#x52A1;&#x5C42;&#x8FD4;&#x56DE;&#x7684;<code>sayHello + who + &quot;.&quot;</code>&#x5185;&#x5BB9;&#xFF0C;&#x5176;&#x952E;&#x503C;&#x4E3A;<code>sayHello</code>&#xFF1B;</li>
+<li>View&#x6307;&#x5B9A;&#x4E3A;<code>/hello</code>&#xFF0C;&#x6839;&#x636E;&#x89C6;&#x56FE;&#x89E3;&#x6790;&#x5668;&#x914D;&#x7F6E;&#x6362;&#x7B97;&#x6210;&#x771F;&#x5B9E;&#x6587;&#x4EF6;&#x4E3A;<code>/WEB-INF/views/hello.jsp</code>&#x3002;</li>
+</ul>
+<pre><code class="lang-java"><span class="hljs-keyword">package</span> com.example.controller;
+
+<span class="hljs-keyword">import</span> org.springframework.stereotype.Controller;
+<span class="hljs-keyword">import</span> org.springframework.web.bind.annotation.RequestMapping;
+<span class="hljs-keyword">import</span> org.springframework.web.servlet.ModelAndView;
+
+<span class="hljs-meta">@Controller</span>
+<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">HelloController</span> </span>{
+
+    <span class="hljs-meta">@RequestMapping</span>(<span class="hljs-string">&quot;/sayHello&quot;</span>)
+    <span class="hljs-function"><span class="hljs-keyword">public</span> ModelAndView <span class="hljs-title">sayHello</span><span class="hljs-params">(String who)</span> </span>{
+        ModelAndView mv = <span class="hljs-keyword">new</span> ModelAndView();
+        <span class="hljs-comment">//&#x6A21;&#x62DF;&#x8C03;&#x7528;Service&#x65B9;&#x6CD5;&#xFF0C;&#x8FD4;&#x56DE;&#x95EE;&#x5019;&#x8BED;sayHello</span>
+        String sayHello = <span class="hljs-string">&quot;Greeting! Hello &quot;</span>;
+        mv.addObject(<span class="hljs-string">&quot;sayHello&quot;</span>, sayHello + who + <span class="hljs-string">&quot;.&quot;</span>);
+        mv.setViewName(<span class="hljs-string">&quot;/hello&quot;</span>);
+        <span class="hljs-keyword">return</span> mv;
+    }
+
+}
+</code></pre>
+<p>&#x7F16;&#x5199;hello.jsp&#x6587;&#x4EF6;&#xFF0C;&#x63A5;&#x6536;Model&#x4E2D;&#x643A;&#x5E26;&#x7684;<code>sayHello</code>&#x4E1A;&#x52A1;&#x5BF9;&#x8C61;&#x503C;&#xFF08;Model&#xFF09;&#x3002;</p>
+<p>&#x5E76;&#x5728;&#x5176;&#x4E2D;&#x63D2;&#x5165;&#x4E00;&#x5F20;&#x56FE;&#x7247;&#xFF0C;&#x6F14;&#x793A;&#x9759;&#x6001;&#x8D44;&#x6E90;&#x7684;&#x4F7F;&#x7528;&#x3002;</p>
+<pre><code class="lang-jsp">&lt;%@ page language=&quot;java&quot; contentType=&quot;text/html; charset=UTF-8&quot; pageEncoding=&quot;UTF-8&quot;%&gt;
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;meta charset=&quot;UTF-8&quot;&gt;
+&lt;title&gt;Say Hello to WHO.&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;img src=&quot;&lt;%=request.getContextPath()%&gt;/images/RoyElephant.png&quot; width=&quot;128&quot; height=&quot;128&quot; /&gt;
+    ${sayHello}
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<p>&#x8FD0;&#x884C;&#xFF0C;&#x6D4B;&#x8BD5;&#xFF0C;&#x6B63;&#x786E;&#x8FD4;&#x56DE;&#x671F;&#x671B;&#x7684;&#x7ED3;&#x679C;&#x3002;</p>
+<p><img src="images/image-20191121092015331.png" alt="image-20191121092015331"></p>
+<p><strong>&#x66F4;&#x8FDB;&#x4E00;&#x6B65;&#xFF1A;</strong>&#x53EF;&#x4EE5;&#x5728;Debug&#x6A21;&#x5F0F;&#x4E0B;&#xFF0C;&#x8BBE;&#x7F6E;&#x65AD;&#x70B9;&#xFF0C;&#x89C2;&#x5BDF;&#x5176;&#x5185;&#x90E8;&#x6570;&#x636E;&#x3002;&#x5982;DispatcherServlet&#x7684;handlerMappings&#x8FD9;&#x4E2A;List&#x91CC;&#x9762;&#x6CE8;&#x518C;&#x4E86;&#x6211;&#x4EEC;&#x5728;&#x63A7;&#x5236;&#x5668;&#x91CC;&#x9762;&#x5199;&#x7684;&#x201C;&#x8BF7;&#x6C42;&#x5904;&#x7406;&#x5668;&#x201D;<code>sayHello(String)</code>&#x8FD9;&#x4E2A;&#x65B9;&#x6CD5;&#x3002;</p>
+<p><img src="images/image-20191121012948657.png" alt="image-20191121012948657"></p>
+<p>&#x4EE5;&#x53CA;&#x6211;&#x4EEC;&#x5728;&#x524D;&#x9762;&#x914D;&#x7F6E;&#x7684;&#x89C6;&#x56FE;&#x5904;&#x7406;&#x5668;<code>InternalResourceViewResolver</code>&#x3002;</p>
+<p><img src="images/image-20191121013332130.png" alt="image-20191121013332130"></p>
+<p>&#x53EF;&#x4EE5;&#x6E05;&#x6670;&#x5730;&#x770B;&#x5230;&#x5F53;&#x524D;&#x8BF7;&#x6C42;&#x6240;&#x5BF9;&#x5E94;&#x7684;&#x5904;&#x7406;&#x5668;&#x3002;</p>
+<p><img src="images/image-20191121013623431.png" alt="image-20191121013623431"></p>
+<p>&#x66F4;&#x591A;&#x6E90;&#x7801;&#x8DDF;&#x8E2A;&#x89E3;&#x8BFB;&#xFF0C;&#x8BF7;&#x8BFB;&#x8005;&#x81EA;&#x884C;&#x5B8C;&#x6210;&#x3002;</p>
+<blockquote>
+<p>&#x672C;&#x5C0F;&#x8282;&#x793A;&#x4F8B;&#x9879;&#x76EE;&#x4EE3;&#x7801;&#xFF1A;</p>
+<p><a href="https://github.com/gyzhang/SpringBootCourseCode/tree/master/spring-mvc-jsp" target="_blank">https://github.com/gyzhang/SpringBootCourseCode/tree/master/spring-mvc-jsp</a></p>
+</blockquote>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="SpringBootWeb.html" class="navigation navigation-prev " aria-label="Previous page: 第4章 Spring Boot Web开发">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="4.2thymeleaf.html" class="navigation navigation-next " aria-label="Next page: 4.2 Thymeleaf介绍">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"4.1 Spring MVC介绍","level":"1.5.1","depth":2,"next":{"title":"4.2 Thymeleaf介绍","level":"1.5.2","depth":2,"path":"第4章 Spring Boot Web开发/4.2thymeleaf.md","ref":"第4章 Spring Boot Web开发/4.2thymeleaf.md","articles":[]},"previous":{"title":"第4章 Spring Boot Web开发","level":"1.5","depth":1,"path":"第4章 Spring Boot Web开发/SpringBootWeb.md","ref":"第4章 Spring Boot Web开发/SpringBootWeb.md","articles":[{"title":"4.1 Spring MVC介绍","level":"1.5.1","depth":2,"path":"第4章 Spring Boot Web开发/4.1mvc.md","ref":"第4章 Spring Boot Web开发/4.1mvc.md","articles":[]},{"title":"4.2 Thymeleaf介绍","level":"1.5.2","depth":2,"path":"第4章 Spring Boot Web开发/4.2thymeleaf.md","ref":"第4章 Spring Boot Web开发/4.2thymeleaf.md","articles":[]},{"title":"4.3 使用Servlet、Listener和Filter","level":"1.5.3","depth":2,"path":"第4章 Spring Boot Web开发/4.3legacy.md","ref":"第4章 Spring Boot Web开发/4.3legacy.md","articles":[]},{"title":"4.4 课后作业","level":"1.5.4","depth":2,"path":"第4章 Spring Boot Web开发/4.4homework.md","ref":"第4章 Spring Boot Web开发/4.4homework.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["-search","search-pro","code","splitter","expandable-chapters","page-toc-button","back-to-top-button","livereload"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"livereload":{},"splitter":{},"search-pro":{"cutWordLib":"nodejieba","defineWord":["Spring Boot"],"expandable-chapters":{}},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"code":{"copyButtons":true},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"page-toc-button":{},"back-to-top-button":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"expandable-chapters":{}},"theme":"default","author":"Kevin Zhang","pdf":{"pageNumbers":true,"fontSize":23,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"SpringBoot入门教程","language":"zh-hans","gitbook":"*","description":"针对初级程序员的Spring Boot入门教程，使用版本2.2.x"},"file":{"path":"第4章 Spring Boot Web开发/4.1mvc.md","mtime":"2019-12-28T02:14:19.135Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-02-07T14:42:40.985Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-pro/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-code/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-page-toc-button/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-back-to-top-button/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
